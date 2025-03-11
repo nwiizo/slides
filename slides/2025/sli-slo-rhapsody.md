@@ -50,21 +50,21 @@ style: |
   }
   /* タイトルとサブタイトルのサイズ調整 */
   .title h1 {
-    font-size: 3.2em !important;
+    font-size: 2.4em !important;
     margin-bottom: 0.1em !important;
   }
   .title h3 {
-    font-size: 1.5em !important;
+    font-size: 1.1em !important;
     margin-top: 0.1em !important;
   }
   /* 作者情報のスタイル */
   .author-info {
     position: absolute !important;
     bottom: 40px !important;
-    left: 50px !important;
+    left: 100px !important;
     padding-left: 0 !important;
     text-indent: 0 !important;
-    font-size: 1.2em !important;
+    font-size: 0.9em !important;
     color: white !important;
     font-weight: bold !important;
   }
@@ -118,11 +118,11 @@ _class: title dark
 
 ![bg](../../assets/images/3shake-background-full.png)
 
-<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 5px !important; left: 5px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
 
-<div class="title" style="text-align: left; margin-top: 180px; margin-left: 50px; padding-left: 0;">
+<div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
-# SLI/SLO・ラプソディ<br><span class="highlight-yellow">あるいは組織への適用の旅</span>
+# SLI/SLO・ラプソディ</br>あるいは</br>組織への適用の旅</span>
 
 ### SLI/SLOをビジネスに活かす実践的アプローチ
 
@@ -303,7 +303,6 @@ SLI/SLOの価値が明らかでも、<strong>導入方法と導入プロセス</
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
 <div>
 
-### 多くのステークホルダーとの協力が不可欠
 
 * **日常的な課題解決に貢献する**
   * SLOを通じた実際の問題解決を示す
