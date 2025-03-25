@@ -108,6 +108,10 @@ style: |
     width: 30%;
     margin-left: 70%;
   }
+  /* 非表示用のクラス */
+  .hidden {
+    display: none !important;
+  }
 ---
 
 <!-- 
@@ -178,10 +182,14 @@ _class: title dark
 <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 30px;">
 <div>
 
-### SLI/SLO導入は組織変革のプロジェクト
+
 
 SLI/SLO導入を成功させるには、以下の3つの側面に向き合う心構えが必要です。
 
+<img src="../../assets/images/2025/sli-slo-rhapsody/SLI_SLO_心構え.png" alt="SLI/SLO導入の心構え" style="width: 55%; margin: 20px auto; display: block;">
+
+
+<div class="hidden">
 1. **既存の習慣や方法からの変更を伴う**
    * 変化への抵抗は自然な反応であり、適切に対処する必要がある
 
@@ -190,6 +198,7 @@ SLI/SLO導入を成功させるには、以下の3つの側面に向き合う心
 
 3. **目に見える成果が出るまでに時間がかかる**
     * 短期的な成果よりも長期的な価値を重視する姿勢が求められる
+</div>
 </div>
 </div>
 
@@ -209,13 +218,43 @@ SLI/SLO導入を成功させるには、以下の3つの側面に向き合う心
 
 どれだけ優れた技術も概念も導入時には抵抗が生じます。それらを認識しなけらばなりません。
 
+<img src="../../assets/images/2025/sli-slo-rhapsody/抵抗の種類.png" alt="抵抗の種類" style="width: 70%; margin: 20px auto; display: block;">
+
+<div class=hidden>
+
 1. **情性による抵抗（惰性/現状維持バイアス）**
 2. **労力による抵抗（実行コスト）**
 3. **感情による抵抗（否定的感情）**
 4. **心理的反発（変化への抵抗）**
 
+</div>
+
+
+<div class="reference-right">
+参考：「変化を嫌う人を動かす」 https://www.soshisha.com/book_wadai/books/2624.html
+</div>
+
+---
+<!-- _backgroundColor: white -->
+
+## <span class="highlight-green">変化に対する抵抗</span>
+
+![bg right:30% 80%](../../assets/images/2025/sli-slo-rhapsody/book_change_resistance_cycle.png)
+
 <div class="info-box">
 変化への抵抗は克服すべき「障害」ではなく、<strong>理解し対話すべき自然な反応</strong>です。各抵抗パターンに適した対応を行いましょう。
+</div>
+
+
+<img src="../../assets/images/2025/sli-slo-rhapsody/抵抗の種類.png" alt="抵抗の種類" style="width: 70%; margin: 20px auto; display: block;">
+
+<div class=hidden>
+
+1. **情性による抵抗（惰性/現状維持バイアス）**
+2. **労力による抵抗（実行コスト）**
+3. **感情による抵抗（否定的感情）**
+4. **心理的反発（変化への抵抗）**
+
 </div>
 
 <div class="reference-right">
@@ -223,6 +262,9 @@ SLI/SLO導入を成功させるには、以下の3つの側面に向き合う心
 </div>
 
 ---
+
+
+
 
 <!-- _backgroundColor: white -->
 
@@ -303,15 +345,73 @@ SLI/SLOの価値が明らかでも、<strong>導入方法と導入プロセス</
 
 ### 各部門の役割と貢献
 
+それぞれの部門が、自分の専門性を活かしながら、共通の目標に向かって協働する体制を構築します。今回は、エンジニアリング、プロダクト、経営層の3つの部門について、それぞれの抵抗について考えていきます
+
+<img src="../../assets/images/2025/sli-slo-rhapsody/各部門の役割と貢献.png" alt="各部門の役割と貢献" style="width: 85%; margin: 20px auto; display: block;">
+
+<div class="hidden">
 * **エンジニアリング**：技術的実装と運用
 * **プロダクト**：ユーザー体験とSLO目標値の提案
 * **マーケティング**：顧客期待値とブランドポジショニング
 * **財務**：コスト最適化と投資対効果分析
 * **経営層**：戦略的方向性と資源配分の意思決定 
+</div>
 
-それぞれの部門が、自分の専門性を活かしながら、共通の目標に向かって協働する体制を構築します。今回は、エンジニアリング、プロダクト、経営層の3つの部門について、それぞれの抵抗について考えていきます
 
 ---
+
+<!-- _backgroundColor: white -->
+## <span class="highlight-blue">各部門の抵抗：エンジニアリング</span>
+
+<div class="info-box">
+エンジニアの懸念に寄り添い、<strong>技術的価値と自律性</strong>を重視した対話が重要です。
+</div>
+
+* **エンジニアリング部門の懸念**
+  * 「**既存の監視体制で十分**」
+  * 「数値評価で**裁量が狭まる**」
+  * 「**自律的判断より数値が優先**される」
+
+* **効果的な対応**
+  * 現場の痛点からの改善提案
+  * 技術的自律性の尊重
+  * **判断材料として**の指標という位置づけ
+
+---
+<!-- _backgroundColor: white -->
+## <span class="highlight-blue">各部門の抵抗：プロダクト/ビジネス</span>
+
+<div class="info-box">
+プロダクト部門の言語で対話し、<strong>顧客価値とSREの関連</strong>を明確にします。
+</div>
+
+* **プロダクト部門の懸念**
+  * 「**機能開発が遅くなる**」
+  * 「技術的制約が増える」
+  * 「**顧客視点より数値が優先**される」
+
+* **効果的な対応**
+  * 信頼性と**顧客満足度の関連**を示す
+  * 安定性が**イノベーションを支える**例の共有
+  * プロダクト判断への技術的サポート
+---
+<!-- _backgroundColor: white -->
+## <span class="highlight-blue">各部門の抵抗：経営層</span>
+
+* **経営層の懸念**
+  * 「**投資対効果(ROI)が不明確**」「**短期成果との両立が難しい**」
+  * 「**技術的な詳細の判断が難しい**」「**従来のビジネス指標との整合性**」
+
+* **効果的な対応**
+  * 信頼性問題の**事業インパクトを数値化**、**コスト削減効果**と**収益保護**の具体例
+  * 経営判断に役立つ**シンプルな指標**の提供、**既存KPIとの関連付け**
+
+<div class="info-box">
+経営層には<strong>価値説明</strong>と<strong>長期的ROI</strong>の可視化が重要です。
+</div>
+
+---
+
 <!-- _backgroundColor: white -->
 ## <span class="highlight-blue">組織全体でのSRE実践</span>
 
@@ -373,7 +473,7 @@ SLI/SLOの価値が明らかでも、<strong>導入方法と導入プロセス</
   * トップダウンで強制する
 
 * **太陽アプローチ（推奨）**
-  * **具体的な痛点から始める**
+  * **具体的なユーザー体験から始める**
   * チームの状況に寄り添う
   * 徐々に温めて自発的な変化を促す
 
@@ -394,57 +494,7 @@ SLI/SLOの価値が明らかでも、<strong>導入方法と導入プロセス</
   * 短期的機能追加と長期的信頼性のバランス
 
 ---
-<!-- _backgroundColor: white -->
-## <span class="highlight-blue">各部門の抵抗：エンジニアリング</span>
 
-<div class="info-box">
-エンジニアの懸念に寄り添い、<strong>技術的価値と自律性</strong>を重視した対話が重要です。
-</div>
-
-* **エンジニアリング部門の懸念**
-  * 「**既存の監視体制で十分**」
-  * 「数値評価で**裁量が狭まる**」
-  * 「**自律的判断より数値が優先**される」
-
-* **効果的な対応**
-  * 現場の痛点からの改善提案
-  * 技術的自律性の尊重
-  * **判断材料として**の指標という位置づけ
-
----
-<!-- _backgroundColor: white -->
-## <span class="highlight-blue">各部門の抵抗：プロダクト/ビジネス</span>
-
-<div class="info-box">
-プロダクト部門の言語で対話し、<strong>顧客価値とSREの関連</strong>を明確にします。
-</div>
-
-* **プロダクト部門の懸念**
-  * 「**機能開発が遅くなる**」
-  * 「技術的制約が増える」
-  * 「**顧客視点より数値が優先**される」
-
-* **効果的な対応**
-  * 信頼性と**顧客満足度の関連**を示す
-  * 安定性が**イノベーションを支える**例の共有
-  * プロダクト判断への技術的サポート
----
-<!-- _backgroundColor: white -->
-## <span class="highlight-blue">各部門の抵抗：経営層</span>
-
-* **経営層の懸念**
-  * 「**投資対効果(ROI)が不明確**」「**短期成果との両立が難しい**」
-  * 「**技術的な詳細の判断が難しい**」「**従来のビジネス指標との整合性**」
-
-* **効果的な対応**
-  * 信頼性問題の**事業インパクトを数値化**、**コスト削減効果**と**収益保護**の具体例
-  * 経営判断に役立つ**シンプルな指標**の提供、**既存KPIとの関連付け**
-
-<div class="info-box">
-経営層には<strong>価値説明</strong>と<strong>長期的ROI</strong>の可視化が重要です。
-</div>
-
----
 <!-- _backgroundColor: white -->
 ## <span class="highlight-blue">ビジネス価値の可視化</span>
 
@@ -514,38 +564,38 @@ SLI/SLOワークショップは<strong>共通目標の設定</strong>と<strong>
 
 <!-- _backgroundColor: white -->
 
-## <span class="highlight-blue">SLI/SLOの基本原則</span>
+## <span class="highlight-blue">SLI/SLOの基本原則</span> 
 
-<div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px;">
-<div>
+資料として追加しているだけです。
 
-<div style="float: right; width: 30%; margin-left: 20px; text-align: center;">
-<img src="../../assets/images/2025/sli-slo-rhapsody/book_slo_jp.png" style="width: 100%; object-fit: contain;" alt="SLO Book Cover" />
-<div style="font-size: 0.4em; text-align: right; margin-top: 5px;">
-SLO サービスレベル目標 2023年<br>
-https://www.oreilly.co.jp/books/9784814400348/
-</div>
-</div>
-
-* **SREの実践には体系的知識が不可欠**
-  * SREの理論と実践を深く理解するには<strong>体系的な学習</strong>が欠かせません。資料を読み漁っても歪な理解になりやすいです。本書はSLI/SLOについて<strong>最も包括的</strong>な一冊です。実践する前に体系的な理解を深めておくことをお勧めします。
-</div>
 
 ---
+
 
 <!-- _backgroundColor: white -->
 
 ## <span class="highlight-blue">SLI/SLOの基本原則</span>
 
+
+
 <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px;">
 <div>
 
-### まずはSLIから始めよう
+<div style="display: flex; gap: 40px;">
+<div style="width: 30%;">
+<img src="../../assets/images/2025/sli-slo-rhapsody/SLO_Overview.png" alt="praying" style="width: 65%; height: fit-content;">
+<div style="font-size: 0.7em; text-align: left; margin-top: 5px;">
+Implementing Service Level Objectives より引用
+</div>
+</div>
+
+<div style="width: 70%;">
 
 * SLAやSLOにこだわる前に、まず適切なSLIを確立
 * システムの実際のデータに基づく正確な指標設計
 * 理想的なSLI/SLOは現実の測定から導き出す
 * 既存のSLAに合わせてSLIを歪めない
+* CUJを先に作ってからSLI/SLOを設計する
 
 </div>
 </div>
@@ -569,7 +619,7 @@ SLI/SLOの導入において最も重要なのは、<strong>適切な測定</str
 
 * **原因と結果の明確化**
   * メトリクスで変化を促すか、変化でメトリクスを動かすか
-  * 測定そのものが目的化しないよう注意
+  * 測定や閾値そのものが目的化しないよう注意
 
 </div>
 </div>
@@ -674,7 +724,7 @@ SLI/SLOは<strong>単なる監視ダッシュボード</strong>ではありま�
 ## <span class="highlight-blue">短期決戦ができないのがSLOの難しいところ</span>
 
 <div class="info-box">
-SLI/SLOは短期的な施策ではなく<strong>長期的な投資</strong>です。「旅」として捉え、<strong>段階的な進化</strong>を目指しましょう。
+SLI/SLOは短期的な施策ではなく<strong>長期的な</strong>取り組みです。「旅」として捉え、<strong>段階的な進化</strong>を目指しましょう。
 </div>
 
 * **導入初期の現実**
@@ -682,8 +732,59 @@ SLI/SLOは短期的な施策ではなく<strong>長期的な投資</strong>で�
   * すぐに見える成果より**基盤構築の段階**が先行する
 
 * **長期視点の必要性**
-  * 真の価値は**6-12ヶ月後**から明確に現れる
+  * 本当の価値は**6-12ヶ月後**から明確に現れる(サービスの成熟度による)
   * **段階的な成熟**を計画的に進める
+
+---
+
+<!-- _backgroundColor: white -->
+
+## <span class="highlight-blue">長期的にSLOを進めていく</span>
+
+
+<div style="float: right; width: 30%; margin-left: 20px; text-align: center;">
+<img src="../../assets/images/2025/sli-slo-rhapsody/book_doct.jpg" style="width: 80%; object-fit: contain;" alt="企業変革のジレンマ" />
+<div style="font-size: 0.4em; text-align: right; margin-top: 5px;">
+企業変革のジレンマ<br>
+https://bookplus.nikkei.com/atcl/catalog/24/05/09/01394/
+</div>
+</div>
+
+
+組織は<strong>一度環境に適応すると</strong>、<strong>効率化のために分業化と仕事のルーティン化を進める</strong>ため、<strong>構造的に無能化するものである</strong>。それらを解消するための<strong>一つの手段としてSLI/SLOを導入する</strong>。組織としての能力が低下したとき、乗り越えるべき壁は<strong>「多義性」（解釈の多様さ）、「複雑性」（問題の絡み合い）、「自発性」（内発的動機の欠如）</strong>の3つだ。3つの壁を解きほぐす糸口になるのが<strong>対話</strong>である。
+
+<div style="font-size: 0.6em; text-align: left; margin-top: 10px;">
+(個人の壁を乗り越える方法は紹介したが、組織の壁を乗り越える方法は今回は紹介しない。)<br>
+</div>
+
+---
+
+<!-- _backgroundColor: white -->
+
+## <span class="highlight-blue">長期的にSLOを進めていくには</span>
+
+
+<div style="float: right; width: 30%; margin-left: 20px; text-align: center;">
+<img src="../../assets/images/2025/sli-slo-rhapsody/book_doct.jpg" style="width: 80%; object-fit: contain;" alt="企業変革のジレンマ" />
+<div style="font-size: 0.4em; text-align: right; margin-top: 5px;">
+企業変革のジレンマ<br>
+https://bookplus.nikkei.com/atcl/catalog/24/05/09/01394/
+</div>
+</div>
+
+長期的な企業変革に向けてのプロセスについては、本書の中では</br>
+
+<div class="info-box">
+(1)<strong>全社戦略を考えられるようになる</strong><br>
+(2)<strong>全社戦略へのコンセンサスを形成する</strong><br>
+(3)<strong>部門内での変革を推進する</strong><br>
+(4)<strong>全社戦略・変革施策をアップデートする</strong>
+</div>
+
+と紹介されており、経験則にも理解しやすいです。
+<div style="font-size: 0.6em; text-align: left; margin-top: 10px;">
+(個人の壁を乗り越える方法は紹介したが、組織の壁を乗り越える方法は今回は紹介しない。)<br>
+</div>
 
 
 ---
@@ -710,13 +811,13 @@ SLI/SLOの持続的な実践には組織的な合意と期待値の調整が不�
 
 ## <span class="highlight-blue">SLI/SLOの長期的価値</span>
 
-* **運用負荷（Toil）の削減**
-  * **自動化**と**プロアクティブな対応**による効率化
-  * **繰り返し作業**から**価値創造活動**へのシフト
+* **とにかく続ける**
+  * **続けるのが大事だが一人では辛いので仲間を作る**
+  * **完璧なSLOよりも継続的に改善されるSLOを重視**
 
 * **データに基づく意思決定**
-  * **主観的議論**から**客観的評価**への移行
-  * **リソース配分**と**優先順位付け**の最適化
+  * **主観的議論から客観的評価へ**
+  * **リソース配分と優先順位付けの最適化**
 
 <div class="info-box">
 SLI/SLO導入は<strong>技術的改善</strong>だけでなく<strong>組織文化の変革</strong>です。「完璧なSLO」よりも「継続的に改善されるSLO」を重視しましょう。
@@ -767,7 +868,7 @@ https://sre.google/resources/practices-and-processes/enterprise-roadmap-to-sre/
 
 ## <span class="highlight-blue">まとめ</span>
 
-SREは旅であり、完璧を目指すのではなく継続的な前進が大切です。
+SREやSLOは旅であり、ゴールや完璧を目指すのではなく継続的な前進が大切です。
 
 * **今日から始められること**
   * **小さく始めて**徐々に拡大する
@@ -776,8 +877,22 @@ SREは旅であり、完璧を目指すのではなく継続的な前進が大�
 
 * **成功のための心構え**
   * **完璧よりも継続**を重視する
-  * **技術も情熱も**すべて大切
-  * **信頼性は会話**から生まれる
+  * **技術も情熱も**どちらも大切
+  * **信頼性は会話/対話**から生まれる
+---
+
+<!-- _backgroundColor: white -->
+
+## 参考資料
+
+* [SREエンタープライズロードマップ - Google - Site Reliability Engineering](https://sre.google/resources/practices-and-processes/enterprise-roadmap-to-sre/)
+* [SLO サービスレベル目標 ― SLI、SLO、エラーバジェット導入の実践ガイド](https://www.oreilly.co.jp/books/9784814400348/)
+* [変化を嫌う人を動かす](https://www.soshisha.com/book_wadai/books/2624.html)
+* [企業変革のジレンマ](https://bookplus.nikkei.com/atcl/catalog/24/05/09/01394/)
+* [Implementing Service Level Objectives](https://learning.oreilly.com/library/view/implementing-service-level/9781492076803/)
+* [Building Secure and Reliable Systems](https://sre.google/books/building-secure-reliable-systems/)
+* [Site Reliability Engineering](https://sre.google/sre-book/introduction/)
+* [The Site Reliability Workbook](https://sre.google/workbook/table-of-contents/)
 
 ---
 
