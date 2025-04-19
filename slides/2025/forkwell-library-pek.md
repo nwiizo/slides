@@ -133,7 +133,7 @@ _class: title dark
 </div>
 
 <div class="author-info" style="text-align: left; padding-left: 0; text-indent: 0;">
-2025/3/25 Kubernetesで実践する Platform Engineering - FL#88</br>@nwiizo 50min ##Forkwell_Library
+2025/3/25 Kubernetesで実践する Platform Engineering - FL#88</br>@nwiizo 50min  #Forkwell_Library
 </div>
 
 ---
@@ -149,6 +149,14 @@ _class: title dark
 </div>
 
 <p style="margin-top: 30px !important;">人生を通して"<strong>運動、睡眠、読書</strong>"をちゃんとやりたい</p>
+
+---
+
+## about 3-shake
+
+<div style="text-align: left; margin-left: 70px; margin-top: 20px;">
+  <img src="../../assets/images/3shake-about.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
+</div>
 
 ---
 
@@ -1121,33 +1129,25 @@ spec:
 
 ---
 
-## 学びから実践への応用
+## Platform Engineering実践のための要諦
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-<div style="background-color: #F5F5F5; border-radius: 15px; padding: 15px;">
-  <h3 style="margin-top: 0;">実践方法</h3>
-  <ul style="font-size: 0.8em;">
-    <li>GitHubリポジトリでハンズオン体験</li>
-    <li>自社の文脈に合わせた適用</li>
-    <li>小さく始め、継続的に進化させる</li>
-  </ul>
-</div>
-
-<div style="background-color: #F5F5F5; border-radius: 15px; padding: 15px;">
-  <h3 style="margin-top: 0;">成功の鍵</h3>
-  <ul style="font-size: 0.8em;">
-    <li>開発者の声を中心に設計する</li>
-    <li>測定とフィードバックループの確立</li>
-    <li>製品思考でプラットフォーム設計</li>
-  </ul>
-</div>
+<div style="display: flex; gap: 20px; align-items: center;">
+<div style="width: 25%;">
+  <img src="../../assets/images/2025/forkwell-library-pek/book_the_crux.png" alt="Kubernetes Platform" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <div style="font-size: 0.5em; text-align: center; margin-top: 10px;">
+  戦略の要諦
+  https://bookplus.nikkei.com/atcl/catalog/23/10/13/01057/
+  </div>
 </div>
 
-<div style="background-color: #2D333B; color: white; border-radius: 8px; padding: 15px; margin-top: 15px; font-size: 1.2em; text-align: center; font-weight: bold;">
-"我に似せる者は生き、我を象る者は死す"
+<div style="width: 70%; margin-left: auto;">
+  <ol style="font-size: 0.9em;">
+    <li><strong>開発者の痛点に正面から向き合う</strong> </br> - 理想論ではなく実際の課題を特定</li>
+    <li><strong>既存のツールと知見を最大限活用する</strong> </br> - ゼロから構築せず統合と抽象化に注力</li>
+    <li><strong>スコープクリープを避け核心部分に集中</strong> </br> - 「素晴らしい機能」の誘惑に負けない</li>
+    <li><strong>現場と密に連携し実践的なフィードバックを得る</strong> </br> - 理論よりも実際の使用体験を重視</li>
+  </ol>
 </div>
-<div style="text-align: center; margin-top: 5px; font-style: italic; font-size: 0.7em;">
-本質を理解して創造的に学ぶ者は発展し、表面的な模倣に留まる者は衰退する
 </div>
 
 
@@ -1171,7 +1171,7 @@ spec:
   <h4 style="margin-top: 0; font-size: 0.9em;">初期段階</h4>
   <ul style="font-size: 0.7em;">
     <li>基本的な自動化</li>
-    <li>CI/CDパイプライン</li>
+    <li>ドキュメントの整備</li>
     <li>標準化されたデプロイ</li>
   </ul>
 </div>
@@ -1202,25 +1202,25 @@ spec:
 
 <div style="background-color: rgba(9, 71, 113, 0.5); padding: 20px; border-radius: 15px; margin-top: 20px;">
 <ul style="color: white; font-size: 1em; line-height: 1.5;">
-  <li><strong>プラットフォームは常に進化する生命体</strong></li>
-  <li><strong>開発者体験の最適化を最優先に</strong></li>
+  <li><strong>プラットフォームは完成を目指す静的なものではなく常に進化する動的なもの</strong></li>
+  <li><strong>開発者体験の最適化を最優先にすることが大切で忘れると死にゆく</strong></li>
   <li><strong>理論より実践、完璧より前進</strong></li>
 </ul>
 </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin: 20px 0;">
   <div style="background-color: rgba(56, 139, 253, 0.1); border: 1px solid #58A6FF; padding: 15px; border-radius: 10px;">
     <h3 style="color: #58A6FF; font-size: 0.9em;">📚 今日から始めること</h3>
-    <ul style="color: black; font-size: 0.8em;">
+    <ul style="color: black; font-size: 0.7em;">
       <li>書籍を手に入れ、理解する</li>
-      <li>GitHubのサンプルコードを実行</li>
-      <li>小さなPoCでの実験を計画</li>
+      <li>GitHubのサンプルコードを実行(salaboy/platforms-on-k8s)<br> 『一日で学ぶクラウドネイティブ技術実践ハンズオン』もオススメです</li>
+      <li>机上の空論ではなく小さなPoCでの実験を計画</li>
     </ul>
   </div>
   
   <div style="background-color: rgba(56, 139, 253, 0.1); border: 1px solid #58A6FF; padding: 15px; border-radius: 10px;">
     <h3 style="color: #58A6FF; font-size: 0.9em;">🌐 コミュニティに参加</h3>
-    <ul style="color: black; font-size: 0.8em;">
+    <ul style="color: black; font-size: 0.7em;">
       <li>Platform Engineering Meetup</li>
       <li>Platform Engineering Kaigi</li>
       <li>Cloud Native Days</li>
@@ -1228,6 +1228,30 @@ spec:
   </div>
 </div>
 
+---
+
+## 参考資料
+
+- [Kubernetesで実践する Platform Engineering](https://www.shoeisha.co.jp/book/detail/9784798188379)
+- [Platform Engineering on Kubernetes](https://www.oreilly.co.jp/books/9784873119648/)
+- [Crossplane](https://crossplane.io/)
+- [vCluster](https://www.vcluster.com/)
+- [Argo Rollouts](https://argoproj.github.io/argo-rollouts/)
+- [CNCF Platform Engineering Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/)
+- [CloudEvents](https://cloudevents.io/)
+
+---
+
+## 参考資料
+
+- [DORA Metrics](https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance)
+- [Tekton](https://tekton.dev/)
+- [Knative](https://knative.dev/)
+- [Platform Engineering Meetup](https://platformengineering.connpass.com/)
+- [Salaboy's Blog - Platform Engineering in Tokyo](https://www.salaboy.com/2025/02/03/platform-engineering-in-tokyo/)
+- [Dapr](https://dapr.io/)
+- [OpenFeature](https://openfeature.dev/)
+- [一日で学ぶクラウドネイティブ技術実践ハンズオン](https://book.impress.co.jp/books/1122101063)
 
 ---
 
