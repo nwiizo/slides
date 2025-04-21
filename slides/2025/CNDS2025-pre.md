@@ -233,20 +233,32 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ---
 
-## 技術進化の加速と対応戦略
-
-進化がめちゃ早い。いまカリカリ最適化しても2年後からみたら**誤差**だとは思う
+## 技術進化の加速と変化への対応
 
 - **バランス感覚の重要性**
   - 過度な最適化より継続的な適応力
   - 早期参入の優位性（2年後からでは「本当に辛い」）
+  - **成功パターンより学習サイクルの確立**
+
+- **変化の速度を味方につける**
+  - 小さく始めて素早くフィードバックを得る
+  - 失敗を学びに変換する文化の醸成
+  - **技術トレンドの「波」を捉える視点**
+
+---
+
+## 実践的アプローチと心構え
 
 - **実践的アプローチ**
   - 完璧を求めず「ある程度必要」な取り組み
   - 変化を楽しむマインドセットの醸成
+  - **知識よりも探索能力を重視する**
 
+- **現場での実感**
+  - 以前は「動かない定義」や「架空の機能」に悩まされた
+  - 今ではモデルの精度が上がり問題が大幅に減少
+  - **価値を生む作業に集中できる環境に**
 
-以前は「動かない定義」や「架空の機能」に悩まされましたが、今ではモデルの精度が上がってそのような問題が大幅に減少しています。
 
 ---
 
@@ -309,7 +321,7 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ### 具体的な課題例
 - AWS IAMポリシー生成時に過剰な権限を付与しがち
-- リソース間の複雑な依存関係の理解が不十分
+- リソース間の複雑な依存関係の理解が不十分、作り直しがち
 - コスト最適化を考慮しない設計提案
 
 ---
@@ -324,21 +336,58 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 ### 人間との出力差
 - スピードが主な優位点となっている
 - 経験豊富なインフラエンジニアの知識を超えることは少ない
-- エラーの種類は人間とは異なるが量は同等
 
 ---
 
-## Vibe CodingはIaCと相性が悪い
+## Vibe CodingはIaCと相性が絶望的に悪い
+
+<div style="display: flex; gap: 20px; align-items: center;">
+<div style="width: 25%;">
+  <img src="../../assets/images/2025/CNDS2025-pre/book_vibecoding.png" alt="Kubernetes Platform" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <div style="font-size: 0.5em; text-align: center; margin-top: 10px;">
+  Vibe Coding: The Future of Programming
+  https://learning.oreilly.com/library/view/vibe-coding-the/9798341634749/
+  </div>
+</div>
+
+<div style="width: 70%; margin-left: auto;">
+<ol style="font-size: 0.9em;">
 
 ### 生成AIの現実的な限界: 70%問題
   - IaCは精度が命綱だが、AIはテンプレート的な構成のみ正確に生成可能
   - IaCに必要な厳密さとAIの「だいたいあってる」精度の致命的なギャップ
-  - AIは「薬物中毒の若手開発者」のような振る舞い - 速いがIaC特有の制約を無視
+  - AIは「優秀だが何も確認しない若手開発者」 - 速いがIaC特有の制約を無視
+
+
+</ol>
+</div>
+</div>
+
+---
+
+## Vibe CodingはIaCと相性が絶望的に悪い
+
+<div style="display: flex; gap: 20px; align-items: center;">
+<div style="width: 25%;">
+  <img src="../../assets/images/2025/CNDS2025-pre/book_vibecoding.png" alt="Kubernetes Platform" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <div style="font-size: 0.5em; text-align: center; margin-top: 10px;">
+  Vibe Coding: The Future of Programming
+  https://learning.oreilly.com/library/view/vibe-coding-the/9798341634749/
+  </div>
+</div>
+
+<div style="width: 70%; margin-left: auto;">
+<ol style="font-size: 0.9em;">
+
 
 ### 残りの30%の難しさ
 - 70%を登ってきた経験なしで30%を超える難しさ
 - インフラ構成では小さなミスが大惨事に直結、AIのVibe Codingでは検出困難
-- コードの正確性確保と「砂上の楼閣」インフラの回避が本質的に不可能
+- コードの正確性確保するタイミングでインフラの機能を損なう可能性
+
+</ol>
+</div>
+</div>
 
 ---
 
@@ -603,6 +652,7 @@ Step 2: 各サービスの依存関係の定義
   - 「仕様は変わる、バージョンは上がる、だが本質は残る」
   - コード書きから問題解決者へと開発者の役割を変革
   - 学びながら教え、教えながら学ぶ循環を生み出す
+  - VSCode拡張機能を使っているので勝てなくない？ってのも思っている
 
 ---
 
@@ -611,6 +661,7 @@ Step 2: 各サービスの依存関係の定義
 ### Rules方式とは
 - 必要情報を事前にプロンプトに埋め込むアプローチ
 - AIが参照すべきルールを明示的に提供
+- 構造化された指示を体系的に組み込む方法
 
 ### Rules方式のメリット
 - 一貫した出力品質が得られる
@@ -624,12 +675,14 @@ Step 2: 各サービスの依存関係の定義
 ### 実装戦略
 
 1. **汎用ルール**
-   - クラウドネイティブベストプラクティス
    - 業界標準パターン
+   - 共通設計原則
 
 2. **技術スタック固有ルール**
    - Kubernetes/Terraform等の特有の最適化
    - プラットフォーム固有の制約
+   - フレームワーク推奨パターン
+
 
 ---
 
@@ -638,12 +691,14 @@ Step 2: 各サービスの依存関係の定義
 ### 実装戦略
 
 3. **組織固有ルール**
-   - 命名規則、セキュリティポリシー等
+   - 命名規則、セキュリティポリシー
    - 社内標準アーキテクチャ
+   - コーディング規約
 
 4. **プロジェクト固有ルール**
    - 特定アプリケーション要件
    - 環境固有の設定
+   - チーム合意事項
 
 ---
 
@@ -783,7 +838,7 @@ Step 2: 各サービスの依存関係の定義
 
 ---
 
-## ガードレールのタダン(1/3)
+## ガードレールのチェックポイント(1/3)
 
 1. **コード品質検証**
    - 構文、形式、静的解析、コーディング規約
@@ -799,7 +854,7 @@ Step 2: 各サービスの依存関係の定義
 
 ---
 
-## ガードレールのタダン(2/3)
+## ガードレールのチェックポイント(2/3)
 
 4. **コンプライアンス検証**
    - 組織ポリシー、法規制、業界標準への適合性
@@ -815,7 +870,7 @@ Step 2: 各サービスの依存関係の定義
 
 ---
 
-## ガードレールのタダン(3/3)
+## ガードレールのチェックポイント(3/3)
 
 7. **テスト自動化**
    - ユニットテスト、統合テスト、E2Eテスト
@@ -1058,7 +1113,7 @@ Step 2: 各サービスの依存関係の定義
 3. **運用面の考慮**
    - **保守性とスケーラビリティ**
    - モニタリングと監査の容易さ
-   - **セキュリティとデータ保護**
+   - **セキュリティとデータ保護**([riseandignite/mcp-shield](https://github.com/riseandignite/mcp-shield)などがある)
 
 4. **コスト効率**
    - **APIコールの頻度と量**
@@ -1068,6 +1123,17 @@ Step 2: 各サービスの依存関係の定義
 ---
 
 ## AWS MCP Servers (1/2)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/aws_mcp_servers.png" alt="AWS MCP" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://github.com/awslabs/mcp
+</div>
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.8em;">
 
 ### AWS Documentation MCP Server
 - **AWS公式ドキュメント検索**
@@ -1080,24 +1146,37 @@ Step 2: 各サービスの依存関係の定義
 - 自社ドキュメント・Wiki活用
 - 独自Q&Aデータベース
 
+</ol>
+</div>
+</div>
+
 ---
 
 ## AWS MCP Servers (2/2)
 
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/aws_mcp_servers.png" alt="AWS MCP" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://github.com/awslabs/mcp
+</div>
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.8em;">
+
 ### CDK MCP Server
 - **AWS CDKプロジェクト支援**
-- コンストラクト情報参照
-- プロパティ・メソッド詳細
+- コンストラクト情報参照/プロパティ・メソッド詳細
 
 ### Terraform MCP Server
 - **Terraformプロバイダー情報参照**
-- リソース・データソース詳細
-- モジュール構造解析
+- リソース・データソース詳細/モジュール構造解析
+
 
 ### Lambda MCP Server
 - **任意のLambda関数をMCPツールとして実行**
 - カスタムインテグレーション
-- 既存システム連携
 
 ---
 
@@ -1118,11 +1197,28 @@ Step 2: 各サービスの依存関係の定義
 
 ## kubectl-ai: Kubernetes用AIアシスタント (1/2)
 
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/kubectl-ai.png" alt="kubectl-ai" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://github.com/GoogleCloudPlatform/kubectl-ai
+</div>
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.8em;">
+
 ### 概要
 - **Google Cloudの大規模言語モデルを活用したkubectlプラグイン**
 - **自然言語でKubernetesクラスタを操作**
 - クラスタ状態を考慮した応答生成
 - **MCPとしても利用可能**
+- https://github.com/GoogleCloudPlatform/kubectl-ai
+
+
+</ol>
+</div>
+</div>
 
 ---
 
@@ -1172,7 +1268,7 @@ kubectl ai "クラスタ内の潜在的なセキュリティリスクを検出�
 
 - **複数ツールの統合インターフェース**
   - ツール間の文脈の維持
-  - **学習コストの削減**
+  - **学習コストの削減** -> ユーザーはドキュメントやコードに質問できる
 
 ---
 
