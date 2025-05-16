@@ -199,11 +199,11 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 </div>
 
 <div style="width: 60%;">
-<ol style="font-size: 0.9em;">
+<ol style="font-size: 0.7em;">
 
-### Model Context Protocol (MCP)の本質
+### Model Context Protocol (MCP)とは
 
-*   **定義**: LLMが外部ツール・データソースと通信するための**オープン標準**
+*   **定義**: LLMが外部ツール・データソースと通信する**標準規格**
 
 * **特徴**: JSON-RPC 2.0をベースとした軽量プロトコル
 
@@ -226,7 +226,7 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 </div>
 
 <div style="width: 60%;">
-<ol style="font-size: 0.9em;">
+<ol style="font-size: 0.7em;">
 
 ### 解決する技術的課題
 
@@ -255,7 +255,7 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 - **クライアント**: Claude Desktop, VS Code, Cursor,nvim等
 
-- **サーバー**: 200+（公式+コミュニティ）[RoadMap](https://modelcontextprotocol.io/development/roadmap)にリポジトリの登場が明記
+- **サーバー**: 200+（公式+コミュニティ）[ROADMAP](https://modelcontextprotocol.io/development/roadmap)にリポジトリの登場が明記
 
 - **優位性**: 特定ベンダーに依存しないエコシステムが拡大中
 
@@ -263,29 +263,234 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ## MCPアーキテクチャ概要
 
-![bg right:50% 90%]
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_arc.png" alt="MCP architecture" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+
+**標準化の価値**: 単一インターフェースでAIとデータ・ツールの連携を実現
+</div>
+
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.8em;">
+
 
 ### 3つの主要機能カテゴリ
 
-1. **Tools（ツール）**
-   - LLMが呼び出す「関数」（POST相当）
-   - 例：情報検索、API呼出、データベース操作
-
-2. **Resources（リソース）**
-   - 読み取り専用のデータソース（GET相当）
+- **Resources（リソース）**
+   - 読み取り専用のデータソース
    - 例：ドキュメント、構成情報、リファレンス
 
-3. **Prompts（プロンプト）** ※任意実装
+- **Prompts（プロンプト）** ※任意実装
    - ツール利用に関するガイダンス文書
    - LLMへの最適な指示テンプレート
 
-**標準化の価値**: 単一インターフェースでAIとデータ・ツールの連携を実現
+- **Tools（ツール）**
+   - LLMが呼び出す「関数」
+   - 例：情報検索、API呼出、データベース操作
 
 ---
 
+## MCPアーキテクチャ - [Resources](https://modelcontextprotocol.io/docs/concepts/resources)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_arc.png" alt="MCP architecture" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+
+**Resources**: LLMにコンテキストを提供する
+</div>
+
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.65em;">
+
+### 基本と構造
+- **リソースはLLMの外部データアクセスを実現** - テキスト形式とバイナリ形式のデータをURIで一意に識別し、AIの会話コンテキストとして活用。**アプリケーション制御型**設計により、クライアントがリソースの使用時期と方法を決定。人間が読みやすい名前や説明でAIの理解を促進
+
+### 実装と運用
+- クライアントは**resources/list**でリソース発見、**resources/read**で内容取得、**購読機能**で更新通知を受信。動的リソースには**URIテンプレート**を提供可能。適切なセキュリティ対策と明確なリソース設計がシステムの信頼性を確保
+
+</ol>
+</div>
+</div>
+
+---
+
+## MCPアーキテクチャ - [Prompts](https://modelcontextprotocol.io/docs/concepts/prompts)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_arc.png" alt="MCP architecture" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+
+**Prompts**: LLM対話の再利用可能テンプレート
+</div>
+
+</div>
+<div style="width: 60%;">
+<ol style="font-size: 0.65em;">
+
+
+### 基本構造と目的
+- **プロンプトは標準化された対話パターンを定義** - **ユーザー制御型**の再利用可能なテンプレートとして設計され、一貫したLLM体験を提供。引数を受け取り、リソースから文脈を含め、複数の対話をチェーン化できる。各プロンプトは**名前・説明・引数**の構造で定義され、クライアントは**prompts/list**エンドポイントで発見し、**prompts/get**で使用。引数には名前、説明、必須フラグが含まれる
+
+### 応用と実装
+- **動的なコンテンツと複数ステップのワークフロー** - プロンプトはリソースからの情報を埋め込み、複数のメッセージ交換を事前定義して複雑な対話フローを作成可能。クライアントUIでは**スラッシュコマンド**や**クイックアクション**として表示され、ユーザーに直感的な操作を提供。テンプレートの更新は**notifications/prompts/list_changed**で通知される
+
+---
+
+## MCPアーキテクチャ - [Tools](https://modelcontextprotocol.io/docs/concepts/tools)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_arc.png" alt="MCP architecture" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+
+**tools**: AIに実行力を与える
+</div>
+
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.65em;">
+
+
+### Toolsの基本設計と役割
+- **Toolsは LLM に実世界での行動力を与える** - サーバーが公開する実行可能な機能を介して計算処理やAPI操作を実行できる。クライアントは **tools/list** で発見し、**tools/call** で実行する。各ツールは **名前、説明、入力スキーマ、アノテーション** という明確な構造で定義され、**動作の性質**（読取専用・破壊的操作・べき等性など）をAIとユーザーに伝える
+
+### 実装パターンと応用
+- サーバー側での **リクエストハンドラー実装** がToolsを活性化し、AIの指示を具体的なアクションに変換。エラー処理や進捗報告も適切に設計する。**計算ツールからAPI統合、データ処理まで無限の可能性** - システム操作、外部APIラッパー、データ変換などさまざまなパターンでAIの能力を拡張し、実世界での影響力を高める
+
+---
+
+## MCPアーキテクチャ - [Sampling](https://modelcontextprotocol.io/docs/concepts/sampling)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_sampling.png" alt="MCP architecture" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+
+**Sampling**: サーバーがLLMに補完を要求できるようにする。めちゃくちゃに有用そうではあるが、Clientでは実装されていないものもある。
+</div>
+
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.6em;">
+
+### 基本概念と仕組み
+- **サンプリングはサーバーがLLMに必要なものをリクエストできる機能** - サーバーが**sampling/createMessage**を要求し、クライアントがレビュー、LLMから結果を取得、そして結果を返す。ユーザーが介在する設計により、セキュリティとプライバシーを確保。標準化された**メッセージフォーマット**を使用し、会話履歴、モデル設定、システムプロンプト、コンテキスト含有範囲を指定。**modelPreferences**で希望するモデル名や優先事項（コスト、速度、性能）を伝達できる
+
+### パラメータと制御
+- **テンプレート、サンプリングパラメータ、人間による監視** - 様々な設定（temperature、maxTokens、stopSequences）で出力を調整し、**ヒューマンインザループ**設計によりユーザーがプロンプトと完了を確認・修正可能。サンプリングは**エージェント的ワークフロー**を可能にし、データ分析、意思決定、構造化データ生成、複数ステップのタスク処理などの高度な機能を実現。適切なセキュリティ対策とエラー処理が重要
+
+---
+
+## MCPアーキテクチャ - [Roots](https://modelcontextprotocol.io/docs/concepts/roots)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_roots.png" alt="MCP architecture" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+
+**roots**: Model Context Protocol (MCP)のルーツ：操作境界の定義
+</div>
+
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.6em;">
+
+### 基本概念と役割
+- **Rootsはサーバーの操作範囲を定義する** - クライアントがサーバーに対して関連リソースとその場所を伝える手段。ファイルシステムパス（`file:///home/user/projects/myapp`）やHTTP URL（`https://api.example.com/v1`）などの有効なURIを使用
+- クライアントは接続時に**roots機能**を宣言し、サーバーに**推奨ルーツのリスト**を提供。これにより**ワークスペース内のリソースが明確化**され、異なるリソースを同時に扱う際の組織化が容易に
+
+### 実装と応用
+- サーバーはrootsを尊重してリソースの**範囲特定とアクセス**に活用。厳密な制限ではなく情報提供的な役割だが、境界内での操作を優先すべき
+- **プロジェクトディレクトリ、リポジトリ、APIエンドポイント**などを定義する一般的なユースケースで活用。効果的な運用には必要なリソースのみ提案し、明確な名前付けと適切な変更管理が重要
+
+
+---
+
+## [MCPの通信フロー](https://modelcontextprotocol.io/docs/concepts/architecture)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 58%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_flow.png" alt="MCP flow" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+
+**利点**: シンプルさと互換性を両立した標準的な通信プロトコル
+</div>
+
+
+</div>
+
+<div style="width: 70%;">
+<ol style="font-size: 0.7em;">
+
+- **初期化フェーズ**
+   - クライアントが`initialize`でケイパビリティ宣言
+   - サーバーが利用可能な機能を応答
+
+- **リソース探索**
+   - `resources/list`で利用可能なリソース一覧取得
+   - `resources/get`で特定リソースのデータ取得
+
+- **ツール呼び出し**
+   - `tools/list`でサーバー上のツール一覧取得
+   - `tools/call`で特定ツールの実行要求
+
+</ol>
+</div>
+</div>
+
+---
+
+## [Transports](https://modelcontextprotocol.io/docs/concepts/transports)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 58%;">
+<img src="../../assets/images/2025/MCPDAWN/mcp_transports.png" alt="MCP transports" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+現状は標準出力(stdio)で実装しておけば良さそう
+
+</div>
+
+
+</div>
+
+<div style="width: 70%;">
+<ol style="font-size: 0.62em;">
+
+### STDIO Transport (Local Connection)
+
+- 標準入出力を使用したプロセス間通信,ローカルツール連携に最適
+- LLMアプリが子プロセスとしてMCPサーバー起動
+
+### HTTP Transport (Remote Connection)
+
+- **旧**: HTTP + SSE (Server-Sent Events)によるそこそこ複雑な実装
+
+- **新**: Streamable HTTP Transport (2025-03-26)
+  - 単一エンドポイント (`/message`) 
+  - 柔軟性向上としてSSEが任意
+
+---
 ## JSON-RPCによる通信方式 (1/2)
 
-![bg right:40% 95%]
+JSON-RPCはXMLの代わりにJSONを使用したリモートプロシージャコールの仕組みです。2006年に初めて登場し、2009年にバージョン2.0の仕様が公開されました。SOAPと比較して、シンプルさを重視した設計がその特徴です。
+
+<div style="width: 50%;">
+<ol style="font-size: 0.7em;">
 
 ### メッセージフォーマット
 
@@ -302,6 +507,16 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 }
 ```
 
+---
+
+## JSON-RPCによる通信方式 (2/2)
+
+JSON-RPCの仕様はIETFやW3Cといった標準化団体ではなく、独自のウェブサイト（jsonrpc.org）で公開・管理されています。この仕様はHTTPだけでなく、TCP/IPソケットなど様々な通信プロトコル上での利用を想定しており、基本的かつ共通の機能のみが定義されています。
+
+<div style="width: 50%;">
+<ol style="font-size: 0.7em;">
+
+
 **レスポンス例**:
 ```json
 {
@@ -313,82 +528,29 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 }
 ```
 
----
+</ol>
+</div>
+</div>
 
-## JSON-RPCによる通信方式 (2/2)
-
-![bg right:40% 95%]
-
-### MCPの通信フロー
-
-1. **初期化フェーズ**
-   - クライアントが`initialize`でケイパビリティ宣言
-   - サーバーが利用可能な機能を応答
-
-2. **リソース探索**
-   - `resources/list`で利用可能なリソース一覧取得
-   - `resources/get`で特定リソースのデータ取得
-
-3. **ツール呼び出し**
-   - `tools/list`でサーバー上のツール一覧取得
-   - `tools/call`で特定ツールの実行要求
-
-**利点**: シンプルさと互換性を両立した標準的な通信プロトコル
 
 ---
 
-## 通信トランスポート
-
-![bg right:40% 90%]
-
-### STDIOトランスポート (ローカル接続)
-
-- 標準入出力を使用したプロセス間通信
-
-- LLMアプリが子プロセスとしてMCPサーバー起動
-
-- 認証不要、高速、シンプル
-
-- ローカルツール連携に最適
-
-### HTTPトランスポート (リモート接続)
-
-- **旧**: HTTP + SSE (Server-Sent Events)による複雑な実装
-
-- **新**: Streamable HTTP Transport (2025-03-26)
-  - 単一エンドポイント (`/message`) 
-  - ステートレスモード対応
-  - サーバーレス環境での実装が容易に
-
----
-
-## 2025-03-26仕様の主要革新点 (1/3)
-
-![bg right:40% 90%]
+## 2025-03-26仕様の主要革新点 (1/4)
 
 ### 1. Streamable HTTP Transport
 
 - **シンプル化**: 単一エンドポイント(`/message`)に統合
 
-- **柔軟性向上**: SSEが任意（従来は必須）
+- **柔軟性向上**: 簡単にいうと軽量になった、SSEが任意（従来は必須）
 
-- **TypeScript SDK 1.10.0で実装済み** (SDKによっては未対応)
+- **TypeScript SDK で実装済み** (SDKによっては未対応)
 
-### クライアント-サーバー通信の流れ
+- WebSocket が必要な場合、不要な操作およびネットワークのオーバーヘッドが大量に発生するので採用は見送られた[ #206](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/206)
 
-1. **単一エンドポイント利用**
-   - POSTリクエストに全ての通信を集約
-   - SSEは任意機能（プッシュ通知が必要な場合のみ使用）
-
-2. **セッション管理のオプション**
-   - `Mcp-Session-Id` ヘッダーでセッション紐付け
-   - ヘッダーなしで完全ステートレスにも対応
 
 ---
 
-## 2025-03-26仕様の主要革新点 (2/3)
-
-![bg right:40% 90%]
+## 2025-03-26仕様の主要革新点 (2/4)
 
 ### 2. ステートレスモード
 
@@ -406,53 +568,123 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 - **新機能**: 永続化層不要、JWT等と組み合わせて認証可能
 
-**革新ポイント**: クラウドネイティブ環境でのMCP実装が大幅に簡素化
 
 ---
 
-## 2025-03-26仕様の主要革新点 (3/3)
+## 2025-03-26仕様の主要革新点 (3/4)
 
-![bg right:40% 90%]
+### OAuth 2.1認証フレームワーク
 
-### 3. OAuth 2.1認証フレームワーク
-
-- **認証の標準化**: OAuth 2.1による認可フロー対応
-
-- **実装の柔軟性**: 認証は任意実装だが推奨
-
+- **認証の標準化**: OAuth 2.1による包括的な認可フロー対応
+- **実装の柔軟性**: 認証は任意実装(OPTIONAL)だが推奨
 - **HTTP**: OAuthベース認証、**STDIO**: 環境変数経由認証
+- **関心事の分離**: プロトコル中核部分をクリーンに保持
 
-### 4. Tool annotations & その他の改善
+---
+
+## 2025-03-26仕様の主要革新点 (4/4)
+
+### Tool annotations & その他の改善
 
 - **ツール注釈**: 動作特性を明示するメタデータ
-   - `destructiveHint`（破壊的更新の可能性）
-   - `idempotentHint`（重複呼出の安全性）
-   - `readOnlyHint`（環境変更なしを示す）
-   - `openWorldHint`（外部エンティティとの相互作用）
+   - `destructiveHint` (破壊的更新の可能性)
+   - `idempotentHint` (重複呼出の安全性)
+   - `readOnlyHint` (環境変更なしを示す)
+   - `openWorldHint` (外部エンティティとの相互作用)
+   - `title` (人間が読みやすいタイトル)
 
-- **バッチ処理**: 複数リクエストの一括送信対応
-
+- **バッチ処理**: 複数リクエストの一括送信対応が必須化
 - **マルチモーダル拡張**: オーディオデータサポート
+- **進捗説明**: `ProgressNotification`に`message`フィールド追加
+- **タイムアウト処理**: 接続ハングやリソース枯渇防止の仕組み改善
 
-**セキュリティ強化**: エンタープライズ利用に向けた品質・安全性向上
 
 ---
 
-## AWS/クラウド環境での実装事例
+## AWS MCP Servers (1/2)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/aws_mcp_servers.png" alt="AWS MCP" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://github.com/awslabs/mcp
+</div>
+</div>
+
+<div style="width: 60%;">
+
+<ol style="font-size: 0.8em;">
+
+### AWS Documentation MCP Server
+- **AWS公式ドキュメント検索**
+- サービス・API・パラメータ情報取得
+- ベストプラクティス参照
 
 
-<div style="width: 70%;">
-<ol style="font-size: 0.9em;">
+### Bedrock Knowledge Bases MCP Server
+- **カスタムナレッジベース連携**
+- 自社ドキュメント・Wiki活用
+- 独自Q&Aデータベース
 
-### [AWS MCP Servers](https://github.com/awslabs/mcp)
+</ol>
 
-- **Bedrock Knowledge Bases MCP**: 社内文書検索
+<ol style="font-size: 0.7em;">
+実装を見るだけで参考になることも多い。</br>
+toolのデザインや考え方が勉強になります。
+</ol>
+</div>
+</div>
 
-- **AWS Documentation MCP**: ドキュメント検索
+---
 
-- **CDK/Terraform MCP**: インフラ定義支援
+## AWS MCP Servers (2/2)
 
-- **Lambda MCP**: カスタム関数実行
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/aws_mcp_servers.png" alt="AWS MCP" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://github.com/awslabs/mcp
+</div>
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.8em;">
+
+### CDK MCP Server
+- **AWS CDKプロジェクト支援**
+- コンストラクト情報参照/プロパティ・メソッド詳細
+
+### Terraform MCP Server
+- **Terraformプロバイダー情報参照**
+- リソース・データソース詳細/モジュール構造解析
+
+
+### Lambda MCP Server
+- **任意のLambda関数をMCPツールとして実行**
+- カスタムインテグレーション
+
+---
+
+## kubectl-ai: Kubernetes用AIアシスタント (1/2)
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/kubectl-ai.png" alt="kubectl-ai" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://github.com/GoogleCloudPlatform/kubectl-ai
+</div>
+</div>
+
+<div style="width: 60%;">
+<ol style="font-size: 0.8em;">
+
+### 概要
+- **Google Cloudの大規模言語モデルを活用したkubectlプラグイン**
+- **自然言語でKubernetesクラスタを操作**
+- クラスタ状態を考慮した応答生成
+- **MCPとしても利用可能**
+- https://github.com/GoogleCloudPlatform/kubectl-ai
+
 
 </ol>
 </div>
@@ -460,7 +692,43 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ---
 
+## kubectl-ai: Kubernetes用AIアシスタント (2/2)
+
+実用的なコマンド例：
+
+```bash
+# デプロイメント作成
+kubectl ai "nginxのDeploymentを作成して、レプリカ数は3、リソース制限ありで"
+
+# トラブルシューティング
+kubectl ai "なぜPodがPendingのままなのか調査して"
+
+# スケーリング操作
+kubectl ai "payment-serviceのレプリカを3から5に増やして"
+```
+
+---
+
+## kubectl-aiの活用パターン
+
+```bash
+# リソース最適化
+kubectl ai "すべてのDeploymentのリソース使用状況を分析し、最適化案を提示して"
+
+# セキュリティ診断
+kubectl ai "クラスタ内の潜在的なセキュリティリスクを検出して"
+```
+
+- **複雑なKubernetes操作を自然言語で実行可能に**
+- **現在のクラスタ状態に基づいた適切な提案**
+- **特定の状況に合わせたトラブルシューティング**
+
+
+---
+
 ### 各種サービスのMCP実装例
+
+各サービスベンダーもMCP実装を進めています。人の夢は!!! 終わらねェ!!!
 
 - [**Datadog MCP**](https://github.com/winor30/mcp-server-datadog)(非公式)
   - **監視データやログの自然言語分析**
@@ -472,9 +740,20 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ---
 
-## tfmcp - Terraformを操作するMCPサーバー例
+##  自分でMCPサーバーを作る
 
-![bg right:40% 90%]
+### tfmcp - Terraformを操作するMCPサーバー例
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/tfmcp_arc.png" alt="AWS MCP" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+</div>
+</div>
+
+<div style="width: 70%;">
+<ol style="font-size: 0.9em;">
 
 ### アーキテクチャと実装
 
@@ -487,6 +766,25 @@ tfmcp
 └── terraform   - Terraform連携
 ```
 
+</ol>
+</div>
+</div>
+
+---
+
+## tfmcp - Terraformを操作するMCPサーバー例
+
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/tfmcp_arc.png" alt="AWS MCP" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+</div>
+</div>
+
+<div style="width: 70%;">
+<ol style="font-size: 0.9em;">
+
 ### 主な機能と利点
 
 - **使用言語**: Rust (高性能で安全な実装)
@@ -497,13 +795,26 @@ tfmcp
 
 - **主な機能**: 設定解析、計画実行、状態管理、適用実行
 
-**実装例**: インフラ管理をLLMから自然言語で操作可能に
+**実装例**: インフラ管理をLLMから自然言語で操作可能になる
+
+</ol>
+</div>
+</div>
 
 ---
 
-## tfmcp - 実装から学ぶMCPの本質
+## tfmcp - 実装から学ぶMCPについて
 
-![bg right:40% 90%]
+<div style="display: flex; gap: 5px;">
+<div style="width: 45%;">
+<img src="../../assets/images/2025/MCPDAWN/tfmcp_arc.png" alt="AWS MCP" style="width: 80%; height: fit-content;">
+<div style="font-size: 0.5em; text-align: left; margin-top: 5px;">
+出典: https://syu-m-5151.hatenablog.com/entry/2025/03/09/020057
+</div>
+</div>
+
+<div style="width: 70%;">
+<ol style="font-size: 0.9em;">
 
 ### 公式SDKを使わない独自実装の価値
 
@@ -513,45 +824,43 @@ tfmcp
 
 - **軽量な依存関係**: 必要最小限のコードで構築
 
-### tfmcpの開発アプローチ
-
-- **Rustによる高パフォーマンス実装**
-  - 型安全性、堅牢なエラー処理
-  - 効率的な非同期処理
-
-- **JSON-RPC仕様を直接実装**
-
-- **最小限のコード行数で必要機能を実現**
-
-**開発者へのメッセージ**: 「MCPは実装してこそ理解できる。実装を通じて標準の本質を掴み、独自の拡張も検討してみよう」
+<ol style="font-size: 0.8em;">
+「MCPは実装してこそ理解できる。実装を通じて感覚を掴み、独自の拡張も検討できる。何ができて何ができないかを体感してほしいです」
+</ol>
+</div>
+</div>
 
 ---
 
-## 社内応用シナリオ
 
-![bg right:40% 90%]
+## MCPがもたらす業務変革の具体例
 
-### 導入しやすいユースケース
+1. **社内知識の民主化と活性化**
+   - 埋もれた資料を瞬時に発掘し、組織の「知の格差」を解消
+   - 新入社員でもベテランの知見にAI経由で即アクセス可能に
 
-1. **ナレッジベース連携**
-   - 社内Wiki/Confluence検索サーバー
-   - ドキュメント管理システムとLLMの統合
+2. **「煩わしい」開発タスクからの解放**
+   - 「リリース手順書見てください」から「リリースして」へ
+   - コードレビューの単純指摘をAIが担当し、創造的思考に集中
 
-2. **開発業務支援**
-   - CI/CD操作の自然言語インターフェース
-   - コード生成・テスト支援
+---
 
-3. **データ分析基盤連携**
-   - BIツールとLLMの統合
-   - データ探索・可視化の自然言語操作
+## MCPがもたらす業務変革の具体例
 
-**組織的価値**: 既存システム資産をAIで活性化する「共通言語」の確立
+3. **データドリブン意思決定の加速**
+   - 「このデータどう分析すれば...」から「このデータから何がわかる？」へ
+   - 非エンジニアでも複雑なデータインサイトを会話感覚で引き出せる
 
+
+### ビジネスインパクト
+
+- 属人化したシステム運用知識を「全社の資産」として再定義
+- 「マニュアル作成→共有→トレーニング」のサイクルを短縮し、即戦力化を実現
+- 試作版MCP実装で「どこまでをカスタマイズすべきか」を実データで判断可能に
 ---
 
 ## セキュリティリスクと対策
 
-![bg right:40% 95%]
 
 ### MCPのセキュリティリスク
 
@@ -560,44 +869,23 @@ tfmcp
 - **データ漏洩のリスク**: 機密情報の外部漏洩
 - **プロンプトインジェクション攻撃**: 悪意あるプロンプトによる予期しない操作
 
-### 実装時のベストプラクティス
+---
+
+## セキュリティリスクと対策
+
+### 利用・実装時のベストプラクティス
 
 - **信頼できるソースのみ利用**: 公式リポジトリや信頼できる開発者のコードを確認
 - **最小権限の原則適用**: 必要最小限の権限のみを付与
 - **サンドボックス環境での実行**: 隔離環境によるアクセス制限
 - **監査ログの有効化**: 実行コマンドや操作の記録と定期確認
 - **機密情報のフィルタリング**: APIキーやパスワード等の検出・削除
+- **ツールのセキュリティチェック**: ツールのセキュリティ特性を確認([riseandignite/mcp-shield](https://github.com/riseandignite/mcp-shield),[invariantlabs-ai/mcp-scan](https://github.com/invariantlabs-ai/mcp-scan)などがある)
+
 
 ---
 
-## MCP vs. 他プロトコル - 戦略的位置づけ
-
-![bg right:40% 90%]
-
-### プロトコル比較
-
-|  | **MCP** | **A2A** | **OpenAI Functions** |
-|--|---------|---------|----------------------|
-| **設計思想** | 外部ツール・データ連携 | エージェント間協調 | 単一モデル用関数呼出 |
-| **標準化** | オープン標準 | 一部オープン | ベンダー仕様 |
-| **汎用性** | 言語非依存 | JSON/HTTP | OpenAI専用 |
-| **実用例** | 数百プロジェクト | 初期段階 | OpenAI実装のみ |
-
-### A2Aとの関係性
-
-- **目的の違い**: MCPは「エージェント→ツール」、A2Aは「エージェント→エージェント」
-
-- **用途の住み分け**: 両者は競合ではなく補完関係
-
-**優位点**: MCPはAIツール連携の実質的業界標準に
-
----
-
-## まとめ：AIとシステムの新たな結合点
-
-![bg right:40% 90%]
-
-### 実用段階に入ったMCP
+## まとめ
 
 1. **オープン標準のパワー**
    - ベンダーロックイン回避と互換性確保
@@ -608,13 +896,8 @@ tfmcp
    - OAuth認証・ツール注釈で本番環境での利用障壁を低減
 
 3. **次のステップ**
-   - TypeScript SDKで始める最新実装
-   - クラウドネイティブ環境での利用検討
-   - 既存システムとの統合で新たな価値創出
-
-**MCPは、AIシステム連携のDNAとなる**
-
-**LLMと世界を繋ぐ「共通言語」として、AIアプリケーションの未来を形作る**
+   - 仕様が安定してきたので、実装を進めていくのも良いかも
+   - 運用やセキュリティに気をつけながら既存システムとの統合を目指す
 
 ---
 
