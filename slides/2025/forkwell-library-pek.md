@@ -1124,7 +1124,7 @@ spec:
 </div>
 
 <div style="background-color: #E9F4FF; border-radius: 10px; padding: 10px; margin-top: 15px; font-size: 0.8em; text-align: center;">
-<p style="font-style: italic; margin: 0;">「第9章では、DORAメトリクスを実装し、<>プラットフォームの成功を客観的に測定するための<br>具体的な方法が示されています」</p>
+<p style="font-style: italic; margin: 0;">「第9章では、DORAメトリクスを実装し、プラットフォームの成功を客観的に測定するための<br>具体的な方法が示されています」</p>
 </div>
 
 ---
