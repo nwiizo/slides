@@ -210,218 +210,161 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ## 開発哲学の大転換
 
-### 問題解決のアプローチが変わる
+### 「具体と抽象の往復」という本質的スキル
 
-従来：優秀なエンジニア = 高度な実装技術を持つ人
+<div style="text-align: center; font-size: 1.2em; margin-top: 30px;">
 
-Claude Code時代：優秀なエンジニア = **問題を適切に分解・定義・設計できる人**
-
----
-
-## 人間とAIの新しい役割分担
-
-### 🤔 人間の役割
-- Why（なぜ作るのか）を問う
-- メタ視点で問題を捉える
-- 抽象的な設計を行う
-
-### 🤖 Claude Codeの役割  
-- How（どう作るか）を実装
-- 数字と固有名詞で具体化
-- コードに落とし込む
-
----
-
-## 重要な非対称性
-
-<div style="text-align: center; font-size: 1.2em; margin-top: 50px;">
-
-**抽象の世界が見える人** → 具体の世界も見える ✅
-
-**具体の世界しか見えない人** → 抽象の世界が見えない ❌
+**AIは形式化された知識は扱えても、暗黙知は扱えない**
 
 </div>
 
-<div style="margin-top: 50px; font-size: 0.9em; text-align: center;">
-→ 適切な設計ができる人は、Claude Codeに適切な指示を出せる
-</div>
+<div style="margin-top: 30px;">
 
----
-
-## なぜ「Claude Code使えない」のか？
-
-### 答え：設計か言語化が下手
-
-<div style="font-size: 1.1em; margin-top: 40px;">
-
-**1️⃣ 設計が下手**
-- Whyを問えていない
-- メタ視点で問題整理できない
-
-**2️⃣ 言語化が下手**  
-- 抽象的要求を具体化できない
-- 数字と固有名詞で説明できない
+実装という「形式知」はClaude Codeが処理</br>
+設計という「暗黙知の形式知化」は人間の役割
 
 </div>
 
 ---
 
-## 「具体→抽象→具体」のサイクル
-
-<div style="text-align: center; font-size: 1.3em; margin-top: 60px;">
-
-🔄 表面的な問題（具体）
-
-↓
-
-🎯 本質的な課題（抽象）  
-
-↓
-
-✨ 新たな解決策（具体）
-
-</div>
-
-<div style="margin-top: 50px; text-align: center;">
-このサイクルを回せない → Claude Codeは「使えないツール」
-</div>
-
----
-
-## 「自分でやった方が早い」という幻想
-
-### 原因：設計を軽視しすぎ
-
-- 具体レベルの効率性に囚われる
-- 抽象レベルの最適化を見落とす
-
-### 規模が大きくなると...
-
-📈 実装の手数は**線形以上**に増える
-
-→ 短期間で手数を打てる体力が重要
-
----
-
-## 実装スキルの価値低下
+## 抽象化は誰でも身につけられるスキル
 
 <div style="text-align: center; font-size: 1.1em; margin-top: 30px;">
 
-> 「実装スキルの相対的な重要性が、AIツールの登場により再定義されている」
+抽象化は特別な才能ではなく、</br>
+**正しく学べば誰でも身につけられるスキル**
 
 </div>
 
-### これからのエンジニアの役割
+### 既にあなたが日常的に実践していること
 
-<div style="font-size: 1.1em; margin-top: 40px; text-align: center;">
+<div style="margin-top: 30px; font-size: 1.1em;">
 
-高度な実装技術の追求から</br></br>
-👇</br></br>
-**問題の適切な分解**</br>
-**明確な定義**</br>
-**効率的な解決への設計**
-
-</div>
-
----
-
-## エンジニアの新たな価値基準
-
-<div style="text-align: center; font-size: 1.3em; margin-top: 50px;">
-
-これからのエンジニアに求められるのは、</br>
-高度な実装技術よりも
+- 要求から仕様へ（抽象→具体）
+- 業務知識から設計へ（具体→抽象）
 
 </div>
 
 <div style="text-align: center; margin-top: 40px;">
+Claude Codeはこの往復運動を</br>
+より高速に、より効果的に行うためのツール
+</div>
 
-### 🎯 問題を適切に分解する能力
+---
 
-### 📦 明確に定義する能力
+## なぜClaude Codeが「使えない」と感じるのか
 
-### 🚀 効率的に解決へ導く設計能力
+### 1️⃣ 抽象度のミスマッチ
+
+```bash
+# ❌ 悪い例
+"いい感じのWebアプリ作って"
+
+# ✅ 良い例
+"認証機能付きのタスク管理システムで、
+優先度による並び替えとフィルタリング機能を実装"
+```
+
+<div style="margin-top: 30px; font-size: 0.9em;">
+上司の「いい感じにしといて」と同じように、</br>
+AIに対しても適切な抽象度での指示が必要
+</div>
+
+---
+
+## 2️⃣ 具体化の方向性を示していない
+
+### 抽象から具体への選択肢
+
+<div style="font-size: 1.1em; margin-top: 30px;">
+
+**「ユーザー管理」という抽象**
+
+- メール認証？
+- ソーシャルログイン？  
+- 多要素認証？
+
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+AIは「ある一つの具体」を選ぶが、</br>
+それがあなたの期待と一致するとは限らない
+</div>
+
+---
+
+## 3️⃣ 往復の欠如
+
+### 一度の指示で完璧を求めるのではなく
+
+<div style="font-size: 1.1em; margin-top: 30px;">
+
+1. 初期の抽象的な指示</br>
+2. 生成された具体（コード）の確認</br>
+3. より精緻な抽象への昇華</br>
+4. 改善された具体化
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
+この**往復運動**を繰り返すことが重要
+</div>
+
+---
+
+## 「自分でやった方が早い」の落とし穴
+
+<div style="text-align: center; font-size: 1.1em; margin-top: 30px;">
+
+これは**具体に囚われすぎている**状態
+
+</div>
+
+### 自問すべきこと
+
+<div style="margin-top: 30px;">
+
+- その実装から抽象を導き出せているか？
+- 次に類似の問題に直面した時、より良い設計ができるか？
+- チームメンバーに説明できる抽象的な概念として整理できているか？
 
 </div>
 
 ---
 
-## 比喩で理解するClaude Code①
+## 実装スキルから設計スキルへのシフト
 
+### 価値の源泉が変化している
 
-<div style="display: flex; justify-content: space-between; gap: 40px;">
+<div style="display: flex; gap: 40px; align-items: center; margin-top: 40px;">
 
-<div style="flex: 1;">
+<div style="flex: 1; text-align: center;">
 
-#### 🔧 従来のツール
-**= 「高性能な電動ドライバー」**
-<div style="font-size: 0.8em;">
+**従来**
 
-- 🔩 一つずつのネジ(コード)を効率的に締める
-- 📋 でも設計図は人間が用意する必要がある
-- ✋ 作業の大部分は依然として手作業
+実装の巧拙が</br>
+エンジニアの価値を決めた
+
+</div>
+
+<div style="font-size: 2em;">
+→
+</div>
+
+<div style="flex: 1; text-align: center;">
+
+**これから**
+
+設計の良し悪しが</br>
+成果の質を決める
 
 </div>
 
 </div>
 
-<div style="flex: 1;">
-
-#### 🏗️ Claude Code  
-**= 「熟練の現場監督 + 職人チーム」**
-<div style="font-size: 0.8em;">
-
-- 📐 設計図の理解から施工まで一貫して担当
-- 🔄 問題発見時の自律的な修正・改善
-- 👁️ プロジェクト全体を俯瞰した判断
-
+<div style="text-align: center; margin-top: 40px; font-size: 0.9em;">
+実装はClaude Codeが担当、設計は人間の仕事
 </div>
-
-</div>
-
-</div>
-
-※ あくまで比喩的な説明です。細かい差異についてはご容赦ください
-
-
----
-
-## 比喩で理解するClaude Code②
-
-<div style="display: flex; justify-content: space-between; gap: 40px;">
-
-<div style="flex: 1;">
-
-#### 🔨 従来の開発：町工場
-<div style="font-size: 0.8em;">
-
-- 👨‍🔧 職人（開発者）が一つずつ手作業
-- 🎯 品質は職人の技量に依存
-- 📏 スケールには限界がある
-- 👤 人間は「職人」として個別対応
-
-</div>
-
-</div>
-
-<div style="flex: 1;">
-
-#### 🏭 Claude Code導入後：自動化工場  
-<div style="font-size: 0.8em;">
-
-- 📋 設計図（CLAUDE.md）に基づく生産
-- ✅ 品質保証（lint/test）の自動化
-- ⚡ 並列処理（Task tool）でスケール
-- 👨‍💼 人間は「工場長」として全体を指揮
-
-</div>
-
-</div>
-
-</div>
-
-
-※ あくまで比喩的な説明です。細かい差異についてはご容赦ください
 
 ---
 
@@ -513,6 +456,49 @@ claude --continue
 
 <div style="margin-top: 30px; font-size: 0.9em;">
 💡 パフォーマンス維持のため、定期的なクリアが効果的
+</div>
+
+---
+
+# 具体と抽象の往復を鍛える実践方法
+
+---
+
+## 日常的な往復の意識化
+
+```javascript
+// これはif文で考えると？
+if (才能がない) {
+  // 何をする？実装があるの？
+  // なければこのifは無意味
+}
+```
+
+<div style="margin-top: 30px;">
+
+毎日のコーディングの中で、</br>
+**「これって結局何を解決してるんだっけ？」**</br>
+という問いを持つことから始まる
+
+</div>
+
+---
+
+## Claude Codeとの対話を通じた訓練
+
+<div style="font-size: 1.1em;">
+
+- **初回**：抽象的な要求を伝える
+- **確認**：生成された具体を評価
+- **抽象化**：「つまりこれは○○ということだよね」
+- **具体化**：「例えばこういうケースでは△△だよね」
+- **改善**：より良い抽象度で再指示
+
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+この往復を意識的に繰り返すことで、</br>
+抽象と具体の間を自在に行き来できるようになる
 </div>
 
 ---
@@ -891,17 +877,17 @@ environment_run_cmdツールでgit cliをインストールしたり使用した
 
 <div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
 
-**実装能力** → **抽象化能力 + 言語化能力**
+**実装能力** → **具体と抽象の往復能力**
 
 </div>
 
 <div style="margin-top: 40px;">
 
-#### なぜこの変化が起きているのか？
+#### 開発の本質が変わった
 
-- **Why（抽象）** を人間が担当
-- **How（具体）** をClaude Codeが担当
-- この分業により、開発の本質が変わった
+- 実装という**具体的な労力**はAIが担当
+- 設計という**抽象的な能力**は人間が担当
+- 重要なのは、この2つを**往復できる**こと
 
 </div>
 
@@ -979,29 +965,45 @@ AIに適切に伝えることが</br>
 
 <div style="text-align: center; margin-top: 50px; font-size: 1.1em;">
 
-**この変化を受け入れ、スキルセットを再定義することが成功への鍵**
+**具体と抽象を自在に往復する ー それが次世代のエンジニアリング**
 
 </div>
 
 ---
 
-## まとめ：次世代の開発で成功するために
+## まとめ：手を動かした者だけが、世界を変える
 
-<div style="text-align: center; font-size: 1.2em; margin-top: 40px;">
+Claude Codeは実装という「手を動かす」部分を代替してくれます。
 
-この変化を受け入れ、</br>
-自身のスキルセットを再定義することが</br>
-**次世代の開発において成功する鍵**
+しかし、**抽象と具体の往復という「頭を動かす」部分**は、私たち人間の仕事です。
+
+<div style="text-align: center; font-size: 1.2em; margin-top: 30px;">
+
+実装スキルが重要じゃないのではありません。</br></br>
+**実装という具体に囚われず、**</br>
+**抽象と具体を自在に往復できることこそが、**</br>
+**真に重要なスキル**なのです。
 
 </div>
 
-### 具体的なアクション
+---
+
+## あなたも既に実践している
+
+### このスキルは誰もが身につけることができます
 
 <div style="margin-top: 30px;">
 
-1. **設計スキルの強化** - 問題分解と抽象化の訓練
-2. **言語化能力の向上** - 要件を明確に伝える技術
-3. **AIツールの活用** - Claude Codeなどをパートナーとして
+なぜなら、プログラミングをしているあなたは、</br>
+既に日常的にこの往復運動を実践しているからです。
+
+あとは、それを**自覚的に**行うだけです。
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
+
+> **昨日の自分に誇れる、今日の自分になろう**
 
 </div>
 
@@ -1019,6 +1021,7 @@ AIに適切に伝えることが</br>
 ## 参考文献
 
 ### 実践事例・解説記事
+- [抽象化と具体化 ～プログラマの基本の"き"～](https://speakerdeck.com/soudai/abstraction-and-concretization)
 - [How I Use Claude Code](https://spiess.dev/blog/how-i-use-claude-code)
 - [LLMの制約を味方にする開発術](https://zenn.dev/hidenorigoto/articles/38b22a2ccbeac6)
 - [Claude Code版Orchestratorで複雑なタスクをステップ実行する](https://zenn.dev/mizchi/articles/claude-code-orchestrator)
