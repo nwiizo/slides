@@ -162,7 +162,7 @@ _class: title dark
 
 <div style="text-align: center; margin-top: 30px;">
 
-3-shakeは一緒にSRE界隈を盛り上げてくれる**仲間を大募集中**です！
+3-shakeは一緒にSRE界隈を盛り上げてくれる<strong>仲間を大募集中</strong>です！
 Mobility、FinTech、通信など大規模SREを存分に経験できます
 （最近社内はGenAI / GPU / Kubernetesが盛り上がってます）
 是非、カジュアル面談しましょう！！！！
@@ -187,11 +187,11 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ### 従来のAIアシスタントとの決定的な違い
 
-- **「コード生成器」→「開発パートナー」**
+- <strong>「コード生成器」→「開発パートナー」</strong>
   - 単体機能の提案から、プロジェクト全体の理解・実装まで(限りなく4に近い性能を持ち始めている)
   - エディタの外で動作、ターミナルネイティブな操作
 
-- **自律性の飛躍的向上**
+- <strong>自律性の飛躍的向上</strong>
   - 複数ファイルの連携変更
   - git操作、テスト実行、デバッグまで一貫して処理
   - 失敗時の自己修正・再試行
@@ -208,46 +208,46 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ---
 
-## 開発哲学の大転換
+## Claude Codeが変えるエンジニアの役割
 
-### 「具体と抽象の往復」という本質的スキル
+### 「コードを書く」から「意図を伝える」へ
 
-<div style="text-align: center; font-size: 1.2em; margin-top: 30px;">
+<div style="margin-top: 30px; font-size: 1.1em;">
 
-**AIは形式化された知識は扱えても、暗黙知は扱えない**
+今まで私たちエンジニアは、</br>
+<strong>「何を作りたいか」</strong>を考え、</br>
+<strong>「どう作るか」</strong>を実装していた
 
 </div>
 
-<div style="margin-top: 30px;">
+<div style="text-align: center; margin-top: 40px; font-size: 1.2em;">
 
-実装という「形式知」はClaude Codeが処理</br>
-設計という「暗黙知の形式知化」は人間の役割
+Claude Codeは<strong>「どう作るか」を自動化</strong>する</br>
+私たちは<strong>「なぜ作るか」に集中</strong>できる
 
 </div>
 
 ---
 
-## 抽象化は誰でも身につけられるスキル
+## 実は私たちが既にやっていること
 
-<div style="text-align: center; font-size: 1.1em; margin-top: 30px;">
+### エンジニアリングの日常
 
-抽象化は特別な才能ではなく、</br>
-**正しく学べば誰でも身につけられるスキル**
+<div style="margin-top: 30px; font-size: 1.05em;">
 
-</div>
+🔄 <strong>要件定義を読んでコードに落とす</strong>
+- 「ユーザーが求めているもの」から「具体的な実装」へ
 
-### 既にあなたが日常的に実践していること
-
-<div style="margin-top: 30px; font-size: 1.1em;">
-
-- 要求から仕様へ（抽象→具体）
-- 業務知識から設計へ（具体→抽象）
+🔄 <strong>コードを読んで設計を理解する</strong>  
+- 「具体的な実装」から「意図や目的」を読み取る
 
 </div>
 
-<div style="text-align: center; margin-top: 40px;">
-Claude Codeはこの往復運動を</br>
-より高速に、より効果的に行うためのツール
+<div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
+
+これが<strong>「具体と抽象の往復」</strong></br>
+Claude Codeはこの往復を<strong>高速化</strong>するツール
+
 </div>
 
 ---
@@ -272,13 +272,15 @@ AIに対しても適切な抽象度での指示が必要
 
 ---
 
-## 2️⃣ 具体化の方向性を示していない
+## なぜClaude Codeが「使えない」と感じるのか
 
-### 抽象から具体への選択肢
+### 2️⃣ 具体化の方向性を示していない
+
+#### 抽象から具体への選択肢
 
 <div style="font-size: 1.1em; margin-top: 30px;">
 
-**「ユーザー管理」という抽象**
+<strong>「ユーザー管理」という抽象</strong>
 
 - メール認証？
 - ソーシャルログイン？  
@@ -293,9 +295,11 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 ---
 
-## 3️⃣ 往復の欠如
+## なぜClaude Codeが「使えない」と感じるのか
 
-### 一度の指示で完璧を求めるのではなく
+### 3️⃣ 往復の欠如
+
+#### 一度の指示で完璧を求めるのではなく
 
 <div style="font-size: 1.1em; margin-top: 30px;">
 
@@ -307,7 +311,7 @@ AIは「ある一つの具体」を選ぶが、</br>
 </div>
 
 <div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
-この**往復運動**を繰り返すことが重要
+この往復運動を繰り返すことが重要
 </div>
 
 ---
@@ -316,7 +320,7 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 <div style="text-align: center; font-size: 1.1em; margin-top: 30px;">
 
-これは**具体に囚われすぎている**状態
+これは<strong>具体に囚われすぎている</strong>状態
 
 </div>
 
@@ -340,7 +344,7 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 <div style="flex: 1; text-align: center;">
 
-**従来**
+<strong>従来</strong>
 
 実装の巧拙が</br>
 エンジニアの価値を決めた
@@ -353,7 +357,7 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 <div style="flex: 1; text-align: center;">
 
-**これから**
+<strong>これから</strong>
 
 設計の良し悪しが</br>
 成果の質を決める
@@ -393,17 +397,17 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 ### 特性を理解した上での活用
 
-Claude Codeは**圧倒的な実装スピード**を持つ一方で、
-**コンテキストの保持**や**暗黙の了解**には対応していない
+Claude Codeは<strong>圧倒的な実装スピード</strong>を持つ一方で、
+<strong>コンテキストの保持</strong>や<strong>暗黙の了解</strong>には対応していない
 暗黙知を形式知に変換し、明示的な指示を与えることが重要です。
 
 <div style="margin-top: 30px;">
 
 #### この特性を踏まえた3つのポイント
 
-1️⃣ **明示的な指示** - 曖昧さを排除する
-2️⃣ **タスク管理** - TodoWriteで状態を保存
-3️⃣ **コンテキスト制御** - 定期的な/clearで最適化
+1️⃣ <strong>明示的な指示</strong> - 曖昧さを排除する
+2️⃣ <strong>タスク管理</strong> - TodoWriteで状態を保存
+3️⃣ <strong>コンテキスト制御</strong> - 定期的な/clearで最適化
 
 </div>
 
@@ -460,45 +464,54 @@ claude --continue
 
 ---
 
-# 具体と抽象の往復を鍛える実践方法
+# 「なぜ」を問う力を鍛える実践方法
 
 ---
 
-## 日常的な往復の意識化
+## 「なぜ」の習慣化
 
-```javascript
-// これはif文で考えると？
-if (才能がない) {
-  // 何をする？実装があるの？
-  // なければこのifは無意味
+### コードの背後にある意図を言語化する
+
+```rust
+// ❌ 「何を」しているかだけ
+fn process_data(input: Vec<String>) -> Vec<String> {
+    input.iter().filter(|s| !s.is_empty()).collect()
+}
+
+// ✅ 「なぜ」そうするのかを明確に
+// 空文字列を除外する理由:
+// 1. データベースインポート時のNull値対策
+// 2. 後続処理でのエラー防止
+// 3. UI表示時のレイアウト崩れ回避
+fn sanitize_import_data(raw_data: Vec<String>) -> Vec<String> {
+    raw_data.iter().filter(|s| !s.is_empty()).collect()
 }
 ```
 
-<div style="margin-top: 30px;">
-
-毎日のコーディングの中で、</br>
-**「これって結局何を解決してるんだっけ？」**</br>
-という問いを持つことから始まる
-
-</div>
-
 ---
 
-## Claude Codeとの対話を通じた訓練
+## Claude Codeで「なぜ」を明確化する訓練
 
-<div style="font-size: 1.1em;">
+### 意図の言語化サイクル
 
-- **初回**：抽象的な要求を伝える
-- **確認**：生成された具体を評価
-- **抽象化**：「つまりこれは○○ということだよね」
-- **具体化**：「例えばこういうケースでは△△だよね」
-- **改善**：より良い抽象度で再指示
+<div style="font-size: 1.05em; margin-top: 30px;">
+
+1. <strong>要求の背景を説明</strong>
+   - 「○○機能を作って」→ 「○○の問題を解決するために」
+
+2. <strong>生成コードの意図を確認</strong>
+   - 「この実装は、つまり○○を意図している？」
+
+3. <strong>代替アプローチの提案</strong>
+   - 「別の観点から、△△でも解決できる？」
+
+4. <strong>トレードオフの明示化</strong>
+   - 「性能と保守性、どちらを優先すべき？」
 
 </div>
 
-<div style="text-align: center; margin-top: 30px;">
-この往復を意識的に繰り返すことで、</br>
-抽象と具体の間を自在に行き来できるようになる
+<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
+<strong>「何を作るか」ではなく「なぜ作るか」を伝える習慣</strong>
 </div>
 
 ---
@@ -598,8 +611,8 @@ claude --continue  # 直前のセッション継続
 
 ### MCP（Model Context Protocol）の戦略的活用
 
-**原則**: 必要最小限での利用
-- **基本操作はClaude Code標準機能で十分**
+<strong>原則</strong>: 必要最小限での利用
+- <strong>基本操作はClaude Code標準機能で十分</strong>
 - MCPは「どうしても標準機能では難しい場合」のみ、パスごとに設定する
 - 例：[playwright-mcp](https://github.com/microsoft/playwright-mcp) でのブラウザ自動化
 
@@ -664,10 +677,7 @@ Step 4: 最終検証とベンチマーク実行
 - cargo publishの事前検証
 - タグ作成とGitHub Release準備
 
-**効果**: 手動30分の作業 → 自動5分で完了(MCPを立てるとリソースも喰うので⋯)
-
----
-
+<strong>効果</strong>: 手動30分の作業 → 自動5分で完了(MCPを立てるとリソースも喰うので⋯)
 
 ---
 
@@ -685,16 +695,16 @@ fn send_email(to: &str, subject: &str) {
 }
 ```
 
-**効果**: AIが自動的にメール確認→リンククリック→認証完了までを実行可能
+<strong>効果</strong>: AIが自動的にメール確認→リンククリック→認証完了までを実行可能
 
 ---
 
 ## ログ設計の戦略
 
 ### ログの「ちょうど良い」バランスも変わるのではないか？
-- **情報不足**: AIが問題を理解できない
-- **情報過多**: トークン消費量増加、推論速度低下  
-- **理想**: 問題解決に必要な情報のみを適切なタイミングで簡潔に
+- <strong>情報不足</strong>: AIが問題を理解できない
+- <strong>情報過多</strong>: トークン消費量増加、推論速度低下  
+- <strong>理想</strong>: 問題解決に必要な情報のみを適切なタイミングで簡潔に
 
 デバッグモードでは、AIが理解しやすいように、必要な情報を自動的に出力することが重要になりそうです。
 良いログ、悪いログの基準も変わる可能性があります。
@@ -729,10 +739,10 @@ IMPORTANT: カスタムエラー型でエラーコンテキストを明確化
 #### 開発効率を上げる基本原則
 <div style="font-size: 0.8em;">
 
-- **高速フィードバック**: コンパイル・テストの高速化
-- **明確なエラーメッセージ**: AIが理解しやすい診断情報
-- **統一されたツールチェーン**: 一貫したコマンド体系
-- **自動化可能な品質チェック**: 繰り返し作業の削減
+- <strong>高速フィードバック</strong>: コンパイル・テストの高速化
+- <strong>明確なエラーメッセージ</strong>: AIが理解しやすい診断情報
+- <strong>統一されたツールチェーン</strong>: 一貫したコマンド体系
+- <strong>自動化可能な品質チェック</strong>: 繰り返し作業の削減
 
 </div>
 
@@ -772,9 +782,9 @@ Step 5: テスト作成・tokio-testでの非同期テスト
 ---
 
 
-### 4. 並列開発の活用
+### 4. 品質を高める並列開発
 
-#### Git Worktreeで同時開発
+#### 複数アプローチの同時検証
 ```bash
 # メインプロジェクト
 git worktree add ../project-feature-a feature-a
@@ -787,31 +797,46 @@ cd ../project-feature-b && claude-code "tokio CLI ツール実装"
 
 ---
 
-### 4. 並列開発の活用
+### 4. 品質検証の並列化
 
-#### Taskツールでサブタスク分割
+#### 複数観点からのコード評価
 
-ツールやCLAUDE.md を活用して、複雑な実装を小さなタスクに分割し、並列で進めることが可能です。Claude Codeでは以前にやっていたロールの設定とかはあまり意味がないのでタスクを淡々とやらせたほうがいい。
+<div style="font-size: 0.95em;">
+
+ツールやCLAUDE.md を活用して、<strong>同じ機能を複数のアプローチで実装</strong>し、</br>
+最も良い品質のコードを選択することが可能です。
+
+</div>
 
 ```
-> 4つの観点でRustプロジェクト分析
+> 同じ機能を4つのアプローチで実装
 
-Task(Performance Expert)      ⏺ 並列実行
-Task(Security Expert)         ⏺ 並列実行  
-Task(Error Handling Expert)   ⏺ 並列実行
-Task(Testing Expert)          ⏺ 並列実行
+Task(パフォーマンス重視実装)    ⏺ 並列実行
+Task(メンテナンス重視実装)    ⏺ 並列実行  
+Task(セキュリティ重視実装)      ⏺ 並列実行
+Task(テスト容易性重視実装)    ⏺ 並列実行
 ```
 
 ---
 
 
-# ガードレールの設計
+# 品質を保証するガードレール
 
-AI開発において重要なのは、単なる開発速度の向上ではなく、**品質を担保しながら高速開発を実現する仕組み**です。
+### 高速開発と高品質の両立
 
-Claude Codeは確かに高速でコードを生成しますが、適切なガードレールがなければ、技術的負債やセキュリティリスクが蓄積されてしまいます。
+<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
 
-実装方法は様々ありますが、今日は特に効果的な3つのアプローチを紹介します。
+<strong>スピードを活かして、より良いコードを</strong>
+
+</div>
+
+Claude Codeの高速性は、単に「早く作る」ためのものではありません。</br>
+<strong>「何度も試して、最良を選ぶ」</strong>ためのツールです。
+
+ただし、適切なガードレールなしでは、</br>
+技術的負債やセキュリティリスクが蓄積されてしまいます。
+
+ここでは、特に効果的な3つのアプローチを紹介します。
 
 ---
 
@@ -873,75 +898,39 @@ environment_run_cmdツールでgit cliをインストールしたり使用した
 
 ## 🔄 開発プロセスの根本的な変化
 
-### 価値創出の源泉がシフト
+### エンジニアリングの価値軸が根底から変わった
 
-<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
+<div style="text-align: center; margin-top: 30px; font-size: 1.3em;">
 
-**実装能力** → **具体と抽象の往復能力**
+<strong>「どう作るか」の時代は終わった</strong></br>
+<strong>「なぜ作るか」の時代が始まった</strong>
 
 </div>
 
-<div style="margin-top: 40px;">
+<div style="margin-top: 40px; font-size: 1.1em;">
 
-#### 開発の本質が変わった
-
-- 実装という**具体的な労力**はAIが担当
-- 設計という**抽象的な能力**は人間が担当
-- 重要なのは、この2つを**往復できる**こと
+- <strong>実装の巧みさ</strong>で差がつく時代は過去に
+- <strong>意図の明確さ</strong>で成果が決まる時代へ
+- Claude Codeは<strong>実装の奴隷</strong>から<strong>思考の解放</strong>をもたらした
 
 </div>
 
 ---
 
-## Before & After
+## 開発の「速度」が変わると「質」も変わる
 
 <div style="display: flex; justify-content: space-between; gap: 40px; margin-top: 40px;">
 
-<div style="flex: 1; text-align: center;">
-
-### Before: 実装中心の開発
-
-<div style="margin-top: 30px; font-size: 1.1em;">
-
-複雑なアルゴリズムを</br>
-自分で実装できることが</br>
-**エンジニアの価値**だった
-
-</div>
-
-</div>
-
-<div style="flex: 1; text-align: center;">
-
-### After: 設計・言語化中心の開発
-
-<div style="margin-top: 30px; font-size: 1.1em;">
-
-問題の本質を見抜き</br>
-AIに適切に伝えることが</br>
-**エンジニアの価値**に
-
-</div>
-
-</div>
-
-</div>
-
----
-
-## 必要なスキルセットの変化
-
-<div style="display: flex; justify-content: space-between; gap: 60px; margin-top: 40px;">
-
 <div style="flex: 1;">
 
-### 📉 価値が下がったスキル
+### 🚶 従来: 1週間かけて1機能
 
-<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
+<div style="margin-top: 30px; font-size: 0.95em;">
 
-特定言語の深い知識</br>
-複雑な実装テクニック</br>
-手動でのコード最適化
+- 実装に時間を取られる
+- 設計の見直しは困難
+- <strong>「動けばいい」</strong>で妥協
+- フィードバックサイクルが遅い
 
 </div>
 
@@ -949,61 +938,124 @@ AIに適切に伝えることが</br>
 
 <div style="flex: 1;">
 
-### 📈 価値が上がったスキル
+### 🚀 Claude Code: 1日で10パターン
 
-<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
+<div style="margin-top: 30px; font-size: 0.95em;">
 
-**Whyを問う力**</br>
-**メタ認知能力**</br>
-**言語化能力**
-
-</div>
-
-</div>
+- 実装は瞬時に完了
+- 複数の設計を比較検討
+- <strong>「最適解は何か」</strong>を追求
+- 高速PDCAで品質向上
 
 </div>
 
-<div style="text-align: center; margin-top: 50px; font-size: 1.1em;">
-
-**具体と抽象を自在に往復する ー それが次世代のエンジニアリング**
-
 </div>
-
----
-
-## まとめ：手を動かした者だけが、世界を変える
-
-Claude Codeは実装という「手を動かす」部分を代替してくれます。
-
-しかし、**抽象と具体の往復という「頭を動かす」部分**は、私たち人間の仕事です。
-
-<div style="text-align: center; font-size: 1.2em; margin-top: 30px;">
-
-実装スキルが重要じゃないのではありません。</br></br>
-**実装という具体に囚われず、**</br>
-**抽象と具体を自在に往復できることこそが、**</br>
-**真に重要なスキル**なのです。
-
-</div>
-
----
-
-## あなたも既に実践している
-
-### このスキルは誰もが身につけることができます
-
-<div style="margin-top: 30px;">
-
-なぜなら、プログラミングをしているあなたは、</br>
-既に日常的にこの往復運動を実践しているからです。
-
-あとは、それを**自覚的に**行うだけです。
 
 </div>
 
 <div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
+<strong>量が質に転化する</strong> - これがClaude Code時代の開発
+</div>
 
-> **昨日の自分に誇れる、今日の自分になろう**
+---
+
+## 「早いコード」ではなく「良いコード」を
+
+### Claude Codeの真の価値は速度ではない
+
+<div style="margin-top: 30px; font-size: 1.1em;">
+
+<div style="text-align: center; margin-bottom: 30px;">
+<strong>重要なのは「早く書く」ことではなく</strong></br>
+<strong>「何度も書き直せる」こと</strong>
+</div>
+
+#### 🎯 質の高いコードが生まれる理由
+
+1. <strong>試行回数の増加</strong> - 10倍のアプローチを試せる
+2. <strong>比較検討の容易さ</strong> - 複数の実装を並べて評価
+3. <strong>リファクタリングの低コスト化</strong> - 気軽に最適化
+4. <strong>ベストプラクティスの適用</strong> - AIが最新パターンを提案
+
+</div>
+
+---
+
+## 新しい競争優位性の源泉
+
+### 「実装力」から「構想力」へのパラダイムシフト
+
+<div style="margin-top: 40px;">
+
+#### 💡 真の差別化要因
+
+1. <strong>問題発見力</strong> - そもそも何を解決すべきか
+2. <strong>アーキテクチャ設計力</strong> - 全体最適を描く力
+3. <strong>意図の言語化力</strong> - AIと協働する対話力
+4. <strong>品質基準の設定力</strong> - 「良い」を定義する力
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.2em; color: #4AADDD;">
+
+<strong>コードを書く能力ではなく、</strong>
+<strong>コードに込める意図の質で勝負する時代</strong>
+
+</div>
+
+---
+
+## エンジニアリングの新たな地平
+
+### Claude Codeがもたらした「創造的破壊」
+
+<div style="margin-top: 30px; font-size: 1.1em;">
+
+<div style="display: flex; gap: 40px; margin-top: 20px;">
+<div style="flex: 1;">
+
+<strong>破壊されたもの</strong>
+- 実装速度での差別化
+- 暗記型の知識優位性
+- 手作業による最適化
+
+</div>
+<div style="flex: 1;">
+
+<strong>創造されたもの</strong>
+- 設計思想での差別化
+- 概念理解の優位性
+- 試行錯誤による最適化
+
+</div>
+</div>
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.2em;">
+
+<strong>私たちは今、エンジニアリングの再定義の瞬間に立っている</strong>
+
+</div>
+
+---
+
+## 今すぐ始められる3つのアクション
+
+### Claude Code時代を生き抜くために
+
+<div style="margin-top: 30px; font-size: 1.1em;">
+
+1. <strong>今日から</strong>: 書いたコードの「なぜ」を3行で説明する習慣
+2. <strong>今週から</strong>: Claude Codeで1つの機能を3パターン実装してみる
+3. <strong>今月から</strong>: 設計の意図をドキュメント化し、チームで共有
+
+</div>
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.3em; color: #4AADDD;">
+
+<strong>実装の時代は終わった。設計の時代が始まった。</strong></br>
+<strong>あなたはどちら側に立つ？</strong>
 
 </div>
 
@@ -1021,7 +1073,7 @@ Claude Codeは実装という「手を動かす」部分を代替してくれま
 ## 参考文献
 
 ### 実践事例・解説記事
-- [抽象化と具体化 ～プログラマの基本の"き"～](https://speakerdeck.com/soudai/abstraction-and-concretization)
+- [抽象化をするということ - 具体と抽象の往復を身につける](https://speakerdeck.com/soudai/abstraction-and-concretization)
 - [How I Use Claude Code](https://spiess.dev/blog/how-i-use-claude-code)
 - [LLMの制約を味方にする開発術](https://zenn.dev/hidenorigoto/articles/38b22a2ccbeac6)
 - [Claude Code版Orchestratorで複雑なタスクをステップ実行する](https://zenn.dev/mizchi/articles/claude-code-orchestrator)
