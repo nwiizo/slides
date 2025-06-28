@@ -487,7 +487,14 @@ _class: title dark
 
 ## LLMの正体を知ろう
 
-<div style="text-align: center; margin-top: 50px; font-size: 1.5em;">
+<div style="display: flex; gap: 40px; align-items: center; margin-top: 30px;">
+<div style="width: 25%;">
+<img src="../../assets/images/2025/CNDS2025-pre/book_prompt_engineering.png" alt="プロンプトエンジニアリング書籍" style="width: 100%; height: auto;">
+</div>
+
+<div style="flex: 1;">
+
+<div style="text-align: center; font-size: 1.5em;">
 
 大規模言語モデル（LLM）は
 
@@ -495,17 +502,20 @@ _class: title dark
 
 </div>
 
-<div style="text-align: center; margin-top: 50px; font-size: 1.2em;">
+<div style="text-align: center; margin-top: 40px; font-size: 1.2em;">
 
 つまり、**文書を補完するエンジン**
 
 </div>
 
-<div style="text-align: center; margin-top: 40px; font-size: 1.1em; color: #4AADDD;">
+<div style="text-align: center; margin-top: 30px; font-size: 1.1em; color: #4AADDD;">
 
 仕組みを理解することで、<br>
 より効果的に活用できるようになります
 
+</div>
+
+</div>
 </div>
 
 ---
@@ -550,20 +560,26 @@ AIの制約を理解して活用する
 
 ## プロンプトエンジニアリング5原則
 
-<div style="text-align: center; margin-top: 30px; font-size: 1.1em; color: #4AADDD;">
+<div style="display: flex; gap: 40px; align-items: center; margin-top: 20px;">
+<div style="width: 25%;">
+<img src="../../assets/images/2025/CNDS2025-pre/book_pega.png" alt="プロンプトエンジニアリング書籍" style="width: 100%; height: auto;">
+</div>
+
+<div style="flex: 1;">
+
+<div style="text-align: center; font-size: 1.1em; color: #4AADDD;">
 
 「プロンプトエンジニアリング」という名前は難しそうですが...
 
 </div>
 
-<div style="text-align: center; margin-top: 30px; font-size: 1.3em;">
+<div style="text-align: center; margin-top: 20px; font-size: 1.3em;">
 
 **🎼 楽譜であり 🍳 レシピであり 🖌️ 技法です**
 
 </div>
 
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
 <div style="text-align: center;">
 <div style="font-size: 2em;">1️⃣</div>
 <div>方向性</div>
@@ -583,6 +599,9 @@ AIの制約を理解して活用する
 <div style="text-align: center;">
 <div style="font-size: 2em;">5️⃣</div>
 <div>分割</div>
+</div>
+</div>
+
 </div>
 </div>
 
