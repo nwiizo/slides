@@ -126,12 +126,13 @@ _class: title dark
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
-# <span style="font-size: 1.4em;">Claude Code</br>どこまでも.</br></span>
+# <span style="font-size: 1.4em;">Claude Code</br>どこまでも</span>
 
 </div>
 
 <div class="author-info" style="text-align: left; padding-left: 0; text-indent: 0;">
-2025/6/18 KAGのLT会 #6 </br>@nwiizo 10min #KAGのLT会
+2025/6/18 KAGのLT会 #6
+@nwiizo 10min #KAGのLT会
 </div>
 
 ---
@@ -142,8 +143,9 @@ _class: title dark
 ## nwiizo
 
 <div class="info-box">
-株式会社スリーシェイクで</br>プロのソフトウェアエンジニアをやっているものです</br>
-格闘技、読書、グラビアが趣味でよく本を紹介してます</br>
+株式会社スリーシェイクで
+プロのソフトウェアエンジニアをやっているものです
+格闘技、読書、グラビアが趣味でよく本を紹介してます
 </div>
 
 <p style="margin-top: 30px !important;">人生を通して"<strong>運動、睡眠、読書</strong>"をちゃんとやりたい</p>
@@ -214,15 +216,15 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 <div style="margin-top: 30px; font-size: 1.1em;">
 
-今まで私たちエンジニアは、</br>
-<strong>「何を作りたいか」</strong>を考え、</br>
+今まで私たちエンジニアは、
+<strong>「何を作りたいか」</strong>を考え、
 <strong>「どう作るか」</strong>を実装していた
 
 </div>
 
 <div style="text-align: center; margin-top: 40px; font-size: 1.2em;">
 
-Claude Codeは<strong>「どう作るか」を自動化</strong>する</br>
+Claude Codeは<strong>「どう作るか」を自動化</strong>する
 私たちは<strong>「なぜ作るか」に集中</strong>できる
 
 </div>
@@ -245,7 +247,7 @@ Claude Codeは<strong>「どう作るか」を自動化</strong>する</br>
 
 <div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
 
-これが<strong>「具体と抽象の往復」</strong></br>
+これが<strong>「具体と抽象の往復」</strong>
 Claude Codeはこの往復を<strong>高速化</strong>するツール
 
 </div>
@@ -266,7 +268,7 @@ Claude Codeはこの往復を<strong>高速化</strong>するツール
 ```
 
 <div style="margin-top: 30px; font-size: 0.9em;">
-上司の「いい感じにしといて」と同じように、</br>
+上司の「いい感じにしといて」と同じように、
 AIに対しても適切な抽象度での指示が必要
 </div>
 
@@ -289,7 +291,7 @@ AIに対しても適切な抽象度での指示が必要
 </div>
 
 <div style="text-align: center; margin-top: 30px;">
-AIは「ある一つの具体」を選ぶが、</br>
+AIは「ある一つの具体」を選ぶが、
 それがあなたの期待と一致するとは限らない
 </div>
 
@@ -303,9 +305,9 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 <div style="font-size: 1.1em; margin-top: 30px;">
 
-1. 初期の抽象的な指示</br>
-2. 生成された具体（コード）の確認</br>
-3. より精緻な抽象への昇華</br>
+1. 初期の抽象的な指示
+2. 生成された具体（コード）の確認
+3. より精緻な抽象への昇華
 4. 改善された具体化
 
 </div>
@@ -346,7 +348,7 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 <strong>従来</strong>
 
-実装の巧拙が</br>
+実装の巧拙が
 エンジニアの価値を決めた
 
 </div>
@@ -359,7 +361,7 @@ AIは「ある一つの具体」を選ぶが、</br>
 
 <strong>これから</strong>
 
-設計の良し悪しが</br>
+設計の良し悪しが
 成果の質を決める
 
 </div>
@@ -462,57 +464,6 @@ claude --continue
 💡 パフォーマンス維持のため、定期的なクリアが効果的
 </div>
 
----
-
-# 「なぜ」を問う力を鍛える実践方法
-
----
-
-## 「なぜ」の習慣化
-
-### コードの背後にある意図を言語化する
-
-```rust
-// ❌ 「何を」しているかだけ
-fn process_data(input: Vec<String>) -> Vec<String> {
-    input.iter().filter(|s| !s.is_empty()).collect()
-}
-
-// ✅ 「なぜ」そうするのかを明確に
-// 空文字列を除外する理由:
-// 1. データベースインポート時のNull値対策
-// 2. 後続処理でのエラー防止
-// 3. UI表示時のレイアウト崩れ回避
-fn sanitize_import_data(raw_data: Vec<String>) -> Vec<String> {
-    raw_data.iter().filter(|s| !s.is_empty()).collect()
-}
-```
-
----
-
-## Claude Codeで「なぜ」を明確化する訓練
-
-### 意図の言語化サイクル
-
-<div style="font-size: 1.05em; margin-top: 30px;">
-
-1. <strong>要求の背景を説明</strong>
-   - 「○○機能を作って」→ 「○○の問題を解決するために」
-
-2. <strong>生成コードの意図を確認</strong>
-   - 「この実装は、つまり○○を意図している？」
-
-3. <strong>代替アプローチの提案</strong>
-   - 「別の観点から、△△でも解決できる？」
-
-4. <strong>トレードオフの明示化</strong>
-   - 「性能と保守性、どちらを優先すべき？」
-
-</div>
-
-<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
-<strong>「何を作るか」ではなく「なぜ作るか」を伝える習慣</strong>
-</div>
 
 ---
 
@@ -711,6 +662,10 @@ fn send_email(to: &str, subject: &str) {
 
 ---
 
+# Claude Codeが働ける環境をちゃんと整える
+
+---
+
 ### 1. プロジェクト設定の最適化
 
 #### CLAUDE.mdの戦略的活用
@@ -803,7 +758,7 @@ cd ../project-feature-b && claude-code "tokio CLI ツール実装"
 
 <div style="font-size: 0.95em;">
 
-ツールやCLAUDE.md を活用して、<strong>同じ機能を複数のアプローチで実装</strong>し、</br>
+ツールやCLAUDE.md を活用して、<strong>同じ機能を複数のアプローチで実装</strong>し、
 最も良い品質のコードを選択することが可能です。
 
 </div>
@@ -830,10 +785,10 @@ Task(テスト容易性重視実装)    ⏺ 並列実行
 
 </div>
 
-Claude Codeの高速性は、単に「早く作る」ためのものではありません。</br>
+Claude Codeの高速性は、単に「早く作る」ためのものではありません。
 <strong>「何度も試して、最良を選ぶ」</strong>ためのツールです。
 
-ただし、適切なガードレールなしでは、</br>
+ただし、適切なガードレールなしでは、
 技術的負債やセキュリティリスクが蓄積されてしまいます。
 
 ここでは、特に効果的な3つのアプローチを紹介します。
@@ -902,7 +857,7 @@ environment_run_cmdツールでgit cliをインストールしたり使用した
 
 <div style="text-align: center; margin-top: 30px; font-size: 1.3em;">
 
-<strong>「どう作るか」の時代は終わった</strong></br>
+<strong>「どう作るか」の時代は終わった</strong>
 <strong>「なぜ作るか」の時代が始まった</strong>
 
 </div>
@@ -966,7 +921,7 @@ environment_run_cmdツールでgit cliをインストールしたり使用した
 <div style="margin-top: 30px; font-size: 1.1em;">
 
 <div style="text-align: center; margin-bottom: 30px;">
-<strong>重要なのは「早く書く」ことではなく</strong></br>
+<strong>重要なのは「早く書く」ことではなく</strong>
 <strong>「何度も書き直せる」こと</strong>
 </div>
 
@@ -1035,27 +990,6 @@ environment_run_cmdツールでgit cliをインストールしたり使用した
 <div style="text-align: center; margin-top: 40px; font-size: 1.2em;">
 
 <strong>私たちは今、エンジニアリングの再定義の瞬間に立っている</strong>
-
-</div>
-
----
-
-## 今すぐ始められる3つのアクション
-
-### Claude Code時代を生き抜くために
-
-<div style="margin-top: 30px; font-size: 1.1em;">
-
-1. <strong>今日から</strong>: 書いたコードの「なぜ」を3行で説明する習慣
-2. <strong>今週から</strong>: Claude Codeで1つの機能を3パターン実装してみる
-3. <strong>今月から</strong>: 設計の意図をドキュメント化し、チームで共有
-
-</div>
-
-<div style="text-align: center; margin-top: 50px; font-size: 1.3em; color: #4AADDD;">
-
-<strong>実装の時代は終わった。設計の時代が始まった。</strong></br>
-<strong>あなたはどちら側に立つ？</strong>
 
 </div>
 

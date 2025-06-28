@@ -1,0 +1,1265 @@
+---
+marp: true
+theme: ../../themes/3shake-theme.css
+paginate: true
+math: mathjax
+mermaid: true
+style: |
+  :root {
+    --logo-url: url("../../assets/images/3shake-cover.png");
+    --mini-font-size: 20px;
+    --header-footer-height: 50px;
+    --black: #333;
+  }
+  /* Add highlight-red class */
+  .highlight-red {
+    color: rgb(224, 64, 64);
+  }
+  /* 通常ページの左下にロゴを表示（より左下に押し込む） */
+  section:not(.title)::before {
+    content: "";
+    position: absolute;
+    left: 15px;  /* より左に */
+    bottom: 15px;  /* より下に */
+    width: 60px !important;  /* ロゴサイズを調整 */
+    height: 60px !important;  /* ロゴサイズを調整 */
+    background-image: var(--logo-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+    z-index: 100;
+  }
+  /* 背景色付きスライドではロゴ色を反転 */
+  section[data-background-color="dark"]::before {
+    filter: brightness(0) invert(1);
+  }
+  /* タイトルページのページ番号を非表示 */
+  section.title::after {
+    display: none;
+  }
+  /* タイトルスライドのロゴスタイル */
+  .title-logo {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 240px !important;
+    height: auto;
+    z-index: 9999;
+  }
+  /* すべての画像サイズを上書き - 3shake-logo.pngのみに適用 */
+  img[src*="3shake-logo.png"] {
+    max-width: 240px !important;
+    width: 240px !important;
+  }
+  /* タイトルとサブタイトルのサイズ調整 */
+  .title h1 {
+    font-size: 2.4em !important;
+    margin-bottom: 0.1em !important;
+  }
+  .title h3 {
+    font-size: 1.1em !important;
+    margin-top: 0.1em !important;
+  }
+  /* 作者情報のスタイル */
+  .author-info {
+    position: absolute !important;
+    bottom: 40px !important;
+    left: 100px !important;
+    padding-left: 0 !important;
+    text-indent: 0 !important;
+    font-size: 0.9em !important;
+    color: white !important;
+    font-weight: bold !important;
+  }
+  /* スライドタイトル（h2）のスタイル */
+  section h2 {
+    font-size: 1.8em !important;
+    margin-top: -25px !important;
+    padding-top: 0 !important;
+    margin-bottom: 10px !important;
+    color: black !important;
+    border-bottom: 1px solid #dadce0 !important;
+  }
+  /* コンテンツエリアの上部マージンを調整 */
+  section > *:not(h2):not(header):not(footer) {
+    margin-top: 1.2em !important;
+  }
+  /* 引用（参考文献）のスタイル */
+  blockquote {
+    border-top: 0.1em dashed var(--black);
+    font-size: var(--mini-font-size);
+    width: 100%;
+    position: absolute;
+    bottom: var(--header-footer-height);
+    left: 0;
+    padding: 10px 20px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  /* カスタムテーマにMermaidのスタイル設定を追加 */
+  mermaid {
+    display: block;
+    margin: 0 auto;
+  }
+  /* 参考文献用のスタイル */
+  .reference-right {
+    font-size: 0.4em;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: -15px;
+    display: block;
+    width: 30%;
+    margin-left: 70%;
+  }
+  /* 参考文献を右下に配置 */
+  .reference-bottom {
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+    font-size: 0.7em;
+    color: #666;
+    text-align: right;
+  }
+  /* テキスト階層のスタイル */
+  section h3 {
+    font-size: 1.3em !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  section p, section li {
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+  }
+  section code {
+    font-size: 0.85em !important;
+  }
+  section pre {
+    font-size: 0.8em !important;
+  }
+  /* 小さめのテキスト用クラス */
+  .small-text {
+    font-size: 0.85em !important;
+  }
+  /* より小さいテキスト用クラス */
+  .tiny-text {
+    font-size: 0.75em !important;
+  }
+---
+
+<!-- 
+_backgroundColor: #0a1929
+_color: white
+_class: title dark
+-->
+
+![bg](../../assets/images/3shake-background-full.png)
+
+<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+
+<div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
+
+# <span style="font-size: 1.4em;">もうAIが書いたと</br>バレない小説を</span>
+### 魔法を科学にするプロンプトエンジニアリング
+
+</div>
+
+<div class="author-info" style="text-align: left; padding-left: 0; text-indent: 0;">
+2025/XX/XX Forkwell Library LT会
+@nwiizo 10min #ForikwellLibrary
+</div>
+
+---
+
+<!-- _backgroundColor: white -->
+
+![bg left:30% fit](../../assets/images/nwiizo_icon.jpg)
+## nwiizo
+
+<div class="info-box">
+株式会社スリーシェイクで
+プロのソフトウェアエンジニアをやっているものです
+格闘技、読書、グラビアが趣味でよく本を紹介してます
+</div>
+
+<p style="margin-top: 30px !important;">人生を通して"<strong>運動、睡眠、読書</strong>"をちゃんとやりたい</p>
+
+---
+
+## about 3-shake
+
+<div style="text-align: center; margin-top: 30px;">
+  <img src="../../assets/images/3shake-about.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
+</div>
+
+---
+
+## We are Hiring!!
+
+<div style="text-align: center; margin-top: 30px;">
+
+3-shakeは一緒にSRE界隈を盛り上げてくれる<strong>仲間を大募集中</strong>です！
+Mobility、FinTech、通信など大規模SREを存分に経験できます
+（最近社内はGenAI / GPU / Kubernetesが盛り上がってます）
+是非、カジュアル面談しましょう！！！！
+
+  <img src="../../assets/images/3shake-hiring.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
+</div>
+
+
+---
+
+## 生成AIで小説を書いたことはありますか？
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.4em;">
+
+最初は「<span class="highlight-blue">すごい！</span>」と感動
+
+↓
+
+読み返すと「<span class="highlight-red">なんか違う...</span>」
+
+</div>
+
+<div style="margin-top: 40px; font-size: 1.1em;">
+
+❌ キャラクターが薄っぺらい  
+❌ 会話が不自然  
+❌ 行動に一貫性がない  
+❌ 「AIが書いた感」が抜けない
+
+</div>
+
+---
+
+## 今日のゴール
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.5em;">
+
+「<strong>本当に人間が書いた小説だと思った</strong>」
+
+と言われる作品を作る方法
+
+</div>
+
+<div style="display: flex; gap: 60px; margin-top: 50px; align-items: center;">
+<div style="flex: 1; text-align: center;">
+
+### 🛡️ **防御力**
+一貫性・論理性  
+（AIに任せる）
+
+</div>
+<div style="font-size: 2em;">＋</div>
+<div style="flex: 1; text-align: center;">
+
+### ⚔️ **攻撃力**
+独創性・感動  
+（人間が創造）
+
+</div>
+</div>
+
+---
+
+## AI小説「あるある」
+
+<div style="font-size: 1.3em; text-align: center; margin-top: 50px;">
+
+🛻 **物理法則の破綻**  
+「壁を背にした位置から背後を攻撃される」
+
+</div>
+
+<div style="font-size: 1.3em; text-align: center; margin-top: 40px;">
+
+🤯 **性格の破綻**  
+「家族愛が最優先のキャラが家族を見捨てる」
+
+</div>
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.2em;">
+
+あなたも経験ありませんか？
+
+</div>
+
+---
+
+## 「読むのがしんどい」問題
+
+<div style="text-align: center; margin-top: 30px; font-size: 1.4em;">
+
+あらすじは面白そうなのに...
+
+<span class="highlight-red">なぜか読むのが疲れる</span>
+
+</div>
+
+<div style="display: flex; gap: 60px; margin-top: 50px;">
+<div style="flex: 1; text-align: center;">
+
+### 😵 情報整理の負担
+
+主人公の性別が  
+途中で判明！？
+
+</div>
+<div style="flex: 1; text-align: center;">
+
+### 🌀 視点の混乱
+
+誰が話してるのか  
+分からない...
+
+</div>
+</div>
+
+---
+
+## なぜこんな問題が起きるのか？
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.3em;">
+
+### LLMの3つの根本的制約
+
+</div>
+
+<div style="margin-top: 40px;">
+
+### 1️⃣ <span class="highlight-blue">Lost in the Middle現象</span>
+長いコンテキストの中間部分で**20-45%性能低下**
+
+### 2️⃣ <span class="highlight-blue">複数制約の同時処理困難</span>
+二重制約で充足率が**41%まで低下**
+
+### 3️⃣ <span class="highlight-blue">人格構造の理解限界</span>
+表面的パターンは学習できても、**内的一貫性は維持できない**
+
+<div class="reference-bottom">
+Liu et al., 2023<br>
+Stolfo et al., 2024<br>
+Transformerアーキテクチャの構造的制約
+</div>
+
+</div>
+
+---
+
+## ちょっと待って！
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.5em;">
+
+LLMの正体は
+
+<span class="highlight-red">次の単語を予測するモデル</span>
+
+</div>
+
+<div style="text-align: center; margin-top: 30px; font-size: 0.9em;">
+
+**Autoregressive Language Modeling**  
+P(w<sub>t</sub>|w<sub>1</sub>, ..., w<sub>t-1</sub>)
+
+</div>
+
+<div style="text-align: center; margin-top: 30px; font-size: 1.2em;">
+
+魔法ではなく、**文書補完エンジン**
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.1em; color: #4AADDD;">
+
+正体を理解することで、真の可能性が広がる
+
+</div>
+
+---
+
+## では、どうすればいいのか？
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.5em;">
+
+魔法を<span class="highlight-blue">科学</span>にする
+
+**プロンプトエンジニアリング5原則**
+
+</div>
+
+---
+
+## プロンプトエンジニアリング5原則
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.3em;">
+
+**魔法を科学にする5つの原則**
+
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+<div style="text-align: center;">
+<div style="font-size: 2em;">1️⃣</div>
+<div>方向性</div>
+</div>
+<div style="text-align: center;">
+<div style="font-size: 2em;">2️⃣</div>
+<div>形式</div>
+</div>
+<div style="text-align: center;">
+<div style="font-size: 2em;">3️⃣</div>
+<div>例示</div>
+</div>
+<div style="text-align: center;">
+<div style="font-size: 2em;">4️⃣</div>
+<div>評価</div>
+</div>
+<div style="text-align: center;">
+<div style="font-size: 2em;">5️⃣</div>
+<div>分割</div>
+</div>
+</div>
+
+<div class="reference-bottom">
+Hudson & Manning (2024)<br>
+"Prompt Engineering for Generative AI"
+</div>
+
+---
+
+## 原則1: Give Direction（方向性を示せ）
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.5em;">
+
+具体的で明確な指示を与える
+
+</div>
+
+<div style="margin-top: 50px;">
+
+### ❌ 曖昧な指示
+```
+「面白いキャラクターを作って」
+```
+
+### ✅ 明確な指示
+```
+「3行で共感できる家族愛キャラを作成」
+```
+
+</div>
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.1em; color: #4AADDD;">
+
+AIは指示の曖昧さを補完できない
+
+</div>
+
+---
+
+## 原則2&3: Format & Examples
+
+<div style="margin-top: 40px;">
+
+### 2️⃣ **Specify Format**（フォーマット指定）
+```
+❌ 「キャラクター設定を教えて」
+✅ 「■名前 ■価値観 ■内的矛盾の形式で」
+```
+
+</div>
+
+<div style="margin-top: 50px;">
+
+### 3️⃣ **Provide Examples**（例を示せ）
+```
+❌ 「感情を表現して」
+✅ 「怒り→拳を握る、のように行動で」
+```
+
+</div>
+
+---
+
+## 原則4&5: Quality & Division
+
+<div style="margin-top: 40px;">
+
+### 4️⃣ **Evaluate Quality**（品質を測れ）
+```
+❌ 「キャラ作って終わり」
+✅ 「一貫性・共感度を10点評価」
+```
+
+</div>
+
+<div style="margin-top: 50px;">
+
+### 5️⃣ **Divide Labor**（作業を分割せよ）
+```
+❌ 「一気に全部作って」
+✅ 「Step1→価値観 Step2→矛盾 Step3→行動」
+```
+
+</div>
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.2em; color: #4AADDD;">
+
+この5原則が**AI小説の品質**を変える
+
+</div>
+
+---
+
+## 創作プロが使うテクニック①
+
+### 📝 荒木飛呂彦の「身上調査書」
+
+<div style="text-align: center; margin-top: 40px;">
+
+キャラクターを**警察の調書**のように細かく設定
+
+</div>
+
+<div style="margin-top: 40px; text-align: center;">
+
+```
+基本情報：名前・年齢・職業
+核となる価値観：1つに限定
+最大の恐れ：具体的に
+行動パターン：3つ
+```
+
+</div>
+
+<div class="reference-bottom">
+『荒木飛呂彦の漫画術』(2015)
+</div>
+
+---
+
+## 創作プロが使うテクニック②
+
+### 💬 大塚英志の「30問答」
+
+<div style="text-align: center; margin-top: 40px;">
+
+キャラへの**インタビュー**で深みを出す
+
+</div>
+
+<div style="text-align: center; margin-top: 30px; font-size: 1.1em; color: #666;">
+
+でも正直...<br>
+<span class="highlight-red">30問全部自分で考えるのはしんどい</span><br>
+<span class="highlight-blue">楽しく考えられる時間は意外と短い</span>
+
+</div>
+
+<div style="text-align: center; margin-top: 40px;">
+
+**だからこそAIとの協働が効果的**
+
+</div>
+
+<div class="reference-bottom">
+『ストーリーメーカー』(2006)
+</div>
+
+---
+
+## 生成AIを活用した創作活動
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.3em;">
+
+**2〜3時間で物語の基本構造を構築可能**
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.2em;">
+
+成功のポイントは  
+<span class="highlight-blue">明確な「型」と制約条件</span>
+
+</div>
+
+<div style="display: flex; gap: 40px; margin-top: 40px;">
+<div style="flex: 1;">
+
+### 🎯 進んだテクニック
+**結末から逆算する**
+
+- 映画の予告編を作るように
+- ゴールを明確に設定
+- 逆順で構成を組み立て
+
+</div>
+<div style="flex: 1;">
+
+### 📝 基本の制約設定
+- **ジャンル**の明確化
+- **文字数**の設定
+- **時代設定**の定義
+- **登場人物の特徴**
+
+</div>
+</div>
+
+---
+
+## 効果的な作業フローと実践
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.3em;">
+
+**段階的アプローチ + 柔軟な調整**
+
+</div>
+
+<div style="display: flex; gap: 60px; margin-top: 40px;">
+<div style="flex: 1;">
+
+### 📝 3ステップ作業法
+
+1. **全体構想**  
+   AIにストーリーライン作成依頼
+
+2. **段階的詳細化**  
+   細部を少しずつ詰める
+
+3. **柔軟な調整**  
+   結末や展開を必要に応じて修正
+
+</div>
+<div style="flex: 1;">
+
+### 🎯 成功のコツ
+
+- **要求を小分けに**
+- AIの素直な反応を活用
+- 予想外の出力は軌道修正
+
+<div class="tiny-text" style="margin-top: 20px; color: #4AADDD;">
+人間の創造性 × AIの処理能力
+</div>
+
+</div>
+</div>
+
+---
+
+## 実践：段階的キャラクター設計
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.5em;">
+
+🧩 **Chain-of-Thought (CoT) Prompting**
+
+「一気に」ではなく「ステップバイステップ」
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
+
+なぜ効果的？  
+↓  
+LLMは<span class="highlight-blue">線形処理</span>が得意  
+複雑なタスクを<span class="highlight-blue">小さく分割</span>すると精度UP
+
+</div>
+
+<div class="reference-bottom">
+Wei et al. (2022)<br>
+"Chain-of-Thought Prompting"
+</div>
+
+---
+
+## 失敗例 vs 成功例
+
+<div style="display: flex; gap: 60px; margin-top: 40px;">
+<div style="flex: 1;">
+
+### ❌ 失敗例
+
+```
+「魅力的で一貫性のある
+キャラクターを作って
+小説を書いて」
+```
+
+<div style="text-align: center; margin-top: 30px; font-size: 1.2em;">
+↓  
+<span class="highlight-red">情報過多で混乱</span>
+</div>
+
+</div>
+<div style="flex: 1;">
+
+### ✅ 成功例
+
+```
+Step1: 価値観1つ
+↓
+Step2: 矛盾1つ
+↓
+Step3: 行動3つ
+```
+
+<div style="text-align: center; margin-top: 30px; font-size: 1.2em;">
+↓  
+<span class="highlight-blue">明確で一貫性あり</span>
+</div>
+
+</div>
+</div>
+
+---
+
+## 一貫性を保つコツ
+
+<div style="text-align: center; margin-top: 40px;">
+
+### 🌍 **物理的一貫性**
+
+</div>
+
+```
+◼ 移動時間は現実的に
+◼ 同時に2箇所にいない
+◼ 各シーンで位置を明記
+```
+
+<div style="text-align: center; margin-top: 40px;">
+
+### 🧠 **心理的一貫性**
+
+</div>
+
+```
+◼ 設定した価値観から逸脱しない
+◼ 性格が変わるなら理由を
+◼ 感情変化は段階的に
+```
+
+---
+
+## 高度なテク：「赤ずきん原則」
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.4em;">
+
+👧 **道から外れるな**
+
+</div>
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.2em;">
+
+LLMが<span class="highlight-blue">訓練された文書形式</span>を使う  
+↓  
+<span class="highlight-blue">安定した出力</span>が得られる
+
+</div>
+
+<div style="margin-top: 40px; text-align: center;">
+
+「モデルが訓練された道から遠く離れてはいけない」
+
+</div>
+
+<div class="reference-bottom">
+Patel & Pavlick (2021)<br>
+"Little Red Riding Hood Principle"
+</div>
+
+---
+
+## 具体例：慣れ親しんだ形式を使う
+
+<div style="display: flex; gap: 40px; margin-top: 30px;">
+<div style="flex: 1;">
+
+### 📰 ニュース記事形式
+
+```markdown
+【人物特報】
+地方都市の図書館司書、
+田中花子さん（28）が話題に
+```
+
+<div style="text-align: center; margin-top: 20px;">
+LLMはニュース記事を  
+大量に学習済み
+</div>
+
+</div>
+<div style="flex: 1;">
+
+### 🎤 インタビュー形式
+
+```markdown
+【人物インタビュー】
+記者：価値観は？
+田中：知識で人を助けたい
+```
+
+<div style="text-align: center; margin-top: 20px;">
+対話形式で  
+自然な流れを作る
+</div>
+
+</div>
+</div>
+
+---
+
+## CHARACTER.md：プロジェクト設定の体系化
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.5em;">
+
+**キャラクター設定を構造化する**
+
+</div>
+
+<div style="text-align: center; margin-top: 40px;">
+
+<div style="font-size: 1.2em; margin-bottom: 30px;">
+小説プロジェクト用設定管理システム
+</div>
+
+<div class="small-text">
+キャラクターの一貫性を保つための<br>
+体系的な設定ファイル
+</div>
+
+</div>
+
+---
+
+## CHARACTER.md の構造
+
+```markdown
+# CHARACTER.md
+
+## 【主人公：田中花子の設定】
+```
+
+<div style="margin-top: 40px;">
+
+### 🎯 不変コア（絶対に変更されない要素）
+<div class="small-text">
+
+- 核となる価値観：「知識を通じて人を助けたい」
+- 最大の恐れ：「自分の無力さを実感すること」
+- 根本的矛盾：「人助けしたいのに対人関係が苦手」
+
+</div>
+
+</div>
+
+---
+
+## CHARACTER.md の構造（続き）
+
+<div style="margin-top: 30px;">
+
+### 🔄 準安定層（状況に応じて変化するが範囲限定）
+<div class="small-text">
+
+- 現在の感情状態：やや内向的だが、本の話題では活発
+- 人間関係：同僚とは表面的、利用者には献身的
+
+</div>
+
+</div>
+
+<div style="margin-top: 40px;">
+
+### 🎨 可変層（柔軟に調整可能）
+<div class="small-text">
+
+- 具体的な話し方：関西弁（軽め）、丁寧語ベース
+- 口癖：「まあ、そんなもんかな」「ちょっと待って」
+
+</div>
+
+</div>
+
+---
+
+## Git worktreeを活用したプロジェクト管理
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.5em;">
+
+**複数バージョンの並行管理**
+
+</div>
+
+<div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
+
+同時に複数のストーリー展開を試す
+
+</div>
+
+---
+
+## Git worktree の構成
+
+```bash
+novel-project/
+├── main/                    # メインストーリーライン
+├── character-dev/           # キャラクター開発専用
+├── prompt-experiments/      # プロンプト実験
+└── quality-check/          # 品質監査用
+```
+
+<div class="small-text" style="margin-top: 40px;">
+
+各ディレクトリが独立した作業環境として機能
+
+</div>
+
+---
+
+## worktree の作成とブランチ戦略
+
+```bash
+# worktreeの作成
+git worktree add ../character-dev character-development
+git worktree add ../prompt-experiments prompt-testing
+```
+
+<div style="margin-top: 30px;">
+
+### ブランチ戦略
+<div class="small-text">
+
+- **main**: 完成したシーンの統合
+- **character-development**: キャラクター設定の実験・改良
+- **prompt-testing**: プロンプト設計の検証
+
+</div>
+
+</div>
+
+<div class="tiny-text" style="text-align: center; margin-top: 40px; color: #4AADDD;">
+複数の展開を試して、最良の結果を選択するアプローチ
+</div>
+
+---
+
+## 段階的品質向上ワークフロー
+
+### Phase 1: 基本設計（単一制約管理）
+
+<pre style="font-size: 0.75em;">
+【目標】キャラクターの核を確立
+【制約】価値観1つのみに集中
+
+Step1: コアとなる価値観の特定
+「この人物の人生で最優先事項は？」
+例：「家族の安全と幸福」
+
+Step2: 価値観の行動指針化
+「この価値観は具体的にどんな行動を導くか？」
+例：危険回避、情報収集、犠牲的行動
+
+検証項目：
+□ 価値観が具体的で行動の指針となるか
+□ 日常的な場面での行動パターンが明確か
+</pre>
+
+---
+
+## Phase 2: 複雑性の追加（二重制約の管理）
+
+<pre style="font-size: 0.75em;">
+【目標】内面の矛盾を設定
+【制約】Phase1の設定を維持しつつ対立要素を追加
+
+Step1: 矛盾する欲求の特定
+「家族優先」の人が持ちうる対立する欲求
+例：「個人的成長・自己実現への憧れ」
+
+Step2: 葛藤の具体的場面設定
+矛盾が表面化するシチュエーション
+例：転職オファー（成長機会 vs 家族との時間）
+
+検証項目：
+□ 矛盾が人間らしい複雑さを生んでいるか
+□ 葛藤の解決方法が価値観と整合しているか
+</pre>
+
+---
+
+## よくある失敗と対処法
+
+### 失敗例1: 制約過多による性能低下
+
+<div style="font-size: 0.9em;">
+
+**問題**: 「優しくて、強くて、賢くて、面白くて、神秘的で...」  
+**原因**: 複数制約同時処理によるLLM性能低下（KITAB研究）  
+**解決策**: Tree-of-Thoughts（選択肢の並行検討）
+
+```
+以下3案を独立して評価し、最適解を選択：
+
+【案A：優しさ重視型】
+メリット：共感しやすい、親しみやすい
+適用場面：日常系、癒し系小説
+
+【案B：知性重視型】
+メリット：論理的展開、問題解決能力
+適用場面：ミステリー、SF小説
+
+判断基準：物語ジャンル＋読者層で決定
+```
+
+</div>
+
+---
+
+## 失敗例2: 物理空間での論理破綻
+
+**問題**: 空間認識限界による物理法則違反  
+**解決策**: 心理描写重視＋物理描写最小化
+
+```
+【推奨アプローチ】
+1. アクションより心理・感情描写を重視
+2. 空間配置は簡潔な表現に留める
+3. 物理法則が重要な場面は人間が最終確認
+
+【表現例の比較】
+❌ 物理描写詳細：「剣を振り上げた瞬間、敵は背後から...」
+✅ 心理描写重視：「緊張が頂点に達した時、予期しない声が...」
+```
+
+---
+
+## 品質保証：継続的改善システム
+
+<div style="text-align: center; margin-top: 50px; font-size: 1.3em;">
+
+**各シーン生成後の必須確認**
+
+</div>
+
+<div style="display: flex; gap: 60px; margin-top: 40px;">
+<div style="flex: 1;">
+
+### 🎭 キャラクター一貫性
+□ 行動は価値観と一致？  
+□ 話し方は統一？  
+□ 関係性は維持？  
+□ 性格変化は自然？
+
+</div>
+<div style="flex: 1;">
+
+### 📖 読者体験
+□ 感情の流れは論理的？  
+□ 物理法則は正しい？  
+□ 理解しやすい？  
+□ キャラは「生きてる」？
+
+</div>
+</div>
+
+---
+
+## 段階的品質向上サイクル
+
+<div style="font-size: 0.9em;">
+
+```
+【Week 1: 基本一貫性】
+- 単一制約（核となる価値観）の維持確認
+- 明らかな矛盾の修正
+- 基本的な話し方パターンの統一
+
+【Week 2: 複雑性バランス】
+- 内面の矛盾が適切に表現されているか
+- 成長や変化が自然で説得力があるか
+- 読者が理解できる範囲の複雑さか
+
+【Week 3: 読者体験最適化】
+- 共感しやすさの確認
+- 予測可能性と意外性のバランス調整
+- 感情的インパクトの効果測定
+- 「読む労力」の軽減効果確認
+```
+
+</div>
+
+---
+
+## 実用ツール：自動化による効率向上
+
+### Chain-of-Thoughtプロンプト自動生成
+
+```
+【依頼文例】
+「以下のキャラクター概要から、5段階の設計プロンプトを生成してください：
+
+概要：『小さな町の図書館司書。本を愛しているが人との交流は苦手。
+町の危機に際して、自分の知識で人々を助けたいと思っている。』
+
+Chain-of-Thoughtアプローチで、各段階に検証項目も含めてください。
+物理的一貫性と心理的一貫性の両方を考慮した設計にしてください。」
+
+【期待される出力】
+段階的な設計プロセス＋各段階の品質チェック項目＋一貫性維持のための制約
+```
+
+---
+
+## 品質チェック自動化プロンプト
+
+```
+【品質監査プロンプト】
+以下の観点から生成されたシーンを評価してください：
+
+1. キャラクター設定との整合性（10点満点）
+2. 物理的な論理性（10点満点）
+3. 心理的な一貫性（10点満点）
+4. 読みやすさ（労力の少なさ）（10点満点）
+5. 感情的インパクト（10点満点）
+
+各項目について：
+- 点数とその理由
+- 改善提案
+- 具体的な修正案（必要な場合）
+
+を提供してください。
+```
+
+---
+
+## まとめ：制約を味方にする創作アプローチ
+
+### 成功のための6原則
+
+<div style="font-size: 0.9em;">
+
+1. **段階的設計**: Chain-of-Thoughtで複雑さを段階的に管理
+2. **制約の明示化**: 曖昧な表現を避け、具体的定義を使用
+3. **赤ずきん原則**: 訓練データに慣れ親しんだ形式の活用
+4. **階層的管理**: 不変コア・準安定・可変の3層構造
+5. **継続的検証**: 各段階での品質確認を怠らない
+6. **現実的適用**: AIの得意領域での効果的活用に集中
+
+</div>
+
+<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
+
+**制約＝創造性の敵という誤解を捨てる**
+
+- コンテキスト制限 → 本当に重要な要素への集中
+- 複数制約処理困難 → 段階的アプローチの必然的採用
+- 暗黙理解の限界 → 明示的設計スキルの向上
+
+</div>
+
+---
+
+## 今すぐ始められる実践ステップ
+
+### Phase 1（今週）
+
+- 1人のキャラクターでChain-of-Thoughtプロセスを実践
+- CHARACTER.mdファイルの作成
+- 基本的な一貫性チェックの習慣化
+
+### Phase 2（今月）
+
+- 短編小説での一貫性維持経験の蓄積
+- 品質チェックリストの習慣化
+- 物理的・心理的描写のバランス調整
+
+### Phase 3（今後3ヶ月）
+
+- 複数キャラクター・長編作品への挑戦
+- 自動化ツールの活用による効率向上
+- 読者フィードバックを活用した改善サイクル確立
+
+---
+
+## 最終提言：持続可能な創作システムの構築
+
+<div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
+
+**AIは基本的な品質管理（防御力）を担当し、**  
+**人間は独創的なアイデアと感情的インパクト（攻撃力）を創造する**
+
+</div>
+
+<div style="margin-top: 40px;">
+
+この役割分担を理解し、適切なプロンプト設計を習得することで、読者が「労力をかけずに楽しめる」、そして「心に残る」作品を創造することができるのです。
+
+技術の急速な進歩の中でも、「制約を理解し、それを創造性の源泉とする」基本アプローチは普遍的価値を持ちます。
+
+</div>
+
+---
+
+<!-- 
+_backgroundColor: #0a1929
+_color: white
+_class: title dark
+-->
+
+![bg](../../assets/images/3shake-background-full.png)
+
+
+
+<!-- タイトルページ左上に大きなロゴを表示 -->
+<div style="position: absolute !important; top: 5px !important; left: 5px !important; z-index: 9999 !important; margin: 0 !important; padding: 0 !important;">
+  <img src="../../assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
+</div>
+
+<div style="text-align: center; margin-top: 200px;">
+
+# ありがとう<span class="highlight-yellow">ございました</span>
+
+### ご質問・ご相談はお気軽にお問い合わせください
+
+@nwiizo | https://3-shake.com
+</div>
+
+---
+
+## 参考文献
+
+### 学術論文・研究
+- Liu et al. (2023) "Lost in the Middle: How Language Models Use Long Contexts"
+- Stolfo et al. (2024) "KITAB: Evaluating LLMs on Constraint Satisfaction"
+- Wei et al. (2022) "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+- Patel & Pavlick (2021) "Mapping Language Models to Grounded Conceptual Spaces"
+
+### 書籍
+- Hudson & Manning (2024) 『Prompt Engineering for Generative AI』 O'Reilly Media
+- 荒木飛呂彦 (2024) 『荒木飛呂彦の新・漫画術』集英社
+- 大塚英志 (2006) 『ストーリーメーカー』アスキー・メディアワークス
+- カール・イグレシアス (2001) 『「感情」から書く脚本術』フィルムアート社
+
+### プレゼンテーション
+- GitHub Japan 服部佑樹 (2024) "How to read Prompt Engineering for LLM"
+
+---
+
+## 推奨リソース
+
+### 小説執筆・創作支援ツール
+- **Novel AI**: AI小説創作特化プラットフォーム
+- **Sudowrite**: プロ作家向けAIライティングアシスタント
+- **CHARACTER.mdテンプレート**: https://github.com/nwiizo/character-template
+
+### コミュニティ・フォーラム
+- **r/WritingWithAI**: RedditのAI創作コミュニティ
+- **HuggingFace Forums**: LLM技術者コミュニティ
+
+### 学習リソース
+- **Coursera**: "Prompt Engineering for ChatGPT"
+- **DeepLearning.AI**: "ChatGPT Prompt Engineering for Developers"
+- **日本プロンプトエンジニアリング協会**: https://jpe.or.jp
