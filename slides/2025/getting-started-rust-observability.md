@@ -174,31 +174,12 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
   <img src="../../assets/images/3shake-hiring.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
 </div>
 
-
----
-
-## 今日のアジェンダ
-
-### Webアプリケーションにオブザーバビリティを実装する
-
-<div style="margin-top: 25px; font-size: 0.95em;">
-
-1. <strong>オブザーバビリティの三本柱</strong>
-2. <strong>Rustでの基本実装</strong>
-3. <strong>構造化ログとトレーシング</strong> 
-4. <strong>メトリクスの実装</strong> 
-5. <strong>測定の落とし穴と戦略</strong>
-6. <strong>2025年のベストプラクティス</strong>
-
-</div>
-
-
 ---
 
 ## オブザーバビリティとは
 
 ### CNCFの定義から理解する
-<div style="display: flex; gap: 20px; align-items: center;">
+<div style="display: flex; gap: 20px; align-items: flex-start;">
 <div style="flex: 1; font-size: 0.85em;">
 
 制御理論において、「オブザーバビリティとは、システムの外部出力の知識から、そのシステムの内部状態をどれだけ推測できるかの尺度」という概念から拝借している
@@ -287,21 +268,39 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 
 ## 実装時のシグナル相関
 
-### トラブルシューティングでの活用例
+### トラブルシューティングでの活用例:ECサイトで深夜3時に注文処理が遅延
 
-<div style="display: flex; gap: 30px; align-items: center;">
+
+<div style="display: flex; gap: 30px; align-items: flex-start;">
 <div style="flex: 1;">
 
-<div style="font-size: 0.85em;">
-<strong>シナリオ</strong>: APIレスポンスの遅延
+<div style="font-size: 0.6em;">
 
-<div style="font-size: 0.8em; margin-top: 10px;">
+<div style="font-size: 0.75em; margin-top: 10px;">
 
-1. **トレース**で遅いリクエストを特定
-2. **メトリクス**でその時間帯のリソース使用状況を確認
-3. **ログ**で具体的なエラーや警告を調査
+**1. トレース（OpenTelemetry）で調査開始**
+```
+注文API: 15秒（通常は500ms）
+└─ 在庫確認: 200ms ✓
+└─ 決済処理: 14.5秒 ⚠️
+   └─ DB接続待機: 14秒 ❌
+```
 
-→ DB接続プールの枯渇が原因と判明
+**2. メトリクス（Prometheus）で状況確認**
+- DB接続プール: 100/100（満杯）、CPU使用率: 95%（異常高負荷）、メモリ: 正常範囲
+
+**3. ログ（構造化ログ）で根本原因発見**
+```json
+{
+  "level": "ERROR",
+  "time": "03:00:12",
+  "msg": "バッチ処理が大量のDB接続を占有",
+  "batch_id": "daily_report",
+  "connections": 80
+}
+```
+
+→ **原因**: 深夜バッチとAPIが接続プールを奪い合い
 
 </div>
 </div>
@@ -470,7 +469,7 @@ let routes = get_questions
 
 <div style="font-size: 0.75em; margin-top: 12px;">
 💡 JSONで出力さえしていれば、どんなログ収集サービスでも助かる。CloudWatch Logs、Datadog、Elasticsearch、どこでも対応可能です。<br>
-構造化ログは「クラウド時代の当たり前」です。
+構造化ログは「クラウド時代の当たり前」です。というか、これがないとログの解析が大変です。<br>
 </div>
 
 </div>
@@ -538,7 +537,7 @@ histogram!("request_duration_seconds")
 
 ---
 
-## トレーシング：非同期アプリケーションの可視化
+## トレーシング
 
 ### OpenTelemetryの基本概念
 
@@ -709,19 +708,18 @@ Bunyan形式（業界標準）。Elasticsearch/Datadogと相性良し
 
 <strong>技術の進歩と運用の複雑性</strong>
 
-🎯 <strong>観測能力の飛躍的向上</strong>
+🎯 **観測能力の飛躍的向上**
 - あらゆるデータが取得可能に
 - リアルタイムでの可視化
 - 高度な相関分析が容易に
 
-📈 <strong>新たに生まれる課題</strong>
+📈 **新たに生まれる課題**
 - 情報の洪水への対処
 - 真に重要な指標の選別
 - チームの認知的負荷
 
 <div style="text-align: center; margin-top: 20px; padding: 12px; background-color: #e3f2fd; border-radius: 5px;">
-💭 <strong>考察</strong>: 優れた技術は適切な戦略と共に使われて初めて価値を生む<br>
-オブザーバビリティは「何でも見える」ことではなく「見るべきものを見る」こと
+💡 オブザーバビリティは「何でも見える」ことではなく「見るべきものを見る」こと
 </div>
 
 </div>
@@ -736,16 +734,19 @@ Bunyan形式（業界標準）。Elasticsearch/Datadogと相性良し
 
 <strong>📝 ログ</strong>: エラーの詳細と文脈情報
 ```rust
+// エラーが起きたときに詳細情報を記録
 error!(user_id = %id, error = ?e, "決済処理失敗");
 ```
 
 <strong>📊 メトリクス</strong>: ビジネスに直結する数値
 ```rust
+// 決済完了の回数をカウント
 counter!("payment_completed_total", "currency" => "JPY");
 ```
 
 <strong>🔗 トレーシング</strong>: クリティカルパスの処理時間
 ```rust
+// この関数の実行時間を自動で記録（dbは大きいのでスキップ）
 #[instrument(skip(db), fields(order_id = %id))]
 ```
 
@@ -758,218 +759,59 @@ counter!("payment_completed_total", "currency" => "JPY");
 
 ---
 
-## オブザーバビリティ実装の落とし穴
-
-### 測りすぎがもたらす逆効果
-
-<div style="font-size: 0.85em;">
-
-📏 <strong>グッドハートの法則：「測定値が目標になった瞬間、それは良い測定値ではなくなる」</strong>
-
-<div style="margin-top: 20px;">
-
-**オブザーバビリティへの影響:**
-- ログ出力数での評価 → 意味のないログの氾濫
-- メトリクス数での評価 → カーディナリティ爆発
-- カバレッジ100%追求 → getter/setterまで計測
-
-</div>
-
-<div style="text-align: center; margin-top: 20px; padding: 12px; background-color: #fff3cd; border-radius: 5px;">
-⚠️ <strong>オブザーバビリティの本質</strong><br>
-全てを見ることではなく、見るべきものを見ることが重要
-</div>
-
-</div>
-
----
-
-## 測定戦略のアンチパターンとベストプラクティス
-
-### 測りすぎ vs 賢い測定
-
-<div style="font-size: 0.7em;">
-
-<div style="display: flex; gap: 20px;">
-<div style="flex: 1;">
-
-**❌ アンチパターン**
-```rust
-// カーディナリティ爆発
-static METRICS: Lazy<IntCounterVec> = 
-  Lazy::new(|| {
-    register_int_counter_vec!(
-      "app_metrics",
-      "Everything",
-      &["function", "user_id", 
-        "timestamp", "version"]
-    ).unwrap()
-  });
-
-// すべての関数を計測
-#[instrument]  // getter/setterも！
-pub fn get_flag(&self) -> bool {
-    self.flag
-}
-```
-</div>
-<div style="flex: 1;">
-
-**✅ ベストプラクティス**
-```rust
-// REDメトリクスのみ
-pub struct ApiMetrics {
-    requests: IntCounter,
-    errors: IntCounter,
-    duration: Histogram,
-}
-
-// ビジネスクリティカルのみ
-#[instrument(
-    skip_all,
-    fields(order.id = %id)
-)]
-pub async fn process_order(
-    id: Uuid
-) -> Result<Order> {
-    // 重要な処理のみ
-}
-```
-</div>
-</div>
-
-<div style="text-align: center; margin-top: 15px; padding: 10px; background-color: #e8f5e9; border-radius: 5px;">
-💡 <strong>原則</strong>: ビジネス価値に直結する情報だけを収集する
-</div>
-
-</div>
-
----
-
-## 真のオブザーバビリティとは
-
-### システムの健全性を総合的に理解すること
-
-<div style="font-size: 0.85em;">
-
-<strong>メトリクスだけでは見えないもの</strong>
-- システムの将来的な拡張性
-- コードベースの保守性
-- チームの運用負荷
-- ユーザー体験の質
-
-<div style="text-align: center; margin-top: 25px; padding: 15px; background-color: #f0f0f0; border-radius: 5px;">
-🌟 <strong>オブザーバビリティの真価</strong><br>
-三本柱（ログ・メトリクス・トレーシング）を組み合わせて<br>
-システムの内部状態を正しく理解し、素早く問題解決すること
-</div>
-
-</div>
-
----
-
-## AI時代のオブザーバビリティ戦略
-
-### ログ設計の新しいパラダイム
-
-<div style="font-size: 0.8em;">
-
-<strong>AIとの協働を前提としたログ設計</strong>
-
-📊 <strong>情報量の最適化</strong>
-- **情報不足**: AIが問題を理解できない
-- **情報過多**: トークン消費増加、推論速度低下
-- **理想**: 問題解決に必要十分な情報を簡潔に
-
-🤖 <strong>AI理解を考慮した構造化</strong>
-```rust
-// AI向けに最適化されたエラーログ
-error!(
-    context = "payment_processing",
-    user_id = %id,
-    amount = %amount,
-    error_type = "timeout",
-    retry_count = 3,
-    "決済タイムアウト: 外部APIレスポンス遅延"
-);
-```
-
-🔄 <strong>文脈の自動付与</strong>
-- リクエストID、トレースIDの自動伝播
-- 関連するビジネスコンテキストの付加
-- デバッグモードでのみ詳細情報を出力
-
-<div style="margin-top: 15px; padding: 10px; background-color: #e8f5e9; border-radius: 5px;">
-💡 <strong>将来展望</strong>: AIが理解しやすいログは、人間にとっても理解しやすい<br>
-構造化と簡潔性のバランスが、次世代のログ設計の鍵となる
-</div>
-
-</div>
-
----
-
 ## 2025年のオブザーバビリティトレンド
 
-### 最新の実装パターンと推奨事項
+### OpenTelemetryの成熟と実装の選択肢
 
-<div style="margin-top: 15px; font-size: 0.85em;">
+<div style="display: flex; gap: 30px; align-items: flex-start;">
+<div style="flex: 1; font-size: 0.7em;">
 
-<strong>1. OpenTelemetryの成熟</strong>
-- v0.30.0でMetrics API/SDKが安定版に
-- `opentelemetry-appender-tracing`が推奨ログアプローチ
-- 最小Rustバージョン: 1.75
+<strong>🚀 OpenTelemetryが実用段階へ</strong>
+- [opentelemetry-rust](https://github.com/open-telemetry/opentelemetry-rust) がv0.30.0でMetrics API/SDKが安定版に
+- ログ・メトリクス・トレースを統一的に扱える
+- ベンダー中立で将来の移行が容易
 
-<strong>2. メトリクスの2つのエコシステム</strong>
-- `prometheus`クレート: Prometheus特化
-- `metrics`クレート + `metrics-prometheus`: 汎用的
+<strong>📦 Rustでの実装選択肢</strong>
+```rust
+// シンプルに始めるなら
+tracing + tracing-subscriber
 
-<strong>3. Tracingクレートの普及</strong>
-- 「基本的な使い方はシンプルだが、可能性は無限」
-- RUST_LOG=debugで簡単に開始
+// 本格的な実装なら
+opentelemetry + opentelemetry-otlp
+```
 
-<strong>4. Webフレームワークの選択</strong>
-- axumが人気上昇中（Towerエコシステム）
-- warpも引き続き安定的な選択肢
+</div>
+<div style="flex: 1;">
+<img src="../../assets/images/2025/getting-started-rust-observability/otelrs-project-status.png" alt="OpenTelemetry Rust Project Status" style="width: 80%; max-width: 400px;">
+</div>
+</div>
+
+---
+
+## まとめ
+
+<div style="margin-top: 15px; font-size: 0.7em;">
+
+<strong>1. Rustでオブザーバビリティを始める</strong>
+- ログ・メトリクス・トレーシングの三本柱で内部状態を理解
+- `tracing`クレートで簡単に開始、`#[instrument]`で自動計測
+- まずは`tracing`から始めて、必要に応じて拡張
+
+<strong>2. 実装時の重要な考え方</strong>
+- 「何でも見える」ではなく「見るべきものを見る」
+- ビジネス価値とアクションに繋がる情報のみ収集
 
 </div>
 
 ---
 
-## まとめ：実装から運用まで
-
-### 今日学んだこと
-
-<div style="margin-top: 15px; font-size: 0.85em;">
-
-<strong>1. オブザーバビリティの基礎</strong>
-- ログ、メトリクス、トレーシングの三本柱
-- それぞれの役割と使い分け
-
-<strong>2. Rustでの段階的実装</strong>
-- `log` → `tracing`への移行パス
-- 構造化ログとJSON出力の重要性
-- 非同期処理での`#[instrument]`活用
-
-<strong>3. 2025年の実装選択肢</strong>
-- OpenTelemetry v0.30.0の成熟
-- metricsクレートエコシステムの台頭
-- axumなど新しいWebフレームワークへの対応
-
-<strong>4. 測定の落とし穴を避ける</strong>
-- 測りすぎによる弊害の認識
-- 内部改善vs外部評価の明確な区別
-
-</div>
-
----
-
-## 重要なメッセージ
+## 最後にメッセージ
 
 ### 測定は手段であって目的ではない
 
 <div style="text-align: center; margin-top: 40px; font-size: 1.1em;">
 
-<strong>メトリクスは問題解決のツール</strong>
+<strong>オブザーバビリティはあくまでも問題解決のツール</strong>
 
 </div>
 
@@ -979,37 +821,30 @@ error!(
 
 ✅ チームの改善を促進するために使う
 
-❌ 個人やチームを評価するために使わない
+❌ 監視のための数値の収集が目的にならないよう注意
 
 ❌ 数値の最適化が目的にならないよう注意
 
 </div>
 
----
 
 ---
 
 ## 参考文献（1/2）
 
-### 書籍・オブザーバビリティ理論
+### 書籍
 
 <div style="display: flex; gap: 40px; align-items: start;">
 <div style="flex: 1;">
 
-**測定戦略・理論**
-- ジェリー・Z・ミュラー『測りすぎ』
-- 『入門監視』 Mike Julian
-- 『オブザーバビリティエンジニアリング』 Charity Majors他
-
-**Rust実装ガイド**
-- 『Zero To Production In Rust』 Luca Palmieri著
-- 『Programming Rust』 Jim Blandy他著
-- 『Rust for Rustaceans』 Jon Gjengset著
+- 『測りすぎ――なぜパフォーマンス評価は失敗するのか? 』
+- 『入門監視』
+- 『オブザーバビリティエンジニアリング』
+- 『Zero To Production In Rust』
 
 <div style="margin-top: 20px; padding: 15px; background-color: #e3f2fd; border-radius: 5px;">
 <strong>特に推奨</strong><br>
-『Zero To Production In Rust』は実践的なRust Webアプリケーション開発と<br>
-オブザーバビリティの実装を同時に学べる最良の一冊
+『Zero To Production In Rust』は実践的なRust Webアプリケーション開発とオブザーバビリティの実装を同時に学べる最良の一冊
 </div>
 
 </div>
@@ -1029,24 +864,14 @@ error!(
 **公式ドキュメント**
 - [Rust log crate](https://docs.rs/log/) - Rustのロギング標準
 - [tracing クレート](https://docs.rs/tracing/) - 非同期Rust向けトレーシング
-- [OpenTelemetry Rust (v0.30.0)](https://github.com/open-telemetry/opentelemetry-rust)
+- [OpenTelemetry Rust](https://github.com/open-telemetry/opentelemetry-rust)
 - [prometheus-rust](https://github.com/prometheus/client_rust)
 
 **技術ブログ・記事**
-- [「測りすぎ」アンチパターンとエンジニアリングメトリクス](https://syu-m-5151.hatenablog.com/entry/2024/05/06/090014)
+- [もう一度読むObservability Engineering](https://syu-m-5151.hatenablog.com/entry/2024/05/06/090014)
 - [State of the Crates 2025](https://ohadravid.github.io/posts/2024-12-state-of-the-crates/)
-- [Tokio Tracing Tutorial](https://tokio.rs/tokio/topics/tracing)
 - [CNCF Observability Whitepaper](https://github.com/cncf/tag-observability)
 
-**コミュニティリソース**
-- [Rust Users Forum](https://users.rust-lang.org/)
-- [日本Rustユーザグループ](https://rust-jp.rs/)
-- [r/rust (Reddit)](https://www.reddit.com/r/rust/)
-
-<div style="margin-top: 20px; padding: 12px; background-color: #fff3cd; border-radius: 5px;">
-📚 <strong>学習のコツ</strong>: 理論（測定戦略）と実装（Rustコード）を並行して学ぶことで、<br>
-実践的なオブザーバビリティの知識が身につく
-</div>
 
 </div>
 
