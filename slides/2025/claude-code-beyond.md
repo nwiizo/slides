@@ -1,12 +1,12 @@
 ---
 marp: true
-theme: ../../themes/3shake-theme.css
+theme: 3shake-theme
 paginate: true
 math: mathjax
 mermaid: true
 style: |
   :root {
-    --logo-url: url("../../assets/images/3shake-cover.png");
+    --logo-url: url("../../brands/3shake/assets/images/3shake-cover.png");
     --mini-font-size: 20px;
     --header-footer-height: 50px;
     --black: #333;
@@ -120,9 +120,9 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
-<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../../brands/3shake/assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
@@ -139,7 +139,7 @@ _class: title dark
 
 <!-- _backgroundColor: white -->
 
-![bg left:30% fit](../../assets/images/nwiizo_icon.jpg)
+![bg left:30% fit](../../assets/shared/nwiizo_icon.jpg)
 ## nwiizo
 
 <div class="info-box">
@@ -155,7 +155,7 @@ _class: title dark
 ## about 3-shake
 
 <div style="text-align: center; margin-top: 30px;">
-  <img src="../../assets/images/3shake-about.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
+  <img src="../../brands/3shake/assets/images/3shake-about.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
 </div>
 
 ---
@@ -169,7 +169,7 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 （最近社内はGenAI / GPU / Kubernetesが盛り上がってます）
 是非、カジュアル面談しましょう！！！！
 
-  <img src="../../assets/images/3shake-hiring.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
+  <img src="../../brands/3shake/assets/images/3shake-hiring.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
 </div>
 
 
@@ -180,7 +180,7 @@ Mobility、FinTech、通信など大規模SREを存分に経験できます
 <div style="display: flex; justify-content: space-between; gap: 30px; align-items: center;">
 
 <div style="flex: 1;">
-<img src="/Users/nwiizo/ghq/github.com/nwiizo/3shake-marp-templates/assets/images/2025/claude-code-beyond/codegen.png" alt="Claude Code" style="width: 80%; height: auto;">
+<img src="../../assets/images/2025/claude-code-beyond/codegen.png" alt="Claude Code" style="width: 80%; height: auto;">
 </div>
 
 <div style="flex: 1;">
@@ -378,13 +378,13 @@ AIは「ある一つの具体」を選ぶが、
 
 <div style="display: flex; justify-content: space-between; gap: 20px; align-items: flex-start;">
   <div style="flex: 1; text-align: center;">
-    <img src="/Users/nwiizo/ghq/github.com/nwiizo/3shake-marp-templates/assets/images/2025/claude-code-beyond/getting-started-with-claude-code.png" alt="Getting Started with Claude Code" style="width: 100%; height: auto;">
+    <img src="../../assets/images/2025/claude-code-beyond/getting-started-with-claude-code.png" alt="Getting Started with Claude Code" style="width: 100%; height: auto;">
     <p style="margin-top: 10px; font-size: 0.6em;">
       <a href="https://speakerdeck.com/schroneko/getting-started-with-claude-code">https://speakerdeck.com/schroneko/getting-started-with-claude-code</a>
     </p>
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="/Users/nwiizo/ghq/github.com/nwiizo/3shake-marp-templates/assets/images/2025/claude-code-beyond/yasasiiclaude-coderu-men.png" alt="Claude Code入門" style="width: 100%; height: auto;">
+    <img src="../../assets/images/2025/claude-code-beyond/yasasiiclaude-coderu-men.png" alt="Claude Code入門" style="width: 100%; height: auto;">
     <p style="margin-top: 10px; font-size: 0.6em;">
       <a href="https://speakerdeck.com/minorun365/yasasiiclaude-coderu-men">https://speakerdeck.com/minorun365/yasasiiclaude-coderu-men</a>
     </p>
@@ -544,13 +544,13 @@ claude --continue  # 直前のセッション継続
 
 <div style="display: flex; justify-content: space-between; gap: 20px; align-items: flex-start;">
   <div style="flex: 1; text-align: center;">
-    <img src="/Users/nwiizo/ghq/github.com/nwiizo/3shake-marp-templates/assets/images/2025/claude-code-beyond/blog_01.png" alt="Blog 01" style="width: 100%; height: auto;">
+    <img src="../../assets/images/2025/claude-code-beyond/blog_01.png" alt="Blog 01" style="width: 100%; height: auto;">
     <p style="margin-top: 10px; font-size: 0.6em;">
       <a href="https://syu-m-5151.hatenablog.com/entry/2025/06/05/134147">https://syu-m-5151.hatenablog.com/entry/2025/06/05/134147</a>
     </p>
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="/Users/nwiizo/ghq/github.com/nwiizo/3shake-marp-templates/assets/images/2025/claude-code-beyond/blog_02.png" alt="Blog 02" style="width: 100%; height: auto;">
+    <img src="../../assets/images/2025/claude-code-beyond/blog_02.png" alt="Blog 02" style="width: 100%; height: auto;">
     <p style="margin-top: 10px; font-size: 0.6em;">
       <a href="https://syu-m-5151.hatenablog.com/entry/2025/06/06/190847">https://syu-m-5151.hatenablog.com/entry/2025/06/06/190847</a>
     </p>
@@ -1023,13 +1023,13 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
 
 
 <!-- タイトルページ左上に大きなロゴを表示 -->
 <div style="position: absolute !important; top: 5px !important; left: 5px !important; z-index: 9999 !important; margin: 0 !important; padding: 0 !important;">
-  <img src="../../assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
+  <img src="../../brands/3shake/assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
 </div>
 
 <div style="text-align: center; margin-top: 200px;">

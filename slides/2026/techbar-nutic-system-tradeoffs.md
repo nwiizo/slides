@@ -10,9 +10,9 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
-<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../../brands/3shake/assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 80px; padding-left: 0; max-width: 70%;">
 
@@ -31,7 +31,7 @@ _class: title dark
 
 <!-- _backgroundColor: white -->
 
-![bg left:30% fit](../../assets/images/nwiizo_icon.jpg)
+![bg left:30% fit](../../assets/shared/nwiizo_icon.jpg)
 
 ## nwiizo
 
@@ -49,7 +49,7 @@ _class: title dark
 
 <h2 id="about-3-shake">about 3-shake</h2>
 <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-<img src="../../assets/images/3shake-about.png" alt="3-SHAKE会社概要" style="width: 85%; height: fit-content;" />
+<img src="../../brands/3shake/assets/images/3shake-about.png" alt="3-SHAKE会社概要" style="width: 85%; height: fit-content;" />
 </div>
 
 ---
@@ -59,12 +59,11 @@ _class: title dark
 <ol>
 <li><strong>非機能要件とは何か</strong> — 「動く」の先にあるもの</li>
 <li><strong>分散システムという選択肢</strong> — なぜ分散し、何が難しいのか</li>
-<li><strong>トレードオフという現実</strong> — 正解のない世界での判断</li>
+<li><strong>トレードオフという現実</strong> — 何を優先するかで形が変わる</li>
 </ol>
 </div>
 <div style="margin-top: 20px; padding: 12px; background-color: #f5f5f5; border-radius: 8px; font-size: 0.75em;">
-<p>ソフトウェアエンジニアが日々向き合っている「設計の考え方」を、できるだけ身近な例で紹介します。授業や本で出てくる言葉が、実際の現場でどう使われるのかをイメージできるようになるのがゴールです。</p>
-<p>この仕事の面白さは、正解を暗記することではなく、現実の制約の中で「なぜこの形にするのがよいか」を考え続けるところにあります。</p>
+<p>ソフトウェアエンジニアが日々している「何を優先するか」の話を、できるだけ身近な例で紹介します。授業や本で出てくる言葉が、現場でどんな判断につながるのかをつかむのがゴールです。</p>
 </div>
 
 ---
@@ -75,25 +74,25 @@ _class: title dark
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 <p><strong>こんな疑問を持っていませんか？</strong></p>
 <ul>
-<li>「動けばOK」の先に何があるの？</li>
-<li>分散システムって何がそんなに難しい？</li>
-<li>設計の「良い・悪い」はどう決まる？</li>
+<li>「動けばOK」の先で何を考えるの？</li>
+<li>分散すると何が増えるの？</li>
+<li>何を見て設計を決めるの？</li>
 </ul>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 <p><strong>この発表で持ち帰れるもの</strong></p>
 <ul>
-<li>非機能要件という視点の獲得</li>
-<li>分散システムの本質的な難しさの理解</li>
-<li>「トレードオフで考える」という設計思考</li>
+<li>非機能要件という見方</li>
+<li>分散すると増える難しさ</li>
+<li>何を優先するかで設計が変わること</li>
 </ul>
 </div>
 </div>
 <div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">目標：「なぜそう設計したのか」を語れるようになる</span>
+<span style="color: #e65100; font-weight: bold;">目標：「なぜその形にしたのか」を説明できるようになる</span>
 </div>
 <div style="margin-top: 12px; font-size: 0.72em;">
-<p>就職してから役に立つのは、ライブラリ名をいくつ知っているかより、<strong>理由を持って判断できるか</strong>です。そこがエンジニアの仕事の面白いところでもあります。</p>
+<p>就職してから役に立つのは、ライブラリ名をたくさん知っていることより、<strong>何を優先したかを説明できること</strong>です。</p>
 </div>
 </div>
 
@@ -101,20 +100,23 @@ _class: title dark
 
 <h2 id="%E4%BB%8A%E6%97%A5%E3%81%AE%E8%A6%8B%E6%96%B9">今日の見方</h2>
 <div style="font-size: 0.75em;">
-<p>この発表は、用語をたくさん覚えるためのものではありません。次の3つの感覚を持ち帰ってもらえれば十分です。</p>
+<p>今日は、用語を覚えるよりも、<strong>1本の筋</strong>で見てください。</p>
 <div style="display: flex; gap: 18px; margin-top: 15px; align-items: stretch;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>1. 動く</strong></p>
-<p>だけでは足りない</p>
+<p><strong>1. 守るものが違う</strong></p>
+<p>同じ機能でも、速さ、正しさ、直しやすさのどれを優先するかで設計が変わります。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>2. 分散</strong></p>
-<p>すると世界が変わる</p>
+<p><strong>2. 分けると失敗が変わる</strong></p>
+<p>1台では起きない「成功したか不明」「途中まで成功」が出てきます。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>3. 設計</strong></p>
-<p>は優先順位を決める仕事</p>
+<p><strong>3. 最後は判断になる</strong></p>
+<p>全部は取れないので、何を守るために何を引き受けるかを決めます。</p>
 </div>
+</div>
+<div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">この流れで、ソフトウェアエンジニアの仕事の中身を見ていきます</span>
 </div>
 </div>
 
@@ -196,9 +198,12 @@ _class: transition
 </tr>
 </tbody>
 </table>
+<div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<p>ここで大事なのは、これらを<strong>別々の単語として覚えないこと</strong>です。実際のシステムでは、「速くしたい」「止めたくない」「ズレたくない」が同時に出てきます。だから設計では、いつも複数の性質をまとめて考えることになります。</p>
 </div>
-<div style="margin-top: 15px; font-size: 0.74em;">
-<p>ここで大事なのは、これらを<strong>バラバラの単語として覚えないこと</strong>です。実際のシステムでは「速くしたい」「止めたくない」「ズレたくない」が同時に出てきて、そこで設計の悩みが始まります。</p>
+<div style="margin-top: 12px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">設計の悩みは、1つの単語ではなく、複数の性質がぶつかるところから始まります</span>
+</div>
 </div>
 
 ---
@@ -218,7 +223,7 @@ _class: transition
 <li>分析システム: 大量データをまとめて読めること、履歴を持てること</li>
 </ul>
 </div>
-<p>私はここでも、<strong>正解が1つあるのではなく、誰のためのシステムかで求める性質が変わる</strong>と考えています。だから設計では、まず「このシステムは何を優先するのか」を言葉にする必要があります。</p>
+<p>同じデータでも、誰が何のために使うかで重視するものは変わります。だから設計では、まず<strong>何を優先するか</strong>を決める必要があります。</p>
 </div>
 </div>
 </div>
@@ -238,27 +243,28 @@ _class: transition
 
 ---
 
-<h2 id="%E3%81%BE%E3%81%9A%E6%8A%BC%E3%81%95%E3%81%88%E3%81%9F%E3%81%843%E3%81%A4%E3%81%AE%E5%93%81%E8%B3%AA%E8%BB%B8">まず押さえたい3つの品質軸</h2>
+<h2 id="%E5%93%81%E8%B3%AA%E3%81%AF%E5%9B%B0%E3%82%8A%E6%96%B9%E3%81%A7%E8%80%83%E3%81%88%E3%82%8B">品質は「困り方」で考える</h2>
 <div style="font-size: 0.75em;">
+<p>学生のうちは、難しい分類名よりも「誰がどう困るのか」で見るほうがつかみやすいです。</p>
 <div style="display: flex; gap: 18px; margin-top: 10px; align-items: stretch;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>信頼性（Reliability）</strong></p>
-<p>想定外の入力や人為ミス、ハードウェア故障が起きても、システムが期待どおりに振る舞い続けること。</p>
+<p><strong>遅い</strong></p>
+<p>検索や画面表示が遅いと、ユーザーは離れます。機能は合っていても使われません。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>スケールしやすさ（Scalability）</strong></p>
-<p>利用者数やデータ量、トラフィックが増えても、破綻せずに伸ばしていけること。</p>
+<p><strong>止まる</strong></p>
+<p>決済や申込が途中で止まると、その場で業務や体験が止まります。被害はすぐ見えます。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>保守性（Maintainability）</strong></p>
-<p>将来の変更、障害対応、機能追加を、チームが継続的に扱えること。</p>
+<p><strong>直せない</strong></p>
+<p>小さな変更でも時間がかかると、バグ修正も改善も遅れます。チームの速度が落ちます。</p>
 </div>
 </div>
 <div style="margin-top: 15px;">
-<p>この3つは、長く使われるシステムを考えるときの基本の見方です。単に速いだけでも、単に止まらないだけでも足りません。<strong>あとから直せるか、育てられるか</strong>まで含めて考えないと、長く使うシステムは苦しくなります。</p>
+<p>非機能要件は、こうした<strong>困り方をどこまで減らしたいか</strong>を決める話です。</p>
 </div>
 <div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">「今動くか」ではなく「壊れても、伸びても、変わっても耐えられるか」で見る</span>
+<span style="color: #e65100; font-weight: bold;">品質は飾りではなく、「どんな困り方を減らしたいか」の宣言です</span>
 </div>
 </div>
 
@@ -266,10 +272,33 @@ _class: transition
 
 <h2 id="%E3%81%93%E3%81%93%E3%81%8B%E3%82%89%E3%81%AF%E8%A8%AD%E8%A8%88%E3%81%AE%E8%A8%80%E8%91%89%E3%81%A7%E8%A6%8B%E3%81%A6%E3%81%BF%E3%82%8B">ここからは「設計の言葉」で見てみる</h2>
 <div style="font-size: 0.73em;">
-<p>ここまでは、速さ・止まりにくさ・直しやすさといった<strong>品質の話</strong>として見てきました。</p>
-<p>では、エンジニアが実際に設計するときは、これらをどう扱うのでしょうか。</p>
+<p>ここまでは、ユーザーや運用者が<strong>どう困るか</strong>の話として見てきました。</p>
 <div style="margin-top: 15px;">
-<p>ここで出てくるのが、<strong>「非機能要件」よりも「アーキテクチャ特性」と呼ぶ見方</strong>です。言い換えると、「あとで気をつける品質」ではなく、最初から構造に入れるべき条件として見る、ということです。</p>
+<p>設計では、それを「あとで気をつけること」ではなく、<strong>最初から構造を決める条件</strong>として扱います。ここからは、その条件がどう設計に効くかを見ます。</p>
+</div>
+</div>
+
+---
+
+<h2 id="%E9%9D%9E%E6%A9%9F%E8%83%BD%E8%A6%81%E4%BB%B6%E3%81%A8%E3%81%84%E3%81%86%E5%90%8D%E5%89%8D%E3%81%AE%E5%BC%B1%E3%81%95">「非機能要件」という名前の弱さ</h2>
+<div style="font-size: 0.73em;">
+<p>私は、「非機能要件」という名前には少し弱いところがあると思っています。</p>
+<div style="display: flex; gap: 18px; margin-top: 15px; align-items: stretch;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<p><strong>「機能ではない」と聞こえる</strong></p>
+<p>主役ではない、あとで考えるものに見えやすい。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<p><strong>補足条件に見えやすい</strong></p>
+<p>速さや止まりにくさを、最後に足すもののように誤解しやすい。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<p><strong>でも実際は形を決める</strong></p>
+<p>どんな構造にするかに直結する、かなり重要な条件です。</p>
+</div>
+</div>
+<div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">名前だけだと重要さが伝わりにくい。だから見方を変える必要があります</span>
 </div>
 </div>
 
@@ -280,10 +309,10 @@ _class: transition
 <div style="display: flex; gap: 28px; align-items: center;">
 <div style="width: 36%;">
 <img src="../../assets/images/2026/fosa2-ch04-architecture-characteristics-triangle.png" alt="アーキテクチャ特性の条件" style="width: 100%;" />
-<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">出典: Fundamentals of Software Architecture, 2nd Edition, Figure 4-2 をもとに作成</div>
+<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">出典: Fundamentals of Software Architecture, 2nd Edition, Figure 4-2 を引用</div>
 </div>
 <div style="flex: 1;">
-<p>ここでは、単なる「非機能要件」ではなく<strong>アーキテクチャ特性</strong>として見るほうがしっくりきます。</p>
+<p>ここでは、非機能要件を<strong>アーキテクチャ特性</strong>と呼びます。意味は、システムの形を決める大事な条件ということです。</p>
 <div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
 <ul>
 <li>ドメイン機能そのものではない</li>
@@ -291,7 +320,7 @@ _class: transition
 <li>そのシステムの成功に重要である</li>
 </ul>
 </div>
-<p>つまり、可用性や性能は「あとで頑張る品質」ではなく、<strong>最初に構造へ織り込む判断材料</strong>です。ここを後回しにすると、実装が進むほど直しづらくなります。</p>
+<p>可用性や性能は、実装の最後に足すものではなく、<strong>最初に決めること</strong>です。後回しにすると、実装が進むほど直しにくくなります。</p>
 </div>
 </div>
 </div>
@@ -303,7 +332,7 @@ _class: transition
 <div style="display: flex; gap: 28px; align-items: center;">
 <div style="width: 38%;">
 <img src="../../assets/images/2026/fosa2-ch04-solution-domain-and-characteristics.png" alt="ドメイン要件とアーキテクチャ特性" style="width: 100%;" />
-<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">出典: Fundamentals of Software Architecture, 2nd Edition, Figure 4-1 をもとに作成</div>
+<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">出典: Fundamentals of Software Architecture, 2nd Edition, Figure 4-1 を引用</div>
 </div>
 <div style="flex: 1;">
 <p>私は、ソフトウェアの解決策は<strong>ドメイン要件</strong>と<strong>アーキテクチャ特性</strong>の両方でできていると考えています。</p>
@@ -313,17 +342,38 @@ _class: transition
 <li>アーキテクチャ特性: 速い、止まらない、変更しやすい、守られている</li>
 </ul>
 </div>
-<p>機能だけ見ると「一応動くもの」は作れます。でも本番で遅い、よく落ちる、直しにくい、となりがちです。逆に品質の話だけしても、何を作りたいのかがぼやけます。<strong>やりたいことと、そのやり方の両方を見るのが設計</strong>です。</p>
-<p>ここに、エンジニアリングの面白さがあります。コードを書く前に、どんな世界を作るかを考えているからです。</p>
+<p>機能だけ見れば、ひとまず動くものは作れます。でも本番では、遅い、落ちる、直しにくい、という問題が出やすい。だから設計では、<strong>何をするか</strong>と<strong>どう動いてほしいか</strong>の両方を見ます。</p>
 </div>
 </div>
 </div>
 
 ---
 
-<h2 id="設計では構造だけでなく判断理由も大事">設計では構造だけでなく判断理由も大事</h2>
+<h2 id="%E5%90%8C%E3%81%98%E6%A9%9F%E8%83%BD%E3%81%A7%E3%82%82%E5%AE%88%E3%82%8B%E3%82%82%E3%81%AE%E3%81%8C%E9%81%95%E3%81%86%E3%81%A8%E6%A7%8B%E9%80%A0%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8B">同じ機能でも、守るものが違うと構造が変わる</h2>
 <div style="font-size: 0.73em;">
-<p>私は、アーキテクチャは図だけでは完成しないと考えています。<strong>なぜその構造にしたのか</strong>が抜けると、あとから見た人は意図を読み取れません。</p>
+<p>ここで大事なのは、非機能要件が「補足情報」ではなく、<strong>構造を曲げる力</strong>を持っていることです。</p>
+<div style="display: flex; gap: 18px; margin-top: 12px; align-items: stretch;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<p><strong>速く返したい</strong></p>
+<p>キャッシュ、検索インデックス、読み取り専用の複製を使いたくなります。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<p><strong>二重課金を避けたい</strong></p>
+<p>同じ依頼を見分けるIDや、強い整合性、慎重なやり直し制御が必要になります。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<p><strong>小さく直し続けたい</strong></p>
+<p>単純な構造、境界の明確さ、自動テストを優先したくなります。</p>
+</div>
+</div>
+<p>つまり、設計は「何を作るか」だけでなく、<strong>何を守りたいか</strong>で大きく変わります。</p>
+</div>
+
+---
+
+<h2 id="%E7%90%86%E7%94%B1%E3%81%8C%E8%A8%80%E3%81%88%E3%81%AA%E3%81%84%E8%A8%AD%E8%A8%88%E3%81%AF%E3%80%81%E3%81%82%E3%81%A8%E3%81%A7%E5%BC%B1%E3%81%8F%E3%81%AA%E3%82%8B">理由が言えない設計は、あとで弱くなる</h2>
+<div style="font-size: 0.73em;">
+<p>設計で強いのは、図がきれいなものではなく、<strong>なぜそうしたのかを説明できるもの</strong>です。</p>
 <div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
 <ul>
 <li>なぜ同期通信を選んだのか</li>
@@ -331,41 +381,14 @@ _class: transition
 <li>なぜ今は分散しないのか</li>
 </ul>
 </div>
-<p>ここが曖昧だと、あとから入った人には「なんとなくそうなっている設計」に見えます。だから設計は、形を決める仕事であると同時に、<strong>判断の理由を残す仕事</strong>でもあります。</p>
-</div>
-
----
-
-<h2 id="その判断を残すならADRがちょうどいい">その判断を残すなら ADR がちょうどいい</h2>
-<div style="font-size: 0.71em;">
-<div style="display: flex; gap: 24px; align-items: center;">
-<div style="width: 36%;">
-<img src="../../assets/images/2026/fosa2-ch01-architecture-decisions.png" alt="アーキテクチャ決定はシステム構築のルールになることを示す図" style="width: 100%;" />
-<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">図の出典: Fundamentals of Software Architecture, 2nd Edition, Figure 1-5 を引用</div>
-</div>
-<div style="flex: 1;">
-<p>ここで私が相性がいいと思うのが、<strong>ADR（Architectural Decision Records）</strong>です。大げさな設計書ではなく、<strong>重要な設計判断とその背景を残すための短い記録</strong>です。</p>
-<div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
-<ul>
-<li>どんな文脈で</li>
-<li>どんな選択肢を見て</li>
-<li>何を選び、何を見送ったか</li>
-</ul>
-</div>
-<p><em>Facilitating Software Architecture</em> では、ADR は advice process を支え、意思決定を開いた形で残す方法として扱われています。私はこの考え方をとても実務的だと思っています。あとから見返したときに「なぜその決定に至ったのか」が追えるからです。</p>
-</div>
-</div>
-<div style="margin-top: 12px; font-size: 0.64em; color: #999;">
-本文の出典: Andrew Harmel-Law, <em>Facilitating Software Architecture</em>, Chapter 6 / <a href="https://facilitatingsoftwarearchitecture.com/supportingmaterial/">supporting material</a><br>
-参考: <a href="https://syu-m-5151.hatenablog.com/entry/2024/12/31/232546">アーキテクチャ設計の民主化とADRによる意思決定の未来</a>
-</div>
+<p>ここが曖昧だと、あとから入った人には「なんとなくそうなっている設計」に見えます。逆に理由が言えれば、変更するときにも判断をやり直せます。</p>
 </div>
 
 ---
 
 <h2 id="%E8%89%AF%E3%81%84%E7%89%B9%E6%80%A7%E3%81%AF%E6%B8%AC%E3%82%8C%E3%82%8B%E8%A8%80%E8%91%89%E3%81%AB%E7%BF%BB%E8%A8%B3%E3%81%99%E3%82%8B">良い特性は「測れる言葉」に翻訳する</h2>
 <div style="font-size: 0.73em;">
-<p>ここで大事なのは、「いい感じに速い」みたいな曖昧な言い方では、設計の話が前に進まないということです。</p>
+<p>理由を言えるようにするには、「いい感じに速い」のような曖昧な言い方では足りません。</p>
 <table>
 <thead>
 <tr>
@@ -376,24 +399,24 @@ _class: transition
 <tbody>
 <tr>
 <td>高速にしたい</td>
-<td>p95 応答時間 300ms 以下</td>
+<td>p95 応答時間 300ms（0.3秒）以下</td>
 </tr>
 <tr>
 <td>落ちにくくしたい</td>
-<td>月間可用性 99.95%</td>
+<td>月のあいだ 99.95% 動いている</td>
 </tr>
 <tr>
 <td>変更しやすくしたい</td>
-<td>1機能のリードタイムを 1 日以内</td>
+<td>1機能を作り始めてから使えるまでを 1 日以内</td>
 </tr>
 <tr>
 <td>安全にしたい</td>
-<td>個人情報アクセスは監査ログ必須</td>
+<td>個人情報へのアクセスは、誰がいつ見たかの記録を必ず残す</td>
 </tr>
 </tbody>
 </table>
-<div style="margin-top: 15px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
-<p>平均だけ見ると、たまにものすごく遅いケースが隠れてしまいます。だから「100回中95回はここまでに返る」のような、<strong>ばらつきが見える指標</strong>が大事になります。</p>
+<div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<p>平均だけ見ると、たまにものすごく遅いケースが隠れてしまいます。だから p95 のように「100回のうち95回はここまでに返る」と見える指標が大事になります。</p>
 </div>
 </div>
 
@@ -404,15 +427,15 @@ _class: transition
 <div style="display: flex; gap: 28px; align-items: center;">
 <div style="width: 38%;">
 <img src="../../assets/images/2026/fosa2-ch06-fitness-functions.png" alt="設計ルールを継続的に確認する仕組み" style="width: 100%;" />
-<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">出典: Fundamentals of Software Architecture, 2nd Edition, Figure 6-2 をもとに作成</div>
+<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">出典: Fundamentals of Software Architecture, 2nd Edition, Figure 6-2 を引用</div>
 </div>
 <div style="flex: 1;">
-<p>性能やレイヤ分離、依存関係の制約は、会議で言うだけでは守られません。だから私は、こうしたものを<strong>「設計ルールを自動で確認する仕組み（fitness function）」</strong>として継続的に検証するのが大事だと思っています。</p>
+<p>性能やレイヤ分離、依存関係の制約は、会議で言うだけでは守られません。だから私は、こうしたものを<strong>設計ルールが守られているかを自動で確かめる仕組み</strong>として継続的に検証するのが大事だと思っています。</p>
 <div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
 <ul>
-<li>CIで循環依存を落とす</li>
+<li>CI（変更を自動で確認する流れ）で循環依存を落とす</li>
 <li>100回中95回の応答時間が基準を超えたら警告する</li>
-<li>controller から repository 直参照を禁止する</li>
+<li>入口の処理から、データ保存の処理を直接呼ばせない</li>
 </ul>
 </div>
 <p>大事なのは、<strong>良い設計を『みんな気をつけよう』だけで守らないこと</strong>です。</p>
@@ -434,7 +457,7 @@ _class: transition
 <p><strong>ページ表示が3秒かかるとユーザーの53%が離脱する</strong> — 性能の問題。機能的には正しく動いている。ただ遅いだけ。それだけでサービスは死ぬ。</p>
 </div>
 <div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">障害の多くは「機能のバグ」ではなく「非機能要件の敗北」</span>
+<span style="color: #e65100; font-weight: bold;">設計は「何を作るか」より先に、「どんな事故を避けたいか」から始まる</span>
 </div>
 </div>
 
@@ -445,11 +468,11 @@ _class: transition
 <div style="display: flex; gap: 20px; align-items: center;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 <p><strong>ここまででわかったこと</strong></p>
-<p>機能が同じでも、速さ・止まりにくさ・直しやすさが違えば、設計は大きく変わる。</p>
+<p>同じ機能でも、守りたいものが違えば、必要な構造も必要な工夫も変わります。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 <p><strong>次の問い</strong></p>
-<p>「では、その品質を満たすために、システムの形はどう変わるのか？」<br>
+<p>「では、その品質を満たすためにシステムを分けると、何が増えるのか？」<br>
 → 分散システムの話へ</p>
 </div>
 </div>
@@ -658,79 +681,74 @@ _class: transition
 
 ---
 
-<h2 id="%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE8%E3%81%A4%E3%81%AE%E8%AA%A4%E8%AC%AC">分散コンピューティングの8つの誤謬</h2>
-<div style="font-size: 0.7em;">
-<p>1991年にSun Microsystemsのエンジニアたちがまとめた、分散システム初心者が陥りがちな思い込みです。30年以上経った今でもまったく色褪せていない。</p>
-<div style="display: flex; gap: 15px; margin-top: 10px; align-items: center;">
+<h2 id="%E5%88%86%E6%95%A3%E3%81%A7%E5%8E%84%E4%BB%8B%E3%81%AA%E3%81%AE%E3%81%AF%E5%A4%B1%E6%95%97%E3%82%88%E3%82%8A%E4%B8%8D%E6%98%8E">分散で厄介なのは「失敗」より「不明」</h2>
+<div style="font-size: 0.72em;">
+<p>手元の関数呼び出しなら、たいていは「成功」か「失敗」です。分散ではそこに<strong>「成功したかどうかわからない」</strong>が入ります。</p>
+<div style="display: flex; gap: 18px; margin-top: 12px; align-items: stretch;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
-<ol>
-<li>ネットワークは信頼できる</li>
-<li>レイテンシはゼロ</li>
-<li>帯域幅は無限</li>
-<li>ネットワークは安全</li>
-</ol>
+<p><strong>失敗</strong></p>
+<p>やり直す、待たない、別経路に切り替える、という対処が考えやすい。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
-<ol start="5">
-<li>トポロジは変化しない</li>
-<li>管理者は一人</li>
-<li>転送コストはゼロ</li>
-<li>ネットワークは均一</li>
-</ol>
+<p><strong>不明</strong></p>
+<p>やり直すと二重実行になるかもしれない。状態確認や取り消しが必要になります。</p>
 </div>
 </div>
-<div style="margin-top: 12px;">
-<p>手元で関数を呼ぶときは、たいてい「成功」か「失敗」です。でもネットワーク越しだと「成功したかどうかわからない」が混ざります。この「わからない」が、分散システムを難しくします。</p>
-</div>
-<div style="margin-top: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">全部ウソ。だが全部、最初は本当だと思ってしまう</span>
+<div style="margin-top: 12px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">分散で増えるのはエラーの数より、「状態が読めない場面」です</span>
 </div>
 </div>
 
 ---
 
-<h2 id="%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%88%86%E3%81%91%E3%81%A6%E3%82%82%E7%B5%90%E5%90%88%E3%81%AF%E6%B6%88%E3%81%88%E3%81%AA%E3%81%84">サービスを分けても結合は消えない</h2>
+<h2 id="%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%88%86%E3%81%91%E3%81%A6%E3%82%82%E7%B5%90%E5%90%88%E3%81%AF%E6%B6%88%E3%81%88%E3%81%AA%E3%81%84">サービスを分けても、影響は残る</h2>
 <div style="font-size: 0.73em;">
-<p>ここでは、結合の強さを決める要因は<strong>共有ライフサイクル（shared lifecycle）</strong>と<strong>共有知識（shared knowledge）</strong>だと考えます。</p>
+<p>サービスを分けても、次の2つが強いと、実際には一緒に直すことになります。</p>
 <div style="display: flex; gap: 20px; margin-top: 12px; align-items: stretch;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
-<p><strong>共有ライフサイクル</strong></p>
-<p>一緒にテスト、一緒にデプロイ、一緒に障害対応が必要だと、実質的には近いまま。</p>
+<p><strong>いつも一緒に動かす必要がある</strong></p>
+<p>テスト、デプロイ、障害対応がいつもセットなら、見た目ほど独立していません。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
-<p><strong>共有知識</strong></p>
-<p>片方の内部モデルやDB都合をもう片方が知っていると、変更は連鎖する。</p>
+<p><strong>相手の中身を知りすぎている</strong></p>
+<p>片方のDBや内部の都合をもう片方が前提にしていると、変更が連鎖します。</p>
 </div>
 </div>
 <div style="margin-top: 15px;">
 <p>マイクロサービスに分けると、見た目は独立したように見えます。でも境界の切り方が雑だと、<strong>別サービスなのに毎回セットで直す</strong>ことになります。</p>
 </div>
+<div style="margin-top: 12px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">分散は独立を約束しません。境界が悪いと、調整コストだけが増えます</span>
+</div>
 </div>
 
 ---
 
-<h2 id="境界は技術名よりも責務で切ったほうが強い">境界は技術名よりも責務で切ったほうが強い</h2>
+<h2 id="%E5%88%86%E3%81%91%E3%82%8B%E5%8D%98%E4%BD%8D%E3%81%AF%E4%B8%80%E7%B7%92%E3%81%AB%E5%A4%89%E3%82%8F%E3%82%8B%E3%82%82%E3%81%AE">分ける単位は「一緒に変わるもの」</h2>
 <div style="font-size: 0.73em;">
-<p>私は、サービスやモジュールの境界を「API担当」「DB担当」のような<strong>技術名</strong>で切るより、<strong>何の責任を持つか</strong>で切るほうが長持ちすると考えています。</p>
+<p>サービスやモジュールは、「API担当」「DB担当」のような<strong>技術名</strong>で切るより、<strong>変更理由がそろう単位</strong>で切るほうが長持ちします。</p>
 <div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
 <ul>
 <li>技術で切る: 画面、API、DB が別々に増えて調整が増えやすい</li>
 <li>責務で切る: 注文、決済、配送のように変更理由をそろえやすい</li>
 </ul>
 </div>
-<p>分散システムが難しいのは、台数が増えるからだけではありません。<strong>境界の置き方がチームの会話や変更のしやすさまで決めてしまう</strong>からです。</p>
+<p>分散システムが難しいのは、台数が増えるからだけではありません。<strong>分け方しだいで、変更のしやすさまで変わる</strong>からです。</p>
 </div>
 
 ---
 
-<h2 id="%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%81%AB%E3%81%99%E3%82%8C%E3%81%B0%E8%87%AA%E5%8B%95%E3%81%A7%E7%96%8E%E7%B5%90%E5%90%88%E3%81%AB%E3%81%AA%E3%82%8B%E3%82%8F%E3%81%91%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84">非同期にすれば自動で疎結合になるわけではない</h2>
+<h2 id="%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%81%AB%E3%81%99%E3%82%8C%E3%81%B0%E8%87%AA%E5%8B%95%E3%81%A7%E7%96%8E%E7%B5%90%E5%90%88%E3%81%AB%E3%81%AA%E3%82%8B%E3%82%8F%E3%81%91%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84">非同期にしても依存は消えない</h2>
 <div style="font-size: 0.73em;">
-<p>イベント駆動やメッセージングは、確かに実行中の結びつき（runtime coupling）を下げます。送信側が一時停止しても、受信側はすぐには止まりません。</p>
+<p>イベント駆動やメッセージングを使うと、相手がその場で止まっても、こちらまで止まりにくくなります。</p>
 <div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
 <p>しかし、イベントに送信側の内部モデルがそのまま漏れていると、スキーマ変更のたびに受信側も巻き込まれます。</p>
 </div>
 <div style="margin-top: 15px;">
-<p>言い換えると、<strong>物理的な距離（distance）</strong>と<strong>結びつきの強さ（integration strength）</strong>は別物です。配置だけ分けても、共有知識が強ければ、結局は大きく絡み合った扱いにくいシステムになります。</p>
+<p>つまり、別々の場所で動いていても、相手の中身に強く依存していれば、扱いにくさは残ります。</p>
+</div>
+<div style="margin-top: 12px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">非同期化は待ち合わせを減らしますが、意味の依存までは消しません</span>
 </div>
 </div>
 
@@ -741,11 +759,11 @@ _class: transition
 <div style="display: flex; gap: 20px; align-items: center;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 <p><strong>ここまででわかったこと</strong></p>
-<p>分散システムは便利だが、失敗・通信・結合の問題を自動で解決してくれるわけではない。</p>
+<p>分散システムは能力を増やしますが、その代わりに「不明」と「調整コスト」が増えます。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 <p><strong>次の問い</strong></p>
-<p>「では、そんな中で何を優先して決めればいいのか？」<br>
+<p>「では、その増えた難しさの中で、何を守るために何を引き受けるのか？」<br>
 → トレードオフの話へ</p>
 </div>
 </div>
@@ -763,8 +781,8 @@ _class: transition
 
 ## <span style="color: white;">すべてはトレードオフ</span>
 
-<span style="color: white; font-weight: bold;">"There are no solutions. There are only trade-offs."</span>
-<span style="color: white;">— Thomas Sowell</span>
+<span style="color: white; font-weight: bold;">全部を取ることはできない</span>
+<span style="color: white;">大きい事故を小さい不便に変えるのが設計</span>
 
 </div>
 
@@ -788,7 +806,7 @@ _class: transition
 </div>
 </div>
 <div style="margin-top: 15px;">
-<p>ネットワーク分断（P）は現実に起きる。だからCとAのどちらを優先するかを選ぶことになります。ただし、CAP定理は「ネットワーク分断時」の話に限定されていて、レイテンシやスループットなど日常的なトレードオフはカバーしていない。実際の設計判断はCAPだけでは足りず、<strong>「分断がない平常時にも、一貫性とレイテンシのトレードオフがある」</strong>（PACELC）という視点が必要です。</p>
+<p>ネットワーク分断（P）は現実に起きる。だからCとAのどちらを優先するかを選ぶことになります。ただし、CAP定理は「ネットワーク分断時」の話に限定されていて、返ってくるまでの時間や、1秒あたりにさばける量のような日常的なトレードオフはカバーしていない。実際の設計判断はCAPだけでは足りず、PACELC という<strong>「分断時だけでなく、平常時にも一貫性と速さの両立は難しい」と考える見方</strong>が必要です。</p>
 </div>
 </div>
 
@@ -808,7 +826,7 @@ _class: transition
 </div>
 </div>
 <div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">技術が同じでも、文脈が変われば最適解は変わる</span>
+<span style="color: #e65100; font-weight: bold;">止まってでも守るべきものと、少しずれても出し続けたいものは違います</span>
 </div>
 </div>
 
@@ -835,7 +853,7 @@ _class: transition
 </div>
 </div>
 <div style="margin-top: 15px;">
-<p>同期通信は「その場で返事がほしい」ときに向いています。非同期通信は「少し待ってもいいから、全体は止めたくない」ときに向いています。</p>
+<p>違いは速さの好みではありません。<strong>その場で確定したいのか、あとでそろえばよいのか</strong>の違いです。</p>
 </div>
 </div>
 
@@ -849,7 +867,7 @@ _class: transition
 イベントの順序が前後する、同じメッセージが重複する、送る側の都合が受け取る側に漏れる、といった別の難しさが出ます。</p>
 </div>
 <div style="margin-top: 15px;">
-<p>だから大事なのは「同期か非同期かの宗教」ではなく、<strong>何を優先したいからその通信方式を選ぶのか</strong>です。</p>
+<p>だから大事なのは「同期か非同期かの宗教」ではなく、<strong>その場の確実さを取るのか、全体の止まりにくさを取るのか</strong>です。</p>
 </div>
 </div>
 
@@ -884,8 +902,8 @@ _class: transition
 </tr>
 </tbody>
 </table>
-<div style="margin-top: 15px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
-<p>現実の設計では、普段の速さ、運用の大変さ、チームが理解して扱えるかまで含めて判断します。だから「分断時」だけでなく「平常時にどれだけ遅くなるか」や「どこまで品質を約束するか」まで考える必要があります。</p>
+<div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<p>現実の設計では、分断時だけでなく、普段の速さや運用の大変さまで含めて考えます。だから「平常時にどれだけ遅くなるか」や「どこまで品質を約束するか」まで見ないと、実際の設計判断にはつながりません。</p>
 </div>
 </div>
 
@@ -915,9 +933,9 @@ _class: transition
 
 ---
 
-<h2 id="%E3%83%88%E3%83%AC%E3%83%BC%E3%83%89%E3%82%AA%E3%83%95%E3%81%AF%E4%BD%95%E3%82%92%E8%AB%A6%E3%82%81%E3%82%8B%E3%81%8B%E3%81%AE%E9%81%B8%E6%8A%9E">トレードオフは「何を諦めるか」の選択</h2>
+<h2 id="%E3%83%88%E3%83%AC%E3%83%BC%E3%83%89%E3%82%AA%E3%83%95%E3%81%AF%E4%BD%95%E3%82%92%E5%AE%88%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E4%BD%95%E3%82%92%E5%BC%95%E3%81%8D%E5%8F%97%E3%81%91%E3%82%8B%E3%81%8B">トレードオフは「何を守るために何を引き受けるか」</h2>
 <div style="font-size: 0.75em;">
-<p>非機能要件の間には緊張関係があります。全部を同時に最高にすることはできません。</p>
+<p>非機能要件の間には緊張関係があります。全部を同時に最大化できないからこそ、設計では<strong>守りたいもののために別の不便やコストを引き受ける</strong>ことになります。</p>
 <table>
 <thead>
 <tr>
@@ -953,15 +971,21 @@ _class: transition
 
 ---
 
-<h2 id="%E3%83%88%E3%83%AC%E3%83%BC%E3%83%89%E3%82%AA%E3%83%95%E3%81%AF%E3%81%97%E3%81%8B%E3%81%9F%E3%81%AA%E3%81%84%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%8F%E8%85%95%E3%81%AE%E8%A6%8B%E3%81%9B%E3%81%A9%E3%81%93%E3%82%8D">トレードオフは「しかたない」ではなく「腕の見せどころ」</h2>
+<h2 id="%E8%A8%AD%E8%A8%88%E3%81%AF%E5%A4%A7%E3%81%8D%E3%81%84%E4%BA%8B%E6%95%85%E3%82%92%E5%B0%8F%E3%81%95%E3%81%84%E4%B8%8D%E4%BE%BF%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B">設計は「大きい事故」を「小さい不便」に変える</h2>
 <div style="font-size: 0.75em;">
-<div style="margin-top: 15px;">
-<p>トレードオフは「しかたなく我慢すること」ではありません。<strong>限られた時間・お金・人の中で、何をいちばん大事にするかを決めること</strong>です。「全部大事です」は、まだ何も決めていないのと同じです。</p>
-<p>言い換えると、目指すのは「完璧な設計」ではなく、<strong>今の条件でいちばん無理の少ない設計</strong>です。全部を満たす理想形ではなく、制約の中でいちばん納得できる形を選ぶ。英語で言えば、<strong>least worst architecture</strong> に近い考え方です。</p>
+<p>良い設計は、痛みをゼロにすることではありません。<strong>致命傷になりうる事故を、受け入れられる不便に変える</strong>ことです。</p>
+<div style="display: flex; gap: 18px; margin-top: 12px; align-items: stretch;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<p><strong>銀行</strong></p>
+<p>数秒止まる不便を受け入れて、誤送金という大事故を防ぐ。</p>
 </div>
-<div style="margin-top: 15px; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p>ここがこの仕事の面白いところです。制約があるからこそ、エンジニアは考える余地があります。<strong>完璧な答えを当てる仕事ではなく、条件の中で最も納得できる答えを組み立てる仕事</strong>です。</p>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<p><strong>SNS</strong></p>
+<p>数字が少しずれる不便を受け入れて、全体停止という大事故を避ける。</p>
 </div>
+</div>
+<div style="margin-top: 15px; background-color: #e0e0e0; padding: 14px; border-radius: 8px; text-align: center;">
+<p><span style="color: #e65100; font-weight: bold;">設計は「全部を良くする」より、「どの痛みを小さくするか」を決める仕事です</span></p>
 </div>
 </div>
 
@@ -1000,9 +1024,8 @@ _class: transition
 </tr>
 </tbody>
 </table>
-<div style="margin-top: 15px;">
-<p>ここで大事なのは、「どれが唯一の正解か」ではなく、<strong>自分たちが何を優先したのか</strong>を説明できることです。</p>
-<p>同じ技術を使っていても、会社やサービスが違えば答えが変わる。そこにこの仕事の奥行きがあります。</p>
+<div style="margin-top: 12px; background-color: #f5f5f5; padding: 12px; border-radius: 8px; font-size: 0.95em;">
+<p>ここで大事なのは、「どれが唯一の正解か」ではなく、<strong>何を守るために何を引き受けたのか</strong>を説明できることです。表は答えを覚えるためではなく、<strong>守るものが変わると選択も変わる</strong>とつかむためのものです。</p>
 </div>
 </div>
 
@@ -1012,7 +1035,7 @@ _class: transition
 <div style="font-size: 0.74em;">
 <p>設計は、「将来あるかもしれない全部の問題」に先回りして、最初から難しくするゲームではありません。</p>
 <div style="margin-top: 12px; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p>将来あるかもしれない負荷のために今から Kafka と CQRS と 20 マイクロサービスを入れるより、今の課題に対して<strong>最小限で十分な複雑さ</strong>を選ぶほうが良いことが多い。</p>
+<p>将来あるかもしれない負荷のために今から Kafka（大量のメッセージをやり取りする基盤）や、CQRS（書き込みと読み取りを分ける設計）と 20 マイクロサービスを入れるより、今の課題に対して<strong>最小限で十分な複雑さ</strong>を選ぶほうが良いことが多い。</p>
 </div>
 <div style="margin-top: 15px;">
 <p>複雑さそのものがコストです。理解するのも、壊れたときに直すのも、新しく入った人に教えるのも大変になります。だから「すごそうな設計」より「今の課題にちょうどいい設計」のほうが強いことが多いです。</p>
@@ -1025,16 +1048,16 @@ _class: transition
 <div style="font-size: 0.75em;">
 <p>設計判断に迷ったとき、自分に問いかける3つの質問があります。</p>
 <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 10px;">
-<p><strong>1. 最悪の場合、何が起きるか？</strong></p>
-<p>一貫性を緩めたらデータが消える？表示が1秒ずれる？被害の大きさで優先度が決まる。</p>
+<p><strong>1. 壊れたとき、誰がいちばん困るか？</strong></p>
+<p>課金ミス、情報漏えい、数秒の遅さでは重さが違います。まず被害の大きさを見ます。</p>
 </div>
 <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 12px;">
-<p><strong>2. それはどれくらいの頻度で起きるか？</strong></p>
-<p>年に1回のネットワーク分断に備えて常時性能を犠牲にするのか。頻度とコストのバランスを見る。</p>
+<p><strong>2. その痛みは、たまに起きるのか、毎回起きるのか？</strong></p>
+<p>年1回の障害と、毎日の遅さでは意味が違います。頻度で許容できるコストが変わります。</p>
 </div>
 <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 12px;">
-<p><strong>3. そのとき、ユーザーは何を感じるか？</strong></p>
-<p>エンジニアの視点では「99.9%の可用性」。ユーザーの視点では「年に8時間使えない時間がある」。数字の裏にある体験を想像する。</p>
+<p><strong>3. 大きい事故を、小さい不便に変えられているか？</strong></p>
+<p>一時停止で守れるなら止める。少し古い表示で済むなら速さを取る。痛みの置き場所を決めます。</p>
 </div>
 </div>
 
@@ -1044,23 +1067,23 @@ _class: transition
 <div style="font-size: 0.73em;">
 <div style="display: flex; gap: 18px; margin-top: 12px; align-items: stretch;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>答えが1つではない</strong></p>
-<p>数学の問題のように唯一の正解があるわけではなく、条件に応じて「よりよい答え」を探します。</p>
+<p><strong>正解が固定されない</strong></p>
+<p>同じ技術でも、守るものが違えば答えが変わります。そこが面白い。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>技術と現実をつなぐ</strong></p>
-<p>速さ、使いやすさ、お金、運用のしやすさを全部見ながら形にしていきます。</p>
+<p><strong>失敗のコストを読む</strong></p>
+<p>何が致命傷で、何が小さな不便で済むかを読み、構造に変えていきます。</p>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p><strong>自分の判断が残る</strong></p>
-<p>設計した構造や仕組みが、何年も後のチームやユーザー体験に影響します。</p>
+<p><strong>判断が長く効く</strong></p>
+<p>決めた構造は、あとから入る人やユーザー体験、運用のしやすさにまで影響します。</p>
 </div>
 </div>
 <div style="margin-top: 15px; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<p>コードを書くことはもちろん大事です。でも、<strong>どんな失敗を防ぐか、何を優先するか、どこで複雑さを止めるか</strong>を考えるところに、ソフトウェアエンジニアの仕事の面白さがあります。</p>
+<p>コードを書くことはもちろん大事です。でも、それと同じくらい、<strong>どの事故をどこで小さくするかを決めること</strong>が大事です。</p>
 </div>
 <div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">「実装する人」で終わらず、「なぜその形にするかを考える人」になれるのが面白い</span>
+<span style="color: #e65100; font-weight: bold;">ソフトウェアエンジニアは、機能を作る人である前に、被害の形を設計する人です</span>
 </div>
 </div>
 
@@ -1069,19 +1092,19 @@ _class: transition
 <h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
 <div style="font-size: 0.75em;">
 <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
-<p><strong>非機能要件</strong>はシステムの品質を定義する。「何をするか」だけでなく「どう動くか」まで設計しなければ、本番環境で破綻する。</p>
+<p><strong>「動けばOK」の先で考えること</strong>は、どんな事故を避けたいかです。</p>
 </div>
 <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 12px;">
-<p><strong>分散システム</strong>は非機能要件を満たすための強力な手段だが、部分障害やネットワークの不確実性という新しい問題を持ち込む。銀の弾丸ではない。</p>
+<p><strong>分散すると増えるもの</strong>は、サーバー台数より「不明」と「調整コスト」です。</p>
 </div>
 <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 12px;">
-<p><strong>トレードオフ</strong>はエンジニアリングの本質。すべてを同時に最適化はできない。大事なのは「何を選び、何を諦めたか」を説明できること。</p>
+<p><strong>設計を決める軸</strong>は、何を守りたいか、どれくらい起きるか、ユーザーにどう見えるかです。</p>
 </div>
 <div style="margin-top: 12px; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
-<p><strong>面白さ</strong>は、正解の丸暗記ではなく、状況に応じて判断を組み立てること。だからソフトウェアエンジニアは、技術者であると同時に設計者でもあります。</p>
+<p><strong>この仕事のおもしろさ</strong>は、状況に合わせて「大きい事故を小さい不便に変える判断」を組み立てるところにあります。</p>
 </div>
 <div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">「正解」はない。「この文脈で最も妥当な選択」があるだけ</span>
+<span style="color: #e65100; font-weight: bold;">設計とは、何を守るために何を引き受けるかを決める仕事です</span>
 </div>
 </div>
 
@@ -1124,13 +1147,14 @@ _class: transition
 -->
 
 <div style="position: absolute !important; top: 5px !important; left: 5px !important; z-index: 9999 !important; margin: 0 !important; padding: 0 !important;">
-  <img src="../../assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;" />
+  <img src="../../brands/3shake/assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;" />
 </div>
 <div style="text-align: center; margin-top: 200px;">
 
-# ありがとう<span class="highlight-yellow">ございました</span>
+# ありがとうございました
 
 ### ご質問・ご相談はお気軽にどうぞ
 
 @nwiizo | https://3-shake.com
+
 </div>

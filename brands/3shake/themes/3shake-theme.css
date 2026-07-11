@@ -1,0 +1,374 @@
+/* @theme 3shake-theme */
+@import 'default';
+
+/* カラー変数定義 */
+:root {
+  --3shake-blue: #4AADDD;
+  --3shake-blue-dark: #0a1929;
+  --3shake-blue-light: #e6f0ff;
+  --3shake-blue-pale: rgba(74, 173, 221, 0.1);
+  --3shake-yellow: #ECBE30;
+  --3shake-green: #5FB878;
+  --3shake-gray: #80868b;
+  --3shake-gray-light: #dadce0;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --header-height: 70px;
+  --footer-height: 50px;
+  --side-padding: 50px;
+  --logo-url: url("../../brands/3shake/assets/images/3shake-cover.png");
+}
+
+/* 全スライド共通のスタイル */
+section {
+  font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ロゴをすべてのスライドに自動的に表示 */
+section:not(.title)::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: var(--logo-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  z-index: 100;
+}
+
+/* 背景色付きスライドではロゴ色を反転 */
+section[data-background-color="dark"]::before {
+  filter: brightness(0) invert(1);
+}
+
+/* タイトルスライドのスタイル */
+section.title {
+  background-color: var(--3shake-blue-dark);
+  color: var(--text-light);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+section.title h1 {
+  color: var(--text-light);
+  font-size: 3.2em;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.1em;
+  padding: 0;
+  border: none;
+}
+
+section.title h3 {
+  color: var(--text-light);
+  font-size: 1.5em;
+  margin-top: 0.1em;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 通常スライドの見出しスタイル */
+section h2 {
+  color: var(--text-dark);
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--3shake-gray-light);
+  padding-bottom: 0.3em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* コンテンツエリア */
+section > *:not(h2):not(header):not(footer) {
+  margin-left: var(--side-padding);
+  margin-right: var(--side-padding);
+  margin-top: 1em;
+}
+
+/* リストのスタイル */
+section ul,
+section ol {
+  padding-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+section ul li,
+section ol li {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+section ul ul,
+section ol ol {
+  margin-top: 0.3em;
+}
+
+/* コードブロックのスタイル */
+section pre {
+  background: var(--3shake-blue-dark);
+  border-radius: 6px;
+  padding: 1em;
+  color: var(--3shake-blue-light);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  font-size: 0.9em;
+}
+
+section code {
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* 引用のスタイル */
+section blockquote {
+  border-left: 5px solid var(--3shake-blue);
+  margin-left: 0;
+  padding: 0.5em 0 0.5em 1em;
+  color: var(--3shake-gray);
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 0 4px 4px 0;
+}
+
+/* フッター */
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--3shake-gray);
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+/* タイトルページのページ番号を非表示 */
+section.title::after {
+  display: none;
+}
+
+/* 3-SHAKEカラースキーム */
+.highlight-yellow {
+  color: var(--3shake-yellow);
+  font-weight: bold;
+}
+
+.highlight-green {
+  color: var(--3shake-green);
+  font-weight: bold;
+}
+
+.highlight-blue {
+  color: var(--3shake-blue);
+  font-weight: bold;
+}
+
+/* 背景色付きのボックス */
+.info-box {
+  background-color: var(--3shake-blue-pale);
+  border-left: 4px solid var(--3shake-blue);
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* テーブルスタイル */
+section table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+section th {
+  background-color: var(--3shake-blue);
+  color: var(--text-light);
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+section td {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--3shake-gray-light);
+}
+
+section tr:last-child td {
+  border-bottom: none;
+}
+
+section tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Mermaid図のスタイル */
+.mermaid {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 2em auto !important;
+  background: transparent !important;
+}
+
+.mermaid svg {
+  height: auto !important;
+  max-width: 100% !important;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+/* Mermaid自動サイズ調整用のクラス */
+.mermaid-auto-xxxs svg {
+  max-width: 10% !important;
+}
+
+.mermaid-auto-xxs svg {
+  max-width: 15% !important;
+}
+
+.mermaid-auto-xs svg {
+  max-width: 20% !important;
+}
+
+.mermaid-auto-s svg {
+  max-width: 25% !important;
+}
+
+.mermaid-auto-sm svg {
+  max-width: 35% !important;
+}
+
+.mermaid-auto-md svg {
+  max-width: 50% !important;
+}
+
+.mermaid-auto-lg svg {
+  max-width: 65% !important;
+}
+
+.mermaid-auto-xl svg {
+  max-width: 80% !important;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1280px) {
+  .mermaid-auto-xxxs svg {
+    max-width: 15% !important;
+  }
+  .mermaid-auto-xxs svg {
+    max-width: 20% !important;
+  }
+  .mermaid-auto-xs svg {
+    max-width: 25% !important;
+  }
+  .mermaid-auto-s svg {
+    max-width: 30% !important;
+  }
+  .mermaid-auto-sm svg {
+    max-width: 40% !important;
+  }
+  .mermaid-auto-md svg {
+    max-width: 60% !important;
+  }
+  .mermaid-auto-lg svg, .mermaid-auto-xl svg {
+    max-width: 90% !important;
+  }
+}
+
+/* Mermaidノードスタイルのカスタマイズ */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon,
+.mermaid .node path {
+  stroke-width: 2px;
+}
+
+.mermaid .node.default > rect,
+.mermaid .node.default > circle,
+.mermaid .node.default > ellipse,
+.mermaid .node.default > polygon {
+  fill: #f4f4f4;
+  stroke: #999;
+}
+
+.mermaid .edgeLabel {
+  background-color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.mermaid .flowchart-link {
+  stroke-width: 2px;
+}
+
+/* 2カラムレイアウト */
+.columns {
+  display: flex;
+  gap: 2em;
+  margin: 1em 0;
+}
+
+.columns > * {
+  flex: 1;
+}
+
+/* アニメーション効果 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 画像スタイル */
+section img:not([class]) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 背景画像スタイル */
+section[data-background-image] {
+  background-size: cover;
+  background-position: center;
+}
+
+/* 背景色付きスライド */
+section[data-background-color="dark"] {
+  background-color: var(--3shake-blue-dark);
+  color: var(--text-light);
+}
+
+section[data-background-color="dark"] h2 {
+  color: var(--text-light);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+section[data-background-color="dark"] code {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+section[data-background-color="dark"] .info-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left-color: var(--3shake-blue);
+} 

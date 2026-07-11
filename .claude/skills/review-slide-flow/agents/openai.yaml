@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Slide Flow"
+  short_description: "Trace a presentation’s logic and repair audience-visible gaps"
+  default_prompt: "Use $review-slide-flow to review the logical flow of this Marp presentation."

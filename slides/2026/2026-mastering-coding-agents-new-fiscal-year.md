@@ -10,9 +10,9 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
-<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../../brands/3shake/assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 80px; padding-left: 0; max-width: 70%;">
 
@@ -31,7 +31,7 @@ _class: title dark
 
 <!-- _backgroundColor: white -->
 
-![bg left:30% fit](../../assets/images/nwiizo_icon.jpg)
+![bg left:30% fit](../../assets/shared/nwiizo_icon.jpg)
 
 ## nwiizo
 
@@ -50,7 +50,7 @@ _class: title dark
 ## about 3-shake
 
 <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-<img src="../../assets/images/3shake-about.png" alt="3-SHAKE会社概要" style="width: 85%; height: fit-content;">
+<img src="../../brands/3shake/assets/images/3shake-about.png" alt="3-SHAKE会社概要" style="width: 85%; height: fit-content;">
 </div>
 
 ---
@@ -3361,9 +3361,9 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
-<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../../brands/3shake/assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
 
 <div class="title" style="text-align: left; margin-top: 150px; margin-left: 80px; padding-left: 0; max-width: 70%;">
 

@@ -1,0 +1,9 @@
+{
+  "name": "nwiizo-slides",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Conference slides by nwiizo",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.3.0"
+  }
+}

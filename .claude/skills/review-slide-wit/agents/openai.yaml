@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Slide Wit"
+  short_description: "Evaluate humor for purpose, precision, voice, and safety"
+  default_prompt: "Use $review-slide-wit to assess the humor and rhetorical wit in this presentation."

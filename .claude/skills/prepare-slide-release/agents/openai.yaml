@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Slide Release"
+  short_description: "Verify themes, assets, PDFs, links, and clean clones"
+  default_prompt: "Use $prepare-slide-release to validate this presentation before publishing it."

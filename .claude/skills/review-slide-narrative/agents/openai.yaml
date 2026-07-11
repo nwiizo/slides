@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Slide Narrative"
+  short_description: "Align narrative tension, empathy, and audience transformation"
+  default_prompt: "Use $review-slide-narrative to review the narrative and audience empathy of this presentation."

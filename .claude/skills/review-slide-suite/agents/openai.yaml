@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Slide Suite"
+  short_description: "Synthesize specialist reviews into one coherent edit strategy"
+  default_prompt: "Use $review-slide-suite to coordinate a complete review of this presentation."

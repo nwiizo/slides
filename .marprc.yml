@@ -1,0 +1,5 @@
+allowLocalFiles: true
+html: true
+themeSet: brands/3shake/themes/
+bespoke:
+  progress: true

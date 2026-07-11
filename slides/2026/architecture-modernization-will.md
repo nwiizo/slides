@@ -12,9 +12,9 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
-<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../../brands/3shake/assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
@@ -33,7 +33,7 @@ _class: title dark
 
 <!-- _backgroundColor: white -->
 
-![bg left:30% fit](../../assets/images/nwiizo_icon.jpg)
+![bg left:30% fit](../../assets/shared/nwiizo_icon.jpg)
 
 ## nwiizo
 
@@ -52,7 +52,7 @@ _class: title dark
 ## about 3-shake
 
 <div style="text-align: center; margin-top: 30px;">
-  <img src="../../assets/images/3shake-about.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
+  <img src="../../brands/3shake/assets/images/3shake-about.png" alt="3-shake about" style="width: 80%; margin-top: 10px;">
 </div>
 
 ---
@@ -116,7 +116,7 @@ _class: title dark
 Mobility、FinTech、通信など大規模SREを存分に経験できます
 是非、カジュアル面談しましょう！
 
-  <img src="../../assets/images/3shake-hiring.png" alt="3-shake hiring" style="width: 80%; margin-top: 10px;">
+  <img src="../../brands/3shake/assets/images/3shake-hiring.png" alt="3-shake hiring" style="width: 80%; margin-top: 10px;">
 </div>
 
 ---
@@ -3956,11 +3956,11 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
 <!-- タイトルページ左上に大きなロゴを表示 -->
 <div style="position: absolute !important; top: 5px !important; left: 5px !important; z-index: 9999 !important; margin: 0 !important; padding: 0 !important;">
-  <img src="../../assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
+  <img src="../../brands/3shake/assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
 </div>
 
 <div style="text-align: center; margin-top: 200px;">

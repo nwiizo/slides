@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deepen Slide Claims"
+  short_description: "Turn generic claims into bounded, defensible insights"
+  default_prompt: "Use $deepen-slide-claims to test and deepen the core claims in this presentation."

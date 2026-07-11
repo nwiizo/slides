@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trim Slide Redundancy"
+  short_description: "Remove repetition while preserving pacing and comprehension"
+  default_prompt: "Use $trim-slide-redundancy to find safe cuts and consolidation opportunities in this presentation."

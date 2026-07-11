@@ -1,12 +1,12 @@
 ---
 marp: true
-theme: ../../themes/3shake-theme.css
+theme: 3shake-theme
 paginate: true
 math: mathjax
 mermaid: true
 style: |
   :root {
-    --logo-url: url("../../assets/images/3shake-cover.png");
+    --logo-url: url("../../brands/3shake/assets/images/3shake-cover.png");
     --mini-font-size: 20px;
     --header-footer-height: 50px;
     --black: #333;
@@ -162,9 +162,9 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
-<img src="../../assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
+<img src="../../brands/3shake/assets/images/3shake-logo.png" alt="3-SHAKE logo" style="position: absolute !important; top: 100px !important; left: 100px !important; width: 240px !important; height: auto !important; z-index: 9999 !important;">
 
 <div class="title" style="text-align: left; margin-top: 100px; margin-left: 20px; padding-left: 0; max-width: 70%;">
 
@@ -181,7 +181,7 @@ _class: title dark
 
 <!-- _backgroundColor: white -->
 
-![bg left:30% fit](../../assets/images/nwiizo_icon.jpg)
+![bg left:30% fit](../../assets/shared/nwiizo_icon.jpg)
 ## nwiizo
 
 <div class="info-box">
@@ -199,7 +199,7 @@ _class: title dark
 ## about 3-shake
 
 <div style="text-align: center; margin-top: 30px;">
-  <img src="../../assets/images/3shake-about.png" alt="3-shake" style="width: 95%; max-width: 900px;">
+  <img src="../../brands/3shake/assets/images/3shake-about.png" alt="3-shake" style="width: 95%; max-width: 900px;">
 </div>
 
 ---
@@ -1800,13 +1800,13 @@ _color: white
 _class: title dark
 -->
 
-![bg](../../assets/images/3shake-background-full.png)
+![bg](../../brands/3shake/assets/images/3shake-background-full.png)
 
 
 
 <!-- タイトルページ左上に大きなロゴを表示 -->
 <div style="position: absolute !important; top: 5px !important; left: 5px !important; z-index: 9999 !important; margin: 0 !important; padding: 0 !important;">
-  <img src="../../assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
+  <img src="../../brands/3shake/assets/images/3shake-logo.png" style="width: 240px !important; height: auto !important; display: block !important;">
 </div>
 
 <div style="text-align: center; margin-top: 200px;">

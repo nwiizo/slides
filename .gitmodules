@@ -1,0 +1,3 @@
+[submodule "vendor/3shake-marp-templates"]
+	path = vendor/3shake-marp-templates
+	url = https://github.com/nwiizo/3shake-marp-templates.git
