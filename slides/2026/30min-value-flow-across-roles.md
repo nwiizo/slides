@@ -18,7 +18,7 @@ _class: title dark
 
 # <span style="font-size: 0.82em; line-height: 1.25;">AIで実装は速くなった。</br>なのにプロダクトは速くならない。</span>
 
-### <span style="font-size: 0.78em;">職能の壁を越えて価値のフローを設計する</span>
+### <span style="font-size: 0.78em;">職能の壁を越えて、価値が届くまでの流れを設計する</span>
 
 </div>
 
@@ -51,6 +51,41 @@ _class: title dark
 
 <div style="text-align: center; margin-top: 30px;">
   <img src="../../brands/3shake/assets/images/3shake-about.png" alt="3-shake about" style="width: 80%; max-height: 430px; object-fit: contain; margin-top: 10px;">
+</div>
+
+---
+
+## 初めての単著が出ました
+
+<div style="display: flex; gap: 44px; align-items: center;">
+
+<div style="width: 31%; text-align: center;">
+<img src="../../assets/images/2026/value-flow-across-roles/oi-toriaezu-owarasero.webp" alt="書籍『おい、とりあえず終わらせろ』の表紙" style="height: 390px; max-width: 100%; object-fit: contain; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);">
+<div style="font-size: 0.55em; color: #888; margin-top: 5px;">書影：ダイヤモンド社</div>
+</div>
+
+<div style="flex: 1; font-size: 0.78em;">
+
+<div style="font-size: 1.28em; line-height: 1.4;">
+<strong>『おい、とりあえず終わらせろ』</strong>
+</div>
+
+<div style="margin-top: 14px;">
+完璧に準備しようとして動けなくなるより、まず終わらせ、そこから直していく。そんな進め方をまとめた本です。
+</div>
+
+<div style="margin-top: 22px; padding: 16px 18px; background-color: #f5f5f5; border-radius: 8px; line-height: 1.75;">
+<strong>2026年に翻訳に携わった本</strong><br>
+『アーキテクチャモダナイゼーション』<br>
+『セキュアAPI』<br>
+『実践 プラットフォームエンジニアリング』
+</div>
+
+<div style="margin-top: 18px; color: #555;">
+最近では本を読むだけでは飽き足らず、書いたり、訳したりしています。『アーキテクチャモダナイゼーション』の翻訳で考えてきた「価値が届くまでの流れ」も、今回の発表につながっています。
+</div>
+
+</div>
 </div>
 
 ---
@@ -91,11 +126,11 @@ AIでPull Request（PR）は増え、手を動かす速さも上がったよう�
 1. 増えた生産量はどこに消えたのか
 2. 測りやすい数字は、価値が届いた証拠ではない
 3. 役割ごとの前提を対話で確かめる
-4. ユーザーが達成したいことから「作る・やめる」を判断する
+4. ユーザーが達成したいことから「作る・任せる・やめる」を判断する
 
 <div style="margin-top: 26px; padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
 
-前半は「なぜ速くならないのか」を数字で見ます。後半は、役割ごとの前提を確かめる<strong>対話と一つの図</strong>、チームの判断をAIの実装へ反映する<strong>判断の前提・実装前の仕様</strong>を扱います。
+前半は「なぜ速くならないのか」を数字で見ます。後半は、役割ごとの前提を対話で確かめ、<strong>図に並べた判断材料</strong>から、まず「作る」を決めます。次に、その判断をAIへどう渡し、どこまで「任せる」かを考えます。最後に、利用と依存を確かめ、「やめる」条件と判断日を決めます。
 
 </div>
 
@@ -148,10 +183,6 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-出典：<a href="https://dora.dev/research/2025/dora-report/">DORA, State of AI-assisted Software Development 2025（v. 2025.2）</a> ／ <a href="https://cloud.google.com/resources/content/dora-roi-of-ai-assisted-software-development">DORA, ROI of AI-assisted Software Development 2026（v. 2026.1）</a>
-</div>
-
 ---
 
 ## ジョブ理論では、ユーザーの目的から考える
@@ -192,34 +223,113 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 ---
 
-## 価値が届くのは、ユーザーのジョブが片付いたとき
+## 完全に余談なのですが
+
+<div style="font-size: 0.7em;">
+
+クレイトン・M・クリステンセンの本では、『ジョブ理論』以外に、この二冊も好きです。
+
+<div style="display: grid; grid-template-columns: 1fr 1.18fr 170px; gap: 14px; align-items: stretch; margin-top: 12px;">
+
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>『イノベーションのジレンマ』</strong>
+
+<div style="margin-top: 10px;">
+優良企業は、既存顧客の要望を聞き、収益の上がる改善へ投資します。その合理的な判断が、当初は主流顧客の求める性能に届かず、市場も小さい新技術への対応を遅らせます。
+</div>
+
+<div style="margin-top: 10px;">
+新技術が別の顧客に受け入れられ、改良を重ねて既存製品を脅かす。この動きを<strong>破壊的イノベーション</strong>として説明した本です。
+</div>
+</div>
+
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>『イノベーションの経済学』</strong><br>
+<span style="color: #666;">「繁栄のパラドクス」に学ぶ巨大市場の創り方</span>
+
+<div style="margin-top: 10px;">
+高価、複雑、手に入りにくいといった理由で、既存の製品を利用できない人々がいます。本書では、この状態を<strong>無消費</strong>と呼びます。
+</div>
+
+<div style="margin-top: 10px;">
+手頃で使いやすい解決策が新しい市場をつくり、販売や流通、雇用も育てていく。これを<strong>市場創造型イノベーション</strong>として、各国の事例から説明します。
+</div>
+</div>
+
+<div style="text-align: center; align-self: center;">
+<img src="../../assets/images/2026/innovation-economics-book-cover.png" alt="書籍『イノベーションの経済学』の表紙" style="width: 100%; max-height: 270px; object-fit: contain;">
+<div style="font-size: 0.55em; color: #888; margin-top: 5px;">クレイトン・M・クリステンセンほか『イノベーションの経済学』</div>
+</div>
+
+</div>
+
+<div style="margin-top: 12px; padding: 10px 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>いま見えている顧客だけを前提にすると、次に生まれる市場を見落とす。この視点が好きです。</strong>
+</div>
+
+</div>
+
+<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
+出典：<a href="https://www.seshop.com/product/detail/2241">翔泳社『イノベーションのジレンマ 増補改訂版』</a> ／ <a href="https://www.harpercollins.co.jp/hc/books/detail/15576">ハーパーコリンズ・ジャパン『イノベーションの経済学』</a>
+</div>
+
+---
+
+## 実装が終わっても、価値が届いたかはまだ分からない
 
 <div style="font-size: 0.72em;">
 
-機能を出した時点と、ユーザーがその機能を使ってジョブを片付けた時点を分けて考えます。検索機能を改善する例で見ると、次のようになります。
+実装完了は、予定した機能がコードとして動き、テストを通った状態です。リリースすれば、ユーザーが利用できるようになります。ここまでで確認できるのは、<strong>チームが予定したものを作り、利用できるようにしたこと</strong>です。
 
-<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>出したもの</strong><br><span style="color: #666;">検索条件を追加して<br>利用可能にした</span></div>
-<div style="font-size: 1.4em;">→</div>
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>使われ方</strong><br><span style="color: #666;">対象のユーザーが<br>実際の検索で使った</span></div>
-<div style="font-size: 1.4em;">→</div>
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>生じた変化</strong><br><span style="color: #555;">必要な情報へ早くたどり着けた<br>その結果、購入につながった</span></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 20px;">
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>必要な人が利用できるか</strong><br><br>
+対象のユーザーが機能を知り、必要なときに使えるとは限りません。
+</div>
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>実際の状況で使われるか</strong><br><br>
+使える機能でも、ユーザーが別の手段を選ぶことがあります。
+</div>
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>望んだ結果が起きるか</strong><br><br>
+使われても、探す時間や購入の判断が変わらないことがあります。
+</div>
 </div>
 
-<div style="margin-top: 20px;">
-
-<strong>アウトプット</strong>は作って出したもの。<strong>アウトカム</strong>は、ユーザーが使ったあとに起きた、ユーザーや事業の変化です。リリースしただけでは、価値が届いたとは判断できません。利用後の変化を確かめて判断します。
+<div style="margin-top: 20px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>価値が届くのは、実装が終わったときではなく、ユーザーのジョブが片付いたときです。</strong>
+</div>
 
 </div>
 
-<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+---
+
+## 価値が届くのは、ユーザーのジョブが片付いたとき
+
+<div style="font-size: 0.7em;">
+
+ジョブが片付いたとは、機能を使った結果、ユーザーが望んでいた変化が実際に起きた状態です。検索機能を操作できても、必要な情報へ早くたどり着けなければ、ジョブはまだ片付いていません。
+
+作って出したものを<strong>アウトプット</strong>、利用後に生じたユーザーや事業の変化を<strong>アウトカム</strong>と呼びます。
+
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 16px; text-align: center;">
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>アウトプット</strong><br><span style="color: #666;">検索条件を実装し<br>本番で利用できる</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>利用</strong><br><span style="color: #666;">対象のユーザーが<br>商品を探すときに使った</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>アウトカム</strong><br><span style="color: #555;">必要な情報へ早くたどり着き<br>購入を判断できた</span></div>
+</div>
+
+<div style="margin-top: 18px;">
+
+利用回数はアウトプットとアウトカムをつなぐ手がかりです。ただし、利用回数だけではジョブが片付いたか分かりません。利用後の変化まで確かめます。
+
+</div>
+
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
 <strong>プロダクトの速さは、機能を出すまでではなく、結果を確かめるまでで見る必要があります。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-参考：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第1章、第11章 ／ Susanne Kaiser, <em>Architecture for Flow</em>, 第1章
 </div>
 
 ---
@@ -228,7 +338,7 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 <div style="font-size: 0.75em;">
 
-まず、チケットに着手してから変更を利用できるようになるまでを、実作業30%、待ち70%と置いた例で考えます。
+まず、アウトプットを本番で利用できる状態にするまで、つまりチケットに着手してから本番へ反映するまでを、実作業30%、待ち70%と置いた例で考えます。
 
 <div style="display: flex; margin-top: 22px; height: 64px; border-radius: 8px; overflow: hidden; font-weight: bold;">
 <div style="width: 30%; background-color: #e65100; color: white; display: flex; align-items: center; justify-content: center;">実作業 30%</div>
@@ -277,7 +387,44 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 </div>
 
 <div style="margin-top: 14px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.15em;">
-<span style="color: #e65100; font-weight: bold;">この例では、合意と判断の待ち時間が、全体の速さを決める詰まりになる。</span>
+<span style="color: #e65100; font-weight: bold;">この例では、合意と判断の待ち時間が、全体の速さを決める詰まりになる。<br>次に、AIが短くしやすい仕事と、その外側に残る仕事を分けて見る。</span>
+</div>
+
+</div>
+
+---
+
+## 実作業を速めても、外側の待ちは残る
+
+<div style="font-size: 0.75em;">
+
+先ほどの30/70の例を、AIを使う場面に重ねます。AIが直接短くしやすいのは、一人が手元で作って確かめる繰り返しです。これを<strong>内側のループ</strong>と呼びます。その成果をチームが受け入れ、利用できる状態にする繰り返しが<strong>外側のループ</strong>です。
+
+<div style="display: flex; gap: 20px; align-items: center; margin-top: 16px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+
+<strong>内側のループ</strong>
+
+設計し、コードを書き、動かし、手元でテストする。実作業30%と重なる部分が多く、AIで短くしやすい。
+
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+
+<strong>外側のループ</strong>
+
+優先順位を決め、レビューし、統合し、リリースする。役割をまたぐ判断や調整があり、待ち70%が生まれやすい。
+
+</div>
+</div>
+
+<div style="margin-top: 20px;">
+
+AIで内側の成果が早く出ても、外側で一日に受け入れられる件数は自動では増えません。レビューの観点、判断する人、依存先との進め方を変えなければ、早くできたPRが外側の工程に並びます。
+
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>30/70の例では、内側を半分にしても外側の70は残る。<br>AIの効果は、変更を利用でき、結果を確かめるまでの流れで見る。</strong>
 </div>
 
 </div>
@@ -293,7 +440,7 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 </div>
 <div style="flex: 1; font-size: 0.72em;">
 
-30/70の例は、実装に着手してからリリースするまでだけを切り出しました。<strong>バリューストリーム</strong>は、さらに広い範囲を扱います。まだ片付いていないユーザーのジョブを見つけ、届けたい結果と確かめ方を決め、実装して届け、ジョブが片付いたか確かめるまでを、ひと続きの仕事として捉えます。
+内側と外側のループで整理したのは、主にチケットへ着手してからアウトプットを利用できる状態にするまでです。しかし、プロダクトの仕事は着手前から始まり、リリース後も続きます。ユーザーのジョブを見つけ、求めるアウトカムと確かめ方を決め、アウトプットを届け、ジョブが片付いたか確かめるまで。この全体を<strong>バリューストリーム</strong>と呼びます。
 
 <div style="margin-top: 18px; padding: 12px; background-color: #f5f5f5; border-radius: 8px;">
 <strong>開始条件</strong>　ユーザーのジョブが、まだ片付いていない<br>
@@ -304,7 +451,7 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 </div>
 
 <div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-出典：Susanne Kaiser, <em>Architecture for Flow</em>, Addison-Wesley, 2025, 第6章
+出典：Susanne Kaiser, <em>Architecture for Flow</em>, Addison-Wesley, 2025
 </div>
 
 ---
@@ -313,33 +460,82 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 <div style="font-size: 0.72em;">
 
+範囲をバリューストリームまで広げると、実装の位置づけが見えてきます。実装は、その途中でアウトプットを作って届ける仕事です。前には、ジョブを見つけて何を作るかを決める仕事があり、後には、利用後のアウトカムを確かめる仕事があります。
+
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px;">
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>ジョブを見つける</strong><br>
 ユーザーが困る状況、いま試している手段、達成したいことを、観察や対話から確かめる。
 </div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>結果と確かめ方を決める</strong><br>
+<strong>アウトカムと確かめ方を決める</strong><br>
 ユーザーの行動や事業の数字がどう変われば価値が届いたと言えるかを、実装前に決める。
 </div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>作って届ける</strong><br>
+<strong>アウトプットを作って届ける</strong><br>
 設計し、実装してテストする。リリースして、ユーザーが変更を利用できる状態にする。
 </div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>結果を確かめる</strong><br>
+<strong>アウトカムを確かめる</strong><br>
 実際に使われ、期待した変化が起きたかを見る。続ける、変える、やめるを判断する。
 </div>
 </div>
 
 <div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>コードを書く前には判断があり、届けた後には結果の確認がある。</strong>
+<strong>つまり、アウトプットを作る前には判断があり、届けた後にはアウトカムの確認があります。実装だけを速くしても、前後が遅ければ、バリューストリーム全体は速くなりません。</strong>
 </div>
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, Addison-Wesley, 2025, 第6章
+---
+
+## バリューストリームマッピングは、作業と待ちを分ける
+
+<div style="font-size: 0.75em;">
+
+バリューストリームの工程を時系列に並べ、各区間を実際に手を動かしていた時間と、判断や作業を待っていた時間に分けて可視化する方法を、<strong>バリューストリームマッピング</strong>と呼びます。
+
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 14px; text-align: center;">
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>直近10件を選ぶ</strong><br><span style="color: #666;">大きさで選別せず、<br>実際に進めた案件を使う</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>時刻を記録から拾う</strong><br><span style="color: #666;">ジョブの確認、着手、PR、承認、<br>本番反映、利用開始、結果確認</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>区間を分ける</strong><br><span style="color: #555;">作業か、誰かを待ったか。<br>待った相手の役割を書く</span></div>
+</div>
+
+<div style="margin-top: 22px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>実際の記録を使い、作業していた時間と待っていた時間を分ける。</strong>
+</div>
+
+</div>
+
+---
+
+## 待ち時間は、相手と理由まで記録する
+
+<div style="font-size: 0.75em;">
+
+工程を並べたら、最初に二つを見ます。個人の働き方を評価するためではありません。役割の間で仕事をどう渡し、どこで止まっているかを知るためです。
+
+<div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>作業していた時間の割合</strong><br><br>
+着手から結果を確認するまでに、設計、実装、確認など、実際に進めていた時間がどれだけあったか。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>最も長く待った工程</strong><br><br>
+どの工程で、誰の、どんな判断や作業を待ったか。件数だけでなく、待った理由も記録する。
+</div>
+</div>
+
+<div style="margin-top: 20px;">
+待ちのすべてが無駄ではありません。本番前の確認のように、安全のために設ける待ちもあります。担当と判断日が決まった保留は、期限のない放置と分けます。見直すのは、目的を説明できない確認、担当が曖昧な引き継ぎ、処理できる量を超えて積み上がる待ちです。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>待ちの合計が大きい工程を、最初の制約候補にする。相手と理由が分かれば、減らす方法を選べる。</strong>
+</div>
+
 </div>
 
 ---
@@ -353,22 +549,28 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 </div>
 <div style="flex: 1; font-size: 0.72em; line-height: 1.45;">
 
+バリューストリームマッピングで長い待ちを見つけたら、チームが流れをどこまで自分たちで進められるかを見直します。ここでいう独立とは、関係するチームがあっても、日常的な変更を発見から結果の確認まで大きな待ちなしに進められることです。そのために、チームの担当範囲、判断できる範囲、目標の置き方、ソフトウェアの分け方という四つの条件を揃えます。
+
+<div style="margin-top: 14px;">
+
 <strong>事業の仕事に合わせて担当範囲を決める</strong>　どのジョブを扱うかが明確<br>
 <strong>チームが判断できる</strong>　製品・技術・リリースを決められる<br>
 <strong>利用後の変化から作るものを決める</strong>　届けた結果まで確かめる<br>
 <strong>ソフトウェアを分ける</strong>　単独で変更して届けられる
 
-<div style="margin-top: 16px;">
+</div>
 
-ほかのチームと協力していても、日常的な変更を発見から結果の確認まで同じチームで進められるなら、ここでいう<strong>独立</strong>に当たります。
+<div style="margin-top: 14px;">
+
+この四つは別々ではありません。担当範囲と目指すアウトカムが決まっていても、判断のたびにほかのチームを待ち、ソフトウェアも一緒に変更しなければならないなら、流れは独立していません。
 
 </div>
 
 </div>
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024, 第1章
+<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px; padding-right: 36px;">
+出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024
 </div>
 
 ---
@@ -376,6 +578,8 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 ## 四つの条件は、「何を担うか」と「どう進めるか」
 
 <div style="font-size: 0.72em;">
+
+先ほどの四つは、「何を担うか」と「どう進めるか」の二つに分けて考えます。事業の仕事と目指すアウトカムは、チームが引き受ける範囲を決めます。判断できる範囲とソフトウェアの分け方は、その仕事を大きな待ちなしに進められるかを決めます。
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px;">
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -397,13 +601,9 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 </div>
 
 <div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>事業の仕事と利用後の変化から「何を引き受けるか」を決める。判断の権限とソフトウェアの分け方で「待たずに終えられるか」を決める。</strong>
+<strong>四つの条件を揃えるのは、チームを閉じるためではありません。ジョブの発見からアウトカムの確認までを、大きな待ちなしに進めるためです。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024, 第1章
 </div>
 
 ---
@@ -411,6 +611,8 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 ## 仕事を引き継ぐところで、待ちが生まれやすい
 
 <div style="font-size: 0.72em;">
+
+四つの条件が揃わないと、仕事は役割の間を何度も移動します。ここでは、変更を利用できるようにするまでに、誰から誰へ仕事を渡し、何を待っているかを見ます。
 
 <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
 <div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>優先順位を決める人<br>→ 実装する人</strong><br><span style="color: #666;">何を作るかの判断を待つ</span></div>
@@ -430,10 +632,6 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 <strong>AIで作業を速くしても、引き継ぐ回数と待つ順番は変わらない。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024, 第1章 ／ Susanne Kaiser, <em>Architecture for Flow</em>, Addison-Wesley, 2025, 第5章、第6章「依存関係の分析」
 </div>
 
 ---
@@ -465,82 +663,48 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, 第6章「依存関係の分析」／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第1章
-</div>
-
 ---
 
-## AIが速くするのは、まず一人の手元
+## 制約理論では、一番遅い工程から直す
 
 <div style="font-size: 0.75em;">
 
-<div style="display: flex; gap: 20px; align-items: center; margin-top: 16px;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+各工程には、一日に処理できる仕事の量があります。実装から渡される量が次の工程で処理できる量を超えると、終わっていない仕事がその手前に積み上がります。全体の速さを決めている工程を<strong>制約</strong>と呼び、そこから改善する考え方が<strong>制約理論</strong>です。
 
-<strong>内側のループ</strong>
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
+<div style="padding: 15px 10px; background-color: #f5f5f5; border-radius: 8px;">
 
-一人が手元でコードを書き、動かし、直す繰り返し。この繰り返しはAIで短くしやすい。
+<strong>AI支援で実装</strong><br><br>
+1日に10件のPRを作る
 
 </div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 15px 10px; background-color: #f5f5f5; border-radius: 8px;">
 
-<strong>外側のループ</strong>
+<strong>レビュー</strong><br><br>
+意図・影響・テストを<br>1日に5件確認できる
 
-チームがレビュー、統合、検証、説明を重ね、変更を利用できる状態にするまでの繰り返し。
+
+</div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 15px 10px; background-color: #f5f5f5; border-radius: 8px;">
+
+<strong>レビュー待ち</strong><br><br>
+一日ごとに5件増える
 
 </div>
 </div>
 
 <div style="margin-top: 20px;">
 
-内側のループで作ったPRは、外側のループへ入ります。AIでPRを作る時間が短くなっても、レビューする人数、確認する項目、他チームと合意する順番は、そのままでは変わりません。作業が数日ではなく数時間で終わるようになると、チームが調整するより速く仕事の列が空になり、同じファイルで互いにぶつかり始めます。
+この例では、レビューできる件数が変わらない限り、利用できる状態になるのは一日5件までです。実装済みのPRが増えるほど、着手から利用可能になるまでの時間は長くなります。数字は仕組みを説明するための例です。実際の制約は、工程ごとの件数と待ち時間から確かめます。
 
 </div>
 
 <div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>内側から外側へ渡す仕事だけが増えると、外側の工程で待ちが増える。</strong>
+<strong>制約を変えないまま実装だけを速めると、利用可能になるまでの時間は長くなる。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-参考：Alfonso Graziano, <em>AI-Native Software Engineering</em>, O'Reilly Early Release, 2026年時点の草稿, 「SDDフレームワーク」の章
-</div>
-
----
-
-## 速くする工程を誤ると、待ちは長くなる
-
-<div style="font-size: 0.75em;">
-
-一番遅い工程が、全体の速さを決めます。この工程を<strong>制約</strong>と呼び、まずその工程を改善する考え方が<strong>制約理論</strong>です。内側のループを速めた結果、外側が制約になったとします。外側で一定時間に処理できる仕事の量（処理能力）が変わらなければ、終わっていない仕事（仕掛かり）が積み上がります。
-
-<div style="display: flex; gap: 20px; align-items: center; margin-top: 16px;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
-
-<strong>実装が速くなると</strong>
-
-たとえば月曜の朝、5つのAIエージェントが、それぞれ500行のPRを作ってきたとします。レビューは、意図と影響範囲を一緒に確かめる作業から、AIが生成した変更を一から読み解く作業へ変わります。レビュアーの時間は増えていません。
-
-</div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
-
-<strong>レビューが追いつかないと</strong>
-
-レビューに使える時間が変わらなければ、1本あたりの待ち時間はむしろ延びます。同僚のPRには追いつけていたレビュアーも、同僚に加えて機械の速さで出荷するエージェントには追いつけません。判断する人の手元には、判断待ちの案件が積み上がります。
-
-</div>
-</div>
-
-<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>実装を速めると、次に遅い工程が全体の速さを決める。この例では、合意と判断。</strong>
-</div>
-
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-出典：Eliyahu M. Goldratt（Susanne Kaiser, <em>Architecture for Flow</em>, 第6章「制約の管理」での引用）／ Addy Osmani, <em>Beyond Vibe Coding</em>, 第10章 ／ Alfonso Graziano, <em>AI-Native Software Engineering</em>, 「SDDワークフロー」の章
 </div>
 
 ---
@@ -549,35 +713,35 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 <div style="font-size: 0.75em;">
 
-ただし、待ちが全体の速さを決めるとは限りません。
+前の例ではレビューが制約でした。しかし、どの工程が制約かは、人数や役割の数だけでは決まりません。直近の仕事がどこで列になり、次の工程が何を待っていたかを見ます。
 
 <div style="display: flex; gap: 20px; align-items: center; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 
-<strong>実装が制約になりやすい段階</strong>
+<strong>実装が制約になっている状態</strong>
 
-1人か2人で、決める人と作る人が同じ。ほかの人への引き継ぎもほとんどありません。ここでは実装が制約になりやすく、AIで実装時間を短くすると、全体も速くなりやすい。
+作る内容は決まり、レビューする人も待っている。それでも、実装を待つ案件が増えている。ここなら、AIで実装時間を短くすると全体も速くなりやすい。
 
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 
-<strong>待ちが制約になりやすい段階</strong>
+<strong>判断やレビューが制約になっている状態</strong>
 
-役割が分かれ、判断、レビュー、運用のたびに仕事を引き継ぐ現場。待ち時間が全体の大半を占めると、待ちが制約になりやすい。
+実装は終わっているのに、優先順位、仕様、レビュー、リリースの判断を待つ案件が増えている。ここでは、実装だけを速めても全体は速くならない。
 
 </div>
 </div>
 
 <div style="margin-top: 18px;">
 
-役割が分かれていても、実装が制約になっている組織はあります。飲食店予約サービスのOpenTableでは、実際に測ると、全体の速さを決めていたのはエンジニアリング工程でした。自分たちの現場で、実装と待ちのどちらが詰まりになっているかも、測って確かめます。次の章では、その測り方を扱います。
+バリューストリームマッピングで直近10件を作業と待ちに分け、待ちが集中する工程と、その手前に積み上がる件数を見ます。制約が分かったら、そこへ入れる仕事を絞る、不要な確認を減らす、必要な人や時間を増やす、という順で対処します。
 
 </div>
 
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>AIをどこに使うかは、いまの制約を動かせるかで決める。</strong>
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第3章
 </div>
 
 ---
@@ -602,26 +766,22 @@ _class: transition
 
 <div style="font-size: 0.75em;">
 
-PR数、コード変更の記録（コミット）の数、変更行数。どれもダッシュボードに出しやすく、AIを入れると増やしやすい数字です。ただ、これらが表すのは<strong>作った量</strong>です。ある企業では、データベース内で動く処理（ストアドプロシージャ）の作成数が開発者の個人目標になっていました。PR数を個人目標にしても、作った量そのものが目的になる同じ問題が起きます。
+PR数、コード変更の記録（コミット）の数、変更行数。どれもダッシュボードに出しやすく、AIを入れると増やしやすい数字です。ただ、これらが表すのは<strong>アウトプットの量</strong>です。たとえば、データベース内で動く処理（ストアドプロシージャ）の作成数を個人目標にすると、必要性より作成数が優先されます。PR数を個人目標にしても、アウトプットそのものが目的になる同じ問題が起きます。
 
 <div style="margin-top: 14px; padding: 12px; background-color: #f5f5f5; border-radius: 8px; text-align: center;">
-<strong>アウトプット＝作ったもの。アウトカム＝使った結果に生じた変化。</strong>
+<strong>AIで増えやすいのはアウトプット。価値を判断するにはアウトカムを確かめる。</strong>
 </div>
 
 <div style="margin-top: 18px;">
 
-頼まれた機能を作り続け、利用後の変化より機能の量と出す速さだけを見るチームを<strong>フィーチャーファクトリー</strong>と呼びます。機能を作ること自体が目的になり、使われた結果を確かめない状態です。
+頼まれた機能を作り続け、アウトカムよりアウトプットの量と出す速さだけを見るチームを<strong>フィーチャーファクトリー</strong>と呼びます。機能を作ること自体が目的になり、使われた結果を確かめない状態です。
 
 </div>
 
 <div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
-<span style="color: #e65100; font-weight: bold;">作った量ではなく、使われた結果を測る。</span>
+<span style="color: #e65100; font-weight: bold;">アウトプットの量ではなく、アウトカムを測る。</span>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024, 第1章、第11章
 </div>
 
 ---
@@ -629,34 +789,58 @@ PR数、コード変更の記録（コミット）の数、変更行数。どれ
 ## 価値は「速く」だけでは測れない
 
 <div style="display: flex; gap: 24px; align-items: center;">
-<div style="width: 43%;">
+<div style="width: 48%;">
 <img src="../../assets/images/2026/architecture-modernization-bvssh.png" alt="Better Value Sooner Safer Happier" style="width: 100%; height: fit-content;">
 <div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">Figure 1.3 Better Value Sooner Safer Happier (Source: Smart et al., Sooner Safer Happier [IT Revolution, 2020]) より引用</div>
 </div>
-<div style="flex: 1; font-size: 0.68em; line-height: 1.45;">
+<div style="flex: 1; font-size: 0.75em; line-height: 1.5;">
 
-<strong>Better</strong>　品質を上げる<br>
-<strong>Value</strong>　ユーザーと事業の成果を増やす<br>
-<strong>Sooner</strong>　価値を早く、頻繁に届ける<br>
-<strong>Safer</strong>　変更による失敗と影響を減らす<br>
-<strong>Happier</strong>　ユーザーと働く人の満足を高める
+変更を良くしたかは、速さだけでは決まりません。品質、アウトカム、速さ、安全性、関わる人の満足を一緒に見ます。
+
+<div style="margin-top: 20px; padding: 16px; background-color: #f5f5f5; border-radius: 8px;">
+AIで作る時間が短くなっても、手戻りや障害が増え、レビューする人の負担が重くなれば、改善したとは言い切れません。
+</div>
 
 </div>
 </div>
 
-<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>AIで早く届けられるようになっても、安全性が下がれば、全体として良くなったとは言えない。</strong>
+<div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>「早くなったか」だけでなく、「何が良くなり、どこに負担が移ったか」を見る。</strong>
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024, 第1章 ／ Jonathan Smartほか, <em>Sooner Safer Happier</em>, 2020
+<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px; padding-right: 44px;">
+出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024 ／ Jonathan Smartほか, <em>Sooner Safer Happier</em>, 2020
 </div>
 
 ---
 
-## 届ける速さを三つに分ける
+## 同じ変更を、五つの面から確かめる
+
+<div style="font-size: 0.75em;">
+
+五つは、同じ変更を別の面から見るための観点です。速さを上げた結果、品質や安全性、関わる人の満足を悪化させていないかを確かめます。
+
+<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 16px;">
+<div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 10px 14px; background-color: #f5f5f5; border-radius: 8px;"><strong>Better</strong><span>期待した動作を安定して行えるか。品質は上がったか</span></div>
+<div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 10px 14px; background-color: #f5f5f5; border-radius: 8px;"><strong>Value</strong><span>ユーザーのジョブが片付き、事業のアウトカムが変わったか</span></div>
+<div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 10px 14px; background-color: #f5f5f5; border-radius: 8px;"><strong>Sooner</strong><span>小さな変更を、早く、繰り返し届けられたか</span></div>
+<div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 10px 14px; background-color: #f5f5f5; border-radius: 8px;"><strong>Safer</strong><span>変更による失敗と、起きたときの影響を減らせたか</span></div>
+<div style="display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 10px 14px; background-color: #f5f5f5; border-radius: 8px;"><strong>Happier</strong><span>ユーザーと、開発・運用に関わる人の負担を減らせたか</span></div>
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>五つを一つの点数にまとめず、どこが良くなり、どこが悪くなったかを並べて判断する。</strong>
+</div>
+
+</div>
+
+---
+
+## アウトプットを届ける速さを三つに分ける
 
 <div style="font-size: 0.72em;">
+
+五つのうち、まず<strong>Sooner</strong>を測ります。アウトプットを届ける流れは、一つの数字だけでは分かりません。かかった時間、届けた件数、その時間のうち実際に作業していた割合を分けて見ます。
 
 <div style="display: flex; gap: 16px; align-items: stretch; margin-top: 18px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -678,40 +862,36 @@ PR数、コード変更の記録（コミット）の数、変更行数。どれ
 </div>
 
 <div style="margin-top: 12px; text-align: center; color: #555;">
-この三つで分かるのは「届ける速さ」です。使われた結果であるアウトカムは、別に確かめます。
+この三つで分かるのは「アウトプットを届ける速さ」です。使われた結果であるアウトカムは、別に確かめます。
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, 第6章 ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第11章
 </div>
 
 ---
 
-## 速さと結果は、同じ対象で確かめる
+## アウトプットの速さとアウトカムを並べて見る
 
 <div style="font-size: 0.75em;">
 
-リードタイムやスループットで分かるのは、変更を届ける速さです。価値まで見るには、<strong>同じ期間と対象ユーザー</strong>について、使われ方と結果を並べます。検索条件を追加した例なら、次の三つです。
+リードタイムやスループットで分かるのは、アウトプットを届ける速さです。価値まで見るには、<strong>同じ期間と対象ユーザー</strong>について、利用とアウトカムを並べます。検索条件を追加した例なら、次の三つです。
 
 <div style="display: flex; gap: 16px; align-items: stretch; margin-top: 18px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>流れ</strong><br><br>
+<strong>アウトプットを届ける流れ</strong><br><br>
 着手から利用可能になるまでの時間と、そのうち誰かを待っていた時間
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>使われ方</strong><br><br>
+<strong>利用の手がかり</strong><br><br>
 対象ユーザーが新しい検索条件を使った割合と、検索を途中でやめた割合
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>結果</strong><br><br>
+<strong>アウトカム</strong><br><br>
 必要な情報へたどり着くまでの時間と、その後に購入へ進んだ割合
 </div>
 </div>
 
 <div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.05em;">
-<strong>届ける時間が短くなっても、使われ方と結果が変わらなければ、価値が届く速さは変わっていない。</strong>
+<strong>アウトプットを早く届けても、利用とアウトカムが変わらなければ、価値が届く速さは変わっていない。</strong>
 </div>
 
 </div>
@@ -722,12 +902,12 @@ PR数、コード変更の記録（コミット）の数、変更行数。どれ
 
 <div style="font-size: 0.75em;">
 
-顧客のジョブよりスケジュールを優先して機能を量産する状態を、Melissa Perriは<strong>ビルドトラップ</strong>と呼びました。作る量だけをAIで増やすと、この罠に入りやすくなります。多くのチームは、新しいものを足すのは得意でも、古いものを消すのは苦手だからです。ある自動車メーカーでは、データベース内で動く処理の約30%がもう使われていませんでした。
+顧客のジョブよりスケジュールを優先して機能を量産する状態を、Melissa Perriは<strong>ビルドトラップ</strong>と呼びました。アウトプットの量だけをAIで増やすと、この罠に入りやすくなります。多くのチームは、新しいものを足すのは得意でも、古いものを消すのは苦手だからです。かつて入ったプロジェクトでは、データベース内で動く処理を調べたところ、約30%がすでに使われていませんでした。
 
 <div style="display: flex; gap: 20px; align-items: center; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 
-<strong>機能が1つ増えるたびに</strong>
+<strong>機能というアウトプットが1つ増えるたびに</strong>
 
 レビューで読む範囲、テストの対象、運用で守る対象、ユーザーが比べる選択肢が増える。
 
@@ -747,22 +927,20 @@ PR数、コード変更の記録（コミット）の数、変更行数。どれ
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-参考：Melissa Perri, <em>Escaping the Build Trap</em> ／ Nick Tuneほか, <em>Architecture Modernization</em>, 第8章
-</div>
-
 ---
 
 ## 速くなった体感も、測定の代わりにならない
 
 <div style="font-size: 0.75em;">
 
+AIの影響を調べる研究組織METRは、経験豊富なオープンソースソフトウェア（OSS）開発者16人に、普段扱うコード群の246課題をAIツールあり・なしで解いてもらい、所要時間と本人の体感を比べました。
+
 <div style="display: flex; gap: 20px; align-items: center; margin-top: 10px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 
-<strong>実験</strong>
+<strong>実測</strong>
 
-経験豊富なオープンソースソフトウェア（OSS）開発者16人が、日頃から扱っているコード群の246課題に取り組んだ。AIツールを使ったグループは、使わなかったグループより<strong>19%遅かった</strong>。
+各課題は、AIツールを使える条件と使えない条件へ無作為に割り当てられました。AIを使える条件では、完了まで<strong>平均19%長く</strong>かかりました。課題は平均2時間で、単純に時間へ置き換えると約23分の差です。
 
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
@@ -781,47 +959,9 @@ PR数、コード変更の記録（コミット）の数、変更行数。どれ
 </div>
 
 <div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>PR数でも体感でもなく、価値が届くまでの流れそのものを測る。</strong>
+<strong>PR数や体感だけで決めない。バリューストリームマッピングで流れを測り、アウトカムと並べて見る。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-出典：<a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity, 2025</a> ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第13章
-</div>
-
----
-
-## 価値が届くまでの流れを測る
-
-<div style="font-size: 0.72em;">
-
-価値が届くまでの工程を時系列に並べ、作業と待ちを分ける方法を<strong>バリューストリームマッピング</strong>と呼びます。
-
-<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 14px; text-align: center;">
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>直近10件を選ぶ</strong><br><span style="color: #666;">大きさで選別せず、<br>実際に進めた案件を使う</span></div>
-<div style="font-size: 1.4em;">→</div>
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>時刻を記録から拾う</strong><br><span style="color: #666;">ジョブの確認、着手、PR、承認、<br>本番反映、利用開始、結果確認</span></div>
-<div style="font-size: 1.4em;">→</div>
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>区間を分ける</strong><br><span style="color: #555;">作業か、誰かを待ったか。<br>待った相手の役割を書く</span></div>
-</div>
-
-<div style="margin-top: 18px;">
-
-最初に見る数字は二つです。全体のうち作業していた時間の割合と、<strong>どの工程で、誰を待った時間が最も長かったか</strong>。ここで見るのは、個人の働き方ではありません。役割の間で仕事をどう渡しているかです。
-
-待ちのすべてが無駄ではありません。本番前の確認のように、安全のため意図して設ける待ちもあります。判断も、担当と判断日を決めて先送りするなら待ちではなく設計です。見直すのは、何のためか説明できない確認、担当が曖昧な引き継ぎ、処理能力を超えて積み上がる待ちです。測れば、必要な待ちと見直す待ちを分けられます。
-
-</div>
-
-<div style="margin-top: 12px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>待ちの合計が大きい工程を、最初の制約候補にする。どの判断や作業を待っていたか確かめる。</strong>
-</div>
-
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, 第6章「バリューストリームマッピング」／ Jacqui Read, <em>Communication Patterns</em>, O'Reilly, 2023, 第11章
 </div>
 
 ---
@@ -875,10 +1015,6 @@ _class: transition
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-参考：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第5章
-</div>
-
 ---
 
 ## 「違う情報」の奥に、違う解釈がある
@@ -898,7 +1034,7 @@ _class: transition
 <div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>営業</strong>　商談の機会を逃す</div>
 <div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>デザイナー</strong>　利用者が途中で迷う</div>
 <div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>エンジニア</strong>　次の変更が難しくなる</div>
-<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>SRE</strong>　障害対応の負担が増える</div>
+<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>SRE</strong>　信頼性と運用を担い、障害対応の負担が増える</div>
 </div>
 
 <div style="margin-top: 14px;">
@@ -947,17 +1083,13 @@ _class: transition
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-参考：宇田川元一『他者と働く』第1章、第2章 ／ <a href="https://jinjibu.jp/article/detl/keyperson/2173/2/3/1/">「日本の人事部」宇田川元一さんインタビュー</a>
-</div>
-
 ---
 
 ## 対話は、同意を急ぐことではない
 
 <div style="font-size: 0.7em;">
 
-ここでいう対話は、説得や情報共有の言い換えではありません。互いを、指示に従わせる相手ではなく、問題を一緒に扱う相手として関係を作り直すことです。本書では、次の四つを行き来しながら進めます。
+ここでいう対話は、説得や情報共有の言い換えではありません。互いを、指示に従わせる相手ではなく、問題を一緒に扱う相手として関係を作り直すことです。『他者と働く』では、次の四つを行き来しながら進めます。
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px;">
 <div style="background-color: #f5f5f5; padding: 12px; border-radius: 8px;"><strong>準備</strong><br><span style="color: #555;">分かり合えていないと認め、自分の前提をいったん保留する</span></div>
@@ -976,26 +1108,22 @@ _class: transition
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-出典：<a href="https://jinjibu.jp/article/detl/keyperson/2173/2/3/1/">「日本の人事部」宇田川元一さんインタビュー</a>（準備・観察・解釈・介入）
-</div>
-
 ---
 
 ## 判断待ちを短くする三つの取り決め
 
 <div style="font-size: 0.72em;">
 
-前提を確かめる対話と並行して、判断の依頼そのものにも形を与えます。Jacqui Readは、判断が止まる原因の多くを、誰が決めるのか、何をいつまでに返すのかが曖昧なことに見ています。
+前提を確かめる対話と並行して、判断の依頼そのものにも形を与えます。判断が止まりやすいのは、誰が決めるのか、何をいつまでに返すのか、返事がないときにどう進めるのかが曖昧なときです。
 
 <div style="display: flex; gap: 16px; align-items: stretch; margin-top: 14px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>決める人を一人にする</strong><br><br>
-最も詳しい人か、最も影響を受ける人が決定オーナー。役職の高い人ではない。
+最も詳しい人か、最も影響を受ける人を、決める人にする。役職の高い人とは限らない。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>同意ではなくコミットを求める</strong><br><br>
-全員の賛成を待たない。結果に従うことを約束してもらい、意見は記録に残す。
+<strong>全員一致を待たない</strong><br><br>
+反対意見は記録に残す。決まった後は、その方針で動く。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>依頼に四つを書く</strong><br><br>
@@ -1013,10 +1141,6 @@ _class: transition
 <strong>判断待ちの多くは、内容ではなく「誰が・いつまでに」が決まっていないことで生まれる。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-出典：Jacqui Read, <em>Communication Patterns</em>, O'Reilly, 2023, 第12章「意思決定にまつわる神話」、第14章（4つのWはGreene &amp; Sanderson, <em>Remote Works</em> より）
 </div>
 
 ---
@@ -1051,10 +1175,6 @@ _class: transition
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, 第1章 ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第5章 ／ Jacqui Read, <em>Communication Patterns</em>, 第1章「抽象度の混在」
-</div>
-
 ---
 
 ## 縦は見えやすさ、横は成熟度
@@ -1084,7 +1204,7 @@ _class: transition
 </div>
 
 <div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024, 第5章
+出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024
 </div>
 
 ---
@@ -1122,7 +1242,7 @@ _class: transition
 
 <div style="font-size: 0.72em;">
 
-同じ機能でも、役割によって見ている情報は違います。ここでは、PM、デザイナー、エンジニア、SRE（信頼性と運用を担う役割）が持つ情報を、ウォードリーマップに並べます。
+検索機能を例に、PM、デザイナー、エンジニア、SREが持つ情報を、同じウォードリーマップに並べます。役割が違えば、確かめたいことも変わります。
 
 <div style="display: flex; gap: 16px; align-items: stretch; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -1145,13 +1265,9 @@ _class: transition
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, 第1章 ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第5章
-</div>
-
 ---
 
-## 差別化の中心は、横軸の右端にあった
+## 差別化だと思っていたものが、右端へ動いていた
 
 <div style="font-size: 0.7em;">
 
@@ -1178,7 +1294,7 @@ _class: transition
 </div>
 
 <div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-出典：Susanne Kaiser, <em>Architecture for Flow</em>, 第1章「効率性ギャップ」、第2章 ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第5章、第10章
+出典：Susanne Kaiser, <em>Architecture for Flow</em> ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>
 </div>
 
 ---
@@ -1208,7 +1324,7 @@ _class: transition
 
 <div style="margin-top: 16px;">
 
-4ヶ月分を取り消すとなると、やめる判断そのものが重くなります。最初の判断が間違いだったように見えることも、決断を遅らせます。判断が疑われるまでの時間が長いほど、直す費用は高くなる。やめる判断を早くする方法は、4章で扱います。
+4ヶ月分を取り消すとなると、やめる判断そのものが重くなります。最初の判断が間違いだったように見えることも、決断を遅らせます。判断が疑われるまでの時間が長いほど、直す費用は高くなる。やめる判断を早くする方法は、このあと扱います。
 
 </div>
 
@@ -1216,10 +1332,6 @@ _class: transition
 <strong>ユーザーのジョブとの関係を説明できない計画は、始める前に問い直せたはず。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 8px;">
-参考：Nick Tune ほか, <em>Architecture Modernization</em>, 第16章「難しい決断をする覚悟」／ Jacqui Read, <em>Communication Patterns</em>, 第11章
 </div>
 
 ---
@@ -1238,7 +1350,7 @@ PM・デザイナー・エンジニアに、ユーザーと直接話す営業や
 <strong>横軸の右端にある要素</strong><br><span style="color: #555;">既製サービスと自前運用を比較。必要な制御と総費用で決める</span>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>依存の線が集まる要素</strong><br><span style="color: #555;">複数の機能や仕組みが共通して必要とする要素。2章で測った待ち時間と見比べ、担当するチームを決める</span>
+<strong>依存の線が集まる要素</strong><br><span style="color: #555;">複数の機能や仕組みが共通して必要とする要素。先ほど測った待ち時間と見比べ、担当するチームを決める</span>
 </div>
 </div>
 
@@ -1249,13 +1361,38 @@ PM・デザイナー・エンジニアに、ユーザーと直接話す営業や
 </div>
 
 <div style="margin-top: 12px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
-<span style="color: #e65100; font-weight: bold;">図で見ている情報を揃える。計測で、減らす待ちを選ぶ。</span>
+<span style="color: #e65100; font-weight: bold;">図で意見の違いを具体化する。計測で、次に確かめることを選ぶ。</span>
 </div>
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, 第5章「フロー最適化の要件」、第8章 ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第10章
+---
+
+## 計測と図を、日々の判断へつなぐ
+
+<div style="font-size: 0.72em;">
+
+長い待ちや前提の違いを見つけても、眺めているだけでは流れは変わりません。何が一番の問題かを絞り、どこへ力を集めるかを決め、日々の仕事へ反映します。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 18px;">
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>診断<br><span style="color: #555;">いま何が起きているか</span></strong><br><br>
+実際の記録と各役割の見方から、全体の流れを最も止めているものを一文で説明する。
+</div>
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>方針<br><span style="color: #555;">何を選ぶか</span></strong><br><br>
+どのジョブとアウトカムを優先し、いまは何をやらないかまで決める。
+</div>
+<div style="padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>進め方<br><span style="color: #555;">どう続けるか</span></strong><br><br>
+決める人、判断日、確認する数字、例外の扱いを、日々の流れに組み込む。
+</div>
+</div>
+
+<div style="margin-top: 20px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.08em;">
+<strong>「改善する」だけでは進めない。何に力を集め、いまは何をしないか、どう確かめるかまで決める。</strong>
+</div>
+
 </div>
 
 ---
@@ -1268,9 +1405,9 @@ _class: transition
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; flex-direction: column; color: white; text-align: center;">
 
-<h2 style="color: white !important;">4. ジョブから「作る・やめる」を判断する</h2>
+<h2 style="color: white !important;">4. ジョブから「作る・任せる・やめる」を判断する</h2>
 
-<strong>作れるものが増えても、ユーザーのジョブは増えない。</strong>
+<strong>作る理由を決め、確かめられる範囲をAIへ任せ、やめる条件と判断日を残す。</strong>
 
 </div>
 
@@ -1301,7 +1438,7 @@ _class: transition
 </div>
 
 <div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 6px;">
-出典：<a href="https://www.christenseninstitute.org/theory/jobs-to-be-done/">Christensen Institute, Jobs to Be Done Theory</a>／ Susanne Kaiser, <em>Architecture for Flow</em>, 第1章
+出典：<a href="https://www.christenseninstitute.org/theory/jobs-to-be-done/">Christensen Institute, Jobs to Be Done Theory</a>／ Susanne Kaiser, <em>Architecture for Flow</em>
 </div>
 
 ---
@@ -1309,6 +1446,8 @@ _class: transition
 ## 作るべきかは、四つの問いで決める
 
 <div style="font-size: 0.7em;">
+
+四つの問いで、作る理由、実際の困りごと、アウトカムまでの時間、代わりの手段を確かめます。実装案を比べる前に、そもそも作る必要があるかを判断します。
 
 <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
 <div style="padding: 12px 14px; background-color: #f5f5f5; border-radius: 8px;">
@@ -1320,8 +1459,8 @@ _class: transition
 <span style="color: #555;">抽象的な賛否より、直近の行動を見る。そのとき何を試し、何が決め手だったか</span>
 </div>
 <div style="padding: 12px 14px; background-color: #f5f5f5; border-radius: 8px;">
-<strong>待ち時間の合計が最も大きい工程を改善するか</strong><br>
-<span style="color: #555;">2章で見つけた待ち時間を減らさない機能は、作っても待ちの列に並ぶだけ</span>
+<strong>アウトカムを確かめるまでの時間を短くするか</strong><br>
+<span style="color: #555;">一つの作業だけでなく、判断や引き継ぎを含む全体の流れで確かめる</span>
 </div>
 <div style="padding: 12px 14px; background-color: #f5f5f5; border-radius: 8px;">
 <strong>既存の手段や小さな実験で、先に確かめられないか</strong><br>
@@ -1335,17 +1474,229 @@ _class: transition
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-参考：Rob Fitzpatrick, <em>The Mom Test</em>, 2013
+---
+
+## 曖昧な依頼は、AIの数だけ別の実装へ分かれる
+
+<div style="font-size: 0.72em;">
+
+作る理由を決めたら、その判断をAIへ渡します。一人のAIなら、実装中に読み違いを直せます。複数を別々に走らせると、書かなかった判断をそれぞれが埋めます。
+
+<div style="display: grid; grid-template-columns: 0.85fr auto 1.5fr; gap: 14px; align-items: center; margin-top: 16px;">
+<div style="background-color: #e0e0e0; padding: 18px; border-radius: 8px; text-align: center; font-size: 1.08em;">
+<strong>曖昧な依頼</strong><br><br>
+「検索を速くする」
+</div>
+<div style="font-size: 1.6em;">→</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>PR A</strong>　APIの応答時間を縮める</div>
+<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>PR B</strong>　検索条件を増やす</div>
+<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>PR C</strong>　検索基盤を置き換える</div>
+</div>
+</div>
+
+<div style="margin-top: 16px;">
+どれも、依頼に反しているとは言い切れません。しかし、ユーザーが情報へたどり着く時間を短くしたいのか、システムの応答時間を短くしたいのかが決まっていなければ、どのPRが正しいかも判断できません。生成する数が増えるほど、レビューで意図を確かめ直す仕事も増えます。
+</div>
+
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>仕様に前提を書けば、どこに異論があるかを実装前に話せる。AIを増やすのは、その後です。</strong>
+</div>
+
+</div>
+
+---
+
+## 仕様を書くと、実装前の判断が表に出る
+
+<div style="font-size: 0.7em;">
+
+ここでいう仕様は、新しい文書の種類を増やす話ではありません。Design DocやPRの説明に、AIがコードを書く前に読む判断材料を置きます。仕様を書く時間の中心は、文章を整えることより、誰のジョブをどう満たし、何を守り、どこで止めるかを決めることです。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px;">
+<div style="background-color: #f5f5f5; padding: 11px 14px; border-radius: 8px;">
+<strong>目標</strong>　誰のどのジョブを、なぜ解くか<br>
+<strong>受け入れ基準</strong>　結果を見て判定できる条件
+</div>
+<div style="background-color: #f5f5f5; padding: 11px 14px; border-radius: 8px;">
+<strong>不変条件</strong>　変えてはいけない動作や品質<br>
+<strong>境界</strong>　対象と対象外。越えるなら止める
+</div>
+<div style="background-color: #f5f5f5; padding: 11px 14px; border-radius: 8px;">
+<strong>完了の定義</strong>　テスト、文書、確認結果など、PRを受け入れられる状態
+</div>
+<div style="background-color: #f5f5f5; padding: 11px 14px; border-radius: 8px;">
+<strong>先行事例</strong>　似た実装と、過去に試して失敗した案<br>
+<strong>未解決の問い</strong>　決める人と、最初の調べ方
+</div>
+</div>
+
+<div style="margin-top: 14px;">
+この七つを、作業の大きさに合わせて使います。機能ごとに約800語を上限の目安とし、背景はリンクへ分けます。小さな変更はPRの説明へ、複数のPRにまたがる変更はDesign Docへ書き、リポジトリで更新しながら各PRから参照します。繰り返し使うルールはAGENTS.mdへ分けます。
+</div>
+
+<div style="margin-top: 12px; padding: 11px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>長く詳しく書けばよいわけではない。曖昧な言葉、隠れた前提、古い情報を減らし、一度で読み切れる量に絞る。</strong>
+</div>
+
+</div>
+
+---
+
+## AIには、実装より先に計画を出してもらう
+
+<div style="font-size: 0.72em;">
+
+仕様で「何を満たすか」を決めたら、「どう進めるか」はAIに提案してもらいます。人は、その計画が目標、受け入れ基準、不変条件、境界を外していないかを確認します。実装を始めるのは、その後です。
+
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>チーム</strong><br><span style="color: #555;">仕様で判断をそろえる</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>AI</strong><br><span style="color: #555;">調査結果と計画を出す</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>人</strong><br><span style="color: #555;">仕様と照らしてから着手を決める</span></div>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>計画が仕様から外れている</strong><br><br>
+AIが意図を読み違えたか、必要な情報を渡せていません。計画か、参照する情報を直します。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>計画は仕様どおりだが、望ましくない</strong><br><br>
+依頼した内容に問題があります。ジョブやアウトカムへ戻り、仕様そのものを見直します。
+</div>
+</div>
+
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>数百行の差分から意図を推測する前に、計画の段階で方向のずれを止める。</strong>
+</div>
+
+</div>
+
+---
+
+## 計画を読んだだけでは、検証したことにならない
+
+<div style="font-size: 0.72em;">
+
+計画の確認で分かるのは、目的へ向かう道筋が妥当かどうかです。実際に正しく動くか、安全か、アウトカムにつながるかは、成果物を動かして初めて分かります。流暢で詳しい計画も、その証拠にはなりません。
+
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>計画</strong><br><span style="color: #555;">方向と前提を確認する</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>小さな実装</strong><br><span style="color: #555;">確認できる単位まで進める</span></div>
+<div style="font-size: 1.4em;">→</div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>検証</strong><br><span style="color: #555;">テスト・計測・利用結果を見る</span></div>
+</div>
+
+<div style="margin-top: 20px;">
+大きな作業を一度に実装すると、最初の読み違いが後続の変更へ広がります。まず作る理由を確かめ、次に構造を決め、最後に小さく動くところまで作ります。区切りごとに結果を確かめてから、次へ進みます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>計画は方向をそろえる。検証は、実際に起きたことを確かめる。両方を混ぜない。</strong>
+</div>
+
+</div>
+
+---
+
+## AIに任せるのは、確かめて戻せる範囲まで
+
+<div style="font-size: 0.72em;">
+
+作るべきかをチームで決めた後も、AIへどこまで任せるかは一律ではありません。失敗をすぐに見つけられ、元に戻せる作業ほど広く任せられます。影響が大きく、誤りを見つけにくい作業ほど、小さく区切って人が途中で確認します。
+
+仕様が伝えられるのは、チームが言葉にした意図と条件です。その変更がプロダクト全体にふさわしいか、ユーザーの負担に見合うかは、成果物を見て人が判断します。
+
+<div style="display: flex; gap: 14px; align-items: stretch; margin-top: 14px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 13px; border-radius: 8px;">
+<strong>広く任せやすい作業</strong><br><br>ビルド、型検査、既存の動作を固定したテストで、成否を低い負担で確かめられる。失敗しても元に戻せる。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 13px; border-radius: 8px;">
+<strong>小さく区切る作業</strong><br><br>権限、決済、本番データのように、誤りの影響が大きい。変更範囲を絞り、途中で人が確認する。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 13px; border-radius: 8px;">
+<strong>要約ではなく証拠を確認する</strong><br><br>AI自身の説明をレビューの代わりにしない。可能なら作業を担当したAIとは確認役を分け、差分、テスト結果、計測、画面、分かっている不足を確かめる。
+</div>
+</div>
+
+<div style="margin-top: 12px;">
+本番へ出す変更は、数か月後にも、何が変わり、なぜ安全だと判断したかを説明できる状態にします。
+</div>
+
+<div style="margin-top: 12px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.02em;">
+<span style="color: #e65100; font-weight: bold;">AIへ任せる範囲は、誤りを見つけて元に戻せるところまで。<br>作業は任せても、作るべきかと受け入れるかは人が決める。</span>
+</div>
+
+</div>
+
+---
+
+## 同じ見落としは、コードとテストで防ぐ
+
+<div style="font-size: 0.75em;">
+
+AIが作る量が増えるほど、人が同じ見落としを毎回指摘するやり方は詰まります。レビューで見つけた失敗は、次回もっと早く見つけられる形へ戻します。
+
+<div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>原因をコードで直す</strong><br><br>
+使い方を間違えやすいAPIや、読まないと分からない境界は、説明を増やす前に構造を直す。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>期待する動作をテストで固定する</strong><br><br>
+変えてはいけない動作や、完了条件として機械で判定できるものは、テストとCIで確かめる。
+</div>
+</div>
+
+<div style="margin-top: 22px;">
+人が指摘した内容を、次からは実装中やCIで検出できれば、同じ確認をレビューで繰り返さずに済みます。まず、コードとテストで防げないかを考えます。
+</div>
+
+<div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>レビューで見つけた失敗を、次回はレビューより前に見つける。</strong>
+</div>
+
+</div>
+
+---
+
+## コンテキストに残すのは、コードで防げないこと
+
+<div style="font-size: 0.75em;">
+
+ここでいう<strong>コンテキスト</strong>は、AIが作業前に読むAGENTS.md、Design Doc、PRの説明です。失敗のたびに情報を足すと、重要な判断が埋もれ、古い前提も残ります。「安全に気をつける」と書いても、日々の動きは変わりません。コードやテストで防げないことだけを残します。
+
+<div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>危険な操作は実行前に止める</strong><br><br>
+触れてはいけない場所や許可していない操作は、注意書きだけにせず、権限や自動チェックで止める。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>繰り返すルールだけ短く残す</strong><br><br>
+リポジトリ全体で守ることはAGENTS.mdへ、作業固有の判断はDesign DocやPRの説明へ分ける。
+</div>
+</div>
+
+<div style="margin-top: 22px;">
+ソフトウェアの変更と一緒にコンテキストも更新します。使われなくなった情報は削除し、現在の判断に必要な情報が埋もれないようにします。
+</div>
+
+<div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>繰り返す判断は仕組みへ移す。人は、ジョブと影響を見て、変更を受け入れるか決める。</strong>
+</div>
+
 </div>
 
 ---
 
 ## 機能を消す方が、作るより難しい
 
-<div style="font-size: 0.72em;">
+<div style="font-size: 0.75em;">
 
-機能を加えるときは、期待する新しい動作を満たすことに確認の範囲を絞りやすい。一方、消すときは、<strong>今ある大切な動作を失わないこと</strong>を確かめなければなりません。その判断材料は、コードだけには残っていません。
+AIへ任せて作れる量が増えても、機能を消す判断は自動化できません。加えるときは、期待する新しい動作に確認を絞れます。消すときは、<strong>今ある大切な動作を失わないこと</strong>を確かめます。その判断材料は、コードだけには残っていません。
 
 <div style="display: flex; gap: 18px; align-items: stretch; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -1358,80 +1709,180 @@ _class: transition
 </div>
 </div>
 
-<div style="margin-top: 18px;">
-
-利用記録だけで決めず、営業やCSには顧客への影響を、エンジニアには仕組みの依存を、SREや運用担当には障害時の使われ方を確かめます。新しい利用を止め、関係者へ知らせ、元に戻せる状態で一度止めてから削除します。
-
+<div style="margin-top: 20px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>利用回数だけでも、コードだけでも、消してよいとは判断できない。</strong>
 </div>
 
-<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>「使われていないように見える」だけでは消せない。影響を確かめ、段階を踏んで止める。</strong>
-</div>
-
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-参考：Susanne Kaiser, <em>Architecture for Flow</em>, 第5章 ／ Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 第16章
 </div>
 
 ---
 
-## C4モデルで削除の影響を確かめる
+## 止める前に、利用者と依存先を確かめる
 
 <div style="font-size: 0.72em;">
 
-<strong>C4モデル</strong>は、ソフトウェアの構造を、システム全体からコードまで段階を分けて表す方法です。削除の判断では、四段階すべてを描くのではなく、まず上の二つで影響範囲を確かめます。
+同じ機能について、利用者にとっての重要性と、仕組みが受ける影響を別々に確かめます。どちらか一方だけでは、安全に止められません。
 
-<div style="display: grid; grid-template-columns: 285px 1fr; gap: 10px 16px; align-items: center; margin-top: 16px;">
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>システムコンテキスト図</strong></div>
-<div>対象システムを一つの箱として、その周りに利用者と外部システムを置きます。機能を消したとき、誰の仕事と、どの外部連携に影響するかを確かめます。</div>
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>コンテナ図</strong></div>
-<div>システム内のアプリケーションとデータストア、その通信を表します。ここでいうコンテナはDockerコンテナではなく、実行するアプリケーションかデータストアを指します。</div>
+<div style="display: flex; gap: 20px; align-items: stretch; margin-top: 16px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>利用者にとっての重要性</strong><br><br>
+営業やCSには顧客の業務への影響を、デザイナーには利用する場面を確かめます。利用回数が少なくても、特定の業務や復旧時に欠かせない場合があります。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>仕組みが受ける影響</strong><br><br>
+エンジニアにはコードとデータの依存を、SREや運用担当には障害時の使われ方を確かめます。設定や帳票など、コードの外に依存が残ることもあります。
+</div>
 </div>
 
-<div style="margin-top: 16px; padding: 12px 14px; background-color: #f5f5f5; border-radius: 8px;">
-<strong>複雑なところだけ補う</strong>　機能が動く順序は動的図、本番で動く場所や冗長化・代替経路は配置図で確かめます。コンポーネント図やコード図まで必要かは、削除による失敗の大きさで決めます。
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
+<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>新しい利用を止める</strong></div>
+<div style="font-size: 1.3em;">→</div>
+<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>関係者へ知らせる</strong></div>
+<div style="font-size: 1.3em;">→</div>
+<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>元に戻せる状態で止める</strong></div>
 </div>
 
-<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>必要な粒度まで詳しくする。すべての図を作ることを目的にしない。</strong>
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>重要性を確かめた後、C4モデルで構造上の影響を絞る。両方が揃ってから削除する。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-出典：<a href="https://c4model.com/diagrams">C4 model, Diagrams</a> ／ Simon Brown, <em>The C4 Model</em>, 2026, 第2〜4・7〜8章
 </div>
 
 ---
 
-## 一つの記録だけでは、削除を判断できない
+## C4モデルは、構造の詳しさを四段階にそろえる
 
-<div style="font-size: 0.7em;">
+<div style="font-size: 0.72em;">
 
-C4図が示すのは、設計判断の<strong>結果としての構造や動作</strong>です。なぜその設計を選んだのか、いま誰が必要としているのかは、別の情報とつないで確かめます。
+機能を消した影響を確かめるとき、最初からコード全体を追う必要はありません。<strong>C4モデル</strong>は、システムコンテキスト、コンテナ、コンポーネント、コードの四段階で、ソフトウェアの構造を表します。図の色や形より先に、どの詳しさを話しているかをそろえます。まず全体を見て、判断に必要な箇所だけ詳しくします。
 
-<div style="display: grid; grid-template-columns: 230px 1fr; gap: 8px 16px; align-items: center; margin-top: 14px;">
-<div style="background-color: #f5f5f5; padding: 12px 14px; border-radius: 8px;"><strong>利用実態と重要性</strong></div>
-<div>利用記録に加え、営業・CS・ユーザーへの確認から、誰がどんな状況で使い、その機能を止めると何に困るかを見る。</div>
-<div style="background-color: #f5f5f5; padding: 12px 14px; border-radius: 8px;"><strong>現在の構造と動作</strong></div>
-<div>C4図をコード、設定、データ、稼働環境と照合し、削除対象から影響するシステムと代替経路を確認する。</div>
-<div style="background-color: #f5f5f5; padding: 12px 14px; border-radius: 8px;"><strong>判断した背景</strong></div>
-<div>検討中はDesign Doc（設計案と検討内容をまとめる文書）に選択肢と影響を書く。決めた後はADR（設計判断の記録）に、選んだ理由、受け入れた不利益、見直す条件を残す。</div>
+<div style="text-align: center; margin-top: 8px;">
+<img src="../../assets/images/2026/value-flow-across-roles/c4-static-structure.png" alt="システムコンテキスト、コンテナ、コンポーネント、コードへ段階的に詳しくするC4モデルの概観" style="height: 264px; max-width: 100%; object-fit: contain;">
 </div>
 
-<div style="margin-top: 16px;">
-図が古ければ影響を見落とし、ADRだけでは現在の利用を見誤ります。すべてを一つに詰め込まず、C4図、Design Doc、ADR、利用記録を相互にリンクし、判断日には同じ機能について見直します。
-</div>
-
-<div style="margin-top: 13px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>ログだけでは重要性が分からない。図だけでは理由が分からない。ADRだけでは現状が分からない。</strong>
+<div style="margin-top: 8px; padding: 10px 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>この発表では、上の二つを使います。システムコンテキスト図で「誰に影響するか」を、コンテナ図で「どのアプリやデータに影響するか」を確かめます。</strong>
 </div>
 
 </div>
 
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px;">
-参考：Simon Brown, <em>The C4 Model</em>, O'Reilly, 2026, 第12章 ／ Jacqui Read, <em>Communication Patterns</em>, O'Reilly, 2023, 第12章
+<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
+画像：<a href="https://c4model.com/diagrams">Simon Brown, C4 model</a>, CC BY 4.0
+</div>
+
+---
+
+## システムコンテキスト図で、利用者と外部連携を見る
+
+<div style="display: flex; gap: 22px; align-items: center; font-size: 0.7em;">
+
+<div style="flex: 1.15; text-align: center;">
+<img src="../../assets/images/2026/value-flow-across-roles/c4-system-context.png" alt="架空のインターネットバンキングを例に、利用者、対象システム、外部システムを示したシステムコンテキスト図" style="height: 342px; max-width: 100%; object-fit: contain;">
+</div>
+
+<div style="flex: 0.85;">
+
+最も大きな範囲で見るのが、<strong>システムコンテキスト図</strong>です。対象システムを一つの箱として扱い、その周りに利用者と外部システムを置きます。
+
+<div style="margin-top: 16px; padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>最初に確かめること</strong><br>
+誰がその機能を使い、どのジョブを片付けているのか。どの外部システムから呼ばれるのか。止めたとき、誰の仕事や外部連携に影響するのか。
+</div>
+
+<div style="margin-top: 14px;">
+営業やCSが知る利用場面と、エンジニアが知る外部連携を、同じシステムの周りへ置けます。ここで、ジョブの理解と仕組みの範囲がつながります。
+</div>
+
+</div>
+</div>
+
+<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
+画像：<a href="https://c4model.com/diagrams/system-context">Simon Brown, System Context diagram</a>, CC BY 4.0
+</div>
+
+---
+
+## コンテナ図で、アプリ・データ・通信を見る
+
+<div style="display: flex; gap: 22px; align-items: center; font-size: 0.7em;">
+
+<div style="flex: 1.08; text-align: center;">
+<img src="../../assets/images/2026/value-flow-across-roles/c4-containers.png" alt="架空のインターネットバンキングを例に、アプリケーション、データストア、外部システムとの通信を示したコンテナ図" style="height: 350px; max-width: 100%; object-fit: contain;">
+</div>
+
+<div style="flex: 0.92;">
+
+対象システムの中へ一段詳しく入るのが、<strong>コンテナ図</strong>です。アプリケーション、データストア、それらの通信に分けて表します。
+
+<div style="margin-top: 14px; padding: 13px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>C4モデルでいう「コンテナ」</strong><br>
+Dockerコンテナに限りません。Webアプリ、API、バッチ、データベースなど、実行するアプリケーションかデータストアを指します。
+</div>
+
+<div style="margin-top: 14px; padding: 13px; background-color: #f5f5f5; border-radius: 8px;">
+<strong>次に確かめること</strong><br>
+どのアプリ、データ、通信が依存しているか。止めたときに使える代替経路があるか。
+</div>
+
+<div style="margin-top: 14px;">
+システムコンテキスト図で影響を受ける相手を絞り、コンテナ図で変更や停止が波及する経路を絞ります。コンポーネントやコードを見るのは、経路をまだ特定できない箇所だけです。
+</div>
+
+</div>
+</div>
+
+<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
+画像：<a href="https://c4model.com/diagrams/container">Simon Brown, Container diagram</a>, CC BY 4.0
+</div>
+
+---
+
+## C4図だけでは、「残す・消す」は決められない
+
+<div style="font-size: 0.75em;">
+
+C4図が受け持つのは、現在の構造と依存関係です。ジョブが重要か、価値が届くまでどこで待つか、なぜその設計を選んだかは、ここまで使ってきた図や記録で確かめます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>バリューストリーム</strong><br><span style="color: #555;">ジョブの発見からアウトカムの確認まで、どこで作業し、どこで待つかを見る</span></div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>ウォードリーマップ</strong><br><span style="color: #555;">ジョブに必要な要素と成熟度を並べ、どこへ投資し、どう運用するかを考える</span></div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>C4図</strong><br><span style="color: #555;">誰が使い、どの外部システム、アプリ、データが依存しているかを確かめる</span></div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>利用記録・Design Doc・必要ならADR</strong><br><span style="color: #555;">実際の利用と、設計した理由、見直す条件を残す</span></div>
+</div>
+
+<div style="margin-top: 18px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>一つの図へ詰め込まず、知りたいことに合う図や記録を使い分ける。</strong>
+</div>
+
+</div>
+
+---
+
+## 残すか消すかは、利用と構造をそろえて決める
+
+<div style="font-size: 0.75em;">
+
+C4図だけで分かるのは構造上の影響です。同じ機能について、利用者にとっての重要性と並べて初めて、残す、縮小する、置き換える、消すという判断ができます。
+
+<div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>利用者にとっての重要性</strong><br><br>
+ジョブ、アウトカム、利用記録、問い合わせを見る。利用回数が少ない場合も、特定の業務や障害時に欠かせないかを確かめる。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>構造上の影響</strong><br><br>
+C4図で、利用者、外部システム、アプリ、データの依存を見る。止めたときの代替経路と、元に戻す方法も確かめる。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+Design DocやADRには、選んだ理由と見直す条件を残します。図や文書は、ソフトウェアの修正と一緒に更新できる詳しさへ絞ります。古い記録を判断材料に残すくらいなら、更新するか、削除します。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>重要性は利用者に確かめる。影響範囲は構造を見て確かめる。両方が揃ってから決める。</strong>
+</div>
+
 </div>
 
 ---
@@ -1440,7 +1891,7 @@ C4図が示すのは、設計判断の<strong>結果としての構造や動作<
 
 <div style="font-size: 0.72em;">
 
-機能を消すのが難しいからこそ、削除の判断を後回しにしません。先ほどの半年計画では、4ヶ月目まで中止を判断できませんでした。やめる条件と判断日を、機能を作る前に書いておけば、継続か中止かをもっと早く決められます。「2ヶ月の調査が終わる7月16日に、続けるかを決める」のように。
+機能を消すのが難しいからこそ、削除の判断を後回しにしません。作る前に置いた前提も、利用や市場の変化で古くなります。先ほどの半年計画では、4ヶ月目まで中止を判断できませんでした。やめる条件と判断日を、機能を作る前に書いておけば、継続か中止かをもっと早く決められます。「2ヶ月の調査が終わる7月16日に、続けるかを決める」のように。
 
 <div style="display: flex; gap: 16px; align-items: stretch; margin-top: 14px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -1461,79 +1912,9 @@ C4図が示すのは、設計判断の<strong>結果としての構造や動作<
 </div>
 
 <div style="margin-top: 12px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>「この条件になったらやめる」と「いつ判断するか」を、<br>PRの説明、ADR（設計判断の記録）、Design Doc（設計案と検討内容をまとめる文書）のいずれかに記載する。</strong>
+<strong>「この条件になったらやめる」と「いつ判断するか」を、作る前のDesign Docに書く。<br>小さな変更ならPRの説明に、大きな設計判断を後から単独で参照したいときだけADRにも残す。</strong>
 </div>
 
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-参考：Kaiser, <em>Architecture for Flow</em>, 第5章 ／ Tune・Perrin, <em>Architecture Modernization</em>, 第16章 ／ Read, <em>Communication Patterns</em>, 第11章
-</div>
-
----
-
-## 検索機能の実装前に決めること
-
-<div style="font-size: 0.72em;">
-
-作ると決めたら、目標、守る条件、確認方法、対象外を実装前に書きます。この四つを<strong>実装前の仕様</strong>と呼びます。仕様駆動開発（SDD）の受け入れ基準、非目標、完了チェックに当たります。
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
-<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;">
-<strong>目標</strong><br><span style="color: #555;">対象ユーザーが必要な情報へ早くたどり着き、購入を判断できる</span>
-</div>
-<div style="background-color: #f5f5f5; padding: 12px 14px; border-radius: 8px;">
-<strong>守る条件</strong><br><span style="color: #555;">検索結果の正しさ、応答時間、閲覧権限を、変更前より悪化させない</span>
-</div>
-<div style="background-color: #f5f5f5; padding: 12px 14px; border-radius: 8px;">
-<strong>確認方法</strong><br><span style="color: #555;">テストとログに加え、検索を終えるまでの時間と購入へ進んだ割合を見る</span>
-</div>
-<div style="background-color: #f5f5f5; padding: 12px 14px; border-radius: 8px;">
-<strong>対象外とやめる条件</strong><br><span style="color: #555;">推薦機能は含めない。判断日までに利用や結果が変わらなければ、続け方を見直す</span>
-</div>
-</div>
-
-<div style="margin-top: 12px; padding: 10px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>AIに実装を頼む前に、何を変え、何を守り、どう確かめるかをチームで決める。</strong>
-</div>
-
-<div style="margin-top: 10px;">
-
-仕様のレビューは、何を作るかを職能を越えて揃える場です。仕様の失敗の多くは、ある役割が知っていた制約を別の役割が知らなかったことから起きます。その会話は数分。コードレビューで見つければ数時間、本番なら、もっと高くつきます。
-
-</div>
-
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-参考：Alfonso Graziano, <em>AI-Native Software Engineering</em>, O'Reilly Early Release（草稿）, 仕様駆動開発の章
-</div>
-
----
-
-## AIは作れる。人が作るべきかを決める
-
-<div style="font-size: 0.72em;">
-
-実装前の仕様をAIへ渡すと、目標と守る条件に沿った案を出し、確認を繰り返しやすくなります。生成が速いほど、曖昧な指示から異なる実装が次々に生まれます。曖昧さの影響範囲は、作る速さに比例して広がる。AI支援開発で最も多い無駄は、悪いコードではなく、間違った問題を解くコードです。エージェントは実装の判断はできても、意図の判断はできません。そして受け入れ基準が書けないなら、まだ探索の段階です。その機能を作るべきかは、仕様だけでは決まりません。
-
-<div style="display: flex; gap: 20px; align-items: center; margin-top: 16px;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center;">
-<strong>AIに任せる</strong><br><br>計画と実装の候補<br>反復とテスト・ログの収集
-</div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center;">
-<strong>人が決める</strong><br><br>ジョブと守る条件<br>確認方法とやめる条件
-</div>
-</div>
-
-<div style="margin-top: 16px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.15em;">
-<span style="color: #e65100; font-weight: bold;">AIに任せる範囲は、検証できるところまで。作るべきかは、チームが決める。</span>
-</div>
-
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
-参考：Alfonso Graziano, <em>AI-Native Software Engineering</em>, 「仕様駆動開発」の章 ／ Addy Osmani, <em>Beyond Vibe Coding</em>, 第3章・第4章
 </div>
 
 ---
@@ -1546,7 +1927,7 @@ AI支援で、動くコードを書く時間は短くなり、個人が作れる
 
 <div style="display: flex; gap: 14px; align-items: stretch; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>実装</strong><br><br>
+<strong>アウトプットを作る</strong><br><br>
 設計・実装・テスト。AI支援で短くしやすく、PR数や生成量にも表れやすい。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -1554,7 +1935,7 @@ AI支援で、動くコードを書く時間は短くなり、個人が作れる
 優先順位の判断、レビュー、他の役割との合意。仕事の進め方を変えなければ残る。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>結果の確認</strong><br><br>
+<strong>アウトカムを確かめる</strong><br><br>
 本番で使われ、狙った変化が起きたかを確かめる。リリースしただけでは分からない。
 </div>
 </div>
@@ -1571,57 +1952,27 @@ AI支援で、動くコードを書く時間は短くなり、個人が作れる
 
 <div style="font-size: 0.72em;">
 
-「作るべきか」を判断するには、次の三つを一緒に見ます。
+「作る・任せる・やめる」は、次の順序で考えます。
 
 <div style="display: flex; gap: 14px; align-items: stretch; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>流れを測る</strong><br><br>
-直近10件を作業と待ちに分け、どの工程で、誰を待った時間が最も長かったかを確かめる。
+<strong>作る</strong><br><br>
+最近困った場面と、片付けたいジョブ、確かめたいアウトカムを見る。既存の手段で足りるなら作らない。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>前提を確かめる</strong><br><br>
-役割ごとに何が問題に見え、何を守ろうとしているかを対話する。その材料を一枚の図に並べる。
+<strong>任せる</strong><br><br>
+前提を仕様へ書き、AIの計画を確認する。テストと計測で確かめられ、元に戻せる範囲まで任せる。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>ジョブから決める</strong><br><br>
-最近困った場面と、何が変われば片付いたと言えるかを確かめる。既存の手段で足りるなら作らない。
+<strong>やめる</strong><br><br>
+利用者への重要性と構造上の影響を調べる。やめる条件と判断日を、作る前に決める。
 </div>
 </div>
 
 <div style="margin-top: 16px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
-<span style="color: #e65100; font-weight: bold;">AIは「どう作るか」の候補を増やす。<br>「何を作るか」「いつやめるか」は、計測とジョブの理解をもとにチームが決める。</span>
+<span style="color: #e65100; font-weight: bold;">AIは「どう作るか」の候補を増やす。<br>チームは「何を作るか」「どこまで任せるか」「いつやめるか」を決め、計画と結果を照らす。</span>
 </div>
 
-</div>
-
----
-
-## 参考資料
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; font-size: 0.62em;">
-<div>
-<strong>フローとプロダクト</strong>
-<ul style="margin-top: 10px; padding-left: 24px;">
-<li><a href="https://publishing.newspicks.com/books/9784910063010">宇田川元一『他者と働く――「わかりあえなさ」から始める組織論』2019</a></li>
-<li>Jacqui Read, <em>Communication Patterns</em>, O'Reilly, 2023（邦訳『開発者とアーキテクトのためのコミュニケーションガイド』オライリー・ジャパン, 2025）</li>
-<li><a href="https://www.oreilly.com/library/view/the-c4-model/9798341660113/">Simon Brown, <em>The C4 Model</em>, O'Reilly, 2026</a></li>
-<li>Susanne Kaiser, <em>Architecture for Flow</em>, Addison-Wesley, 2025</li>
-<li>Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, 2024</li>
-<li>Clayton M. Christensenほか, <em>Competing Against Luck</em>, 2016 ／ <a href="https://www.christenseninstitute.org/theory/jobs-to-be-done/">Jobs to Be Done Theory</a></li>
-<li>Melissa Perri, <em>Escaping the Build Trap</em>, 2018 ／ Rob Fitzpatrick, <em>The Mom Test</em>, 2013</li>
-<li>Jonathan Smartほか, <em>Sooner Safer Happier</em>, 2020 ／ Eliyahu M. Goldratt, Jeff Cox, <em>The Goal</em>, 2004</li>
-</ul>
-</div>
-<div>
-<strong>AI時代の開発</strong>
-<ul style="margin-top: 10px; padding-left: 24px;">
-<li>Addy Osmani, <em>Beyond Vibe Coding</em>, 2025</li>
-<li>Alfonso Graziano, <em>AI-Native Software Engineering</em>, O'Reilly Early Release（2026年時点の草稿、刊行予定2027年）</li>
-<li><a href="https://dora.dev/research/2025/dora-report/">DORA, State of AI-assisted Software Development 2025（v. 2025.2）</a></li>
-<li><a href="https://cloud.google.com/resources/content/dora-roi-of-ai-assisted-software-development">DORA, ROI of AI-assisted Software Development 2026（v. 2026.1）</a></li>
-<li><a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR, Early-2025 AI on Developer Productivity</a></li>
-</ul>
-</div>
 </div>
 
 ---
@@ -1640,7 +1991,7 @@ _class: title dark
 
 # <span style="font-size: 0.9em;">AIは作れる。</br>作るべきかを決めるのが私たちの仕事。</span>
 
-### 職能の壁を越えて価値のフローを設計する
+### 職能の壁を越えて、価値が届くまでの流れを設計する
 
 </div>
 
