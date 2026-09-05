@@ -63,7 +63,7 @@ _class: title dark
 2. <strong>関数型の考えをRustで使う</strong>
 3. <strong>不正な値を作らせない4つのパターン</strong>
 4. <strong>Rustの所有権と型状態を使う</strong>
-5. <strong>DBや既存コードとの境界を設計する</strong>
+5. <strong>境界と既存コードへ段階導入する</strong>
 6. <strong>まとめ</strong>
 
 </div>
@@ -75,36 +75,191 @@ _class: title dark
 
 ---
 
-## この発表で解決できること
+<!--
+_backgroundColor: #0a1929
+_color: white
+_class: transition
+-->
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; flex-direction: column; color: white;">
+
+## <span style="color: white;">この発表の主張</span>
+
+<div style="font-size: 1.15em; margin-top: 28px; text-align: center; color: white;">
+<strong>型はコンパイラのためではない<br>不正な状態を物理的に存在させないための壁である</strong>
+</div>
+
+<div style="font-size: 0.72em; margin-top: 24px; color: #aaa;">
+<code>is_paid = true</code> なのに <code>payment_id</code> が null。その組み合わせ自体を書けなくする。
+</div>
+
+</div>
+
+---
+
+## 壁をどこに建てるか
 
 <div style="font-size: 0.75em;">
 
-<div style="display: flex; gap: 20px; margin-top: 15px; align-items: center;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<p><strong>あらゆる設計原則は「変更を容易にする」の派生である</strong>、という補助線で型の壁を評価します。</p>
 
-<strong>こんな状態に身に覚えはありませんか？</strong>
+| 設計原則 | 変更を容易にする仕組み |
+| --- | --- |
+| カプセル化 | 変わりうる詳細を境界の内側へ閉じ込める |
+| 疎結合 | 変更が無関係な部品へ伝播するのを止める |
+| DRY / Single Source of Truth | 同じ判断を直す場所を1か所に寄せる |
+| テスト / 型 | 変更が壊した前提を、利用者より先に検出する |
 
-- <code>is_paid = true</code> なのに <code>payment_id</code> が null
-- <code>status = "verified"</code> なのに <code>verified_at</code> が欠落
-- <code>CustomerId</code> と <code>OrderId</code> が同じ <code>u64</code> で取り違え
-
-</div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
-
-<strong>この発表で持ち帰れるもの</strong>
-
-- 型を「壁」として使う設計思想
-- 関数型の道具をRustに持ち込む具体パターン
-- 所有権・型状態・<code>PhantomData</code>でさらに強化する方法
-- AI時代でも機械的に検査できる制約の作り方
+<p style="margin-top: 14px;">型も目的ではありません。<strong>不正な状態を閉じ、次の変更で失う時間と確信を減らす</strong>ための手段です。</p>
 
 </div>
+
+<div style="margin-top: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">主題は型の壁。変更容易性は、壁の置き場所を決める補助線</span>
 </div>
 
-<div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">バグは、対処するものから、書けないものへ</span>
+---
+
+## 疎結合は、設計のゴールではない
+
+<div style="font-size: 0.75em;">
+
+<p>結合とは、コンポーネント同士が<strong>接続され、知識やライフサイクルを共有すること</strong>です。結合がなければ、部品は協調できず、システムになりません。</p>
+
+<div style="display: flex; gap: 18px; margin-top: 16px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>結合を弱めすぎる</strong>
+<p>本来一緒に変わるルールが別々の場所へ散り、整合性の維持と調整が難しくなる。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>結合を強めすぎる</strong>
+<p>無関係な変更まで伝播し、1つの修正に多くのコンポーネントが巻き込まれる。</p>
+</div>
 </div>
 
+<p style="margin-top: 16px;">問うべきは「結合しているか」ではなく、<strong>一緒に変わる知識が、変更しやすい場所に結合されているか</strong>です。</p>
+
+</div>
+
+<div style="text-align: right; font-size: 0.5em; color: #999; margin-top: 4px;">
+参考: Vlad Khononov, <em>Balancing Coupling in Software Design</em>, Ch.1
+</div>
+
+---
+
+## 変更コストは、結合の3次元で考える
+
+<div style="font-size: 0.75em;">
+
+<div style="display: flex; gap: 18px; margin-top: 12px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px; text-align: center;">
+<strong>強度</strong>
+<p>境界を越えて<br>共有する知識の量</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px; text-align: center;">
+<strong>距離</strong>
+<p>変更を調整する<br>コード・チームの隔たり</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px; text-align: center;">
+<strong>変動性</strong>
+<p>その知識が<br>変わる頻度</p>
+</div>
+</div>
+
+<div style="margin-top: 22px; padding: 16px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
+<strong>予想保守労力 ≈ 強度 × 距離 × 変動性</strong>
+</div>
+
+<p style="margin-top: 16px;">これは精密な測定式ではなく、どこを動かせば変更コストが下がるかを見るモデルです。<strong>3つすべてが高い関係</strong>を優先して直します。</p>
+
+</div>
+
+<div style="text-align: right; font-size: 0.5em; color: #999; margin-top: 4px;">
+参考: Vlad Khononov, <em>Balancing Coupling in Software Design</em>, Ch.10
+</div>
+
+---
+
+## 距離が大きいほど、変更の調整コストは増える
+
+<div style="display: flex; gap: 28px; align-items: center; margin-top: 12px;">
+<div style="width: 55%; text-align: center;">
+<img src="../../assets/images/2026/rust-types-as-walls/balancing-coupling/distance-cost.jpg" alt="結合されたコンポーネント間の距離と変更コスト" style="width: 100%;">
+</div>
+<div style="flex: 1; font-size: 0.75em;">
+
+<p>同じ変更でも、1つの関数内で完結する場合と、別チームのサービスまで同時に直す場合ではコストが違います。</p>
+
+<p><strong>距離</strong>には、コード上の隔たりだけでなく、リポジトリ、デプロイ単位、担当チーム、タイムゾーンも含まれます。</p>
+
+<p>距離を広げるなら、境界を越える共有知識を減らす必要があります。</p>
+
+</div>
+</div>
+
+<div style="text-align: right; font-size: 0.5em; color: #999; margin-top: 4px;">
+出典: Vlad Khononov, <em>Balancing Coupling in Software Design</em>, Figure 8.2
+</div>
+
+---
+
+## 共有知識と距離の釣り合い
+
+<div style="display: flex; gap: 28px; align-items: center; margin-top: 10px;">
+<div style="width: 38%; text-align: center;">
+<img src="../../assets/images/2026/rust-types-as-walls/balancing-coupling/modularity-complexity.jpg" alt="共有知識と距離によるモジュール性と複雑性" style="width: 100%;">
+</div>
+<div style="flex: 1; font-size: 0.75em;">
+
+<p><strong>共有知識と距離が反対方向</strong>なら、設計はモジュール性へ向かいます。</p>
+
+<ul>
+<li>知識が多いなら、近くに置いて高凝集にする</li>
+<li>遠くへ離すなら、公開する知識を小さくする</li>
+</ul>
+
+<p><strong>両方が大きい</strong>と変更が遠くへ波及し、<strong>両方が小さい</strong>と無関係なものが同居して探索コストが増えます。</p>
+
+</div>
+</div>
+
+<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">近くでは強く、遠くでは小さな契約だけを共有する</span>
+</div>
+
+<div style="text-align: right; font-size: 0.5em; color: #999; margin-top: 4px;">
+出典: Vlad Khononov, <em>Balancing Coupling in Software Design</em>, Figure 14.1
+</div>
+
+---
+
+## 型は、結合を消さず、置き直す
+
+<div style="font-size: 0.75em;">
+
+<div style="display: flex; gap: 20px; margin-top: 12px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>bool + Option</strong>
+
+<p><code>is_paid</code> と <code>payment_id</code> の関係を、すべての利用者が暗黙に知る。</p>
+
+<p>共有知識がコード全体へ漏れ、変更時に遠くの <code>if</code> を探す。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>enum PaymentState</strong>
+
+<p>2つの値の関係を、型定義と生成境界へ集める。</p>
+
+<p>利用者には可能な状態だけを公開し、変更箇所は型エラーで見つける。</p>
+</div>
+</div>
+
+<p style="margin-top: 16px;">型は結合を弱める魔法ではありません。<strong>一緒に変わる知識を型の内側で強く結び、不要な組み合わせを境界の外へ漏らさない</strong>道具です。</p>
+
+</div>
+
+<div style="margin-top: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">型の壁は、結合の置き場所を変える</span>
 </div>
 
 ---
@@ -520,63 +675,6 @@ impl PricedOrder {
 
 ---
 
-## 線形型とアフィン型は、使える回数が違う
-
-<div style="font-size: 0.75em;">
-
-<p>値を何回使えるかに注目すると、Rustの所有権を整理できます。</p>
-
-<div style="display: flex; gap: 18px; margin-top: 12px; align-items: center;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-
-<strong>線形型 (Linear types)</strong>
-
-<p>値は<strong>ちょうど1回</strong>使います。捨てることも複製することもできません。</p>
-
-<p style="font-size: 0.9em; color: #666; margin-top: 8px;">代表例: Clean の uniqueness types、Idris 2 の linear types</p>
-
-</div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-
-<strong>アフィン型 (Affine types)</strong>
-
-<p>値は<strong>1回以下</strong>使います。複製はできませんが、<strong>捨てることはできます</strong>。</p>
-
-<p style="font-size: 0.9em; color: #666; margin-top: 8px;">代表例: Rust の所有権、ATS、Vale</p>
-
-</div>
-</div>
-
-<p style="margin-top: 16px;">Rustの通常の所有値は、捨ててもよいアフィン型の側です。</p>
-
-</div>
-
-<div style="position: absolute; bottom: 20px; right: 40px; font-size: 0.5em; color: #999;">
-Girard (1987) "Linear Logic" / Bernardy, Boespflug, Newton, Peyton Jones, Spiwack (2018) "Retrofitting Linear Types" (POPL'18)
-</div>
-
----
-
-## Rustの所有値は、高々1回だけ使える
-
-<div style="font-size: 0.78em;">
-
-<p><code>Copy</code>ではない値を関数へ渡すと、所有権が移ります。同じ値をもう一度使おうとすると、コンパイルエラーになります。</p>
-
-```rust
-let order = UnvalidatedOrder::new();
-validate(order)?;  // ここで所有権が移る
-validate(order)?;  // エラー。order はもう使えない
-```
-
-<p>一方、使わずに捨てることはできます。<code>Copy</code>型は複製できる例外で、<code>#[must_use]</code>は捨てた値を警告する仕組みです。</p>
-
-<p style="margin-top: 16px;"><strong>この「使い回せない」という制約が、古い状態を残さない壁になります。</strong></p>
-
-</div>
-
----
-
 <!--
 _backgroundColor: #0a1929
 _color: white
@@ -673,26 +771,6 @@ fn charge(o: PricedOrder, card: &Card) -> Result<PaidOrder, PaymentError>;
 
 ---
 
-## ワークフローは左から右へ流せる
-
-<div style="font-size: 0.75em;">
-
-<p>状態型で固めた各ステップは、<strong>関数合成でそのまま繋がります</strong>。<code>tap</code> クレートの <code>.pipe()</code> を挟むと、ネストせず左から右に読める形になります。</p>
-
-```rust
-let paid = raw
-    .pipe(validate)              // Unvalidated → Result<Validated>
-    .map(price)                  // Validated   → Priced
-    .map_err(WorkflowError::from)
-    .and_then(|o| charge(o, &card).map_err(WorkflowError::from))?;
-```
-
-<p>パイプの途中で型が合わなければ、その行が赤くなります。<strong>合成できる順序はコンパイラが保証</strong>する。関数型の「データを変換で流す」発想が、状態遷移にそのまま乗ります。</p>
-
-</div>
-
----
-
 ## パターン2 同じ数字でも、意味ごとに型を分ける
 
 <div style="font-size: 0.75em;">
@@ -769,36 +847,6 @@ impl Email {
 ```
 
 <p>中身のフィールドは<strong>非公開</strong>なので、外部コードは <code>Email::new</code> を通らずに <code>Email</code> 値を作れません。この例では、一度作れた <code>Email</code> は以降のコードで必ず <code>@</code> を含みます。</p>
-
-</div>
-
----
-
-## 複数の制約を組み合わせる
-
-<div style="font-size: 0.75em;">
-
-<p>実務では<strong>複数の制約を束ねる</strong>ことがよくあります。</p>
-
-```rust
-pub struct CustomerName { first: String, last: String }
-
-impl CustomerName {
-    pub fn new(first: &str, last: &str) -> Result<Self, NameError> {
-        let first = first.trim();
-        let last  = last.trim();
-        if first.is_empty() || last.is_empty() {
-            return Err(NameError::Empty);
-        }
-        if first.chars().count() > 50 || last.chars().count() > 50 {
-            return Err(NameError::TooLong);
-        }
-        Ok(CustomerName { first: first.into(), last: last.into() })
-    }
-}
-```
-
-<p>このコンストラクタを通った <code>CustomerName</code> は、<strong>空でも長すぎもしない</strong>ことが型で保証されます。</p>
 
 </div>
 
@@ -940,23 +988,6 @@ fn send_receipt(user: &User) {
 
 ---
 
-## 型は、コンパイル時のユニットテストになる
-
-<div style="font-size: 0.78em;">
-
-<p>enumで「ありえない状態」を書けなくすると、<strong>もう1つ利点</strong>があります。</p>
-
-<div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 14px;">
-<p><strong>「認証済みなのに verified_at が null のケース」のテストは、書く必要がなくなります</strong>。</p>
-<p>なぜなら、そのケースは<strong>コンパイラが通さない</strong>からです。</p>
-</div>
-
-<p style="margin-top: 14px;">この仕組みを、Scott Wlaschin は<strong>「コンパイル時のユニットテスト」</strong>と呼びます。型が、実行前にテストの役目を果たしてくれるのです。テストコードが不要になるのではなく、<strong>型そのものがテスト</strong>になります。</p>
-
-</div>
-
----
-
 ## 4つの基本パターン、一覧で確認
 
 <div style="font-size: 0.78em;">
@@ -998,6 +1029,158 @@ fn send_receipt(user: &User) {
 </div>
 
 <p style="margin-top: 12px;">この4つだけでも、『is_paid と payment_id が矛盾する』系のバグは<strong>書きようがなくなります</strong>。</p>
+
+</div>
+
+---
+
+## 出力は、依存と逆向きに知識を流す
+
+<div style="font-size: 0.75em;">
+
+<div style="text-align: center; margin-top: 18px;">
+<img src="../../assets/images/2026/rust-types-as-walls/balancing-coupling/knowledge-flow.jpg" alt="依存方向と逆向きに流れる知識" style="width: 72%;">
+</div>
+
+<p style="margin-top: 22px;">下流の Module A は上流の Module B に依存します。一方、型・variant・フィールド・エラーという<strong>知識は、Bの出力からAへ流れます</strong>。</p>
+
+<p>出力型を豊かにするほど、Aは高度な判断ができます。同時に、Bがその型を変えたとき、Aも一緒に変わる可能性が高くなります。</p>
+
+</div>
+
+<div style="margin-top: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">出力型は、下流へ公開する知識の境界</span>
+</div>
+
+<div style="text-align: right; font-size: 0.5em; color: #999; margin-top: 4px;">
+出典: Vlad Khononov, <em>Balancing Coupling in Software Design</em>, Figure 10.1
+</div>
+
+---
+
+## 出力が豊かほど、下流の判断力と結合が増える
+
+<div style="font-size: 0.75em;">
+
+<div style="display: flex; gap: 18px; margin-top: 12px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>ドメイン型をそのまま返す</strong>
+
+<pre><code>fn payment_state() -&gt; PaymentState;</code></pre>
+
+<p>下流は全状態を型安全に扱える。一方、variantやフィールドは<strong>公開した知識</strong>になり、変更が利用者へ伝播する。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>用途別の出力へ絞る</strong>
+
+<pre><code>fn receipt_status() -&gt; ReceiptStatus;</code></pre>
+
+<p>利用者に必要な知識だけを公開できる。一方、別の判断が必要になるたび、出力やAPIを追加する必要がある。</p>
+</div>
+</div>
+
+<p style="margin-top: 16px;">同じモジュール内で共に進化するなら豊かな型が効きます。遠い利用者へ返すなら、<strong>利用目的に合わせた小さなコントラクト</strong>の方が変更を閉じ込めます。</p>
+
+</div>
+
+<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">出力の情報量は、利用者の力と提供者の変更自由度を交換する</span>
+</div>
+
+---
+
+## enumは、網羅性と拡張性を交換する
+
+<div style="font-size: 0.75em;">
+
+<div style="display: flex; gap: 18px; margin-top: 10px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<strong>閉じた enum</strong>
+
+<pre><code>pub enum PaymentState {
+    Unpaid,
+    Paid(PaymentId),
+}</code></pre>
+
+<p>利用者は網羅的に <code>match</code> できる。新しいvariantの追加は、利用者の修正を要求する<strong>破壊的変更</strong>になる。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px;">
+<strong>拡張を許す enum</strong>
+
+<pre><code>#[non_exhaustive]
+pub enum PaymentState {
+    Unpaid,
+    Paid(PaymentId),
+}</code></pre>
+
+<p>提供者はvariantを追加しやすい。利用者はワイルドカードが必須になり、未知の状態を<strong>個別には扱えない</strong>。</p>
+</div>
+</div>
+
+<p style="margin-top: 12px;">同時に更新できる内部コードでは閉じた enum、独立して更新されるライブラリ境界では <code>#[non_exhaustive]</code> が候補になります。</p>
+
+</div>
+
+---
+
+## エラー出力は、回復可能性と変更自由度を交換する
+
+<div style="font-size: 0.75em;">
+
+<div style="display: flex; gap: 18px; margin-top: 12px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>型付きエラー</strong>
+
+<pre><code>fn charge(...)
+  -&gt; Result&lt;Receipt, ChargeError&gt;;</code></pre>
+
+<p>呼び出し側は残高不足だけ再試行し、カード拒否は利用者へ返せる。variantは回復契約になり、変更しにくい。</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>不透明なエラー</strong>
+
+<pre><code>fn run_job(...)
+  -&gt; anyhow::Result&lt;()&gt;;</code></pre>
+
+<p>内部エラーを包みやすく、実装を変えやすい。呼び出し側は型による分岐ができず、記録して失敗させる程度になる。</p>
+</div>
+</div>
+
+<p style="margin-top: 14px;">利用者に回復行動を選ばせるAPIでは型付き、最上位で記録して終了する処理では不透明なエラーが自然です。</p>
+
+</div>
+
+<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">利用者が分岐すべき失敗だけを、公開エラー型にする</span>
+</div>
+
+---
+
+## 借用して返すか、所有して返すか
+
+<div style="font-size: 0.75em;">
+
+<div style="display: flex; gap: 16px; margin-top: 14px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px; text-align: center;">
+<strong><code>&amp;str</code></strong>
+<p>割り当て不要<br>元の値より長く保持できない</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px; text-align: center;">
+<strong><code>String</code></strong>
+<p>独立して保持できる<br>複製・割り当てコストを持つ</p>
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 12px; border-radius: 8px; text-align: center;">
+<strong><code>Arc&lt;str&gt;</code></strong>
+<p>安価に共有できる<br>参照カウントとAPI複雑性を持つ</p>
+</div>
+</div>
+
+```rust
+fn name(&self) -> &str;       // 呼び出し側を self の寿命に結合
+fn into_name(self) -> String; // self を消費し、独立した値を返す
+```
+
+<p>出力の所有権はパフォーマンスだけでなく、<strong>呼び出し側が値をいつまで、どこへ運べるか</strong>を決めます。コピーを避ける代わりに寿命を結合するのか、所有権を渡して距離を切るのかを選びます。</p>
 
 </div>
 
@@ -1129,30 +1312,6 @@ impl Order<Validated> {
 
 ---
 
-## 公開APIの拡張点を、型で閉じる
-
-<div style="font-size: 0.75em;">
-
-<p>型は壁ですが、<strong>公開APIの拡張点</strong>には穴が残ります。<code>enum</code> はもともと閉じていますが、<code>trait</code> は放っておくと<strong>外部のコードから実装を増やせます</strong>。</p>
-
-<p>そこで <code>trait</code> を非公開の supertrait で封じます（sealed trait）。</p>
-
-```rust
-mod sealed { pub trait Sealed {} }
-
-pub trait PaymentState: sealed::Sealed { /* ... */ }
-
-pub struct Authorized;
-impl sealed::Sealed for Authorized {}   // 実装できるのは自分のクレートだけ
-impl PaymentState for Authorized { /* ... */ }
-```
-
-<p><code>sealed::Sealed</code> が非公開なので、<strong>外部クレートは <code>PaymentState</code> を実装できません</strong>。「どこまで拡張を許すか」を、お願いではなく型で決められます。</p>
-
-</div>
-
----
-
 ## フィールドを足すとOptionの海に戻る
 
 <div style="font-size: 0.75em;">
@@ -1174,7 +1333,7 @@ struct ValidatedOrder {
 
 ---
 
-## 設計を進化させるときも、型を作る
+## 型エラーを、変更地図にする
 
 <div style="font-size: 0.75em;">
 
@@ -1187,9 +1346,13 @@ struct PricedOrderWithShipping {           // 配送情報は必須・Optionに�
 }
 ```
 
-<p>型が増えると、コンパイラが依存箇所を<strong>全部追跡</strong>します。「直し忘れ」はビルドエラーになる。<code>Option</code> で様子を見るより安全です。</p>
+<p>型が増えると、コンパイラが依存箇所を<strong>全部追跡</strong>します。「直し忘れ」はビルドエラーになる。エラーは邪魔ではなく、<strong>次に直す場所を列挙した変更地図</strong>です。</p>
 
-<p style="margin-top: 12px;">ここまでは型で何でも解決できそうに見えます。でも、<strong>Rust固有の摩擦</strong>もあるのが現実です。</p>
+<p style="margin-top: 12px;">ただし、地図を細かくするほど型は増えます。変更の見落としは減りますが、読む負担は増える。ここからは、<strong>型が変更を難しくする境界</strong>も見ていきます。</p>
+
+<div style="margin-top: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">コンパイルエラーは、変更の残作業リストになる</span>
+</div>
 
 </div>
 
@@ -1230,28 +1393,6 @@ log_for_audit(audit_view);       // 借用がここまで生きている
 ```
 
 <p>監査ログやメトリクスへ古い値を渡したいなら、必要な情報だけコピーするか、共有したい部分を <code>Arc</code> に分けます。<strong>古い状態を誰がいつまで見るのか</strong>を明示的に決める必要があります。</p>
-
-</div>
-
----
-
-## 共有したい中身だけ、構造共有する
-
-<div style="font-size: 0.75em;">
-
-<p>注文全体ではなく、大きなコレクションだけを新旧の状態で共有したいなら、<strong>永続データ構造</strong>が使えます。<code>im-rc</code> の <code>Vector</code> / <code>HashMap</code> は、更新しても<strong>古い値を残し、新しい値を返します</strong>。</p>
-
-```rust
-use im_rc::Vector;
-
-fn add_item(items: &Vector<Item>, new: Item) -> Vector<Item> {
-    let mut next = items.clone();   // clone は構造共有なので安価
-    next.push_back(new);            // next だけが伸びる
-    next                            // 元の items は不変のまま残る
-}
-```
-
-<p>この <code>clone()</code> は全要素を複製せず、変更していない部分を新旧の値で共有します。これを<strong>構造共有</strong>と呼びます。型状態の保証を保ったまま、複製コストを抑えられます。</p>
 
 </div>
 
@@ -1328,7 +1469,7 @@ where
 
 <div style="font-size: 0.78em;">
 
-<p>関数型まつりの皆さんには馴染みがあっても、<strong>チームの全員がこの関数の型を読めるとは限りません</strong>。制約を増やすほど、読む負担も増えます。</p>
+<p>関数型まつりの皆さんには馴染みがあっても、<strong>チームの全員がこの関数の型を読めるとは限りません</strong>。制約を増やすほど、読む負担と変更コストも増えます。</p>
 
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px; margin-top: 14px;">
 
@@ -1340,10 +1481,12 @@ where
 
 </div>
 
+<p style="margin-top: 12px;">判断基準は「型が強いほど良い」ではありません。<strong>防げる障害と見落としのコスト</strong>が、<strong>導入・学習・変更のコスト</strong>を上回る場所にだけ壁を作ります。</p>
+
 </div>
 
 <div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">チームが読めない壁は、守りの価値が逆転する</span>
+<span style="color: #e65100; font-weight: bold;">変更の総コストを下げない壁は、設計ではなく障害物</span>
 </div>
 
 ---
@@ -1446,26 +1589,223 @@ fn from_row(row: OrderRow) -> Result<PaymentState, OrderRowError> {
 
 ---
 
-## 既存コードへの段階導入
+<!--
+_backgroundColor: #0a1929
+_color: white
+_class: transition
+-->
 
-<div style="font-size: 0.78em;">
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; flex-direction: column; color: white;">
 
-<p><code>u64</code> が配り回っているコードベースに newtype を一気に入れるのは大工事です。影響範囲が全ファイルに及ぶこともあります。</p>
+## <span style="color: white;">既存コードへ、どう壁を建てるか</span>
 
-<p>現実解は、<strong>境界から小さく導入</strong>することです。</p>
+<span style="color: white; font-weight: bold;">型を一括導入せず、不変条件を1つずつ移す</span>
 
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px; margin-top: 10px;">
+</div>
+
+---
+
+## 最初に選ぶのは「型」ではなく「不変条件」
+
+<div style="font-size: 0.75em;">
+
+<p><code>u64</code> をすべて newtype にする、と決めると変更範囲が先に膨らみます。まず、<strong>何を二度と壊したくないか</strong>を1つ選びます。</p>
+
+<div style="display: flex; gap: 18px; margin-top: 12px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+
+<strong>最初の対象に向く</strong>
+
+- 間違えたときの障害や手戻りが大きい
+- 同じ検証や取り違え対策が繰り返されている
+- HTTPやDBなど、入口と出口を特定できる
+
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+
+<strong>後回しにする</strong>
+
+- 仕様が探索中で、正しい状態がまだ定まらない
+- 間違えても局所的で、修正コストが小さい
+- 型の読み方をチームで共有できていない
+
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">型を選ぶ前に、守る不変条件を1つ選ぶ</span>
+</div>
+
+---
+
+## 値の旅を、入口から保存まで1本だけ描く
+
+<div style="font-size: 0.75em;">
+
+<p>対象を <code>CustomerId</code> と決めたら、リポジトリ全体を直す前に、<strong>1つのユースケースで値が通る場所</strong>を並べます。</p>
+
+<div style="background-color: #f5f5f5; padding: 18px; border-radius: 8px; margin-top: 16px; text-align: center; font-size: 1.05em;">
+HTTPの <code>u64</code> → Handler → UseCase → Repository → DBの <code>BIGINT</code>
+</div>
+
+<div style="display: flex; gap: 18px; margin-top: 18px; align-items: center;">
+<div style="flex: 1;">
+<strong>探す場所</strong>
+
+- 生の値を受け取る入口
+- 検証や変換をしている場所
+- 同じ型の値を渡す関数
+</div>
+<div style="flex: 1;">
+<strong>残す成果物</strong>
+
+- 最初に移行するユースケース
+- 型へ変換する境界
+- 生の値へ戻す出口
+</div>
+</div>
+
+<p style="margin-top: 14px;">全呼び出しグラフではなく、<strong>変更を完結できる最短の縦1本</strong>だけを移行単位にします。</p>
+
+</div>
+
+---
+
+## 境界に型を置き、内側のAPIを先に作る
+
+<div style="font-size: 0.75em;">
+
+```rust
+pub struct CustomerId(u64);
+
+impl TryFrom<u64> for CustomerId {
+    type Error = CustomerIdError;
+
+    fn try_from(raw: u64) -> Result<Self, Self::Error> {
+        if raw == 0 { return Err(CustomerIdError::Zero); }
+        Ok(Self(raw))
+    }
+}
+
+fn find_customer(id: CustomerId) -> Result<Customer, FindError>;
+```
+
+<p>HTTPやDBの表現はすぐには変えません。入口で <code>u64</code> を <code>CustomerId</code> へ変換し、<strong>新しく作る内側のAPIだけ</strong>を型付きにします。</p>
+
+</div>
+
+<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">外側の互換性を保ち、内側から正しい形を作る</span>
+</div>
+
+---
+
+## 互換アダプタは、移行中だけ残す
+
+<div style="font-size: 0.75em;">
+
+<p>既存の呼び出しを一度に直せないなら、古いシグネチャを<strong>型付きAPIへの薄いアダプタ</strong>にします。</p>
+
+```rust
+fn find_customer(id: CustomerId) -> Result<Customer, FindError> {
+    repository::find(id)
+}
+
+#[deprecated(note = "CustomerId を受け取る find_customer を使う")]
+fn find_customer_raw(raw: u64) -> Result<Customer, FindError> {
+    find_customer(CustomerId::try_from(raw)?)
+}
+```
+
+<p>検証ロジックは新APIへ1か所に寄せ、旧APIは変換して委譲するだけにします。旧API側へ機能追加すると、移行経路が<strong>恒久的な抜け道</strong>になります。</p>
+
+</div>
+
+---
+
+## 呼び出し経路を、縦に1本ずつ移す
+
+<div style="font-size: 0.75em;">
+
+<p>レイヤーを横断して全部のHandlerを直すのではなく、<strong>1つのユースケースを入口からDBまで</strong>型付きにします。</p>
+
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px; margin-top: 12px;">
 
 <ol>
-<li><strong>API入口</strong>：HTTPハンドラや deserialize 直後で newtype に変換</li>
-<li><strong>リポジトリ層</strong>：DB から取り出した直後、返す型を newtype に</li>
-<li><strong>内側に染み込ませる</strong>：呼び出されている関数の引数・戻り値の型を順次 newtype に置き換え</li>
+<li><strong>PR 1</strong>：<code>CustomerId</code>、生成関数、境界のテストを追加</li>
+<li><strong>PR 2</strong>：顧客参照のHandler → UseCase → Repositoryを移行</li>
+<li><strong>PR 3</strong>：次のユースケースを移行し、旧API利用を減らす</li>
+<li><strong>PR 4</strong>：残存利用がなくなったら互換アダプタを削除</li>
 </ol>
 
 </div>
 
-<p style="margin-top: 12px;">すべてを一度に直す必要はありません。<strong>境界に置いた newtype が、内側の型付けを徐々に強制していく</strong>のが実務的なパターンです。</p>
+<p style="margin-top: 14px;">各PRでビルド可能な状態を保ちます。コンパイルエラーは、その縦1本の中で<strong>まだ型が届いていない場所</strong>を示します。</p>
 
+</div>
+
+<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">横に全置換せず、動く縦1本を積み重ねる</span>
+</div>
+
+---
+
+## 生の値を作れる経路は、最後に閉じる
+
+<div style="font-size: 0.75em;">
+
+<p>呼び出し側が移行できたら、型の壁を迂回できる生成経路を閉じます。</p>
+
+```rust
+pub struct CustomerId(u64); // フィールドは非公開
+
+impl CustomerId {
+    pub fn get(&self) -> u64 { self.0 } // DB等の出口だけで使う
+}
+
+#[derive(Deserialize)]
+struct CustomerRequest { customer_id: u64 } // 境界型は分離
+```
+
+<div style="background-color: #f5f5f5; padding: 12px; border-radius: 8px; margin-top: 10px;">
+
+- 直接構築できる公開フィールドをなくす
+- deserialize対象とドメイン型を分ける
+- <code>From&lt;u64&gt;</code> ではなく、失敗を表す <code>TryFrom&lt;u64&gt;</code> を使う
+
+</div>
+
+<p style="margin-top: 12px;">最初から閉じると巨大な変更になります。<strong>移行経路を作ってから、抜け道を閉じる</strong>のが順序です。</p>
+
+</div>
+
+---
+
+## 旧APIを消せたら、1つの導入が完了する
+
+<div style="font-size: 0.75em;">
+
+<p>「型を追加した」だけでは完了ではありません。次の状態まで到達して、初めて変更コストが下がります。</p>
+
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px; margin-top: 14px;">
+
+<ul>
+<li>内側のAPIは <code>u64</code> ではなく <code>CustomerId</code> を受け取る</li>
+<li>生成と検証は境界の1か所に集まっている</li>
+<li>旧APIと直接構築の利用箇所がなく、互換アダプタを削除できる</li>
+<li>不正値を入れた境界テストと、代表ユースケースのテストが残る</li>
+</ul>
+
+</div>
+
+<p style="margin-top: 14px;">次の不変条件へ進むのは、この縦1本を閉じてからです。途中の移行を増やしすぎると、アダプタが新しい複雑性になります。</p>
+
+</div>
+
+<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">導入の単位は「型1個」ではなく「閉じた変更経路1本」</span>
 </div>
 
 ---
@@ -1490,32 +1830,6 @@ fn from_row(row: OrderRow) -> Result<PaymentState, OrderRowError> {
 
 <p style="margin-top: 14px;">型の壁は、CI で初めて効くより、エディタで書いた瞬間に効くほうが強い。フィードバックが早いほど、壁は設計の一部になります。</p>
 
-</div>
-
----
-
-## 型で書けない規約は、自動検査する
-
-<div style="font-size: 0.78em;">
-
-<p><strong>rowan</strong>は、ソースコードをコメントや空白も含めて木構造で扱うライブラリです。コードの形を調べられるので、チーム固有の規約を検査するlintの土台にできます。</p>
-
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px; margin-top: 16px;">
-
-<strong>rowanで検査できる例</strong>
-
-- <code>pub …_id: String</code> → newtype に矯正
-- <code>is_paid: bool</code> + <code>payment_id: Option</code> → enum 化を促す
-- <code>pub enum …Error</code> に <code>#[non_exhaustive]</code> 必須
-
-</div>
-
-<p style="margin-top: 14px;"><code>cargo check</code>が知らない<strong>チーム固有の規約</strong>も、lintなら自動で検査できます。機械に任せる範囲を増やすほど、人間は<strong>仕様そのものが正しいか</strong>の確認に集中できます。</p>
-
-</div>
-
-<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
-<span style="color: #e65100; font-weight: bold;">CIだけで弾くな。書いた瞬間にも弾け</span>
 </div>
 
 ---
@@ -1640,9 +1954,10 @@ _class: transition
 
 <strong>設計思想</strong>
 
-- 型は<strong>コンパイラのための注釈</strong>ではなく、<strong>不正な状態を物理的に禁止する壁</strong>
-- バグは直すのではなく存在させない
-- AIが書く時代も破れない壁は型。正しさが宿る<strong>文脈の検証は人間に残る</strong>
+- 型は<strong>不正な状態を物理的に存在させない壁</strong>
+- バグを見つけて直すだけでなく、書ける状態の集合から取り除く
+- 変更容易性と結合は、<strong>壁をどこへ建てるか</strong>を決める補助線
+- 読解・導入コストが便益を上回るなら、その壁は作らない
 
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
@@ -1652,7 +1967,7 @@ _class: transition
 - 基本4パターン：状態を分ける、意味を分ける、作り方を絞る、正しい組み合わせだけ残す
 - Rust固有：型状態 / <code>PhantomData</code> / 既製の制約型
 - 進化のとき：フィールドを足さず、<strong>新しい型を作る</strong>
-- 境界：外から来た値を型に変換し、内側は型で守る
+- 導入：不変条件を1つ選び、<strong>縦1本を移して旧APIを閉じる</strong>
 
 </div>
 </div>
@@ -1661,6 +1976,45 @@ _class: transition
 <span style="color: #e65100; font-weight: bold;">バグを直すな。表現できなくせよ。</span>
 </div>
 
+</div>
+
+---
+
+## 入力と出力では、壁の向きが違う
+
+<div style="font-size: 0.75em;">
+
+<div style="display: flex; gap: 20px; margin-top: 14px; align-items: center;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+
+<strong>入力型</strong>
+
+- 狭くすると、不正な値を入口で拒否できる
+- 関数の内側は再検証せずに済む
+- 呼び出し側は型を作る責任と変換コストを負う
+
+<p><strong>呼び出し側の自由</strong>を、<strong>受け取る側の保証</strong>へ交換する。</p>
+
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+
+<strong>出力型</strong>
+
+- 豊かにすると、下流は型を使って判断できる
+- エラーや状態を網羅的に処理できる
+- 公開した知識が、提供側の将来変更を拘束する
+
+<p><strong>提供側の自由</strong>を、<strong>利用側の判断力</strong>へ交換する。</p>
+
+</div>
+</div>
+
+<p style="margin-top: 16px;">近くで共に進化するAPIなら豊かな型を共有し、遠くで独立して進化するAPIなら用途別の小さな出力へ絞ります。</p>
+
+</div>
+
+<div style="margin-top: 8px; padding: 10px; background-color: #e0e0e0; border-radius: 5px; text-align: center;">
+<span style="color: #e65100; font-weight: bold;">型の強さではなく、変更する側と保証を受ける側を選ぶ</span>
 </div>
 
 ---
@@ -1688,19 +2042,23 @@ _class: transition
 
 ---
 
-## 参考資料② 理論的背景とツール
+## 参考資料② 結合と変更容易性
 
-<div style="font-size: 0.68em;">
+<div style="font-size: 0.75em;">
 
-- <strong>線形型・アフィン型の理論的背景</strong>
-  - Girard (1987) "Linear Logic"。線形論理の原典（線形型の理論的源流）
-  - Bernardy, Boespflug, Newton, Peyton Jones, Spiwack (2018) "Retrofitting Linear Types"（POPL'18）。既存の言語に線形型を後付けする設計論文
-  - Walker (2005) "Substructural Type Systems"（部分構造型システム概観）
-- <strong>型を IDE と Linter で常時強制する基盤</strong>
-  - <strong>rust-analyzer</strong>: github.com/rust-lang/rust-analyzer。IDE向けRust解析サーバ。型エラーや<code>match</code>漏れをリアルタイムで弾く
-  - <strong>rowan</strong>: github.com/rust-analyzer/rowan。rust-analyzerでも使われるロスレス構文木ライブラリ。構文解析層と組み合わせて自家製lintの土台にできる
+- <strong>Balancing Coupling in Software Design</strong>（Vlad Khononov）
+  - 第1章：結合は接続であり、システムに不可欠
+  - 第8章：距離が大きいほど、連鎖的変更の調整コストが増える
+  - 第10章：統合強度・距離・変動性による結合のバランス
+  - 第11章：戦略・組織・環境の変化に応じたリバランス
+  - 第14章：共に変わるものを近く、独立して変わるものを遠くへ置く
+- <strong>日本語翻訳プロジェクト</strong>
+  - github.com/nwiizo/balancing-coupling-in
+  - 本資料ではFigure 8.2、Figure 10.1、Figure 14.1を引用
 
-<p style="margin-top: 12px; font-size: 0.85em; color: #666;">補足: 「不正な状態を表現不可能にする」という表現は、Yaron Minsky の "Effective ML" で提示され、Scott Wlaschin が F# とドメインモデリングの文脈で広く紹介しています。</p>
+<div style="margin-top: 18px; padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
+本資料での接続：型は結合を消す道具ではなく、<strong>一緒に変わる知識を近くへ集め、境界を越える知識を制御する道具</strong>として扱う。
+</div>
 
 </div>
 
@@ -1714,10 +2072,10 @@ _class: transition
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; flex-direction: column; color: white;">
 
-## <span style="color: white;">どの型から書き始めますか？</span>
+## <span style="color: white;">どのバグから、表現できなくしますか？</span>
 
 <div style="font-size: 0.85em; margin-top: 30px; color: #aaa;">
-変えるのは、型の形ではなく、発想の形
+型で壁を作り、不正な状態をコンパイルの向こう側へ置く
 </div>
 
 <div style="margin-top: 16px; font-size: 0.7em; color: #888;">
