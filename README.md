@@ -10,6 +10,7 @@
 
 - [Mastering Coding Agents in the New Fiscal Year](slides/2026/2026-mastering-coding-agents-new-fiscal-year.pdf)
 - [30min Architecture Modernization](slides/2026/30min-architecture-modernization.pdf)
+- [30min Value Flow Across Roles](slides/2026/30min-value-flow-across-roles.pdf)
 - [30min Effective Platform Engineering](slides/2026/30min-effective-platform-engineering.pdf)
 - [30min Secure APIs](slides/2026/30min-secure-apis.pdf)
 - [45min Web Security](slides/2026/45min-web-security.pdf)
