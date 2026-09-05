@@ -2,7 +2,7 @@
 
 nwiizoの公開講演資料リポジトリ。スライドのソース、講演固有画像、閲覧用PDFを管理する。
 
-スライド規約と3-SHAKE向けテーマの上流は `vendor/3shake-marp-templates/` にある。ただし、submodule内のファイルをスライドから直接参照しない。`brands/3shake/` をこのリポジトリが所有する固定実体として保持し、clone直後でもビルドを自己完結させる。
+スライド規約と3-SHAKE向けテーマの上流は `vendor/3shake-marp-templates/` にある。ただし、submodule内のファイルをスライドから直接参照しない。`brands/3shake/` をこのリポジトリが所有する固定実体として保持し、親リポジトリや未取得のsubmoduleに依存せず再生成できるようにする。
 
 ## ディレクトリ構成
 
@@ -11,21 +11,18 @@ slides/{year}/       # Marp Markdownと公開PDF
 brands/3shake/       # 3-SHAKEテーマとブランド画像の固定実体
 assets/shared/       # 発表者共通画像
 assets/images/{year} # 講演固有画像
-.claude/skills/      # 公開スライドレビュースキル
+.claude/skills/      # 公開スライド作成・レビュースキル
+.agents/skills       # .claude/skillsへのCodex向けシンボリックリンク
 vendor/              # Git submodule
 docs/                # 公開可能な設計・抽象化した運用知識
+.marprc.yml           # Marpのテーマ探索とHTML設定
+package*.json         # ビルドコマンドと固定したNode.js依存
 ```
 
-## 基本コマンド
+## 参照順
 
-```sh
-git submodule update --init --recursive
-npm install
-npx marp slides/2026/example.md --html --allow-local-files --no-stdin
-npx marp slides/2026/example.md --pdf --allow-local-files --no-stdin
-```
-
-詳細な規約は `AGENTS.md` とsubmodule内のルールを参照する。
+- clone、依存導入、ビルド、テンプレート更新、公開前確認は `README.md` を入口とする。
+- AIエージェントの実行規約と必須検証は `AGENTS.md`、スライド記法とテーマ規約はsubmodule内のルールを正とする。
 
 ## 運用上の不変条件
 

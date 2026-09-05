@@ -16,15 +16,11 @@ submoduleが未取得なら、先に `git submodule update --init --recursive` �
 
 ## ローカルスキル
 
-次の公開スキルは `.claude/skills/` を正式な参照元とする。
+公開スキルは `.claude/skills/` を参照元とし、`.agents/skills` は `../.claude/skills` への相対シンボリックリンクとして保持する。利用者向けの一覧と使い分けは `README.md`、各作業の詳細は対応する `SKILL.md` を参照する。
 
-- `$review-slide-flow` — 聴衆が辿る論理、約束の回収、前提と接続を検証する
-- `$deepen-slide-claims` — 主張の機構、境界条件、反例、判断への含意を深める
-- `$review-slide-narrative` — 聴衆の状態変化、緊張、転換、余韻を検証する
-- `$trim-slide-redundancy` — 理解や間を壊さず、重複と時間コストを減らす
-- `$review-slide-wit` — ユーモアと機知を目的、声、精度、安全性から検証する
-- `$review-slide-suite` — 複数レビューの競合を解き、1つの編集順序へ統合する
-- `$prepare-slide-release` — テーマ、画像、PDF、リンク、clean cloneを公開前に検証する
+- ユーザーが単一の観点を指定した場合は、その専門スキルだけを使う。
+- 複数観点のレビューや指摘が競合する場合は `$review-slide-suite` で統合する。
+- 公開前確認は `$prepare-slide-release` に従い、専門レビューの代わりにしない。
 
 ## 資産とビルド
 
@@ -35,14 +31,15 @@ submoduleが未取得なら、先に `git submodule update --init --recursive` �
 - 発表者共通画像は `assets/shared/` に置き、会社ブランドから分離する。
 - HTMLは検証用生成物としてGit管理しない。
 - PDFは公開成果物としてMarkdownと同じディレクトリに置き、Git管理する。Markdownを変更して公開PDFが存在する場合は、PDFも再生成して同じ変更単位で更新する。
-- ビルドはリポジトリ直下で `--allow-local-files --no-stdin` を付けて実行する。
+- Node.js依存はlockfileを正として `npm ci` で導入し、通常のビルドでlockfileを書き換えない。
+- ビルドはリポジトリ直下で `npm run build:html -- <markdown> -o <html>` または `npm run build:pdf -- <markdown> -o <pdf>` を使う。npm scriptsから `--allow-local-files --no-stdin` を外さない。
 - 2026年スライドは `theme: 3shake-2026-presentation` を使う。
 
 ## 変更後の必須確認
 
 1. 参照しているロゴと背景が `brands/3shake/assets/images/`、発表者画像が `assets/shared/`、講演固有画像が `assets/images/{year}/` に存在することを確認する。
 2. `.marprc.yml` の `themeSet: brands/3shake/themes/` と各スライドの `theme:` が一致することを確認する。
-3. 2025年と2026年から最低1件ずつHTMLビルドする。
+3. 2025年と2026年から最低1件ずつ `npm run build:html -- ...` でHTMLビルドする。
 4. 公開PDFを更新した資料はPDFビルドも行う。
 5. submoduleや親リポジトリのローカルパスがなくてもclone後に再現できることを確認する。
 
