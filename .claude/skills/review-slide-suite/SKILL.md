@@ -1,32 +1,45 @@
 ---
 name: review-slide-suite
-description: Coordinate and synthesize multiple specialist reviews of a Marp presentation into one coherent edit strategy. Use when a deck needs flow, claim depth, narrative, redundancy, and wit reviews together, or when specialist recommendations conflict over adding, cutting, moving, or rewriting slides.
+description: Coordinate and synthesize multiple specialist reviews of a Marp presentation into one coherent edit strategy. Use when a deck needs flow, comprehension, claim depth, fact checking, adversarial pressure-testing, narrative, cognitive rhythm, redundancy, wit, and copy polish together, or when specialist recommendations conflict over adding, cutting, moving, or rewriting slides.
 ---
 
 # Review Slide Suite
 
-Produce one prioritized decision set, not five concatenated reports. Preserve the talk’s central promise, factual integrity, duration, and speaker voice while resolving conflicts between specialist lenses.
+Produce one prioritized decision set, not concatenated specialist reports. Preserve the talk’s central promise, factual integrity, duration, and speaker voice while resolving conflicts between specialist lenses.
 
 ## Select reviews
 
 Use only the lenses relevant to the request:
 
 - `$review-slide-flow`: prerequisites, reasoning, promises, order.
+- `$logical-flow-check`: title-to-body logic, claim support, visual reading order, local questions.
+- `$review-slide-comprehension`: first-listen understanding, projected load, jargon, recovery.
 - `$deepen-slide-claims`: mechanism, evidence, scope, decision consequence.
+- `$fact-check-slides`: external facts, versions, figures, quotations, attribution.
+- `$logic-proofreading`: contradictions, realism, risky advice, causal and editorial consistency.
+- `$review-slide-adversarial`: counterarguments, hidden assumptions, failure conditions, hostile Q&A.
 - `$review-slide-narrative`: audience transformation, beats, payoff.
+- `$cognitive-rhythm-writing`: cognitive modes, density waves, question tension, speaker/slide roles.
 - `$trim-slide-redundancy`: time value, repetition, cuts, merges.
 - `$review-slide-wit`: purpose, voice, context collapse, safety.
+- `$polish-slide-copy`: projected wording after structural, factual, and voice decisions are stable.
 
-Add fact checking before rewriting externally verifiable claims. Add release verification after edits, not as a substitute for review.
+Use fact checking when external premises carry the argument or wording may be stale. Add release verification after edits, not as a substitute for review.
 
 ## Default order
 
 1. Establish audience, duration, central question, and answer.
 2. Review flow and promises before polishing individual slides.
-3. Test load-bearing claims before making them memorable.
-4. Review narrative once the argument is stable.
-5. Trim redundancy after required reasoning and payoffs are known.
-6. Review wit last so clever phrasing cannot hide weak logic.
+3. Check local slide logic before treating a gap as a comprehension or wording problem.
+4. Test first-listen comprehension before treating missing context as redundant.
+5. Test load-bearing claims and verify material external premises before making them memorable.
+6. Proofread the stabilized claims for contradictions, realism, unsafe advice, and consistency.
+7. Pressure-test the claims and their supported boundaries.
+8. Review narrative once the argument survives substantive objections.
+9. Review cognitive rhythm after the narrative functions and real sources of tension are known.
+10. Trim redundancy after required reasoning, context, defenses, payoffs, and functional pauses are known.
+11. Review wit after substantive objections are resolved so clever phrasing cannot hide weak logic.
+12. Polish projected wording after structure, claims, facts, duration, and speaker voice are stable.
 
 Change the order only when the user’s request clearly targets one lens.
 
@@ -36,6 +49,7 @@ Change the order only when the user’s request clearly targets one lens.
 2. Merge findings that diagnose the same underlying break. Keep the strongest evidence and list the contributing lenses.
 3. Resolve conflicts with these rules:
    - factual accuracy and source support outrank elegance;
+   - a grounded adversarial finding outranks rhetorical strength, but a speculative attack does not;
    - an unanswered central promise outranks slide-count targets;
    - missing reasoning outranks requests to add a transition;
    - comprehension and accessibility outrank aggressive compression;

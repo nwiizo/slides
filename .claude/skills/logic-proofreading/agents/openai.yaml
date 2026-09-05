@@ -1,0 +1,4 @@
+interface:
+  display_name: "Logic Proofreading"
+  short_description: "Find contradictions and unsafe claims across a slide deck"
+  default_prompt: "Use $logic-proofreading to review this Marp deck for contradictions, realism, safety, and causal consistency."

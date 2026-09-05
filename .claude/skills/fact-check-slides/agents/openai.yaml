@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fact-check Slides"
+  short_description: "Verify slide claims, sources, figures, and versions"
+  default_prompt: "Use $fact-check-slides to verify the externally checkable claims in this presentation."

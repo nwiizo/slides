@@ -15,11 +15,11 @@ The checked-in `brands/{brand}/` pack is a runtime dependency. `vendor/` is an u
 
 ## Workflow
 
-1. Run `npm install` when dependencies are absent or the lockfile changed.
+1. Run `npm ci` in a clean checkout or when dependencies are absent or the lockfile changed. Treat `package-lock.json` as input; release validation must not update it.
 2. Inspect changed Markdown references. Themes must exist in `brands/{brand}/themes/`, brand images in `brands/{brand}/assets/images/`, and talk images in `assets/images/{year}/`.
-3. Build changed decks to HTML with `--allow-local-files`. Treat theme lookup warnings and missing local resources as failures even when the command exits zero.
+3. Build changed decks with `npm run build:html -- <markdown> -o <html>`. Treat theme lookup warnings and missing local resources as failures even when the command exits zero.
 4. Inspect representative output for the expected theme marker and local image references. For visual changes, render or open the output and inspect it.
-5. For every changed Markdown file that has a published PDF, regenerate that PDF in place. Generate a new PDF when the user intends the deck to be public.
+5. For every changed Markdown file that has a published PDF, regenerate it in place with `npm run build:pdf -- <markdown> -o <pdf>`. Generate a new PDF when the user intends the deck to be public.
 6. Confirm every public PDF is linked from README and has a matching Markdown source.
 7. Compare the VCS diff with the chosen base. A changed public Markdown file without a changed sibling PDF is a release blocker.
 8. Test a clean clone or clean worktree without relying on untracked files or an initialized `vendor/` directory. Install dependencies and rebuild representative 2025 and 2026 decks.

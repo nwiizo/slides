@@ -1,0 +1,4 @@
+interface:
+  display_name: "Polish Slide Copy"
+  short_description: "Refine projected text without changing the argument"
+  default_prompt: "Use $polish-slide-copy to refine the wording in this Marp presentation without changing its argument."

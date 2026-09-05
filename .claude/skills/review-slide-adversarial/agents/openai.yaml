@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversarial Slide Review"
+  short_description: "Stress-test slide claims against grounded counterarguments"
+  default_prompt: "Use $review-slide-adversarial to pressure-test this presentation before publication."

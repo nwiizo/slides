@@ -1,0 +1,4 @@
+interface:
+  display_name: "Logical Flow Check"
+  short_description: "Check title, support, and conclusion inside each slide"
+  default_prompt: "Use $logical-flow-check to find missing logical steps inside the slides in this Marp deck."

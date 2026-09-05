@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Slide Comprehension"
+  short_description: "Test a deck for first-listen audience comprehension"
+  default_prompt: "Use $review-slide-comprehension to test whether this presentation works for its intended audience on first listen."

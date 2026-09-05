@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cognitive Rhythm Writing for Slides"
+  short_description: "Shape slide pacing through shifts in audience cognition"
+  default_prompt: "Use $cognitive-rhythm-writing to diagnose and improve the cognitive rhythm of this Marp presentation."

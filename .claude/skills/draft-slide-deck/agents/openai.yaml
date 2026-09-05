@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draft Slide Deck"
+  short_description: "Turn a talk brief into a coherent Marp deck"
+  default_prompt: "Use $draft-slide-deck to turn this talk brief into a coherent Marp presentation."
