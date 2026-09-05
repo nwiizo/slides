@@ -92,9 +92,9 @@ _class: title dark
 
 ## この発表で解決できること
 
-<div style="font-size: 0.75em;">
+<div style="font-size: 0.72em;">
 
-<div style="display: flex; gap: 20px; margin-top: 10px; align-items: center;">
+<div style="display: flex; gap: 20px; margin-top: 12px; align-items: center;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
 
 <strong>こんな状況ではありませんか</strong>
@@ -111,8 +111,12 @@ AIでPull Request（PR）は増え、手を動かす速さも上がったよう�
 </div>
 </div>
 
-<div style="margin-top: 15px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<div style="margin-top: 12px; padding: 10px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
 <strong>見る範囲を、実装からユーザーの結果まで広げる。すると、次に何を速くすべきかが見えてくる。</strong>
+</div>
+
+<div style="margin-top: 12px; padding: 11px 14px; background-color: #eef4f8; border-radius: 8px; line-height: 1.6;">
+<strong>先に白状します。</strong>伝えたいことを絞り切れず、スライドが多くなりました。今日は何枚か飛ばします。すべてを読もうとせず、<strong>気になった言葉と、話がどうつながるか</strong>だけ追ってください。細部は公開版で、あとからじっくり読めます。
 </div>
 
 </div>
@@ -130,7 +134,7 @@ AIでPull Request（PR）は増え、手を動かす速さも上がったよう�
 
 <div style="margin-top: 26px; padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
 
-前半は「なぜ速くならないのか」を数字で見ます。後半は、役割ごとの前提を対話で確かめ、<strong>図に並べた判断材料</strong>から、まず「作る」を決めます。次に、その判断をAIへどう渡し、どこまで「任せる」かを考えます。最後に、利用と依存を確かめ、「やめる」条件と判断日を決めます。
+まず、AIで実装が速くなっても、価値が届くまでの時間が同じだけ縮まない理由を数字で見ます。次に、アウトプットとアウトカムを分け、バリューストリームから待ちを探します。そこで見つけた詰まりを、営業・PM・デザイナー・エンジニアが対話できる図にします。最後に、ユーザーのジョブから「作る」を決め、AIへ「任せる」範囲と「やめる」条件・判断日までつなげます。
 
 </div>
 
@@ -1634,49 +1638,53 @@ AIが意図を読み違えたか、必要な情報を渡せていません。計
 
 ---
 
-## 同じ見落としは、コードとテストで防ぐ
+## 同じ見落としは、コード・Lint・テストで防ぐ
 
-<div style="font-size: 0.75em;">
+<div style="font-size: 0.72em;">
 
 AIが作る量が増えるほど、人が同じ見落としを毎回指摘するやり方は詰まります。レビューで見つけた失敗は、次回もっと早く見つけられる形へ戻します。
 
-<div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>原因をコードで直す</strong><br><br>
 使い方を間違えやすいAPIや、読まないと分からない境界は、説明を増やす前に構造を直す。
 </div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
-<strong>期待する動作をテストで固定する</strong><br><br>
-変えてはいけない動作や、完了条件として機械で判定できるものは、テストとCIで確かめる。
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>構造規約をLintで止める</strong><br><br>
+一般的な規約は既存のLintを使う。コードベース固有で、構文から判定できる規約は自作し、CIで実行する。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>振る舞いをテストで固定する</strong><br><br>
+値の条件や業務の動作など、実行結果で確かめるものはテストへ移す。
 </div>
 </div>
 
-<div style="margin-top: 22px;">
-人が指摘した内容を、次からは実装中やCIで検出できれば、同じ確認をレビューで繰り返さずに済みます。まず、コードとテストで防げないかを考えます。
+<div style="margin-top: 20px;">
+同じ注意を文章で読ませ続ける前に、コードの構造で防ぐか、Lint・テストで判定できないかを考えます。
 </div>
 
-<div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>レビューで見つけた失敗を、次回はレビューより前に見つける。</strong>
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>機械で判定できることは、レビューより前に止める。</strong>
 </div>
 
 </div>
 
 ---
 
-## コンテキストに残すのは、コードで防げないこと
+## コンテキストに残すのは、機械では決められないこと
 
 <div style="font-size: 0.75em;">
 
-ここでいう<strong>コンテキスト</strong>は、AIが作業前に読むAGENTS.md、Design Doc、PRの説明です。失敗のたびに情報を足すと、重要な判断が埋もれ、古い前提も残ります。「安全に気をつける」と書いても、日々の動きは変わりません。コードやテストで防げないことだけを残します。
+ここでいう<strong>コンテキスト</strong>は、AIが作業前に読むAGENTS.md、Design Doc、PRの説明です。誤用はコードの構造で防ぎ、構文や実行結果から判定できる規則はLint・テストへ移し、危険な操作は権限で止めます。そこへ移せない判断だけを、読む範囲と期間に合わせて残します。
 
 <div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
-<strong>危険な操作は実行前に止める</strong><br><br>
-触れてはいけない場所や許可していない操作は、注意書きだけにせず、権限や自動チェックで止める。
+<strong>リポジトリ全体で繰り返す前提</strong><br><br>
+対象とするディレクトリ、ビルド手順、役割分担など、作業をまたいで使う情報はAGENTS.mdへ短く残す。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
-<strong>繰り返すルールだけ短く残す</strong><br><br>
-リポジトリ全体で守ることはAGENTS.mdへ、作業固有の判断はDesign DocやPRの説明へ分ける。
+<strong>作業固有の判断</strong><br><br>
+目標、受け入れ基準、境界など、先ほど仕様として決めた作業固有の判断はDesign DocやPRの説明へ残す。
 </div>
 </div>
 
@@ -1685,7 +1693,7 @@ AIが作る量が増えるほど、人が同じ見落としを毎回指摘する
 </div>
 
 <div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>繰り返す判断は仕組みへ移す。人は、ジョブと影響を見て、変更を受け入れるか決める。</strong>
+<strong>コンテキストは、機械では決められない判断を、人とAIへ渡すために使う。</strong>
 </div>
 
 </div>
