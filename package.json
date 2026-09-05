@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "description": "Conference slides by nwiizo",
+  "scripts": {
+    "build:html": "marp --html --allow-local-files --no-stdin",
+    "build:pdf": "marp --pdf --allow-local-files --no-stdin"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.3.0"
+    "@marp-team/marp-cli": "4.5.0"
   }
 }
