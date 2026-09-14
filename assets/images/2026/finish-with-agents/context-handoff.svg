@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">引き継いだ記録を、今の実物と照合する</title>
+  <desc id="desc">前の会話から目標、採用理由、未解決点、成果と確認結果の場所を引き継ぐ。次の作業ではその記録に加えて現在のコードや実行環境を読み、両方を照合してから再開する。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="4" width="284" height="134" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="360" y="4" width="402" height="134" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="834" y="4" width="282" height="134" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="146" y="57" font-size="30" font-weight="700">前の会話</text>
+    <text x="146" y="102" font-size="25">作業の経緯</text>
+    <text x="561" y="44" font-size="28" font-weight="700">引き継ぐ記録</text>
+    <text x="561" y="84" font-size="25">目標・採用理由・未解決点</text>
+    <text x="561" y="120" font-size="24">成果・確認結果の場所</text>
+    <text x="975" y="57" font-size="30" font-weight="700">次の作業</text>
+    <text x="975" y="102" font-size="25">照合して再開</text>
+    <path d="M304 70 H342 M329 58 L342 70 L329 82 M778 70 H816 M803 58 L816 70 L803 82" fill="none" stroke="#555" stroke-width="3"/>
+    <rect x="4" y="185" width="758" height="66" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="383" y="229" font-size="27">コード・資料・実行環境の、今の状態</text>
+    <path d="M778 218 H975 V152 M964 165 L975 152 L986 165" fill="none" stroke="#555" stroke-width="3"/>
+  </g>
+</svg>

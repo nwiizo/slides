@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="240" viewBox="0 0 1120 240" role="img" aria-labelledby="title desc">
+  <title id="title">変更する量が小さくても、影響は広がる</title>
+  <desc id="desc">一つの共通設定への変更が、複数の画面や出力へ影響する例。変更量だけでなく、利用先を追って一緒に確かめる範囲を決める。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="72" width="276" height="104" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="142" y="113" font-size="29" font-weight="700">一つの共通設定</text><text x="142" y="152">変更する量は小さい</text>
+    <rect x="460" y="4" width="656" height="230" rx="8" fill="#fff" stroke="#999" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="788" y="37" font-weight="700">影響を追って、確認する範囲を決める</text>
+    <rect x="491" y="61" width="594" height="44" rx="6" fill="#f5f5f5" stroke="#aaa" stroke-width="2"/>
+    <rect x="491" y="117" width="594" height="44" rx="6" fill="#f5f5f5" stroke="#aaa" stroke-width="2"/>
+    <rect x="491" y="173" width="594" height="44" rx="6" fill="#f5f5f5" stroke="#aaa" stroke-width="2"/>
+    <text x="788" y="92">一覧画面</text><text x="788" y="148">詳細画面</text><text x="788" y="204">ダウンロードする結果</text>
+    <path d="M280 124 H370 V83 H476 M464 71 L476 83 L464 95 M370 124 V195 H476 M464 183 L476 195 L464 207 M370 139 H476 M464 127 L476 139 L464 151" fill="none" stroke="#666" stroke-width="2.5"/>
+  </g>
+</svg>

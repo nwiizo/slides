@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="290" viewBox="0 0 1120 290" role="img" aria-labelledby="title desc">
+  <title id="title">成果物の整合と、前提の正しさを分ける</title>
+  <desc id="desc">同じ未確認の前提から生成した仕様・実装・テストは、同じ誤りを共有しながら整合できる。業務条件・実際の利用・別に確認した制約と照合して、前提と評価の妥当性を確かめる。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="10" y="8" width="1100" height="176" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="560" y="42" font-size="27" font-weight="700">同じ未確認の前提から生成する</text>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="60" y="65" width="260" height="66" rx="7"/><rect x="430" y="65" width="260" height="66" rx="7"/><rect x="800" y="65" width="260" height="66" rx="7"/></g>
+    <g font-size="28" font-weight="700"><text x="190" y="108">仕様</text><text x="560" y="108">実装</text><text x="930" y="108">テスト</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M333 107 H417"/><path d="M703 107 H787"/><path d="M560 206 V193"/></g>
+    <g font-size="22" fill="#555"><text x="375" y="88">整合する</text><text x="745" y="88">整合する</text></g>
+    <text x="560" y="166" font-size="24">互いに一致しても、前提の誤りは共有できる</text>
+    <rect x="155" y="217" width="810" height="65" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <text x="560" y="245" font-size="24" font-weight="700">業務上の条件・実際の利用・別に確かめた制約</text>
+    <text x="560" y="272" font-size="22">前提と評価を、生成結果とは別の根拠で照合する</text>
+  </g>
+</svg>

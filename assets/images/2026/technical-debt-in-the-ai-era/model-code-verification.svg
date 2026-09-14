@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">構造モデルを、実装の関係と照合する</title>
+  <desc id="desc">構造モデルのAとBを、コード・設定・実行時にある同じ対象へ対応づける。実装でBからCへの依存が見つかったら、図にない関係も確認し、モデルと変更する設計を見直す。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="10" width="445" height="185" rx="8"/><rect x="555" y="10" width="555" height="185" rx="8"/></g>
+    <g font-size="27" font-weight="700"><text x="232" y="49">現状の構造モデル</text><text x="832" y="49">コード・設定・実行時の依存</text></g>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="50" y="82" width="130" height="65" rx="8"/><rect x="285" y="82" width="130" height="65" rx="8"/><rect x="580" y="82" width="115" height="65" rx="8"/><rect x="750" y="82" width="115" height="65" rx="8"/></g>
+    <rect x="950" y="82" width="130" height="65" rx="8" fill="#e0e0e0" stroke="#666" stroke-width="2" stroke-dasharray="6 5"/>
+    <g font-size="30" font-weight="700"><text x="115" y="124">A</text><text x="350" y="124">B</text><text x="637" y="124">A</text><text x="807" y="124">B</text><text x="1015" y="124">C</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M192 114 H273"/><path d="M707 114 H738"/><path d="M877 114 H938"/></g>
+    <path d="M467 114 H543" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="505" y="97" font-size="23">照合</text>
+    <text x="232" y="180" font-size="23" fill="#555">名前・責務・対応する実装を揃える</text>
+    <text x="943" y="180" font-size="23" fill="#555">図にない依存も確認する</text>
+    <text x="560" y="232" font-size="25" font-weight="700">現在ある関係と、次に採用したい関係を分けて考える</text>
+  </g>
+</svg>

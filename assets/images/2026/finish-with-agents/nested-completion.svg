@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">分けた仕事にも終わりを置き、結果を全体へ戻す</title>
+  <desc id="desc">全体の終了条件から一つの仕事を分け、その仕事にも終了条件を置く。実行できる大きさで着手し、確かめた結果を全体の次の判断へ戻す。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="4" width="1112" height="65" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="560" y="47" font-size="30" font-weight="700">全体で、誰が何をできれば終わりか</text>
+    <rect x="4" y="112" width="360" height="102" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="420" y="112" width="280" height="102" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="756" y="112" width="360" height="102" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="184" y="153" font-size="28" font-weight="700">一つの仕事にも終了条件</text>
+    <text x="184" y="191" font-size="24">実行できる大きさまで分ける</text>
+    <text x="560" y="153" font-size="28" font-weight="700">着手して確かめる</text>
+    <text x="560" y="191" font-size="24">結果と、わかったこと</text>
+    <text x="936" y="153" font-size="28" font-weight="700">結果を全体へ戻す</text>
+    <text x="936" y="191" font-size="24">次の仕事と、前提を見直す</text>
+    <path d="M184 75 V101 M172 89 L184 101 L196 89 M376 163 H408 M396 151 L408 163 L396 175 M712 163 H744 M732 151 L744 163 L732 175 M936 106 V80 M924 92 L936 80 L948 92" fill="none" stroke="#555" stroke-width="3"/>
+    <text x="560" y="245" font-size="25" font-weight="700">分けた一つの結果を、全体の次の一歩を決める材料にする</text>
+  </g>
+</svg>

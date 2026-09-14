@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="230" viewBox="0 0 1120 230" role="img" aria-labelledby="title desc">
+  <title id="title">最初に揃える情報と、必要になって読む情報</title>
+  <desc id="desc">今回の目標、守る条件、採用した判断を最初の入力に置き、資料やログの細部は必要に応じて読む。過去の案を今回の決定へ混ぜず、情報の役割と時点を区別する。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="25">
+    <rect x="4" y="8" width="440" height="95" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="224" y="46" font-size="28" font-weight="700">最初に揃える</text><text x="224" y="82">目標・守る条件・採用した判断</text>
+    <rect x="4" y="128" width="440" height="95" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="224" y="167" font-size="28" font-weight="700">必要なときに読む</text><text x="224" y="203">資料の細部・ログの元データ</text>
+    <rect x="672" y="45" width="444" height="142" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="894" y="93" font-size="29" font-weight="700">いまの判断に使う</text><text x="894" y="133">決まったこと／参考情報</text><text x="894" y="166">役割と有効な時点を区別する</text>
+    <path d="M460 55 H562 V88 H656 M644 76 L656 88 L644 100 M460 176 H562 V148 H656 M644 136 L656 148 L644 160" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="480" y="107" width="164" height="35" fill="#fff"/><text x="562" y="132" font-size="23">入口から辿る</text>
+  </g>
+</svg>

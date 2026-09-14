@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="240" viewBox="0 0 1120 240" role="img" aria-labelledby="title desc">
+  <title id="title">補った前提が、その先の仕事へ広がる</title>
+  <desc id="desc">依頼にない判断を推測すると、その前提が作成と説明へ引き継がれる。先に必要な判断を確かめ、確認済みの条件と仮の条件を分けて渡す。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="65" width="230" height="104" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="119" y="107" font-size="29" font-weight="700">依頼にない判断</text>
+    <text x="119" y="146">優先順位・相談先</text>
+    <rect x="326" y="12" width="302" height="88" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="477" y="47" font-weight="700">AIが前提を補う</text>
+    <text x="477" y="82">まだ確かめていない</text>
+    <rect x="326" y="136" width="302" height="88" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="477" y="171" font-weight="700">必要な判断を確かめる</text>
+    <text x="477" y="206">確認済みと仮を分ける</text>
+    <rect x="753" y="12" width="363" height="88" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="934" y="47" font-weight="700">その前提で作成・説明</text>
+    <text x="934" y="82">違えば、その先も手戻り</text>
+    <rect x="753" y="136" width="363" height="88" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="934" y="171" font-weight="700">共有した条件で進める</text>
+    <text x="934" y="206">あとで判断の理由へ戻れる</text>
+    <path d="M234 117 H276 V56 H310 M298 44 L310 56 L298 68 M276 117 V180 H310 M298 168 L310 180 L298 192 M644 56 H737 M725 44 L737 56 L725 68 M644 180 H737 M725 168 L737 180 L725 192" fill="none" stroke="#666" stroke-width="2.5"/>
+  </g>
+</svg>

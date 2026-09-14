@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="252" viewBox="0 0 1120 252" role="img" aria-labelledby="title desc">
+  <title id="title">作り方を替えても、使う人に必要な条件を確かめ続ける</title>
+  <desc id="desc">削除した記事が決めた時間内に検索結果から消えるという条件と、その理由を残す。旧構造から新構造へ切り替える際も、その動作を検証する。保存や検索の作り方を替えることと、必要な動作を消すことを分ける。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="8" width="1112" height="232" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="560" y="45" font-weight="700" font-size="28">削除した記事が、決めた時間内に検索結果から消える</text>
+    <text x="560" y="81" font-size="24">必要になった理由と、動作を確かめる方法を残す</text>
+    <path d="M560 93 V111 M280 127 V111 H840 V127 M268 115 L280 127 L292 115 M828 115 L840 127 L852 115" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="88" y="139" width="384" height="80" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="280" y="173" font-weight="700">旧構造で確かめる</text><text x="280" y="205" font-size="24">保存・検索の作り方A</text>
+    <rect x="648" y="139" width="384" height="80" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="840" y="173" font-weight="700">新構造でも確かめる</text><text x="840" y="205" font-size="24">保存・検索の作り方B</text>
+    <path d="M486 180 H634 M622 168 L634 180 L622 192" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="560" y="163" font-size="24">切り替える</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="260" viewBox="0 0 1120 260" role="img" aria-labelledby="title desc">
+  <title id="title">人やAIを増やす前に、届いていない前提を確かめる</title>
+  <desc id="desc">変更が絡む、知識が届かない、判断を待つという異なる理由に、それぞれ接続の確認、知識の共有、担当と時点の明確化で対処する。必要な前提が届くと、その先を任せて進められる。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="10" width="790" height="68" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="96" width="790" height="68" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="182" width="790" height="68" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="145" y="53" font-weight="700">変更が絡み合う</text><text x="545" y="53">範囲を揃え、接続を確かめる</text>
+    <text x="145" y="139" font-weight="700">知識が届かない</text><text x="545" y="139">前提を整理し、参照できる形へ</text>
+    <text x="145" y="225" font-weight="700">判断・作業待ち</text><text x="545" y="225">必要な材料・担当・時点を揃える</text>
+    <rect x="921" y="73" width="195" height="114" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="1018" y="119" font-weight="700">前提が届く</text><text x="1018" y="160">先へ進める</text>
+    <path d="M284 44 H334 M322 32 L334 44 L322 56 M284 130 H334 M322 118 L334 130 L322 142 M284 216 H334 M322 204 L334 216 L322 228 M810 44 H858 V216 H810 M810 130 H905 M893 118 L905 130 L893 142" fill="none" stroke="#666" stroke-width="2.5"/>
+  </g>
+</svg>

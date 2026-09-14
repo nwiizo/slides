@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="268" viewBox="0 0 1120 268" role="img" aria-labelledby="title desc">
+  <title id="title">学びを使う場所に残し、不要になった指示は外す</title>
+  <desc id="desc">繰り返す判断は共有指示やSkill、確かめる条件はテストや評価、今回だけの事情は仕事の記録へ残す。次の仕事では必要な情報を選ぶ。不要になった指示は常用する情報から外し、変更の理由を履歴へ残す。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="25">
+    <rect x="4" y="8" width="516" height="184" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="134" y="50">繰り返す判断</text><text x="365" y="50" font-weight="700">共有指示・Skill</text>
+    <text x="134" y="108">確かめる条件</text><text x="365" y="108" font-weight="700">テスト・評価</text>
+    <text x="134" y="166">今回だけの事情</text><text x="365" y="166" font-weight="700">仕事の記録</text>
+    <path d="M229 41 H252 M243 32 L252 41 L243 50 M229 99 H252 M243 90 L252 99 L243 108 M229 157 H252 M243 148 L252 157 L243 166" fill="none" stroke="#666" stroke-width="2.5"/>
+    <path d="M534 99 H756 M744 87 L756 99 L744 111" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="645" y="67" font-size="24">必要なときに使う</text>
+    <rect x="770" y="47" width="346" height="104" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="943" y="88" font-size="28" font-weight="700">次の仕事</text><text x="943" y="125">今の前提に合うものを選ぶ</text>
+    <path d="M943 151 V224 H676 M688 212 L676 224 L688 236" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="755" y="190" width="218" height="29" fill="#fff"/>
+    <text x="864" y="212" font-size="24">不要になった指示</text>
+    <rect x="4" y="207" width="658" height="50" rx="8" fill="#fff" stroke="#999" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="333" y="241" font-size="24">常用する指示から外し、変えた理由は履歴へ</text>
+  </g>
+</svg>

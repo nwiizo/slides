@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="275" viewBox="0 0 1120 275" role="img" aria-labelledby="title desc">
+  <title id="title">設計方針を維持し、その範囲で実装を選ぶ</title>
+  <desc id="desc">実装が従う設計方針として、他の部分が前提にするデータの所有・通信・副作用を定める。その範囲では複数の実装を選べる。条件が変わったら理由と影響を確認して方針を見直す。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="10" y="15" width="390" height="151" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <text x="205" y="55" font-size="28" font-weight="700">実装が従う設計方針</text>
+    <g font-size="24"><text x="205" y="100">データの所有 ／ 通信</text><text x="205" y="139">副作用 ／ 維持する動作</text></g>
+    <rect x="535" y="15" width="575" height="151" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="822" y="54" font-size="27" font-weight="700">方針の範囲で、実装方法を選ぶ</text>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="570" y="75" width="230" height="76" rx="7"/><rect x="845" y="75" width="230" height="76" rx="7"/></g>
+    <g font-size="25" font-weight="700"><text x="685" y="106">実装案 A</text><text x="960" y="106">実装案 B</text></g>
+    <g font-size="22" fill="#555"><text x="685" y="138">条件を満たす</text><text x="960" y="138">条件を満たす</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M412 90 H522"/><path d="M822 178 V226 H205 V178"/></g>
+    <rect x="288" y="206" width="450" height="39" fill="#fff"/><text x="513" y="234" font-size="24">条件が変わったら、方針を見直す</text>
+  </g>
+</svg>

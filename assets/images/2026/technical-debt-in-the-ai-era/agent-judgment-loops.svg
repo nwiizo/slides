@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="325" viewBox="0 0 1120 325" role="img" aria-labelledby="title desc">
+  <title id="title">エージェントを、開発全体の判断と反復へつなぐ</title>
+  <desc id="desc">チームが目的、採用条件、任せる範囲を定める。目的を定め、範囲を示し、実装と検証を反復し、採用後の運用を確かめる。エージェントは全工程で支援し、前提や影響が変われば判断を見直す。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="10" y="6" width="1100" height="51" rx="8" fill="#e0e0e0"/>
+    <text x="560" y="41" font-size="27" font-weight="700">チームが定める：目的・採用条件・任せる範囲</text>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="84" width="230" height="103" rx="8"/><rect x="285" y="84" width="240" height="103" rx="8"/><rect x="570" y="84" width="280" height="103" rx="8"/><rect x="895" y="84" width="215" height="103" rx="8"/></g>
+    <g font-size="26" font-weight="700"><text x="125" y="126">目的を定める</text><text x="405" y="126">範囲を示す</text><text x="710" y="126">実装・検証の反復</text><text x="1002" y="126">採用して運用</text></g>
+    <g font-size="22" fill="#555"><text x="125" y="163">何を良くするか</text><text x="405" y="163">何を任せ、何を保つか</text><text x="710" y="163">生成 → 実行 → 修正</text><text x="1002" y="163">結果を引き受ける</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M248 136 H276"/><path d="M533 136 H561"/><path d="M858 136 H886"/><path d="M1002 199 V231 H125 V199"/></g>
+    <rect x="311" y="211" width="508" height="39" fill="#fff"/><text x="565" y="239" font-size="23">前提や影響が変われば、判断を見直す</text>
+    <rect x="10" y="270" width="1100" height="48" rx="8" fill="#fff" stroke="#999" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="560" y="301" font-size="23">エージェント：調査・計画・実装・レビュー・運用分析を、各工程で支援</text>
+  </g>
+</svg>

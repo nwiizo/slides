@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="275" viewBox="0 0 1120 275" role="img" aria-labelledby="title desc">
+  <title id="title">新旧を共存させ、利用とデータを移し、旧経路を閉じる</title>
+  <desc id="desc">移行を三段階に分ける。共存の条件を用意し、利用とデータを移し、旧実装と移行用の経路を廃止する。各段階で観測と復旧可能性を確かめる。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="12" width="334" height="187" rx="8"/><rect x="394" y="12" width="334" height="187" rx="8"/><rect x="778" y="12" width="334" height="187" rx="8"/></g>
+    <g font-size="27" font-weight="700"><text x="177" y="53">共存できる形を作る</text><text x="561" y="53">利用とデータを移す</text><text x="945" y="53">旧経路を閉じる</text></g>
+    <g font-size="24"><text x="177" y="105">旧実装 ＋ 新実装</text><text x="561" y="105">旧実装 → 新実装</text><text x="945" y="105">新実装</text></g>
+    <g font-size="22" fill="#555"><text x="177" y="149">読み書きの互換性</text><text x="177" y="179">書き込みを担う側を決める</text><text x="561" y="149">依存先を段階的に変更</text><text x="561" y="179">移行したデータを照合</text><text x="945" y="149">旧経路の利用がないか確認</text><text x="945" y="179">不要な互換処理を削除</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M352 103 H385"/><path d="M736 103 H769"/></g>
+    <path d="M177 211 V229 H945 V211" fill="none" stroke="#999" stroke-width="2"/>
+    <rect x="298" y="211" width="526" height="43" fill="#fff"/>
+    <text x="561" y="243" font-size="25">各段階で、観測と復旧可能性を確かめる</text>
+  </g>
+</svg>

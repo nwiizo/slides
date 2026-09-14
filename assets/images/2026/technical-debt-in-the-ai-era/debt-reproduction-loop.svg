@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">局所の成果だけを評価すると、負担を生む判断が繰り返される</title>
+  <desc id="desc">生成量だけで成果を測り、完成を優先して確認や記録を後へ送る。再調査・検証・運用の負担が別の担当へ移り、全体の費用が見えなければ、同じ判断が次の仕事でも評価される。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="15" width="240" height="145" rx="8"/><rect x="295" y="15" width="240" height="145" rx="8"/><rect x="580" y="15" width="240" height="145" rx="8"/></g>
+    <rect x="865" y="15" width="245" height="145" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <g font-size="25" font-weight="700"><text x="130" y="56">生成量で評価する</text><text x="415" y="56">完成を優先する</text><text x="700" y="56">負担が後へ移る</text><text x="987" y="56">全体の費用が隠れる</text></g>
+    <g font-size="22" fill="#555"><text x="130" y="98">生成する側の速さが</text><text x="130" y="132">成果として認められる</text><text x="415" y="98">確認・記録を後へ送る</text><text x="415" y="132">判断の理由も残らない</text><text x="700" y="98">再調査・検証・運用</text><text x="700" y="132">別の担当が引き受ける</text><text x="987" y="98">負担が評価に含まれず</text><text x="987" y="132">同じ選択が評価される</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M260 87 H285"/><path d="M545 87 H570"/><path d="M830 87 H855"/><path d="M987 172 V214 H130 V172"/></g>
+    <rect x="245" y="194" width="630" height="39" fill="#fff"/>
+    <text x="560" y="222" font-size="24" font-weight="700">次の仕事でも、同じ判断が選ばれやすくなる</text>
+  </g>
+</svg>

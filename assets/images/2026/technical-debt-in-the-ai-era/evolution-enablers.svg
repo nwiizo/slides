@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" role="img" aria-labelledby="title desc">
+  <title id="title">一回の変更から、次の変更を進める条件を育てる</title>
+  <desc id="desc">変更の候補を作り、検証・利用・運用の結果を確かめる。予測とのずれから理解と意図を更新し、境界・評価・情報・任せる範囲を見直して次の変更へ進む。エージェントは各過程を支援する。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="10" width="430" height="87" rx="8"/><rect x="680" y="10" width="430" height="87" rx="8"/><rect x="680" y="183" width="430" height="87" rx="8"/></g>
+    <rect x="10" y="183" width="430" height="87" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <g font-size="28" font-weight="700"><text x="225" y="47">変更の候補を作る</text><text x="895" y="47">結果を確かめる</text><text x="895" y="219">理解と意図を更新する</text><text x="225" y="219">構造と開発条件を見直す</text></g>
+    <g font-size="24" fill="#555"><text x="225" y="80">調査・試作・実装</text><text x="895" y="80">検証・利用・運用</text><text x="895" y="252">予測とのずれ・維持する理由</text><text x="225" y="252">境界・評価・情報・任せる範囲</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M452 54 H668"/><path d="M895 109 V171"/><path d="M668 226 H452"/><path d="M225 171 V109"/></g>
+    <text x="560" y="148" font-size="27" font-weight="700">エージェントで各過程を支援</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="282" viewBox="0 0 1120 282" role="img" aria-labelledby="title desc">
+  <title id="title">完了、続行、中断を条件で分ける</title>
+  <desc id="desc">現在の結果を終了条件と照合する。達成した場合は成果と根拠を残して完了する。未達で進められ上限内なら続行する。続行できない場合や上限到達では中断し、再開条件や未達の作業を残す。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="25">
+    <rect x="4" y="88" width="252" height="106" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="130" y="131" font-size="28" font-weight="700">終了条件と照合</text><text x="130" y="171" font-size="24">結果・状態を見る</text>
+    <path d="M256 141 H296 M296 36 V246 M296 36 H678 M666 24 L678 36 L666 48 M296 106 H678 M666 94 L678 106 L666 118 M296 176 H678 M666 164 L678 176 L666 188 M296 246 H678 M666 234 L678 246 L666 258" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="328" y="14" width="328" height="43" fill="#fff"/><text x="492" y="45">条件を満たした</text>
+    <rect x="328" y="84" width="328" height="43" fill="#fff"/><text x="492" y="115">未達・進める・上限内</text>
+    <rect x="328" y="154" width="328" height="43" fill="#fff"/><text x="492" y="185">未達・続行できない</text>
+    <rect x="328" y="224" width="328" height="43" fill="#fff"/><text x="492" y="255">未達・上限に達した</text>
+    <rect x="694" y="8" width="422" height="56" rx="7" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <rect x="694" y="78" width="422" height="56" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="694" y="148" width="422" height="56" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="694" y="218" width="422" height="56" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="905" y="45" font-weight="700">完了：成果と根拠を残す</text><text x="905" y="115" font-weight="700">続行：次の一手へ</text>
+    <text x="905" y="185">中断：再開に必要な条件を返す</text><text x="905" y="255">中断：未達と残る作業を返す</text>
+  </g>
+</svg>

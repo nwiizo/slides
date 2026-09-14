@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">使うまでの各段階で、確かめる条件を広げる</title>
+  <desc id="desc">変更ごとの動作確認から、組み合わせによる影響、実際の利用条件へ進む。それぞれの合格が示すのは確かめた範囲であり、未確認の条件まで保証しない。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="8" width="1112" height="178" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="560" y="43" font-size="24">守りたいことに合わせて、確認する時点を選ぶ</text>
+    <rect x="24" y="65" width="304" height="100" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="176" y="105" font-weight="700">変更のたびに</text><text x="176" y="143" font-size="24">狙った動作・既存の動作</text>
+    <rect x="408" y="65" width="304" height="100" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="560" y="105" font-weight="700">組み合わせて</text><text x="560" y="143" font-size="24">同時利用・他への影響</text>
+    <rect x="792" y="65" width="304" height="100" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="944" y="105" font-weight="700">使ってから</text><text x="944" y="143" font-size="24">実際の待ち・差し戻し</text>
+    <path d="M342 115 H394 M382 103 L394 115 L382 127 M726 115 H778 M766 103 L778 115 L766 127" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="560" y="228" font-weight="700">合格の根拠になるのは、実際に確かめた条件まで</text>
+  </g>
+</svg>

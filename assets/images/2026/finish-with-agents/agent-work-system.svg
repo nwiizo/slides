@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" role="img" aria-labelledby="title desc">
+  <title id="title">ハーネスが、判断材料と実行をつなぐ</title>
+  <desc id="desc">ハーネスは、目標やプロンプト、資料、直前の結果を含むコンテキストをモデルへ渡し、選ばれた道具を許可の範囲で実行する。実行結果を次の入力へ戻す。</desc>
+  <rect x="4" y="4" width="1112" height="270" rx="10" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <text x="560" y="42" font-size="28" font-weight="700">ハーネス　入力の組み立て・道具の実行・記録・続行の管理</text>
+    <rect x="28" y="68" width="416" height="116" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="500" y="68" width="222" height="116" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="778" y="68" width="312" height="116" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="236" y="107" font-size="28" font-weight="700">コンテキスト</text>
+    <text x="236" y="144" font-size="24">目標・プロンプト・関連資料</text>
+    <text x="236" y="172" font-size="24">直前の実行結果</text>
+    <text x="611" y="113" font-size="28" font-weight="700">モデル</text>
+    <text x="611" y="156" font-size="24">次の行動を選ぶ</text>
+    <text x="934" y="113" font-size="28" font-weight="700">道具と実行環境</text>
+    <text x="934" y="156" font-size="24">許された操作を実行</text>
+    <path d="M454 126 H488 M477 115 L488 126 L477 137 M732 126 H766 M755 115 L766 126 L755 137" fill="none" stroke="#555" stroke-width="3"/>
+    <path d="M934 195 V234 H236 V196 M225 209 L236 196 L247 209" fill="none" stroke="#555" stroke-width="2.5"/>
+    <rect x="366" y="215" width="442" height="36" fill="#f5f5f5"/>
+    <text x="587" y="241" font-size="25">結果を、次の判断材料へ戻す</text>
+  </g>
+</svg>

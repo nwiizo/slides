@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">手戻りの原因に応じて、次に渡す情報や確認方法を変える</title>
+  <desc id="desc">目的のずれは終了条件へ、情報不足は参照資料へ、確認漏れは実行できる確認へ反映する。それらが次の作業で実際に使われ、同じ手戻りが減ったかまでを見る。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="8" width="236" height="60" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="88" width="236" height="60" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="168" width="236" height="60" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="122" y="47">目的のずれ</text><text x="122" y="127">情報の不足</text><text x="122" y="207">確認の漏れ</text>
+    <path d="M254 38 H330 M318 26 L330 38 L318 50 M254 118 H330 M318 106 L330 118 L318 130 M254 198 H330 M318 186 L330 198 L318 210" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="344" y="8" width="312" height="60" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="344" y="88" width="312" height="60" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="344" y="168" width="312" height="60" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="500" y="47">終了条件を直す</text><text x="500" y="127">資料へ辿れるように</text><text x="500" y="207">実行できる確認へ加える</text>
+    <path d="M656 38 H700 V198 H656 M700 118 H766 M754 106 L766 118 L754 130" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="780" y="66" width="336" height="104" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="948" y="106" font-weight="700">次の作業で使う</text><text x="948" y="144" font-size="24">読めたか・確認が動いたか</text>
+    <text x="948" y="216" font-size="24">同じ手戻りが減ったかを見る</text>
+  </g>
+</svg>

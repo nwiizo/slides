@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="240" viewBox="0 0 1120 240" role="img" aria-labelledby="title desc">
+  <title id="title">Cognitive Debt：実装とチームの共有理解のずれ</title>
+  <desc id="desc">今の実装ではAからBを経てCへ処理が進むが、チームは途中の関係を説明できない模式図。このずれが、次の変更で知る人を待つことや調査のやり直しにつながる。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="10" y="8" width="750" height="222" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="134" y="69" font-size="27" font-weight="700">今の実装</text>
+    <text x="134" y="162" font-size="27" font-weight="700">チームの理解</text>
+    <text x="134" y="195" font-size="21" fill="#555">影響を説明できるか</text>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="284" y="26" width="94" height="60" rx="6"/><rect x="454" y="26" width="94" height="60" rx="6"/><rect x="624" y="26" width="94" height="60" rx="6"/><rect x="284" y="144" width="94" height="60" rx="6"/><rect x="624" y="144" width="94" height="60" rx="6"/></g>
+    <rect x="454" y="144" width="94" height="60" rx="6" fill="#fff" stroke="#666" stroke-width="2" stroke-dasharray="6 4"/>
+    <g font-size="29"><text x="331" y="66">A</text><text x="501" y="66">B</text><text x="671" y="66">C</text><text x="331" y="184">A</text><text x="501" y="184">?</text><text x="671" y="184">C</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M389 56 H442"/><path d="M559 56 H612"/><path d="M389 174 H442" stroke-dasharray="5 4"/><path d="M559 174 H612" stroke-dasharray="5 4"/><path d="M774 119 H842"/></g>
+    <text x="501" y="121" font-size="23" fill="#555">共有理解が追いついていない</text>
+    <rect x="854" y="45" width="256" height="149" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <text x="982" y="88" font-size="27" font-weight="700">次の判断が止まる</text>
+    <text x="982" y="130" font-size="24">知る人を待つ</text>
+    <text x="982" y="166" font-size="24">調査をやり直す</text>
+  </g>
+</svg>

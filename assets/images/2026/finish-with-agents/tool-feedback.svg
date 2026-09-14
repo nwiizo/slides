@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="240" viewBox="0 0 1120 240" role="img" aria-labelledby="title desc">
+  <title id="title">実行結果を、次に調べられる情報として返す</title>
+  <desc id="desc">実行した対象と条件、起きた結果、詳しい証拠の場所を一緒に返す。単なる失敗通知から、次の調査や修正を選べる状態へ進める。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="14" width="340" height="144" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="390" y="14" width="340" height="144" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="776" y="14" width="340" height="144" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="174" y="58" font-size="30" font-weight="700">何を実行したか</text>
+    <text x="174" y="104" font-size="26">対象の版・入力・条件</text>
+    <text x="560" y="58" font-size="30" font-weight="700">何が起きたか</text>
+    <text x="560" y="104" font-size="26">成功・失敗・実行できず</text>
+    <text x="946" y="58" font-size="30" font-weight="700">どこで確かめるか</text>
+    <text x="946" y="104" font-size="26">差分・ログ・実物への参照</text>
+    <text x="367" y="103" font-size="30" fill="#777">＋</text>
+    <text x="753" y="103" font-size="30" fill="#777">＋</text>
+    <text x="560" y="210" font-size="27" font-weight="700">次の調査・修正を選べる結果にする</text>
+  </g>
+</svg>

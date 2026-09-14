@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="230" viewBox="0 0 1120 230" role="img" aria-labelledby="title desc">
+  <title id="title">進まない理由を分けて、現実で確かめる</title>
+  <desc id="desc">なんだか進まない状態から、終わりが曖昧、一歩が大きいなどの理由を分け、次の一歩を試す。結果と相手の反応から、理由と手順を見直す。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="8" width="230" height="140" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="290" y="8" width="260" height="140" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="606" y="8" width="210" height="140" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="872" y="8" width="244" height="140" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="119" y="66" font-size="27" font-weight="700">なんだか進まない</text>
+    <text x="119" y="111" font-size="25">どこを変える？</text>
+    <text x="420" y="47" font-size="29" font-weight="700">理由を分ける</text>
+    <text x="420" y="89" font-size="25">終わりが曖昧</text>
+    <text x="420" y="123" font-size="25">一歩が大きい</text>
+    <text x="711" y="66" font-size="29" font-weight="700">小さく試す</text>
+    <text x="711" y="111" font-size="25">次の一歩を選ぶ</text>
+    <text x="994" y="66" font-size="29" font-weight="700">現実で確かめる</text>
+    <text x="994" y="111" font-size="25">結果と相手の反応</text>
+    <path d="M245 78 H278 M266 66 L278 78 L266 90 M562 78 H594 M582 66 L594 78 L582 90 M828 78 H860 M848 66 L860 78 L848 90 M994 155 V180 H420 V157 M408 169 L420 157 L432 169" fill="none" stroke="#555" stroke-width="3"/>
+    <text x="707" y="219" font-size="26" font-weight="700">結果から、理由と手順を見直す</text>
+  </g>
+</svg>

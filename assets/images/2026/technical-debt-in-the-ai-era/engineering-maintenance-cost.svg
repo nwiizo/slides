@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="255" viewBox="0 0 1120 255" role="img" aria-labelledby="title desc">
+  <title id="title">仕組みの効果と維持費から、適用する範囲を見直す</title>
+  <desc id="desc">一つの仕事で境界・評価・情報を整えて使う。省けた調査や調整と、更新・保守・整理の仕事を比べ、維持・改善・拡大・簡素化を選ぶ。必要な検証と復旧を保ち、次に適用する範囲を見直す。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="15" width="310" height="150" rx="8"/><rect x="405" y="15" width="310" height="150" rx="8"/></g>
+    <rect x="800" y="15" width="310" height="150" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <g font-size="27" font-weight="700"><text x="165" y="54">一つの仕事で使う</text><text x="560" y="54">効果と維持費を比べる</text><text x="955" y="54">適用範囲を選び直す</text></g>
+    <g font-size="24" fill="#555"><text x="165" y="95">境界・評価・情報を整える</text><text x="165" y="135">次の変更で効果を確かめる</text><text x="560" y="95">省けた調査・調整</text><text x="560" y="135">更新・保守・整理の仕事</text><text x="955" y="95">維持・改善・範囲を広げる</text><text x="955" y="135">簡素化・範囲を絞る</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M332 90 H393"/><path d="M727 90 H788"/><path d="M955 177 V214 H165 V177"/></g>
+    <rect x="270" y="194" width="580" height="39" fill="#fff"/>
+    <text x="560" y="222" font-size="24">変更頻度・失敗の影響も含め、負担に見合う形へ</text>
+  </g>
+</svg>

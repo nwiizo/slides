@@ -23,6 +23,7 @@ package*.json         # ビルドコマンドと固定したNode.js依存
 
 - clone、依存導入、ビルド、テンプレート更新、公開前確認は `README.md` を入口とする。
 - AIエージェントの実行規約と必須検証は `AGENTS.md`、スライド記法とテーマ規約はsubmodule内のルールを正とする。
+- 公開する原稿と本文の記載方針は `.claude/rules/public-slide-source.md` を参照する。
 
 ## 運用上の不変条件
 

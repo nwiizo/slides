@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="320" viewBox="0 0 1120 320" role="img" aria-labelledby="title desc">
+  <title id="title">ファイルの分割から、判断と検証を含む分担へ</title>
+  <desc id="desc">ファイルだけを分けると、各担当が全体の未決の判断へ戻る。目的と共通条件を揃え、必要な根拠・変更範囲・評価をまとめた単位で分担する。組み合わせた影響は統合時に確かめる。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g font-size="27" font-weight="700"><text x="265" y="30">判断が未決のまま分担する</text><text x="855" y="30">判断と検証を含めて分担する</text></g>
+    <path d="M558 45 V313" stroke="#aaa" stroke-width="2" stroke-dasharray="6 5"/>
+    <rect x="10" y="52" width="510" height="59" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <text x="265" y="91" font-size="26">全体の事情・未決の判断</text>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="20" y="180" width="235" height="64" rx="8"/><rect x="285" y="180" width="235" height="64" rx="8"/></g>
+    <g font-size="26"><text x="137" y="221">ファイル A</text><text x="402" y="221">ファイル B</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M137 169 V123"/><path d="M402 169 V123"/></g>
+    <text x="265" y="291" font-size="24">どちらも同じ調査・判断待ちへ戻る</text>
+    <rect x="600" y="52" width="510" height="49" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <text x="855" y="85" font-size="25">合意した目的・共通条件</text>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="600" y="134" width="240" height="95" rx="8"/><rect x="870" y="134" width="240" height="95" rx="8"/></g>
+    <g font-size="25" font-weight="700"><text x="720" y="170">任せる単位 A</text><text x="990" y="170">任せる単位 B</text></g>
+    <g font-size="22"><text x="720" y="207">根拠・変更範囲・評価</text><text x="990" y="207">根拠・変更範囲・評価</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M720 107 V127"/><path d="M990 107 V127"/><path d="M720 236 V262"/><path d="M990 236 V262"/></g>
+    <rect x="600" y="272" width="510" height="41" rx="7" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="855" y="300" font-size="23">統合時に、組み合わせた影響を確かめる</text>
+  </g>
+</svg>

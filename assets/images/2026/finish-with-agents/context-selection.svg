@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">保存した情報から、いま必要なものを読む</title>
+  <desc id="desc">資料、コード、実行履歴は保存先にある。必要な範囲を読み、今回の指示と合わせて現在のコンテキストへ入れる。採用した判断や未解決点は保存先へ記録する。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="16" width="432" height="164" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="646" y="16" width="470" height="164" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="220" y="60" font-size="30" font-weight="700">保存されている情報</text>
+    <text x="220" y="108" font-size="27">資料・コード・実行履歴</text>
+    <text x="220" y="151" font-size="24" fill="#555">場所と読み方を辿れるようにする</text>
+    <text x="881" y="60" font-size="30" font-weight="700">いまのコンテキスト</text>
+    <text x="881" y="108" font-size="27">今回の指示・関係する事実</text>
+    <text x="881" y="151" font-size="27">直前の結果</text>
+    <text x="540" y="70" font-size="24" fill="#555">必要な範囲を読む</text>
+    <path d="M454 105 H626 M613 93 L626 105 L613 117" fill="none" stroke="#555" stroke-width="3"/>
+    <path d="M881 192 V233 H220 V193 M209 206 L220 193 L231 206" fill="none" stroke="#777" stroke-width="2.5"/>
+    <rect x="346" y="212" width="446" height="40" fill="#fff"/>
+    <text x="569" y="241" font-size="25" fill="#555">採用した判断・未解決点を記録</text>
+  </g>
+</svg>

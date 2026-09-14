@@ -8,13 +8,15 @@
 
 ### 2026
 
+- [40min AI時代の「技術的負債」の変質ー概念の終焉と再解釈、エージェントと共に向かう先](slides/2026/40min-technical-debt-in-the-ai-era.pdf)
+- [40min おい、エージェントを使って終わらせろ](slides/2026/40min-finish-with-agents.pdf)
 - [Mastering Coding Agents in the New Fiscal Year](slides/2026/2026-mastering-coding-agents-new-fiscal-year.pdf)
 - [30min Architecture Modernization](slides/2026/30min-architecture-modernization.pdf)
 - [30min Value Flow Across Roles](slides/2026/30min-value-flow-across-roles.pdf)
 - [35min Effective Platform Engineering](slides/2026/35min-effective-platform-engineering.pdf)
 - [20min Secure APIs](slides/2026/20min-secure-apis.pdf)
 - [45min Web Security](slides/2026/45min-web-security.pdf)
-- [60min 足さない練習](slides/2026/60min-practice-not-adding.pdf)
+- [60min その機能、追加しますか？](slides/2026/60min-practice-not-adding.pdf)
 - [Architecture Modernization Will](slides/2026/architecture-modernization-will.pdf)
 - [Design Night: Architecture Modernization](slides/2026/design-night-architecture-modernization.pdf)
 - [EMConf: Technical Debt Turning Points](slides/2026/emconf-technical-debt-turning-points.pdf)

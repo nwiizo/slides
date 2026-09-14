@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="230" viewBox="0 0 1120 230" role="img" aria-labelledby="title desc">
+  <title id="title">不明な前提を確かめてから、その先を分ける</title>
+  <desc id="desc">ゴール、方法、実行可能性のどこが不明かで、受け手への確認、方法の調査、小さな試行を選ぶ。その結果から、進められる作業を分ける。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <text x="137" y="30" font-weight="700">わからないこと</text><text x="507" y="30" font-weight="700">最初に任せる一歩</text>
+    <rect x="4" y="48" width="266" height="46" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="112" width="266" height="46" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="176" width="266" height="46" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="137" y="80">期待・ゴール</text><text x="137" y="144">進め方</text><text x="137" y="208">実際にできるか</text>
+    <rect x="360" y="48" width="294" height="46" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <rect x="360" y="112" width="294" height="46" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <rect x="360" y="176" width="294" height="46" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="507" y="80">受け手に確かめる</text><text x="507" y="144">方法を一つ調べる</text><text x="507" y="208">小さく試す</text>
+    <rect x="825" y="82" width="291" height="108" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="970" y="124" font-size="29" font-weight="700">その結果で分ける</text><text x="970" y="164">進められる仕事は何か</text>
+    <path d="M286 71 H344 M332 59 L344 71 L332 83 M286 135 H344 M332 123 L344 135 L332 147 M286 199 H344 M332 187 L344 199 L332 211 M670 71 H745 V199 H670 M670 135 H809 M797 123 L809 135 L797 147" fill="none" stroke="#666" stroke-width="2.5"/>
+  </g>
+</svg>

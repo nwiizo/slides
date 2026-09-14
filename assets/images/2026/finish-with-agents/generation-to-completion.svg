@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="260" viewBox="0 0 1120 260" role="img" aria-labelledby="title desc">
+  <title id="title">生成したものを、使える状態へつなぐ仕事</title>
+  <desc id="desc">案には採用、説明には事実の確認、分担した成果には統合が必要になる。その仕事まで進めることで、相手が使える状態へつながる。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <text x="152" y="31" font-weight="700">生成で増やせるもの</text>
+    <text x="587" y="31" font-weight="700">完了までに必要な仕事</text>
+    <rect x="4" y="52" width="296" height="52" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="124" width="296" height="52" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="4" y="196" width="296" height="52" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="152" y="88">複数の案</text><text x="152" y="160">整った説明</text><text x="152" y="232">分担した成果</text>
+    <rect x="422" y="52" width="330" height="52" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <rect x="422" y="124" width="330" height="52" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <rect x="422" y="196" width="330" height="52" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="587" y="88">比較して、採用する</text><text x="587" y="160">実物と結果を確かめる</text><text x="587" y="232">前提を揃えて、統合する</text>
+    <rect x="878" y="93" width="238" height="114" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="997" y="143" font-size="29" font-weight="700">相手が使える</text><text x="997" y="181">次の仕事へ進む</text>
+    <path d="M316 78 H406 M394 66 L406 78 L394 90 M316 150 H406 M394 138 L406 150 L394 162 M316 222 H406 M394 210 L406 222 L394 234 M768 78 H820 V222 H768 M768 150 H862 M850 138 L862 150 L850 162" fill="none" stroke="#666" stroke-width="2.5"/>
+  </g>
+</svg>

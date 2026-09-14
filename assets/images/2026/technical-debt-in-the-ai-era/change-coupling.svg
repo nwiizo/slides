@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" role="img" aria-labelledby="title desc">
+  <title id="title">ファイルの境界と、変更を閉じ込める境界</title>
+  <desc id="desc">左は別々のサービスが共有スキーマへの依存で一緒に変わる構造。右は各単位がデータを持つ構造。ただし単位間の通信や整合性の依存も確認が必要。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <text x="272" y="35" font-size="28" font-weight="700">分かれていても、変更は一緒</text>
+    <text x="847" y="35" font-size="28" font-weight="700">データも含めて、変更範囲を見る</text>
+    <rect x="18" y="55" width="508" height="204" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2" stroke-dasharray="7 5"/>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="40" y="78" width="215" height="56" rx="6"/><rect x="290" y="78" width="215" height="56" rx="6"/><rect x="122" y="176" width="300" height="57" rx="6"/></g>
+    <g font-size="25"><text x="148" y="115">サービスA</text><text x="398" y="115">サービスB</text><text x="272" y="213">共有スキーマ</text></g>
+    <path d="M148 134 V155 H398 V134 M272 155 V176" fill="none" stroke="#666" stroke-width="2.5"/>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2" stroke-dasharray="7 5"><rect x="594" y="55" width="222" height="204" rx="8"/><rect x="872" y="55" width="230" height="204" rx="8"/></g>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="614" y="78" width="182" height="56" rx="6"/><rect x="614" y="176" width="182" height="57" rx="6"/><rect x="894" y="78" width="186" height="56" rx="6"/><rect x="894" y="176" width="186" height="57" rx="6"/></g>
+    <g font-size="25"><text x="705" y="115">責務A</text><text x="987" y="115">責務B</text><text x="705" y="213">Aのデータ</text><text x="987" y="213">Bのデータ</text></g>
+    <path d="M705 134 V176 M987 134 V176 M816 106 H872" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="845" y="151" font-size="19" fill="#555">通信</text>
+  </g>
+</svg>

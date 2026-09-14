@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">成果と根拠と残る問いを、受け手へ渡す</title>
+  <desc id="desc">何を変えたかがわかる実物、何を確かめたかがわかる根拠、未確認や判断が必要な点を揃える。受け手が使う、採用する、次を決めるための材料にする。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="4" width="330" height="122" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="395" y="4" width="330" height="122" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="786" y="4" width="330" height="122" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="169" y="47" font-size="31" font-weight="700">成果</text>
+    <text x="169" y="94" font-size="25">何を変えたか・実物</text>
+    <text x="560" y="47" font-size="31" font-weight="700">根拠</text>
+    <text x="560" y="94" font-size="25">何を確かめたか・結果</text>
+    <text x="951" y="47" font-size="31" font-weight="700">残る問い</text>
+    <text x="951" y="94" font-size="25">未確認・判断が必要な点</text>
+    <path d="M169 138 V161 H951 V138 M560 138 V176 M549 165 L560 176 L571 165" fill="none" stroke="#555" stroke-width="2.5"/>
+    <rect x="4" y="188" width="1112" height="58" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="560" y="226" font-size="28" font-weight="700">受け手が、使う・採用する・次を決める</text>
+  </g>
+</svg>

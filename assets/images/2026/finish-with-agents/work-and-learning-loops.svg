@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="264" viewBox="0 0 1120 264" role="img" aria-labelledby="title desc">
+  <title id="title">今回の成果を直す流れと、次の仕事の条件を直す流れ</title>
+  <desc id="desc">今回の仕事は終了条件と成果を比べ、未達を直して提出する。その過程で観測した手戻りや待ちから、次の仕事に渡す情報や分け方、確認方法を変える。次の一回で効果を確認する。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="8" width="1112" height="104" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="145" y="50" font-weight="700">今回の仕事</text><text x="145" y="87" font-size="24">終了条件は何か</text>
+    <text x="560" y="50" font-weight="700">作る・確かめる</text><text x="560" y="87" font-size="24">足りなければ直す</text>
+    <text x="968" y="50" font-weight="700">条件を満たして渡す</text><text x="968" y="87" font-size="24">一件の完了</text>
+    <path d="M302 60 H388 M376 48 L388 60 L376 72 M716 60 H802 M790 48 L802 60 L790 72" fill="none" stroke="#666" stroke-width="2.5"/>
+    <path d="M560 112 V155 M548 143 L560 155 L572 143" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="786" y="142" font-size="24">手戻りや待ちの理由を調べる</text>
+    <rect x="4" y="167" width="1112" height="88" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="185" y="204" font-weight="700">次の仕事を始める</text><text x="185" y="236" font-size="24">変えた条件を使う</text>
+    <text x="630" y="204" font-weight="700">前提・分け方・確認を変える</text><text x="630" y="236" font-size="24">同じ所で止まる条件へ対処する</text>
+    <path d="M442 211 H365 M377 199 L365 211 L377 223 M26 167 V130 H145 V118 M133 130 L145 118 L157 130" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="970" y="206" font-size="24">次の一回で</text><text x="970" y="236" font-size="24">違いを見る</text>
+  </g>
+</svg>

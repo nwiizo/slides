@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="260" viewBox="0 0 1120 260" role="img" aria-labelledby="title desc">
+  <title id="title">作る時間と、相手が使えるまでの時間</title>
+  <desc id="desc">作る、確認を待つ、確認・修正・採用、使うという流れ。作る時間は全体の一部であり、確認待ちが積み上がると、作成の短縮だけでは届くまでの時間は同じようには縮まらない。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="10" width="210" height="110" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="270" y="10" width="250" height="110" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <rect x="576" y="10" width="292" height="110" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="924" y="10" width="192" height="110" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="109" y="56" font-size="30" font-weight="700">作る</text>
+    <text x="109" y="96" font-size="24">AIで速くなる部分</text>
+    <text x="395" y="56" font-size="30" font-weight="700">確認を待つ</text>
+    <text x="395" y="96" font-size="24">確認待ちが積み上がる</text>
+    <text x="722" y="56" font-size="29" font-weight="700">確認・修正・採用</text>
+    <text x="722" y="96" font-size="24">受け手に渡せる形へ</text>
+    <text x="1020" y="56" font-size="30" font-weight="700">使う</text>
+    <text x="1020" y="96" font-size="24">相手が次へ進む</text>
+    <path d="M226 65 H258 M246 53 L258 65 L246 77 M532 65 H564 M552 53 L564 65 L552 77 M880 65 H912 M900 53 L912 65 L900 77 M4 146 H214 M202 134 L214 146 L202 158 M4 208 H1116 M1104 196 L1116 208 L1104 220" fill="none" stroke="#555" stroke-width="3"/>
+    <text x="109" y="181" font-size="25">作るまでの時間</text>
+    <text x="560" y="250" font-size="27" font-weight="700">相手が使えるまでの時間には、待つ・確かめる・渡す時間も含まれる</text>
+  </g>
+</svg>

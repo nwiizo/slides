@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="230" viewBox="0 0 1120 230" role="img" aria-labelledby="title desc">
+  <title id="title">指示と、実行できる範囲を揃える</title>
+  <desc id="desc">プロンプトは目的や守る条件を伝える。権限と隔離は実際にできる操作の範囲を制御する。両方を揃えることで、その範囲での調査や修正を任せやすくする。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="12" width="532" height="146" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="584" y="12" width="532" height="146" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="270" y="56" font-size="30" font-weight="700">指示として伝える</text>
+    <text x="270" y="101" font-size="27">目的・守る条件・判断を戻す場面</text>
+    <text x="270" y="140" font-size="24" fill="#555">モデルが行動を選ぶための材料</text>
+    <text x="850" y="56" font-size="30" font-weight="700">実行時に制御する</text>
+    <text x="850" y="101" font-size="27">権限・隔離・操作の許可</text>
+    <text x="850" y="140" font-size="24" fill="#555">実際にできる操作の範囲</text>
+    <text x="560" y="207" font-size="27" font-weight="700">頼んだ範囲と、道具が動ける範囲を揃える</text>
+  </g>
+</svg>

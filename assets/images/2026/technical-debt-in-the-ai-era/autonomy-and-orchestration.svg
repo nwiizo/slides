@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="290" viewBox="0 0 1120 290" role="img" aria-labelledby="title desc">
+  <title id="title">一つの仕事の裁量と、複数の仕事の分担を分ける</title>
+  <desc id="desc">左は調査・修正・検証まで任せ、採用を判断へ戻す例。右は共通の前提から複数の仕事へ分担し、結果を統合・評価する。自律性と分担の設計は別々に選べる。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g font-size="27" font-weight="700"><text x="268" y="31">自律性：一つの仕事の裁量</text><text x="855" y="31">分担・統合：複数の仕事の関係</text></g>
+    <path d="M557 48 V279" fill="none" stroke="#aaa" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="268" y="70" font-size="22" fill="#555">一例：調査・修正・検証まで任せる</text>
+    <rect x="10" y="87" width="400" height="105" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="24" y="111" width="100" height="55" rx="7"/><rect x="160" y="111" width="100" height="55" rx="7"/><rect x="296" y="111" width="100" height="55" rx="7"/><rect x="436" y="111" width="100" height="55" rx="7"/></g>
+    <g font-size="25" font-weight="700"><text x="74" y="148">調査</text><text x="210" y="148">修正</text><text x="346" y="148">検証</text><text x="486" y="148">採用</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M132 139 H150"/><path d="M268 139 H286"/><path d="M416 139 H429"/></g>
+    <g font-size="23"><text x="210" y="226">この範囲を自分で進める</text><text x="478" y="204">判断へ戻す</text></g>
+    <text x="268" y="270" font-size="22" fill="#555">採用まで任せるなら、採用条件も揃える</text>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="600" y="125" width="135" height="55" rx="7"/><rect x="790" y="75" width="130" height="55" rx="7"/><rect x="790" y="175" width="130" height="55" rx="7"/><rect x="985" y="125" width="125" height="55" rx="7"/></g>
+    <g font-size="23" font-weight="700"><text x="667" y="162">共通の前提</text><text x="855" y="112">仕事 A</text><text x="855" y="212">仕事 B</text><text x="1047" y="162">統合・評価</text></g>
+    <path d="M747 152 H759 V102 M759 152 V202 M932 102 H950 V202 H932" fill="none" stroke="#666" stroke-width="2.5"/>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M759 102 H778"/><path d="M759 202 H778"/><path d="M950 152 H973"/></g>
+    <text x="855" y="270" font-size="22" fill="#555">依存・重複・採用する順序を揃える</text>
+  </g>
+</svg>

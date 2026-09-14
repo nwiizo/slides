@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">旧実装を廃止し、移行のための仕組みも整理する</title>
+  <desc id="desc">共存中は旧実装、新実装、互換処理の三つを持つ。旧実装の廃止後も残る互換処理を整理し、維持する対象を減らす。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g font-size="27" font-weight="700"><text x="177" y="35">新旧が共存</text><text x="560" y="35">旧実装を廃止</text><text x="943" y="35">残った仕組みも整理</text></g>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="54" width="334" height="180" rx="8"/><rect x="393" y="54" width="334" height="180" rx="8"/><rect x="776" y="54" width="334" height="180" rx="8"/></g>
+    <g font-size="25"><text x="177" y="99">旧実装</text><text x="177" y="146">新実装</text><text x="177" y="198">移行用の互換処理</text><text x="560" y="120">新実装</text><text x="560" y="186">移行用の互換処理</text><text x="943" y="151">新実装</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M352 144 H385"/><path d="M735 144 H768"/></g>
+  </g>
+</svg>

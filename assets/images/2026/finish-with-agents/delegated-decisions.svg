@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" role="img" aria-labelledby="title desc">
+  <title id="title">結果を見て、途中の判断も進める</title>
+  <desc id="desc">目標、終了条件、任せる範囲を共有する。エージェントは次の一手を選び、作って確かめ、終了条件に照らして採用・統合する。結果が足りなければ計画と次の一手を選び直し、相手が使えるところへつなぐ。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="4" width="1112" height="58" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="560" y="43" font-size="30" font-weight="700">目標・終了条件・任せる範囲を共有する</text>
+    <rect x="4" y="100" width="240" height="108" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="296" y="100" width="240" height="108" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="588" y="100" width="260" height="108" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="900" y="100" width="216" height="108" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="124" y="143" font-size="29" font-weight="700">次の一手を選ぶ</text>
+    <text x="124" y="184" font-size="25">調べる・比較する</text>
+    <text x="416" y="143" font-size="29" font-weight="700">作る・確かめる</text>
+    <text x="416" y="184" font-size="25">結果を観測する</text>
+    <text x="718" y="143" font-size="29" font-weight="700">採用・統合する</text>
+    <text x="718" y="184" font-size="25">終了条件と照合する</text>
+    <text x="1008" y="143" font-size="29" font-weight="700">相手が使う</text>
+    <text x="1008" y="184" font-size="25">必要な結果か</text>
+    <path d="M124 68 V89 M112 77 L124 89 L136 77 M254 154 H286 M274 142 L286 154 L274 166 M546 154 H578 M566 142 L578 154 L566 166 M858 154 H890 M878 142 L890 154 L878 166 M718 216 V241 H124 V218 M112 230 L124 218 L136 230" fill="none" stroke="#555" stroke-width="3"/>
+    <text x="421" y="274" font-size="26" font-weight="700">結果から、計画と次の一手を選び直す</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">ハーネスの変更も、仕事の結果で確かめる</title>
+  <desc id="desc">実際の仕事を動かし、止まった原因や余分な確認を調べ、情報、道具、確認方法を一つ変える。次の実行で、達成した条件、手戻り、確認時間、費用を比べる。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="16" width="310" height="128" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="405" y="16" width="310" height="128" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="806" y="16" width="310" height="128" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="159" y="61" font-size="30" font-weight="700">仕事を動かす</text>
+    <text x="159" y="109" font-size="25">実物と実行記録を見る</text>
+    <text x="560" y="61" font-size="30" font-weight="700">原因を調べる</text>
+    <text x="560" y="109" font-size="25">どこで止まり、何を待つか</text>
+    <text x="961" y="61" font-size="30" font-weight="700">一つ変える</text>
+    <text x="961" y="109" font-size="25">情報・道具・確認方法</text>
+    <path d="M330 80 H388 M375 68 L388 80 L375 92 M731 80 H789 M776 68 L789 80 L776 92" fill="none" stroke="#555" stroke-width="3"/>
+    <path d="M961 156 V211 H159 V156 M148 169 L159 156 L170 169" fill="none" stroke="#777" stroke-width="2.5"/>
+    <rect x="256" y="191" width="610" height="42" fill="#fff"/>
+    <text x="561" y="220" font-size="25">達成した条件・手戻り・確認時間・費用を比べる</text>
+  </g>
+</svg>

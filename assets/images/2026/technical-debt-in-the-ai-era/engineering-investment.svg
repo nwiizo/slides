@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">変更しにくさから、開発への投資を選ぶ</title>
+  <desc id="desc">実装の構造、共有理解、意図の記録から変更しにくさを調べ、判断・情報・検証の仕組みを変える。次の変更で調査、判断待ち、修正の波及がどう変わったかを確かめ、投資を選び直す。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g stroke="#999" stroke-width="2"><rect x="10" y="10" width="320" height="169" rx="8" fill="#f5f5f5"/><rect x="395" y="10" width="340" height="169" rx="8" fill="#e0e0e0"/><rect x="800" y="10" width="310" height="169" rx="8" fill="#f5f5f5"/></g>
+    <g font-size="27" font-weight="700"><text x="170" y="52">今の変更しにくさ</text><text x="565" y="52">開発の条件を変える</text><text x="955" y="52">次の変更で確かめる</text></g>
+    <g font-size="24"><text x="170" y="91">実装の構造</text><text x="170" y="126">共有理解 ／ 意図の記録</text><text x="565" y="91">判断・情報・任せる範囲</text><text x="565" y="126">検証・学習の機会</text><text x="955" y="91">再調査・判断待ち</text><text x="955" y="126">修正と検証の波及</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M342 94 H382"/><path d="M747 94 H787"/><path d="M955 190 V229 H170 V190"/></g>
+    <rect x="348" y="208" width="435" height="40" fill="#fff"/><text x="565" y="237" font-size="24">減った負担から、投資を選び直す</text>
+  </g>
+</svg>

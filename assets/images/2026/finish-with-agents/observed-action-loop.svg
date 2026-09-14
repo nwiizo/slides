@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="240" viewBox="0 0 1120 240" role="img" aria-labelledby="title desc">
+  <title id="title">観測した結果から、次の一手を選ぶ</title>
+  <desc id="desc">現状を読み、終了条件との差を確かめ、足りないことに応じて次の一手を選び実行する。実行結果を次の観測へ戻す。条件を満たせば完了し、進めなければ理由を返す。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="16" width="290" height="112" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="390" y="16" width="330" height="112" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <rect x="816" y="16" width="300" height="112" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="149" y="60" font-size="29" font-weight="700">現状を読む</text><text x="149" y="101">成果・道具の実行結果</text>
+    <text x="555" y="60" font-size="29" font-weight="700">終了条件と比べる</text><text x="555" y="101">何が足りないかを判断</text>
+    <text x="966" y="60" font-size="29" font-weight="700">次の一手を実行</text><text x="966" y="101">調べる・作る・確かめる</text>
+    <path d="M310 72 H374 M362 60 L374 72 L362 84 M736 72 H800 M788 60 L800 72 L788 84 M966 140 V184 H149 V140 M137 152 L149 140 L161 152" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="356" y="163" width="402" height="41" fill="#fff"/><text x="557" y="192">結果を次の判断材料へ戻す</text>
+    <text x="560" y="233" font-size="24">条件を満たせば完了。進めなければ、その理由を返す。</text>
+  </g>
+</svg>

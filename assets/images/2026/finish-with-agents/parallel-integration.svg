@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="260" viewBox="0 0 1120 260" role="img" aria-labelledby="title desc">
+  <title id="title">分けた仕事を、共通の条件で統合する</title>
+  <desc id="desc">目標と受け渡す情報の意味を共有して仕事Aと仕事Bを分担する。それぞれの作業後に、採用する成果を選び、組み合わせた動作を確認する。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="36" width="322" height="182" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="426" y="16" width="280" height="92" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="426" y="150" width="280" height="92" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+    <rect x="806" y="36" width="310" height="182" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="165" y="83" font-size="30" font-weight="700">共通の前提</text>
+    <text x="165" y="128" font-size="26">目標と終了条件</text>
+    <text x="165" y="173" font-size="26">受け渡す情報の意味</text>
+    <text x="566" y="52" font-size="28" font-weight="700">仕事A</text>
+    <text x="566" y="88" font-size="24">作業・確認</text>
+    <text x="566" y="187" font-size="28" font-weight="700">仕事B</text>
+    <text x="566" y="223" font-size="24">作業・確認</text>
+    <text x="961" y="83" font-size="30" font-weight="700">統合</text>
+    <text x="961" y="128" font-size="26">採用するものを選ぶ</text>
+    <text x="961" y="173" font-size="26">組み合わせて確かめる</text>
+    <path d="M339 127 H374 V62 H409 M397 50 L409 62 L397 74 M374 127 V196 H409 M397 184 L409 196 L397 208 M719 62 H760 V127 H790 M778 115 L790 127 L778 139 M719 196 H760 V127" fill="none" stroke="#555" stroke-width="2.5"/>
+  </g>
+</svg>

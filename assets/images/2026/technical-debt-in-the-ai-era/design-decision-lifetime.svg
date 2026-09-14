@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">判断理由を、設計の選び直しへつなぐ</title>
+  <desc id="desc">当時の目的・制約・選択理由と、現在の条件や利用を照合する。維持する条件と変える構造を分け、設計を維持するか、境界・実装・評価を選び直すかを判断する。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#666" stroke-width="2"/>
+    </marker>
+  </defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222">
+    <rect x="12" y="12" width="314" height="94" rx="13" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="169" y="48" text-anchor="middle" font-size="28" font-weight="700">当時の判断</text>
+    <text x="169" y="82" text-anchor="middle" font-size="23">目的・制約・選択と理由</text>
+    <rect x="12" y="144" width="314" height="94" rx="13" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="169" y="180" text-anchor="middle" font-size="28" font-weight="700">今の条件・利用</text>
+    <text x="169" y="214" text-anchor="middle" font-size="23">何が続き、何が変わったか</text>
+    <rect x="397" y="75" width="328" height="102" rx="13" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
+    <text x="561" y="113" text-anchor="middle" font-size="28" font-weight="700">維持する条件と</text>
+    <text x="561" y="147" text-anchor="middle" font-size="25">変える構造を分ける</text>
+    <rect x="801" y="12" width="307" height="94" rx="13" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="954" y="48" text-anchor="middle" font-size="28" font-weight="700">維持する</text>
+    <text x="954" y="82" text-anchor="middle" font-size="23">理由を再確認して使う</text>
+    <rect x="801" y="144" width="307" height="94" rx="13" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="954" y="180" text-anchor="middle" font-size="28" font-weight="700">選び直す</text>
+    <text x="954" y="214" text-anchor="middle" font-size="22">境界・実装・評価を変える</text>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M338 59 H362 V106 H384"/>
+      <path d="M338 191 H362 V148 H384"/>
+      <path d="M737 106 H762 V59 H788"/>
+      <path d="M737 148 H762 V191 H788"/>
+    </g>
+  </g>
+</svg>

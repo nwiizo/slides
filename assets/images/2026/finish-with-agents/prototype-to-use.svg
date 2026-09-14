@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="240" viewBox="0 0 1120 240" role="img" aria-labelledby="title desc">
+  <title id="title">使う場面が変われば、確かめる条件も変わる</title>
+  <desc id="desc">試作で方向性と実現可能性を確かめることは一回の完了。実際の利用へ移る際は、利用者、データ、影響範囲に合わせて、権限、失敗時の動作、戻し方などの確認を加える。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="15" width="365" height="210" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="186" y="59" font-size="30" font-weight="700">隔離した試作</text><text x="186" y="104">方向性・主要な操作</text><text x="186" y="145">実現できる見込み</text><text x="186" y="194" font-weight="700">ここで確かめた一回の完了</text>
+    <rect x="752" y="15" width="364" height="210" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="934" y="59" font-size="30" font-weight="700">実際の利用</text><text x="934" y="104">権限・実データ</text><text x="934" y="145">失敗時の動作・戻し方</text><text x="934" y="194" font-weight="700">利用する条件で確かめる</text>
+    <path d="M385 121 H736 M724 109 L736 121 L724 133" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="560" y="65" font-weight="700">受け手・使う場面が変わる</text><text x="560" y="184">終了条件を置き直す</text>
+  </g>
+</svg>

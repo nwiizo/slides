@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">作成とレビューが同じ思い込みを共有する場合</title>
+  <desc id="desc">ダウンロード対象を画面の行だけと思い込むと、作る側と確認する側が別でも、その前提に沿ったテストは通る。受け手が必要とする検索条件に合う全件という条件から、画面外の行を含むかを別に検証する。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="4" width="630" height="58" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="319" y="42" font-weight="700">共有した思い込み：画面の行だけを出す</text>
+    <rect x="4" y="109" width="276" height="60" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="358" y="109" width="276" height="60" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="142" y="149">作るエージェント</text><text x="496" y="149">確認するエージェント</text>
+    <path d="M319 62 V82 H142 V97 M130 85 L142 97 L154 85 M319 82 H496 V97 M484 85 L496 97 L508 85 M142 169 V187 H496 V169 M319 187 V206 M307 194 L319 206 L331 194" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="4" y="217" width="630" height="49" rx="7" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="319" y="251" font-weight="700">同じ前提のテストは通る</text>
+    <rect x="747" y="4" width="369" height="147" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="931" y="43" font-weight="700">受け手と確かめた条件</text><text x="931" y="90">検索条件に合う全件</text><text x="931" y="128" font-size="24">画面に出ていない行も必要</text>
+    <rect x="747" y="207" width="369" height="59" rx="7" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="931" y="246" font-weight="700">画面外の行も含むかを検証</text>
+    <path d="M931 151 V191 M919 179 L931 191 L943 179 M650 241 H731 M719 229 L731 241 L719 253" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="690" y="211" font-size="24">照合</text>
+  </g>
+</svg>

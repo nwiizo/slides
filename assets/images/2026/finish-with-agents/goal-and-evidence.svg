@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">目標を、確かめられる条件へ</title>
+  <desc id="desc">相手に起きてほしい変化を、今回確かめる終了条件へ具体化し、成果と実測で照合する。未達なら必要な作業へ戻る。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="18" width="320" height="136" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="400" y="18" width="320" height="136" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="796" y="18" width="320" height="136" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="164" y="65" font-size="31" font-weight="700">目標</text>
+    <text x="164" y="115" font-size="26">相手に起きてほしい変化</text>
+    <text x="560" y="65" font-size="31" font-weight="700">終了条件</text>
+    <text x="560" y="115" font-size="26">今回、何を確かめるか</text>
+    <text x="956" y="65" font-size="31" font-weight="700">成果と実測</text>
+    <text x="956" y="115" font-size="26">条件を満たした根拠</text>
+    <path d="M340 85 H382 M370 73 L382 85 L370 97 M736 85 H778 M766 73 L778 85 L766 97" fill="none" stroke="#555" stroke-width="3"/>
+    <text x="560" y="218" font-size="27" font-weight="700">未達なら、必要な作業を進めて確かめ直す</text>
+  </g>
+</svg>

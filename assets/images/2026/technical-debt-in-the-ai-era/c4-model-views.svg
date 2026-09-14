@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">共通の構造モデルから、必要な範囲を表示する</title>
+  <desc id="desc">AがBに依存し、BがCに依存する構造を一度定義する。同じ定義から、全体を説明するA・B・Cの図と、変更を検討するB・Cの図を取り出す。BとCはそれぞれの図で同じ対象を表す。図の省略は依存の消滅を意味しない。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="10" y="12" width="390" height="250" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="205" y="55" font-size="28" font-weight="700">共通の構造モデル</text>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="35" y="88" width="80" height="58" rx="6"/><rect x="165" y="88" width="80" height="58" rx="6"/><rect x="295" y="88" width="80" height="58" rx="6"/></g>
+    <g font-size="28" font-weight="700"><text x="75" y="126">A</text><text x="205" y="126">B</text><text x="335" y="126">C</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M123 117 H155"/><path d="M253 117 H285"/></g>
+    <text x="205" y="185" font-size="24">種類・責務・接続を定義</text>
+    <text x="205" y="226" font-size="22" fill="#555">矢印：参照先への依存</text>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M412 137 H475 V74 H551"/><path d="M475 137 V208 H551"/></g>
+    <rect x="565" y="12" width="545" height="119" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="691" y="60" font-size="25" font-weight="700">全体の説明</text>
+    <text x="691" y="99" font-size="22" fill="#555">A・B・Cを表示</text>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="823" y="47" width="58" height="51" rx="5"/><rect x="923" y="47" width="58" height="51" rx="5"/><rect x="1023" y="47" width="58" height="51" rx="5"/></g>
+    <g font-size="25"><text x="852" y="81">A</text><text x="952" y="81">B</text><text x="1052" y="81">C</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M888 73 H915"/><path d="M988 73 H1015"/></g>
+    <rect x="565" y="148" width="545" height="114" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <text x="711" y="190" font-size="25" font-weight="700">今回の変更の検討</text>
+    <text x="711" y="232" font-size="22">対象のB・Cに絞る</text>
+    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="903" y="181" width="58" height="51" rx="5"/><rect x="1023" y="181" width="58" height="51" rx="5"/></g>
+    <g font-size="25"><text x="932" y="215">B</text><text x="1052" y="215">C</text></g>
+    <path d="M969 207 H1015" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="560" y="292" font-size="22" fill="#555">同じ対象を各図で定義し直さず、必要な範囲を取り出す</text>
+  </g>
+</svg>

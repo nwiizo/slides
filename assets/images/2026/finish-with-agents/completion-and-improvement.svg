@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="248" viewBox="0 0 1120 248" role="img" aria-labelledby="title desc">
+  <title id="title">今回満たす条件と、次に選ぶ改善を分ける</title>
+  <desc id="desc">今回の条件が未達なら修正へ戻り、条件を満たした成果を渡して一度閉じる。追加の改善案は利用後の反応と合わせ、次に取り組む仕事として選ぶ。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle" font-size="26">
+    <rect x="4" y="16" width="282" height="76" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="145" y="61" font-weight="700">今回の条件を確かめる</text>
+    <path d="M300 54 H430 M418 42 L430 54 L418 66" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="364" y="33" font-size="24">満たした</text>
+    <rect x="444" y="16" width="252" height="76" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="570" y="61" font-weight="700">渡して、一度閉じる</text>
+    <path d="M710 54 H830 M818 42 L830 54 L818 66" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="844" y="16" width="272" height="76" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="980" y="61">利用と反応</text>
+    <path d="M145 92 V134 M133 122 L145 134 L157 122" fill="none" stroke="#666" stroke-width="2.5"/>
+    <text x="242" y="123" font-size="24">未達</text>
+    <rect x="4" y="146" width="282" height="62" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="145" y="185">必要な修正をする</text>
+    <path d="M286 177 H321 V83 H300 M312 71 L300 83 L312 95" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="444" y="146" width="252" height="62" rx="8" fill="#fff" stroke="#999" stroke-width="2"/>
+    <text x="570" y="185">追加の改善案を残す</text>
+    <path d="M710 177 H830 M818 165 L830 177 L818 189 M980 92 V134 M968 122 L980 134 L992 122" fill="none" stroke="#666" stroke-width="2.5"/>
+    <rect x="844" y="146" width="272" height="62" rx="8" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="980" y="185" font-weight="700">次の改善を選ぶ</text>
+    <text x="770" y="240" font-size="24">思いついた案すべてで、今回の仕事を開き直さない</text>
+  </g>
+</svg>

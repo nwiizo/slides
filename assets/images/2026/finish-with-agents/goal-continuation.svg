@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" role="img" aria-labelledby="title desc">
+  <title id="title">一回の応答を越えて、目標へ向かう</title>
+  <desc id="desc">目標、進捗、続行や完了などの状態を保存する。一回の作業後に終了条件と照合し、未達で続行できるなら次の作業へ進む。完了や中断は状態として区別する。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="4" y="4" width="1112" height="58" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="560" y="43" font-size="28" font-weight="700">目標・進捗・状態を、次の応答へ引き継ぐ</text>
+    <path d="M560 66 V90 M549 79 L560 90 L571 79" fill="none" stroke="#777" stroke-width="2.5"/>
+    <rect x="4" y="99" width="310" height="90" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="405" y="99" width="310" height="90" rx="6" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="806" y="99" width="310" height="90" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
+    <text x="159" y="155" font-size="30" font-weight="700">一回の作業</text>
+    <text x="560" y="155" font-size="30" font-weight="700">終了条件と照合</text>
+    <text x="961" y="138" font-size="28" font-weight="700">完了 ／ 中断</text>
+    <text x="961" y="174" font-size="23">成果や未達を残す</text>
+    <path d="M330 144 H388 M375 132 L388 144 L375 156 M731 144 H789 M776 132 L789 144 L776 156" fill="none" stroke="#555" stroke-width="3"/>
+    <path d="M560 201 V242 H159 V202 M148 215 L159 202 L170 215" fill="none" stroke="#777" stroke-width="2.5"/>
+    <text x="840" y="250" font-size="25" fill="#555">未達で続行できるなら、次の作業へ</text>
+  </g>
+</svg>

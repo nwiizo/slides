@@ -106,7 +106,7 @@ AIでPull Request（PR）は増え、手を動かす速さも上がったよう�
 
 <strong>持ち帰れるもの</strong>
 
-なぜ、実装が速くなってもプロダクト全体は速くならないのか。価値が届くまでの流れを測り、<strong>全体の速さを決める詰まりを見つける手順</strong>と、ユーザーが達成したいことから「作るべきか」「いつやめるか」を決める<strong>判断の基準</strong>を持ち帰れます。
+なぜ、実装が速くなってもプロダクト全体は速くならないのか。価値が届くまでの流れを測り、<strong>全体の速さを決める詰まり</strong>を見つけます。ユーザーが達成したいこと、失敗の見つけやすさ、利用状況とほかへの影響から、<strong>「作る・任せる・やめる」を決める基準</strong>も持ち帰れます。
 
 </div>
 </div>
@@ -134,7 +134,7 @@ AIでPull Request（PR）は増え、手を動かす速さも上がったよう�
 
 <div style="margin-top: 26px; padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
 
-まず、AIで実装が速くなっても、価値が届くまでの時間が同じだけ縮まない理由を数字で見ます。次に、アウトプットとアウトカムを分け、バリューストリームから待ちを探します。そこで見つけた詰まりを、営業・PM・デザイナー・エンジニアが対話できる図にします。最後に、ユーザーのジョブから「作る」を決め、AIへ「任せる」範囲と「やめる」条件・判断日までつなげます。
+まず、ユーザーにとっての価値を確認し、実装を速めても全体が同じだけ縮まない理由を数字で見ます。作業と待ちを測ったうえで、利用後に何が変わったかを確かめます。次に、役割ごとの前提を対話と図で具体化します。最後に、ジョブから「作る」を決め、確かめられる範囲をAIへ「任せる」。既存の動作と依存を調べ、「やめる」条件や置き換え方まで考えます。
 
 </div>
 
@@ -158,11 +158,11 @@ _class: transition
 
 ---
 
-## AIで実装は確かに速くなった
+## AIで速くなった実感を、結果と分けて確かめる
 
 <div style="font-size: 0.75em;">
 
-AIを使うと、動くコードを書くまでの時間は短くなります。ただし、<strong>個人が感じる作業の速さ</strong>と、<strong>ユーザーや事業に起きた変化</strong>は、同じ指標では測れません。
+AIでコードを書きやすくなったと感じても、確認や修正を含む作業時間まで短くなったかは、別に確かめる必要があります。さらに、<strong>個人の作業時間</strong>と、<strong>ユーザーや事業に起きた変化</strong>も分けて測ります。
 
 <div style="display: flex; gap: 20px; align-items: center; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
@@ -189,7 +189,7 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 ---
 
-## ジョブ理論では、ユーザーの目的から考える
+## 価値の基準を、ユーザーの目的に置く
 
 <div style="font-size: 0.7em;">
 
@@ -200,7 +200,7 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 </div>
 <div style="flex: 1;">
 
-<strong>Jobs to Be Done（ジョブ理論）</strong>は、ユーザーがなぜ製品やサービスを選ぶのかを、達成したいことから考える方法です。ここでいう<strong>ジョブ</strong>は、ユーザーがある状況で片付けたいことです。
+実装の速さをユーザー側の結果へつなげるには、まず「何を達成したいのか」を考えます。ユーザーがなぜ製品やサービスを選ぶのかを、達成したいことから考える方法が<strong>Jobs to Be Done（ジョブ理論）</strong>です。ここでいう<strong>ジョブ</strong>は、ユーザーがある状況で片付けたいことです。
 
 <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px;">
 <div style="display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 10px 12px; background-color: #f5f5f5; border-radius: 8px;"><strong>状況</strong><span>候補が多く、比較に時間がかかっている</span></div>
@@ -230,6 +230,8 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 ## 完全に余談なのですが
 
 <div style="font-size: 0.7em;">
+
+<div style="color: #666; margin-bottom: 8px;">ここは発表では飛ばします。公開版だけの余談です。</div>
 
 クレイトン・M・クリステンセンの本では、『ジョブ理論』以外に、この二冊も好きです。
 
@@ -275,6 +277,35 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 
 <div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 4px;">
 出典：<a href="https://www.seshop.com/product/detail/2241">翔泳社『イノベーションのジレンマ 増補改訂版』</a> ／ <a href="https://www.harpercollins.co.jp/hc/books/detail/15576">ハーパーコリンズ・ジャパン『イノベーションの経済学』</a>
+</div>
+
+---
+
+## この発表では、商品を選ぶ場面を例に考える
+
+<div style="font-size: 0.75em;">
+
+ここから繰り返し使うのは、仕事で使う商品を購入する架空のサービスです。利用者は商品名だけでなく、必要な日までに届くか、条件に合うかを確認して、購入する商品を決めたいと考えています。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>利用者が困っていること</strong><br><br>
+候補が多く、商品ごとに納期や条件を調べ直している。検索結果が出ても、どれを買えばよいか決められない。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>チームが考えている変更</strong><br><br>
+納期で絞る機能、比較しやすい表示、検索の応答時間の改善。ただし、どれが困りごとに効くかは、まだ確かめる必要がある。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+以降の「検索」は、この利用場面を指します。検索画面の使いやすさ、裏側の処理速度、情報の正確さを、同じ「速くする」で片付けずに考えます。個別の経験談は、この架空例と分けて紹介します。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>目指すのは検索機能の完成ではなく、利用者が条件に合う商品を選べること。</strong>
+</div>
+
 </div>
 
 ---
@@ -391,7 +422,7 @@ DORAは、ソフトウェア開発組織を継続的に調査しています。2
 </div>
 
 <div style="margin-top: 14px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.15em;">
-<span style="color: #e65100; font-weight: bold;">この例では、合意と判断の待ち時間が、全体の速さを決める詰まりになる。<br>次に、AIが短くしやすい仕事と、その外側に残る仕事を分けて見る。</span>
+<span style="color: #e65100; font-weight: bold;">待ちが変わらないという仮定なら、残る時間の多くは待ちになる。<br>次に、どの仕事で時間がかかっているかを分けて見る。</span>
 </div>
 
 </div>
@@ -428,7 +459,7 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 </div>
 
 <div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>30/70の例では、内側を半分にしても外側の70は残る。<br>AIの効果は、変更を利用でき、結果を確かめるまでの流れで見る。</strong>
+<strong>内側・外側は仕事の範囲、実作業・待ちは時間の使われ方。<br>レビューにも実作業はあり、AIで短くできる部分と、判断待ちが残る部分を分けて測る。</strong>
 </div>
 
 </div>
@@ -447,8 +478,8 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 内側と外側のループで整理したのは、主にチケットへ着手してからアウトプットを利用できる状態にするまでです。しかし、プロダクトの仕事は着手前から始まり、リリース後も続きます。ユーザーのジョブを見つけ、求めるアウトカムと確かめ方を決め、アウトプットを届け、ジョブが片付いたか確かめるまで。この全体を<strong>バリューストリーム</strong>と呼びます。
 
 <div style="margin-top: 18px; padding: 12px; background-color: #f5f5f5; border-radius: 8px;">
-<strong>開始条件</strong>　ユーザーのジョブが、まだ片付いていない<br>
-<strong>完了条件</strong>　ジョブが片付き、期待した結果を確認できた
+<strong>見る範囲の始まり</strong>　ユーザーの困りごとを捉えたとき<br>
+<strong>一回の検証の区切り</strong>　結果を確かめ、続けるか見直すか決めたとき
 </div>
 
 </div>
@@ -500,7 +531,7 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 バリューストリームの工程を時系列に並べ、各区間を実際に手を動かしていた時間と、判断や作業を待っていた時間に分けて可視化する方法を、<strong>バリューストリームマッピング</strong>と呼びます。
 
 <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 14px; text-align: center;">
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>直近10件を選ぶ</strong><br><span style="color: #666;">大きさで選別せず、<br>実際に進めた案件を使う</span></div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>直近の案件を並べる</strong><br><span style="color: #666;">まず10件程度。<br>未完了の案件も含める</span></div>
 <div style="font-size: 1.4em;">→</div>
 <div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>時刻を記録から拾う</strong><br><span style="color: #666;">ジョブの確認、着手、PR、承認、<br>本番反映、利用開始、結果確認</span></div>
 <div style="font-size: 1.4em;">→</div>
@@ -509,6 +540,35 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 
 <div style="margin-top: 22px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
 <strong>実際の記録を使い、作業していた時間と待っていた時間を分ける。</strong>
+</div>
+
+</div>
+
+---
+
+## 一件の変更を、同じ時間の単位でたどる
+
+<div style="font-size: 0.75em;">
+
+測り方も、検索条件を追加する架空の例で考えます。着手から本番反映までを、夜間や休日を除くチームの共通の業務時間で測り、合計20時間だったとします。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>実際に進めた時間：6時間</strong><br><br>
+設計・実装・テストに5時間。レビューで内容を確認した時間が1時間。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>止まっていた時間：14時間</strong><br><br>
+レビュー開始を待って10時間。本番へ反映する判断を待って4時間。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+この例なら、実作業の割合は6 ÷ 20で30%です。二人で同時に1時間確認しても、案件が進んだ経過時間は1時間です。人数分の工数を足すと、全体に占める割合とは別の数字になります。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>時刻の差だけでは、作業と待ちは分からない。<br>記録と担当者への確認を組み合わせ、不明な時間は不明として残す。</strong>
 </div>
 
 </div>
@@ -524,7 +584,7 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 <div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
 <strong>作業していた時間の割合</strong><br><br>
-着手から結果を確認するまでに、設計、実装、確認など、実際に進めていた時間がどれだけあったか。
+開始と終了を揃えた期間のうち、設計、実装、確認など、案件を実際に進めていた時間がどれだけあったか。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
 <strong>最も長く待った工程</strong><br><br>
@@ -537,75 +597,7 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 </div>
 
 <div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>待ちの合計が大きい工程を、最初の制約候補にする。相手と理由が分かれば、減らす方法を選べる。</strong>
-</div>
-
-</div>
-
----
-
-## 独立したバリューストリームの四つの条件
-
-<div style="display: flex; gap: 24px; align-items: center;">
-<div style="width: 43%;">
-<img src="../../assets/images/2026/am-1-4-independent-value-stream.png" alt="独立したバリューストリームの四つの条件" style="width: 100%; height: fit-content;">
-<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">Figure 1.4 Independent value stream より引用</div>
-</div>
-<div style="flex: 1; font-size: 0.72em; line-height: 1.45;">
-
-バリューストリームマッピングで長い待ちを見つけたら、チームが流れをどこまで自分たちで進められるかを見直します。ここでいう独立とは、関係するチームがあっても、日常的な変更を発見から結果の確認まで大きな待ちなしに進められることです。そのために、チームの担当範囲、判断できる範囲、目標の置き方、ソフトウェアの分け方という四つの条件を揃えます。
-
-<div style="margin-top: 14px;">
-
-<strong>事業の仕事に合わせて担当範囲を決める</strong>　どのジョブを扱うかが明確<br>
-<strong>チームが判断できる</strong>　製品・技術・リリースを決められる<br>
-<strong>利用後の変化から作るものを決める</strong>　届けた結果まで確かめる<br>
-<strong>ソフトウェアを分ける</strong>　単独で変更して届けられる
-
-</div>
-
-<div style="margin-top: 14px;">
-
-この四つは別々ではありません。担当範囲と目指すアウトカムが決まっていても、判断のたびにほかのチームを待ち、ソフトウェアも一緒に変更しなければならないなら、流れは独立していません。
-
-</div>
-
-</div>
-</div>
-
-<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px; padding-right: 36px;">
-出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024
-</div>
-
----
-
-## 四つの条件は、「何を担うか」と「どう進めるか」
-
-<div style="font-size: 0.72em;">
-
-先ほどの四つは、「何を担うか」と「どう進めるか」の二つに分けて考えます。事業の仕事と目指すアウトカムは、チームが引き受ける範囲を決めます。判断できる範囲とソフトウェアの分け方は、その仕事を大きな待ちなしに進められるかを決めます。
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px;">
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>事業の仕事に合わせて担当範囲を決める</strong><br>
-「注文」「決済」のように、事業の中で一つの役割を担う範囲へ集中する。関係の薄いジョブを同じチームへ集めない。
-</div>
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>チームが判断できる</strong><br>
-何を作るか、どう実装するか、いつ届けるかをチームで決める。変更のたびに外部の承認を待たない。
-</div>
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>利用後の変化から作るものを決める</strong><br>
-機能の完成ではなく、利用後に起きてほしい変化を目標にする。届けた後の結果まで同じチームが確かめる。
-</div>
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>ソフトウェアを分ける</strong><br>
-ほかのシステムを同時に変えなくても、開発・テスト・リリースできる。依存があっても、接続方法やデータ形式を安定させる。
-</div>
-</div>
-
-<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>四つの条件を揃えるのは、チームを閉じるためではありません。ジョブの発見からアウトカムの確認までを、大きな待ちなしに進めるためです。</strong>
+<strong>待ちが大きい工程を、全体の速さを決めている候補として詳しく見る。相手と理由が分かれば、減らす方法を選べる。</strong>
 </div>
 
 </div>
@@ -616,7 +608,7 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 
 <div style="font-size: 0.72em;">
 
-四つの条件が揃わないと、仕事は役割の間を何度も移動します。ここでは、変更を利用できるようにするまでに、誰から誰へ仕事を渡し、何を待っているかを見ます。
+待ちの相手と理由が分かったら、仕事を渡す境目を見ます。ここでは、変更を利用できるようにするまでに、誰から誰へ仕事を渡し、何を待っているかを確かめます。
 
 <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
 <div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>優先順位を決める人<br>→ 実装する人</strong><br><span style="color: #666;">何を作るかの判断を待つ</span></div>
@@ -669,7 +661,7 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 
 ---
 
-## 制約理論では、一番遅い工程から直す
+## 全体の速さを決める工程から直す
 
 <div style="font-size: 0.75em;">
 
@@ -685,16 +677,16 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 <div style="font-size: 1.4em;">→</div>
 <div style="padding: 15px 10px; background-color: #f5f5f5; border-radius: 8px;">
 
-<strong>レビュー</strong><br><br>
-意図・影響・テストを<br>1日に5件確認できる
+<strong>レビュー待ち</strong><br><br>
+10件届き、5件進むため<br>一日ごとに5件増える
 
 
 </div>
 <div style="font-size: 1.4em;">→</div>
 <div style="padding: 15px 10px; background-color: #f5f5f5; border-radius: 8px;">
 
-<strong>レビュー待ち</strong><br><br>
-一日ごとに5件増える
+<strong>レビュー</strong><br><br>
+意図・影響・テストを<br>1日に5件確認できる
 
 </div>
 </div>
@@ -706,7 +698,40 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 </div>
 
 <div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>制約を変えないまま実装だけを速めると、利用可能になるまでの時間は長くなる。</strong>
+<strong>次の工程が受け入れられる量を超えて仕事を渡すと、待つ案件が増える。<br>実装を速めた効果を届けるには、レビューへ渡す量と、確認できる量も揃える。</strong>
+</div>
+
+</div>
+
+---
+
+## レビュー待ちは、詰まる理由に合わせて減らす
+
+<div style="font-size: 0.75em;">
+
+一日10件を作っても5件しか確認できない例では、まず、なぜ5件で止まっているかを調べます。レビューを急がせるだけでは、必要な確認を削ってしまうかもしれません。
+
+<div style="display: flex; gap: 16px; align-items: center; margin-top: 18px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>確認する時間がない</strong><br><br>
+新しい実装への着手を絞り、レビューする時間を確保する。担当者へ依頼が集中していないかも見る。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>差分の意図が読めない</strong><br><br>
+変更を目的ごとに分け、判断理由とテスト結果を添える。確認のたびに説明を聞き直す時間を減らす。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>何を正解とするか未決定</strong><br><br>
+コードを読む前に、期待する動作と決める人を確かめる。判断待ちをレビュー担当者の遅さにしない。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+変えた後は、待ち時間だけでなく、本番へ届いた件数と手戻りも見ます。レビューが速くなっても、次に本番反映で待っていれば、そこを改めて調べます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>忙しい人を探すのではなく、仕事が進まない理由を取り除く。</strong>
 </div>
 
 </div>
@@ -750,6 +775,134 @@ AIで内側の成果が早く出ても、外側で一日に受け入れられる
 
 ---
 
+## 独立したバリューストリームの四つの条件
+
+<div style="display: flex; gap: 24px; align-items: center;">
+<div style="width: 43%;">
+<img src="../../assets/images/2026/am-1-4-independent-value-stream.png" alt="独立したバリューストリームの四つの条件" style="width: 100%; height: fit-content;">
+<div style="font-size: 0.55em; color: #999; text-align: center; margin-top: 5px;">Figure 1.4 Independent value stream より引用</div>
+</div>
+<div style="flex: 1; font-size: 0.72em; line-height: 1.45;">
+
+制約が判断や引き継ぎにあるなら、チームが流れをどこまで自分たちで進められるかを見直します。ここでいう独立とは、関係するチームがあっても、日常的な変更を発見から結果の確認まで大きな待ちなしに進められることです。そのために、チームの担当範囲、判断できる範囲、目標の置き方、ソフトウェアの分け方という四つの条件を揃えます。
+
+<div style="margin-top: 14px;">
+
+<strong>事業の仕事に合わせて担当範囲を決める</strong>　どのジョブを扱うかが明確<br>
+<strong>チームが判断できる</strong>　製品・技術・リリースを決められる<br>
+<strong>利用後の変化から作るものを決める</strong>　届けた結果まで確かめる<br>
+<strong>ソフトウェアを分ける</strong>　単独で変更して届けられる
+
+</div>
+
+<div style="margin-top: 14px;">
+
+この四つは別々ではありません。担当範囲と目指すアウトカムが決まっていても、判断のたびにほかのチームを待ち、ソフトウェアも一緒に変更しなければならないなら、流れは独立していません。
+
+</div>
+
+</div>
+</div>
+
+<div style="font-size: 0.5em; color: #777; text-align: right; margin-top: 5px; padding-right: 36px;">
+出典：Nick Tune, Jean-Georges Perrin, <em>Architecture Modernization</em>, Manning, 2024
+</div>
+
+---
+
+## 四つの条件は、「何を担うか」と「どう進めるか」
+
+<div style="font-size: 0.72em;">
+
+先ほどの四つは、「何を担うか」と「どう進めるか」の二つに分けて考えます。事業の仕事と目指すアウトカムは、チームが引き受ける範囲を決めます。判断できる範囲とソフトウェアの分け方は、その仕事を大きな待ちなしに進められるかを決めます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px;">
+<div style="text-align: center; color: #555;"><strong>何を担うか</strong></div>
+<div style="text-align: center; color: #555;"><strong>どう進めるか</strong></div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>事業の仕事に合わせて担当範囲を決める</strong><br>
+「注文」「決済」のように、事業の中で一つの役割を担う範囲へ集中する。関係の薄いジョブを同じチームへ集めない。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>チームが判断できる</strong><br>
+合意した予算・品質・権限の範囲で、何を作り、いつ届けるかを決める。範囲を超える変更は、相談先を先に決める。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>利用後の変化から作るものを決める</strong><br>
+機能の完成ではなく、利用後に起きてほしい変化を目標にする。届けた後の結果まで同じチームが確かめる。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>ソフトウェアを分ける</strong><br>
+ほかのシステムを同時に変えなくても、開発・テスト・リリースできる。依存があっても、接続方法やデータ形式を安定させる。
+</div>
+</div>
+
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>四つの条件を揃えるのは、チームを閉じるためではありません。ジョブの発見からアウトカムの確認までを、大きな待ちなしに進めるためです。</strong>
+</div>
+
+</div>
+
+---
+
+## 分ける単位は、一緒に変更しなくて済む範囲で考える
+
+<div style="font-size: 0.75em;">
+
+ソフトウェアを小さく分けても、変更のたびに他チームの修正が必要なら、待ちは残ります。境界を決めるときは、ファイルやサービスの数より、どこまで自分たちで変更を完結できるかを見ます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>検索側で変えられること</strong><br><br>
+商品データを受け取る形式が安定していれば、検索の内部処理を変えても、商品管理側の同時改修を避けやすい。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>一緒に決める必要があること</strong><br><br>
+納期や在庫の意味、データの持ち主、更新の反映条件を変えるなら、使う側と提供する側で確認が必要になる。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+細かく分けるほど接続や運用の仕事も増えます。頻繁に変える部分から、データの責任と接続の取り決めを明確にします。分割や全面刷新そのものを目的にはしません。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>境界の良し悪しは、箱の小ささより、変更に必要な調整で確かめる。</strong>
+</div>
+
+</div>
+
+---
+
+## サービスを分けても、共有データの変更待ちは残る
+
+<div style="font-size: 0.75em;">
+
+検索と商品管理を別のサービスにしても、同じテーブルの内部構造に依存していれば、自由には変更できません。<strong>データアーキテクチャ</strong>では、データの形、保存場所、渡し方、更新する責任を考えます。これは、チームがどこまで独立して変更できるかにも関わります。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>同じテーブルを直接読む</strong><br><br>
+検索、商品管理、帳票が同じ列を使う。列の名前や意味を変えるたびに、どの処理が壊れるかを調べ、関係者の確認を待つ。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>提供する情報と変更の責任を決める</strong><br><br>
+商品管理が更新を担い、検索や帳票へ必要な情報を渡す。提供する形式と意味を保てる変更なら、内部の同時改修を避けやすい。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+ただし、分ければ同期や障害対応の仕事も増えます。一緒に更新しないと矛盾するデータは、同じ場所で管理する方が簡単な場合もあります。まず共有している項目と利用者を調べ、調整が多い箇所から見直します。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>DBを分けることが目的ではない。誰が何を変え、誰へ知らせるかを明確にする。</strong>
+</div>
+
+</div>
+
+---
+
 <!--
 _backgroundColor: #0a1929
 _color: white
@@ -760,7 +913,7 @@ _class: transition
 
 <h2 style="color: white !important;">2. 測りやすい数字は、価値が届いた証拠ではない</h2>
 
-<strong>PR数も、速くなった体感も、AIで伸びやすい。</strong>
+<strong>変化を確かめるには、作った量と、利用後に起きた変化を分けて測る。</strong>
 
 </div>
 
@@ -783,7 +936,7 @@ PR数、コード変更の記録（コミット）の数、変更行数。どれ
 </div>
 
 <div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
-<span style="color: #e65100; font-weight: bold;">アウトプットの量ではなく、アウトカムを測る。</span>
+<span style="color: #e65100; font-weight: bold;">アウトプットで仕事の流れを、アウトカムで利用後の変化を確かめる。</span>
 </div>
 
 </div>
@@ -895,7 +1048,62 @@ AIで作る時間が短くなっても、手戻りや障害が増え、レビュ
 </div>
 
 <div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.05em;">
-<strong>アウトプットを早く届けても、利用とアウトカムが変わらなければ、価値が届く速さは変わっていない。</strong>
+<strong>アウトプットを早く届けたことと、期待したアウトカムが起きたことを、別々に確かめる。</strong>
+</div>
+
+</div>
+
+---
+
+## 「選べたか」は、操作の記録だけでは分からない
+
+<div style="font-size: 0.75em;">
+
+検索条件を使った記録は残せます。しかし、利用者が必要な情報を見つけ、納得して商品を選べたかまでは分かりません。先ほどのアウトカムを確かめるには、操作の記録と利用者への確認を組み合わせます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>記録で確かめること</strong><br><br>
+検索を始めた時刻、条件の使用、候補を選ぶまでの操作、途中でやめた割合。購入へ進んだかも、対象と期間をそろえて見る。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>本人に確かめること</strong><br><br>
+どの情報で決められたか。まだ何が足りなかったか。購入しなかったのは、比較できなかったからか、条件に合う商品がなかったからか。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+短時間で離れた人を「早く選べた人」と数えないようにします。選べた人だけの時間を比べると、選べずに離れた人を見落とします。件数が少ない場合は、確かな傾向とは言い切らず、分かったことと未確認のことを分けます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>操作が終わったことと、目的を果たせたことを区別する。</strong>
+</div>
+
+</div>
+
+---
+
+## 購入が増えた理由を、変更と結びつけて確かめる
+
+<div style="font-size: 0.75em;">
+
+検索条件を追加した後に購入が増えても、その機能が理由とは限りません。同じ時期の値引きや、訪れたユーザーの違いでも数字は変わります。まず「どう効くはずだったか」を分けて考えます。
+
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
+<div style="background-color: #f5f5f5; padding: 16px 10px; border-radius: 8px;"><strong>検索条件が使われる</strong><br><br>対象のユーザーに届いたか</div>
+<div>→</div>
+<div style="background-color: #f5f5f5; padding: 16px 10px; border-radius: 8px;"><strong>比較の迷いが減る</strong><br><br>必要な情報にたどり着き<br>購入を判断できたか</div>
+<div>→</div>
+<div style="background-color: #f5f5f5; padding: 16px 10px; border-radius: 8px;"><strong>購入へ進む</strong><br><br>売上につながったか</div>
+</div>
+
+<div style="margin-top: 18px;">
+条件を使っても迷いが減らなければ、画面や情報を見直します。迷いが減っても購入されなければ、価格や在庫など、次の理由を調べます。可能なら同時期の新旧画面を比較し、難しければ利用者への確認とほかの変化の記録を併せて判断します。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>売上だけで成功・失敗を決めず、期待した変化がどこまで起きたかを見る。</strong>
 </div>
 
 </div>
@@ -944,7 +1152,7 @@ AIの影響を調べる研究組織METRは、経験豊富なオープンソー�
 
 <strong>実測</strong>
 
-各課題は、AIツールを使える条件と使えない条件へ無作為に割り当てられました。AIを使える条件では、完了まで<strong>平均19%長く</strong>かかりました。課題は平均2時間で、単純に時間へ置き換えると約23分の差です。
+各課題は、AIツールを使える条件と使えない条件へ無作為に割り当てられました。2025年前半のツールを使える条件では、完了までの所要時間が<strong>推定19%長く</strong>なりました。測ったのは生成にかかる時間だけでなく、確認や修正を含む課題の完了までです。
 
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
@@ -958,8 +1166,7 @@ AIの影響を調べる研究組織METRは、経験豊富なオープンソー�
 
 <div style="margin-top: 16px;">
 
-大規模で成熟したコード群に詳しい開発者という条件つきで、ほかの現場へそのまま当てはめることはできません。ただ、少なくともこの条件では、<strong>「速くなった気がする」だけでは判断できません</strong>。体感と、実際に時間を使っているところがずれた例もあります。あるネット銀行では、開発者が「コードを実行可能な形にするビルドが遅い」と訴えました。ところが測ってみると、時間の大半はPRのレビュー待ちでした。
-
+大規模で成熟したコード群に詳しい開発者と、2025年前半のツールを対象にした結果です。現在のすべての開発に当てはめる数字ではありません。ここで分かるのは、<strong>本人の体感と実測が逆向きになる場合がある</strong>ことです。自分たちの流れを測って判断待ちが見えたら、次の問いは「なぜ、その判断が止まるのか」です。
 </div>
 
 <div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
@@ -980,7 +1187,7 @@ _class: transition
 
 <h2 style="color: white !important;">3. 役割ごとの前提を対話で確かめる</h2>
 
-<strong>長い待ちの一部は、情報不足ではなく、役割ごとの前提の違いから生まれる。</strong>
+<strong>待ちの場所が分かっても、役割ごとに問題の見え方が違えば、直し方は決まらない。</strong>
 
 </div>
 
@@ -1032,13 +1239,13 @@ _class: transition
 </div>
 <div style="flex: 1;">
 
-宇田川元一さんは、物事をどう理解し、何を正しいと考えるか、その<strong>解釈の枠組み</strong>をナラティヴと呼びます。立場、経験、背負っている責任が違えば、同じリリース延期にも別の意味が生まれます。
+宇田川元一さんは、物事をどう理解し、何を正しいと考えるか、その<strong>解釈の枠組み</strong>をナラティヴと呼びます。立場、経験、背負っている責任が違えば、「今月リリースするか」という同じ判断でも、心配することが変わります。
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px;">
-<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>営業</strong>　商談の機会を逃す</div>
-<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>デザイナー</strong>　利用者が途中で迷う</div>
-<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>エンジニア</strong>　次の変更が難しくなる</div>
-<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>SRE</strong>　信頼性と運用を担い、障害対応の負担が増える</div>
+<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>営業</strong>　延期すると、商談の機会を逃す</div>
+<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>デザイナー</strong>　今の画面で出すと、利用者が途中で迷う</div>
+<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>エンジニア</strong>　応急処置で出すと、次の変更が難しくなる</div>
+<div style="background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px;"><strong>SRE（信頼性と運用を担う役割）</strong>　復旧手順がないまま出すと、障害対応が長引く</div>
 </div>
 
 <div style="margin-top: 14px;">
@@ -1103,7 +1310,7 @@ _class: transition
 </div>
 
 <div style="margin-top: 16px;">
-一度で分かり合うための順番ではありません。相手の反応から見立てを直し、次の働きかけを変える反復です。この発表では、その対話の材料として一枚の図を使います。
+一度で分かり合うための順番ではありません。相手の反応から見立てを直し、次の働きかけを変える反復です。まず会話の例で確かめ、その後で対話の材料を図に並べます。
 </div>
 
 <div style="margin-top: 12px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
@@ -1114,35 +1321,31 @@ _class: transition
 
 ---
 
-## 判断待ちを短くする三つの取り決め
+## 「今月出したい」の理由を、役割ごとに聞く
 
-<div style="font-size: 0.72em;">
+<div style="font-size: 0.75em;">
 
-前提を確かめる対話と並行して、判断の依頼そのものにも形を与えます。判断が止まりやすいのは、誰が決めるのか、何をいつまでに返すのか、返事がないときにどう進めるのかが曖昧なときです。
+たとえば、営業は「今月出したい」、エンジニアは「まだ出せない」と言っているとします。期日の賛否を繰り返す前に、それぞれが守りたいことを確かめます。
 
-<div style="display: flex; gap: 16px; align-items: stretch; margin-top: 14px;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>決める人を一人にする</strong><br><br>
-最も詳しい人か、最も影響を受ける人を、決める人にする。役職の高い人とは限らない。
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>営業に確かめる</strong><br><br>
+「今月必要なのは、誰のどんな判断ですか」<br>
+→ 顧客が導入を決めるために、商品を比較できることを確かめたい。
 </div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>全員一致を待たない</strong><br><br>
-反対意見は記録に残す。決まった後は、その方針で動く。
-</div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>依頼に四つを書く</strong><br><br>
-誰に、何を、いつまでに、返事がないときはどうするか。「なるべく早く」は期限ではない。
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>エンジニアに確かめる</strong><br><br>
+「どんな失敗を心配していますか」<br>
+→ 全顧客へ公開すると、現在の検索へ戻せない変更が含まれる。
 </div>
 </div>
 
-<div style="margin-top: 16px;">
-
-会議は、決める権限のある人がいるときだけ同期で開きます。進捗の共有や下書きへの意見は非同期で足ります。10人が1時間集まれば、10時間分の作業が止まります。
-
+<div style="margin-top: 18px;">
+この場合、対象の顧客とデザイナーを交えた試用で、購入判断に必要な情報を確かめる案が考えられます。それで営業の目的を満たせるかを聞き、本番公開の範囲と戻す方法は別に決めます。
 </div>
 
-<div style="margin-top: 12px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>判断待ちの多くは、内容ではなく「誰が・いつまでに」が決まっていないことで生まれる。</strong>
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>前提を確かめると、話し合う対象が「出す・出さない」から、<br>「誰に、何を、どこまで確かめてもらうか」へ具体化する。</strong>
 </div>
 
 </div>
@@ -1169,7 +1372,7 @@ _class: transition
 
 <div style="margin-top: 18px;">
 
-システム構成図は、要素同士の接続を表します。ウォードリーマップでは、そこへ<strong>ユーザーのジョブと成熟度</strong>を加えます。答えを自動で出すための図ではありません。どこへ投資するか、既製サービスと自前運用をどう比べるか、何をやめるかを話すために使います。一枚に全部は描きません。知りたいことが違う図を一枚に混ぜると、誰にも読めなくなります。この図は最も抽象度の高い一枚で、詳細は別の図へつなぎます。
+ウォードリーマップでは、<strong>ユーザーのジョブを何が支え、各要素にどんな選択肢があるか</strong>を見ます。どこで試し、どこへ投資し、何を置き換えるかを話すための図です。後で扱うC4モデルは、ソフトウェアの構造を詳しく見るために使います。見る目的が違うので、一方をもう一方の詳しい版とは扱いません。
 
 </div>
 
@@ -1213,11 +1416,40 @@ _class: transition
 
 ---
 
+## 成熟度は、自社の実装年数では決めない
+
+<div style="font-size: 0.75em;">
+
+ウォードリーマップの横軸は、古い技術か新しい技術か、自社で何年使ったかを表すものではありません。その要素の作り方や利用方法が、市場でどれだけ知られ、選べるようになっているかを見ます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>まだ答えを探している要素</strong><br><br>
+どの検索条件が顧客の判断に役立つか、まだ確かめられていない。要望だけで決めず、試用や観察を重ねる。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>既製の選択肢がある要素</strong><br><br>
+検索エンジンや保存領域について、機能・性能・運用条件を比較できる。ただし、既製品が自分たちの必要条件を満たすかは別に確認する。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+位置に意見が割れたら、候補となる製品、実際の利用例、満たせない条件を持ち寄ります。根拠がない位置は仮置きとします。成熟した要素でも、自前運用が適する場合はあります。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>横軸は結論ではない。何を調べ、どの選択肢を比較するかを決める材料です。</strong>
+</div>
+
+</div>
+
+---
+
 ## 検索の例で、図の読み方を確かめる
 
 <div style="font-size: 0.72em;">
 
-先ほどの検索機能を置くと、縦方向にはジョブを支える依存が見え、横方向には要素ごとに適した進め方が見えてきます。
+検索機能の例を置くと、縦方向にはジョブを支える依存が見え、横方向には要素ごとに適した進め方が見えてきます。
 
 <div style="display: flex; gap: 18px; align-items: stretch; margin-top: 10px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 12px 14px; border-radius: 8px; text-align: center;">
@@ -1303,7 +1535,7 @@ _class: transition
 
 ---
 
-## 半年計画の刷新は、ジョブにつながっていなかった
+## 半年計画の刷新は、ジョブを確かめずに始めた
 
 <div style="font-size: 0.75em;">
 
@@ -1314,7 +1546,7 @@ _class: transition
 
 <strong>ウォードリーマップで見ると</strong>
 
-ユーザーのジョブとの関係を説明できない要素は、どれだけ大きくても価値につながっていない。刷新の対象はシステムの内部で、ジョブとの関係は確かめていなかった。
+この半年計画では、刷新の対象をシステム内部の変更に置き、ユーザーが何に困っているかを確かめていませんでした。そのため、変更がどのジョブに結びつくかを説明できませんでした。
 
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
@@ -1340,6 +1572,35 @@ _class: transition
 
 ---
 
+## 刷新では、古いコードが守っていた動作も引き継ぐ
+
+<div style="font-size: 0.75em;">
+
+刷新の目的を決めても、書き直すだけでは元のシステムを引き継げません。長く使われたコードには、利用者の例外的な使い方や、過去の障害への対処が残っています。理由が分からない処理を、不要だと判断するのは早すぎます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>たとえば、検索結果が同じでも</strong><br><br>
+更新の反映が遅くなれば、販売終了の商品を案内するかもしれない。エラーの返し方が変われば、呼び出し元が再試行できなくなるかもしれない。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>置き換える前に残す</strong><br><br>
+守る動作はテストへ。そう決めた理由は設計の記録へ。実際の利用や障害の記録と照らし、必要な動作と古い都合を分ける。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+すべての古い動作を永久に残す必要はありません。変えるなら、誰が依存しているかを確かめ、移行方法を決めます。後半では、C4モデルという構造の表し方を使って、その影響を調べます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>残すべきなのは、利用者が頼っている動作と、その理由。<br>それを確かめられて初めて、実装を変える選択肢が増える。</strong>
+</div>
+
+</div>
+
+---
+
 ## 図に並べると、何を話し合うかが揃う
 
 <div style="font-size: 0.72em;">
@@ -1354,7 +1615,7 @@ PM・デザイナー・エンジニアに、ユーザーと直接話す営業や
 <strong>横軸の右端にある要素</strong><br><span style="color: #555;">既製サービスと自前運用を比較。必要な制御と総費用で決める</span>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>依存の線が集まる要素</strong><br><span style="color: #555;">複数の機能や仕組みが共通して必要とする要素。先ほど測った待ち時間と見比べ、担当するチームを決める</span>
+<strong>依存の線が集まる要素</strong><br><span style="color: #555;">複数の機能や仕組みが共通して必要とする要素。バリューストリームマッピングで測った待ち時間と見比べ、担当するチームを決める</span>
 </div>
 </div>
 
@@ -1366,6 +1627,70 @@ PM・デザイナー・エンジニアに、ユーザーと直接話す営業や
 
 <div style="margin-top: 12px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
 <span style="color: #e65100; font-weight: bold;">図で意見の違いを具体化する。計測で、次に確かめることを選ぶ。</span>
+</div>
+
+</div>
+
+---
+
+## 判断待ちを短くする三つの取り決め
+
+<div style="font-size: 0.72em;">
+
+前提を確かめる対話と並行して、判断の依頼そのものにも形を与えます。判断が止まりやすいのは、誰が決めるのか、何をいつまでに返すのか、返事がないときにどう進めるのかが曖昧なときです。
+
+<div style="display: flex; gap: 16px; align-items: stretch; margin-top: 14px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>決める人を一人にする</strong><br><br>
+その判断を引き受ける権限と責任のある人を決める。詳しい人や影響を受ける人から、判断材料を集める。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>全員一致を待たない</strong><br><br>
+反対意見は記録に残す。決まった後は、その方針で動く。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>依頼に四つを書く</strong><br><br>
+誰に、何を、いつまでに、返事がないときはどうするか。「なるべく早く」は期限ではない。
+</div>
+</div>
+
+<div style="margin-top: 16px;">
+
+判断を目的に集まるなら、決められる人を呼び、必要な情報を先に渡します。進捗共有は文書で済ませ、前提の食い違いが大きいときは対話に時間を使います。10人で1時間話すなら、その10人時で何を確かめるかを明確にします。
+
+</div>
+
+<div style="margin-top: 12px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>判断の依頼は、内容だけでなく「誰が・いつまでに・返事がないとき」を決める。</strong>
+</div>
+
+</div>
+
+---
+
+## 返事がないことを、承認とは扱わない
+
+<div style="font-size: 0.75em;">
+
+判断を待ち続けないためには、期限だけでなく、その後の動き方が必要です。ただし「返事がなければ進める」を、あらゆる変更に適用すると、必要な確認まで省いてしまいます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>確認できるまで止める変更</strong><br><br>
+本番データの削除、閲覧権限の変更、元に戻せない移行など。期限を過ぎたら代わりに判断できる人へ相談し、承認済みとはみなさない。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>合意した範囲で進められる作業</strong><br><br>
+検証環境での比較や、利用者へ影響しない調査など。あらかじめ決めた範囲なら進め、結果を報告する。範囲を超えたら再度相談する。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+「金曜までに判断できなければ、本番公開は保留し、試用の準備だけ進める」のように書きます。全員一致を待たないことも、必要な専門確認や安全上の条件を省くことではありません。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>待ちを減らすとは、確認を飛ばすことではなく、止める範囲と進める範囲を決めること。</strong>
 </div>
 
 </div>
@@ -1451,7 +1776,7 @@ _class: transition
 
 <div style="font-size: 0.7em;">
 
-四つの問いで、作る理由、実際の困りごと、アウトカムまでの時間、代わりの手段を確かめます。実装案を比べる前に、そもそも作る必要があるかを判断します。
+四つの問いで、作る理由、実際の困りごと、期待するアウトカムと確かめ方、代わりの手段を確認します。実装案を比べる前に、そもそも作る必要があるかを判断します。
 
 <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
 <div style="padding: 12px 14px; background-color: #f5f5f5; border-radius: 8px;">
@@ -1463,8 +1788,8 @@ _class: transition
 <span style="color: #555;">抽象的な賛否より、直近の行動を見る。そのとき何を試し、何が決め手だったか</span>
 </div>
 <div style="padding: 12px 14px; background-color: #f5f5f5; border-radius: 8px;">
-<strong>アウトカムを確かめるまでの時間を短くするか</strong><br>
-<span style="color: #555;">一つの作業だけでなく、判断や引き継ぎを含む全体の流れで確かめる</span>
+<strong>期待するアウトカムと、確かめ方を決められるか</strong><br>
+<span style="color: #555;">利用後に何が変われば価値が届いたと言えるか、いつ、誰が確かめるかを先に決める</span>
 </div>
 <div style="padding: 12px 14px; background-color: #f5f5f5; border-radius: 8px;">
 <strong>既存の手段や小さな実験で、先に確かめられないか</strong><br>
@@ -1480,42 +1805,68 @@ _class: transition
 
 ---
 
-## 曖昧な依頼は、AIの数だけ別の実装へ分かれる
+## 書かなかった判断は、実装の中で補われる
 
 <div style="font-size: 0.72em;">
 
-作る理由を決めたら、その判断をAIへ渡します。一人のAIなら、実装中に読み違いを直せます。複数を別々に走らせると、書かなかった判断をそれぞれが埋めます。
+作る理由を決めても、依頼に書かなければ伝わりません。AIは依頼文や既存コードから不足を補って進めることがあります。途中で確認しないまま複数の作業を進めると、異なる前提で実装されても、レビューまで気づけません。
 
 <div style="display: grid; grid-template-columns: 0.85fr auto 1.5fr; gap: 14px; align-items: center; margin-top: 16px;">
 <div style="background-color: #e0e0e0; padding: 18px; border-radius: 8px; text-align: center; font-size: 1.08em;">
-<strong>曖昧な依頼</strong><br><br>
-「検索を速くする」
+<strong>架空の依頼</strong><br><br>
+「検索APIを速くする」
 </div>
 <div style="font-size: 1.6em;">→</div>
 <div style="display: flex; flex-direction: column; gap: 8px;">
-<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>PR A</strong>　APIの応答時間を縮める</div>
-<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>PR B</strong>　検索条件を増やす</div>
-<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>PR C</strong>　検索基盤を置き換える</div>
+<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>案A</strong>　問い合わせを改善し、今の結果を保つ</div>
+<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>案B</strong>　結果を再利用し、更新の反映が遅れる</div>
+<div style="background-color: #f5f5f5; padding: 10px 14px; border-radius: 8px;"><strong>案C</strong>　返す件数を減らし、取得時間を縮める</div>
 </div>
 </div>
 
 <div style="margin-top: 16px;">
-どれも、依頼に反しているとは言い切れません。しかし、ユーザーが情報へたどり着く時間を短くしたいのか、システムの応答時間を短くしたいのかが決まっていなければ、どのPRが正しいかも判断できません。生成する数が増えるほど、レビューで意図を確かめ直す仕事も増えます。
+同じ依頼から考えられる案ですが、利用者への影響は違います。情報の古さや結果の件数を変えてよいかが未決定なら、速くなっただけでは受け入れられません。問題は実装が違うことではなく、許容する変更をチームが決めていないことです。
 </div>
 
 <div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>仕様に前提を書けば、どこに異論があるかを実装前に話せる。AIを増やすのは、その後です。</strong>
+<strong>実装方法の違いと、守る条件の食い違いは別です。<br>決めていないことを、相談なしに決まったことにしない。</strong>
 </div>
 
 </div>
 
 ---
 
-## 仕様を書くと、実装前の判断が表に出る
+## 曖昧さを残すと、レビューが仕様を決める場になる
 
-<div style="font-size: 0.7em;">
+<div style="font-size: 0.75em;">
 
-ここでいう仕様は、新しい文書の種類を増やす話ではありません。Design DocやPRの説明に、AIがコードを書く前に読む判断材料を置きます。仕様を書く時間の中心は、文章を整えることより、誰のジョブをどう満たし、何を守り、どこで止めるかを決めることです。
+先ほどの案Bが完成してから「納期が古くなるのは困る」と分かったら、コードの確認だけでは済みません。許せる遅れを関係者へ聞き、方式を選び直し、実装とテストを直すことになります。
+
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 12px; align-items: center; text-align: center; margin-top: 20px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;"><strong>差分から前提を探す</strong><br>何を変えてよいと<br>判断したのか</div>
+<div>→</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;"><strong>関係者へ確認する</strong><br>その動作で<br>ユーザーが困らないか</div>
+<div>→</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;"><strong>実装し直す</strong><br>変更範囲とテストを<br>組み直す</div>
+</div>
+
+<div style="margin-top: 18px;">
+複数のPRが同じ未決定事項に依存していれば、その判断が終わるまで全部が待ちます。AIがコードを書く時間を短くしても、ここで増えた調査・相談・手戻りは、そのままでは短くなりません。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>文書を書くのは、説明を増やすためではない。<br>実装後に発覚すると高くつく判断を、先に済ませるためです。</strong>
+</div>
+
+</div>
+
+---
+
+## 実装前の判断を、設計文書やPRに書く
+
+<div style="font-size: 0.75em;">
+
+設計の背景と方針を書くDesign Docや、PRの説明に、AIが作業前に読む判断材料を置きます。この発表では、期待する動作と守る条件をまとめたものを<strong>仕様</strong>と呼びます。七つの観点を使って、決め忘れを探します。
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px;">
 <div style="background-color: #f5f5f5; padding: 11px 14px; border-radius: 8px;">
@@ -1536,11 +1887,73 @@ _class: transition
 </div>
 
 <div style="margin-top: 14px;">
-この七つを、作業の大きさに合わせて使います。機能ごとに約800語を上限の目安とし、背景はリンクへ分けます。小さな変更はPRの説明へ、複数のPRにまたがる変更はDesign Docへ書き、リポジトリで更新しながら各PRから参照します。繰り返し使うルールはAGENTS.mdへ分けます。
+七つを毎回すべて埋める必要はありません。小さな変更はPRの説明へ、複数のPRにまたがる変更はDesign Docへ書きます。文量は、一回の作業で判断する範囲に合わせ、背景は必要な箇所へリンクします。
 </div>
 
 <div style="margin-top: 12px; padding: 11px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
 <strong>長く詳しく書けばよいわけではない。曖昧な言葉、隠れた前提、古い情報を減らし、一度で読み切れる量に絞る。</strong>
+</div>
+
+</div>
+
+---
+
+## 「検索を速くする」を、確かめられる依頼へ変える
+
+<div style="font-size: 0.75em;">
+
+先ほどは検索APIの速さを例にしましたが、本当に短くしたいのは、商品を選ぶまでの時間かもしれません。ここでは、候補を絞れず困っていると分かった架空例を考えます。利用者の困りごとと変更の条件をまとめ、効果は仮説として書きます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px;">
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>目標と仮説</strong><br>
+候補が多く比較できない人を助けたい。納期で絞れれば、購入候補を選びやすくなると考える。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>受け入れ基準</strong><br>
+指定した納期に合う商品を表示し、条件を外すと元の結果に戻る。該当なしの場合も表示する。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>守る条件と変更範囲</strong><br>
+閲覧権限は変えない。今回の対象は絞り込み。検索基盤の交換が必要なら、着手前に相談する。
+</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
+<strong>未決定の点と完了の確認</strong><br>
+納期未定の商品を含めるかはPMが確認する。PRにはテスト結果と実際の操作の記録を添える。
+</div>
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>実装の受け入れ条件と、利用後に確かめる効果を分ける。<br>テストが通ったことだけで、「購入候補を選びやすくなった」とは決めない。</strong>
+</div>
+
+</div>
+
+---
+
+## 決めきれないことは、実装ではなく調査として任せる
+
+<div style="font-size: 0.75em;">
+
+最初からすべてを決める必要はありません。納期で絞れると本当に選びやすいのか、今の基盤で実現できるのかが分からないなら、まず確かめる作業を依頼します。採用する実装を作る仕事とは、完了の条件を分けます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>調査・比較を任せる</strong><br><br>
+遅い処理の計測、既存コードの確認、案ごとの効果と費用の比較を求める。仮定と未確認の点も報告してもらう。本番へ反映しない。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>実装を任せる</strong><br><br>
+採用する案と守る条件を決める。権限や結果の意味を変える必要が出たら、推測で進めず相談する。実装方法の細部は提案してもらう。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+複数のAIに異なる案を比較させること自体は役立ちます。その場合も、比較する条件と試す範囲をそろえます。調査で前提が変わったら依頼を更新し、着手済みの作業へ変更点を伝えます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>未決定をなくしてから頼むのではなく、未決定を勝手に確定させない頼み方をする。</strong>
 </div>
 
 </div>
@@ -1558,17 +1971,17 @@ _class: transition
 <div style="font-size: 1.4em;">→</div>
 <div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>AI</strong><br><span style="color: #555;">調査結果と計画を出す</span></div>
 <div style="font-size: 1.4em;">→</div>
-<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>人</strong><br><span style="color: #555;">仕様と照らしてから着手を決める</span></div>
+<div style="padding: 14px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>チーム</strong><br><span style="color: #555;">計画が仕様を満たすか確認する</span></div>
 </div>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px;">
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>計画が仕様から外れている</strong><br><br>
-AIが意図を読み違えたか、必要な情報を渡せていません。計画か、参照する情報を直します。
+読み違い、情報不足、実現上の制約を確かめます。必要な情報を補うか、変更が必要な条件を相談します。
 </div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>計画は仕様どおりだが、望ましくない</strong><br><br>
-依頼した内容に問題があります。ジョブやアウトカムへ戻り、仕様そのものを見直します。
+仕様に必要な条件が抜けているか、選んだ方法に問題がないかを確かめます。ジョブやアウトカムへ戻り、依頼と計画のどちらを直すかを決めます。
 </div>
 </div>
 
@@ -1595,11 +2008,40 @@ AIが意図を読み違えたか、必要な情報を渡せていません。計
 </div>
 
 <div style="margin-top: 20px;">
-大きな作業を一度に実装すると、最初の読み違いが後続の変更へ広がります。まず作る理由を確かめ、次に構造を決め、最後に小さく動くところまで作ります。区切りごとに結果を確かめてから、次へ進みます。
+大きな作業を一度に実装すると、最初の読み違いが後続の変更へ広がります。調査、構造を決める変更、動く最小単位の実装へ分け、区切りごとに結果を確かめてから次へ進みます。
 </div>
 
 <div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
 <strong>計画は方向をそろえる。検証は、実際に起きたことを確かめる。両方を混ぜない。</strong>
+</div>
+
+</div>
+
+---
+
+## テストが通っても、期待する動作が違えば困る
+
+<div style="font-size: 0.75em;">
+
+AIが実装とテストを両方作る場合、同じ読み違いが両方に入ることがあります。たとえば、納期未定の商品を検索結果へ含めるか決まっていないのに、実装でもテストでも「含める」としていれば、テストは通ってしまいます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>期待する結果の根拠を確かめる</strong><br><br>
+チームが合意した動作、既存の外部仕様、過去の不具合を根拠にする。新しい実装が返した値を、そのまま正解にしない。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>困る場面でも確かめる</strong><br><br>
+納期未定、該当商品なし、閲覧権限なし、接続先が応答しない場合を試す。必要な動作を崩したら、検査が失敗するかも確認する。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+別のAIを確認役にしても、同じ曖昧な依頼だけを渡せば十分とは限りません。何を根拠に正しいと判断したかを見ます。そのうえで、商品を選びやすくなったかは、テストとは別に利用者と確かめます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>検査の成功だけでなく、その検査が何を正しいと見なしているかを確認する。</strong>
 </div>
 
 </div>
@@ -1638,6 +2080,35 @@ AIが意図を読み違えたか、必要な情報を渡せていません。計
 
 ---
 
+## 任せる範囲と、同時に動かす数は別に決める
+
+<div style="font-size: 0.75em;">
+
+一つの作業をAIに任せられることと、複数の作業を同時に受け入れられることは別です。実装が並行して進んでも、判断とレビューが一人へ集まれば、そこで待ちが増えます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>一件を、どこまで任せるか</strong><br><br>
+変更範囲、失敗の見つけ方、途中で相談する条件を決める。難しい作業でも、検証環境で結果を確かめられるなら任せやすい。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>何件を、同時に進めるか</strong><br><br>
+作業同士が同じ判断やファイルを奪い合わないか、戻ってきた結果を確認できるかで決める。独立していなければ、先に順番を決める。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+未確認の差分や未回答の質問が増え続けるなら、同時進行を減らします。ここでも見るのは、動かしているAIの数より、確認を終えて利用できる状態になった仕事です。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>任せる量は、生成できる量と、チームが確認して引き受けられる量を見て決める。</strong>
+</div>
+
+</div>
+
+---
+
 ## 同じ見落としは、コード・Lint・テストで防ぐ
 
 <div style="font-size: 0.72em;">
@@ -1651,7 +2122,7 @@ AIが作る量が増えるほど、人が同じ見落としを毎回指摘する
 </div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>構造規約をLintで止める</strong><br><br>
-一般的な規約は既存のLintを使う。コードベース固有で、構文から判定できる規約は自作し、CIで実行する。
+Lintはコードの規約違反を機械的に見つける仕組みです。既存の検査を使い、固有の規約は必要に応じて自作し、変更時に自動実行します。
 </div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>振る舞いをテストで固定する</strong><br><br>
@@ -1671,16 +2142,16 @@ AIが作る量が増えるほど、人が同じ見落としを毎回指摘する
 
 ---
 
-## コンテキストに残すのは、機械では決められないこと
+## コンテキストには、判断の理由と作業の前提を残す
 
 <div style="font-size: 0.75em;">
 
-ここでいう<strong>コンテキスト</strong>は、AIが作業前に読むAGENTS.md、Design Doc、PRの説明です。誤用はコードの構造で防ぎ、構文や実行結果から判定できる規則はLint・テストへ移し、危険な操作は権限で止めます。そこへ移せない判断だけを、読む範囲と期間に合わせて残します。
+ここでいう<strong>コンテキスト</strong>は、依頼文、参照するコードや文書、実行結果など、AIが判断に使う情報です。文章の注意だけに頼らず、規則はLint・テストへ移し、操作できる範囲は権限で制限します。文書には、実装だけでは分からない理由や作業手順を残します。
 
 <div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
 <strong>リポジトリ全体で繰り返す前提</strong><br><br>
-対象とするディレクトリ、ビルド手順、役割分担など、作業をまたいで使う情報はAGENTS.mdへ短く残す。
+作業前に読むAGENTS.mdには、対象の範囲、ビルド手順、役割分担を短く残す。既存のコードから読み取れる説明を重ねすぎない。
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
 <strong>作業固有の判断</strong><br><br>
@@ -1689,11 +2160,11 @@ AIが作る量が増えるほど、人が同じ見落としを毎回指摘する
 </div>
 
 <div style="margin-top: 22px;">
-ソフトウェアの変更と一緒にコンテキストも更新します。使われなくなった情報は削除し、現在の判断に必要な情報が埋もれないようにします。
+ソフトウェアの変更と一緒に文書も更新します。長い作業の引き継ぎでは、目的、確認済みの結果、未解決の点、次の確認を残します。古い指示を現行の方針と混ぜず、必要な情報へたどり着けるようにします。
 </div>
 
 <div style="margin-top: 18px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>コンテキストは、機械では決められない判断を、人とAIへ渡すために使う。</strong>
+<strong>理由と未決定の点を文書で渡し、守れる規則は実行環境でも守る。</strong>
 </div>
 
 </div>
@@ -1704,7 +2175,7 @@ AIが作る量が増えるほど、人が同じ見落としを毎回指摘する
 
 <div style="font-size: 0.75em;">
 
-AIへ任せて作れる量が増えても、機能を消す判断は自動化できません。加えるときは、期待する新しい動作に確認を絞れます。消すときは、<strong>今ある大切な動作を失わないこと</strong>を確かめます。その判断材料は、コードだけには残っていません。
+AIへ任せて作れる量が増えても、機能を消してよいかはコードだけでは決められません。追加では新しい動作と既存への影響を確かめます。削除ではさらに、<strong>誰が今の動作を頼りにしているか</strong>を調べます。その判断材料は、コードだけには残っていません。
 
 <div style="display: flex; gap: 18px; align-items: stretch; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -1743,15 +2214,15 @@ AIへ任せて作れる量が増えても、機能を消す判断は自動化で
 </div>
 
 <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; margin-top: 18px; text-align: center;">
-<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>新しい利用を止める</strong></div>
+<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>影響範囲を確かめる</strong></div>
 <div style="font-size: 1.3em;">→</div>
-<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>関係者へ知らせる</strong></div>
+<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>関係者へ知らせ、新規利用を止める</strong></div>
 <div style="font-size: 1.3em;">→</div>
-<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>元に戻せる状態で止める</strong></div>
+<div style="padding: 12px 10px; background-color: #f5f5f5; border-radius: 8px;"><strong>元に戻せる状態で停止する</strong></div>
 </div>
 
 <div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>重要性を確かめた後、C4モデルで構造上の影響を絞る。両方が揃ってから削除する。</strong>
+<strong>利用者への重要性と構造上の影響を確かめ、関係者へ知らせてから段階的に止める。</strong>
 </div>
 
 </div>
@@ -1762,14 +2233,14 @@ AIへ任せて作れる量が増えても、機能を消す判断は自動化で
 
 <div style="font-size: 0.72em;">
 
-機能を消した影響を確かめるとき、最初からコード全体を追う必要はありません。<strong>C4モデル</strong>は、システムコンテキスト、コンテナ、コンポーネント、コードの四段階で、ソフトウェアの構造を表します。図の色や形より先に、どの詳しさを話しているかをそろえます。まず全体を見て、判断に必要な箇所だけ詳しくします。
+機能を消した影響を確かめるとき、まず全体を見て、必要な箇所だけ詳しくします。<strong>C4モデル</strong>は、システムと周囲の関係、内部のアプリとデータ、アプリ内の役割のまとまり、具体的なコードという四段階で構造を表します。それぞれをシステムコンテキスト、コンテナ、コンポーネント、コードと呼びます。
 
 <div style="text-align: center; margin-top: 8px;">
 <img src="../../assets/images/2026/value-flow-across-roles/c4-static-structure.png" alt="システムコンテキスト、コンテナ、コンポーネント、コードへ段階的に詳しくするC4モデルの概観" style="height: 264px; max-width: 100%; object-fit: contain;">
 </div>
 
 <div style="margin-top: 8px; padding: 10px 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>この発表では、上の二つを使います。システムコンテキスト図で「誰に影響するか」を、コンテナ図で「どのアプリやデータに影響するか」を確かめます。</strong>
+<strong>四段階すべてを描く必要はありません。この発表では、上の二つを中心に、<br>「誰に影響するか」「どのアプリやデータに影響するか」を確かめます。</strong>
 </div>
 
 </div>
@@ -1790,7 +2261,7 @@ AIへ任せて作れる量が増えても、機能を消す判断は自動化で
 
 <div style="flex: 0.85;">
 
-最も大きな範囲で見るのが、<strong>システムコンテキスト図</strong>です。対象システムを一つの箱として扱い、その周りに利用者と外部システムを置きます。
+対象システムと周囲の関係を見るのが、<strong>システムコンテキスト図</strong>です。対象システムを一つの箱として扱い、その周りに利用者と外部システムを置きます。
 
 <div style="margin-top: 16px; padding: 14px; background-color: #f5f5f5; border-radius: 8px;">
 <strong>最初に確かめること</strong><br>
@@ -1845,17 +2316,212 @@ Dockerコンテナに限りません。Webアプリ、API、バッチ、デー�
 
 ---
 
+## 検索の構造を、変更と相談の範囲へつなげる
+
+<div style="font-size: 0.75em;">
+
+銀行システムの図で見た読み方を、検索の架空例へ戻して使います。対象は商品検索システムです。検索APIの内部を変えたいとき、接続先と、影響を受ける利用者を確かめます。
+
+<div style="border: 2px solid #999; border-radius: 8px; padding: 14px; margin-top: 16px;">
+<div style="text-align: center; margin-bottom: 12px;"><strong>商品検索システム：コンテナ図の抜粋</strong></div>
+<div style="display: grid; grid-template-columns: 1fr 0.7fr 1fr 0.7fr 1fr; gap: 8px; align-items: center; text-align: center;">
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>検索画面</strong><br>Webアプリ<br>条件を入力する</div>
+<div>検索を依頼<br>→<br>HTTPS</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>検索API</strong><br>アプリ<br>条件に合う商品を返す</div>
+<div>商品を照会<br>→<br>HTTPS</div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>検索用データ</strong><br>データストア<br>検索対象を保持する</div>
+</div>
+</div>
+
+<div style="margin-top: 16px;">
+矢印は依頼する向きで、応答は省略しています。画面が使う結果の形式やエラーを保てるか、検索用データを誰が更新するかを確認します。この抜粋では利用者・商品管理・運用の経路を省いているため、削除前にはそれらも調べます。
+</div>
+
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>図から「変える範囲」「保つ接点」「確かめる相手」を取り出す。<br>描かれていない関係を、存在しない関係とは扱わない。</strong>
+</div>
+
+</div>
+
+---
+
+## 同じ箱と矢印を、同じ意味で読めるようにする
+
+<div style="font-size: 0.75em;">
+
+検索の図を共有しても、「検索API」を独立して動くアプリと読む人と、アプリ内の関数と読む人では、変更の見積もりが変わります。見た目をそろえる前に、何を表しているかをそろえます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>箱には、種類と役割を書く</strong><br><br>
+アプリなのか、データストアなのか、アプリ内の処理のまとまりなのか。「検索条件を受け付ける」のように役割も添える。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>矢印には、関係の内容を書く</strong><br><br>
+単に「連携」ではなく、「検索条件を送る」「商品更新を通知する」と書く。依頼の向きなのか、データが流れる向きなのかも示す。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+システムの境界と、チームの担当範囲は必ずしも一致しません。複数チームが変更するなら、データの意味や外部への応答を誰が判断するかも確認します。図の枠だけで担当者を推測しません。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>図の目的は、同じ絵を見せることではなく、違う解釈に気づけるようにすること。</strong>
+</div>
+
+</div>
+
+---
+
+## 構造だけで足りないときは、一回の動作を追う
+
+<div style="font-size: 0.75em;">
+
+コンテナ図は何がつながるかを表します。順番や失敗時の扱いを確かめたいときは、<strong>動的図</strong>を使います。一つの操作について、どの要素がどの順番でやり取りするかを表す図です。
+
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
+<div style="background-color: #f5f5f5; padding: 12px 16px; border-radius: 8px;"><strong>1. 検索画面 → 検索API</strong>　指定した納期で検索を依頼する。</div>
+<div style="background-color: #f5f5f5; padding: 12px 16px; border-radius: 8px;"><strong>2. 検索API → 検索用データ</strong>　条件に合う商品を問い合わせる。</div>
+<div style="background-color: #f5f5f5; padding: 12px 16px; border-radius: 8px;"><strong>3. 検索用データ → 検索API → 検索画面</strong>　結果を返し、画面へ表示する。</div>
+</div>
+
+<div style="margin-top: 16px;">
+この順序を動的図にすると、2で応答がない場合に、どこで待つのをやめるか、画面へ何を返すかを話せます。実際の時間はログや計測で確認します。サーバーの配置や切り替え方を知りたいなら、稼働環境を表す<strong>配置図</strong>を別に使います。
+</div>
+
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>構造のつながり、処理の順番、実際の待ち時間を分ける。<br>図を増やすのは、いまの図では判断に必要なことが分からないとき。</strong>
+</div>
+
+</div>
+
+---
+
+## 応答を待たない連携にも、依存は残る
+
+<div style="font-size: 0.75em;">
+
+先ほどの検索例では、呼び出した相手の応答を待ちました。一方、商品情報の更新は、通知を蓄えておき、検索側が後から取り込む方法もあります。こうした<strong>非同期の連携</strong>でも、変更の相談が不要になるわけではありません。
+
+<div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 12px; align-items: center; text-align: center; margin-top: 20px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;"><strong>商品管理アプリ</strong><br>商品更新を通知する</div>
+<div>→</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;"><strong>商品更新キュー</strong><br>通知を蓄える</div>
+<div>→</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;"><strong>検索更新アプリ</strong><br>通知を取り込む</div>
+</div>
+
+<div style="margin-top: 18px;">
+架空例の矢印は、通知が流れる向きです。通知の項目や意味を変えると、受け取る側も変更が必要になる場合があります。止める前には、受信者、処理待ちの通知、失敗時の再処理、データ形式を変更する担当を確かめます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>応答を待たないことと、相手に影響せず変えられることは違う。<br>「連携基盤」の一箱で済ませず、何を誰へ渡すかを見る。</strong>
+</div>
+
+</div>
+
+---
+
+## 検索の速さと、データ更新の反映は別に見る
+
+<div style="font-size: 0.75em;">
+
+商品更新を後から取り込む検索では、結果がすぐ返っても、変更前の納期が表示されることがあります。<strong>応答時間</strong>と、更新が検索へ届くまでの<strong>反映時間</strong>は別です。どちらも、ユーザーが判断に使える情報かどうかに関わります。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>読むためのデータを用意する</strong><br><br>
+商品管理のデータから、検索に必要な項目をまとめたデータを作る。検索は速くしやすくなるが、更新を取り込み続ける必要がある。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>どこで何を確かめるかを決める</strong><br><br>
+検索時に許せる情報の古さと、注文確定時に確認する在庫・納期を分ける。反映が遅れた場合の表示と対応も決める。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+許せる遅れは、エンジニアだけでは決められません。営業・CSが知る顧客の業務、デザイナーが考える表示、PMが判断する優先順位と合わせます。実際の反映時間と、古い情報で困った利用を確認します。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>速く返すだけでなく、その情報でユーザーが判断してよいかを確かめる。</strong>
+</div>
+
+</div>
+
+---
+
+## キャッシュには、更新と復旧の設計も要る
+
+<div style="font-size: 0.75em;">
+
+<strong>キャッシュ</strong>は、取得や計算の結果を保存して再利用する仕組みです。毎回同じ処理をせずに済みますが、元のデータが変わると、保存した結果が古くなることがあります。検索結果を保存するなら、その扱いまで設計します。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>いつ使わなくするか</strong><br><br>
+保存した結果の有効期限、商品更新時に消す範囲、更新に失敗した場合の対応を決める。閲覧権限や顧客ごとの条件が違う結果を混ぜない。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>使えないときにどうするか</strong><br><br>
+保存した結果がないときや、キャッシュが停止したときの動作を決める。すべての要求を元のDBへ流しても、処理しきれるとは限らない。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+利用できた割合だけでなく、応答時間、情報の古さ、DB負荷、運用の手間を見ます。今の問い合わせや索引の改善で足りるなら、保存先を増やさない選択もあります。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>減らせる処理と、増える更新・復旧の仕事を一緒に比べる。</strong>
+</div>
+
+</div>
+
+---
+
+## 図で決めた境界を、コードと確認手順につなげる
+
+<div style="font-size: 0.75em;">
+
+読み取り用データやキャッシュを加えたら、取得と更新の経路も図へ反映します。図では検索APIを経由するはずなのに、画面からデータへ直接アクセスしていたら、図だけでは影響を判断できません。人にもAIにも、図と実装が食い違う状態を前提として渡さないようにします。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>図から実装を確かめられるようにする</strong><br><br>
+アプリや処理の名前と、対応するリポジトリ・ディレクトリをつなぐ。接続先はコードや設定でも確認する。現状と変更案は分けて示す。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>守る境界は、検査や権限にも反映する</strong><br><br>
+禁止する依存はLintや構造のテストで検出する。データへの直接アクセスは権限でも制限する。必要な例外は、理由と見直す条件を残す。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+図は変更と一緒に更新します。細部まで手書きで複製せず、コードから得られる情報は必要なときに生成します。AIには画像だけでなく、対応するコードや構成情報も渡し、推測と確認済みの事実を分けさせます。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>図は判断を助ける。境界を守るのは、実装・権限・検査と、それを見直す人。</strong>
+</div>
+
+</div>
+
+---
+
 ## C4図だけでは、「残す・消す」は決められない
 
 <div style="font-size: 0.75em;">
 
-C4図が受け持つのは、現在の構造と依存関係です。ジョブが重要か、価値が届くまでどこで待つか、なぜその設計を選んだかは、ここまで使ってきた図や記録で確かめます。
+C4の構造図で、仕組みと依存関係を確かめます。必要なら動的図や配置図を補います。それでも、ジョブの重要性、実際の待ち時間、設計を選んだ理由は、別の記録や対話から確かめる必要があります。
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px;">
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>バリューストリーム</strong><br><span style="color: #555;">ジョブの発見からアウトカムの確認まで、どこで作業し、どこで待つかを見る</span></div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>バリューストリームマッピング</strong><br><span style="color: #555;">ジョブの発見からアウトカムの確認まで、どこで作業し、どこで待つかを見る</span></div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>ウォードリーマップ</strong><br><span style="color: #555;">ジョブに必要な要素と成熟度を並べ、どこへ投資し、どう運用するかを考える</span></div>
 <div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>C4図</strong><br><span style="color: #555;">誰が使い、どの外部システム、アプリ、データが依存しているかを確かめる</span></div>
-<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>利用記録・Design Doc・必要ならADR</strong><br><span style="color: #555;">実際の利用と、設計した理由、見直す条件を残す</span></div>
+<div style="background-color: #f5f5f5; padding: 14px; border-radius: 8px;"><strong>利用記録・Design Doc・必要ならADR</strong><br><span style="color: #555;">実際の利用と設計した理由を残す。ADRは、大きな設計判断を後から単独で参照したいときに使う</span></div>
 </div>
 
 <div style="margin-top: 18px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
@@ -1866,29 +2532,161 @@ C4図が受け持つのは、現在の構造と依存関係です。ジョブが
 
 ---
 
-## 残すか消すかは、利用と構造をそろえて決める
+## 調べた結果から、残す・縮小・置き換える・消すを選ぶ
+
+<div style="font-size: 0.72em;">
+
+C4図で構造上の影響を確かめたら、利用者にとっての重要性と組み合わせます。この二つを分けて見ると、すぐに消せるものと、先に代替手段や依存の整理が必要なものを区別できます。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px;">
+<div style="background-color: #f5f5f5; padding: 13px 15px; border-radius: 8px;">
+<strong>重要性が高い × 影響が大きい</strong><br>
+<span style="color: #555;">残すか、代替手段へ段階的に移す。停止は最後にする。</span>
+</div>
+<div style="background-color: #f5f5f5; padding: 13px 15px; border-radius: 8px;">
+<strong>重要性が高い × 影響が小さい</strong><br>
+<span style="color: #555;">機能は残す。複雑さを減らせるなら、実装だけを簡素にする。</span>
+</div>
+<div style="background-color: #f5f5f5; padding: 13px 15px; border-radius: 8px;">
+<strong>重要性が低い × 影響が大きい</strong><br>
+<span style="color: #555;">先に依存を外すか、代替手段へ置き換える。その後で消す。</span>
+</div>
+<div style="background-color: #f5f5f5; padding: 13px 15px; border-radius: 8px;">
+<strong>重要性が低い × 影響が小さい</strong><br>
+<span style="color: #555;">関係者へ知らせ、元に戻せる状態を保ちながら消す。</span>
+</div>
+</div>
+
+<div style="margin-top: 14px;">
+Design DocやADRには、選んだ理由と見直す条件を残します。図や文書は、ソフトウェアの修正と一緒に更新できる詳しさへ絞ります。過去の判断は履歴として残し、現在の方針と区別します。
+</div>
+
+<div style="margin-top: 14px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>利用が少ないだけでは消さない。重要性と構造上の影響をそろえて、止め方を選ぶ。</strong>
+</div>
+
+</div>
+
+---
+
+## 機能を残して、実装だけを置き換えることもできる
 
 <div style="font-size: 0.75em;">
 
-C4図だけで分かるのは構造上の影響です。同じ機能について、利用者にとっての重要性と並べて初めて、残す、縮小する、置き換える、消すという判断ができます。
+ユーザーのジョブに必要でも、今の実装を維持し続ける必要があるとは限りません。検索基盤を置き換えるなら、利用者と呼び出し元が頼る動作を、新旧のどちらでも確かめられるようにします。
 
-<div style="display: flex; gap: 20px; align-items: stretch; margin-top: 20px;">
-<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
-<strong>利用者にとっての重要性</strong><br><br>
-ジョブ、アウトカム、利用記録、問い合わせを見る。利用回数が少ない場合も、特定の業務や障害時に欠かせないかを確かめる。
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>保つ動作を先に決める</strong><br><br>
+納期条件と閲覧権限が守られるか。更新が必要な時間内に反映されるか。応答がないとき、利用者へ説明できるか。
 </div>
-<div style="flex: 1; background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
-<strong>構造上の影響</strong><br><br>
-C4図で、利用者、外部システム、アプリ、データの依存を見る。止めたときの代替経路と、元に戻す方法も確かめる。
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>新旧を同じ条件で比べる</strong><br><br>
+同じ入力で結果と応答時間を比べる。過去の不具合も再現する。差が出たら、改善なのか、必要な動作の欠落なのかを判断する。
 </div>
 </div>
 
 <div style="margin-top: 18px;">
-Design DocやADRには、選んだ理由と見直す条件を残します。図や文書は、ソフトウェアの修正と一緒に更新できる詳しさへ絞ります。古い記録を判断材料に残すくらいなら、更新するか、削除します。
+内部の関数名が変わるだけで壊れるテストと、利用者が頼る動作を確かめるテストは役割が違います。後者を新旧へ共通に使い、実装を変えても必要な条件が守られるかを確認します。
 </div>
 
 <div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
-<strong>重要性は利用者に確かめる。影響範囲は構造を見て確かめる。両方が揃ってから決める。</strong>
+<strong>生成し直せることと、安全に置き換えられることは別。<br>守る動作を、置き換えるコードの外でも確かめられるようにする。</strong>
+</div>
+
+</div>
+
+---
+
+## データ移行は、コピーが終わっても終わらない
+
+<div style="font-size: 0.75em;">
+
+検索用データを新しい保存先へ移す間も、商品の更新は続きます。コピーした件数が一致しただけでは、その間の更新や削除まで反映されたとは分かりません。移行中にどちらへ書き、どちらから読むかを決めます。
+
+<div style="display: flex; gap: 16px; align-items: stretch; margin-top: 18px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>更新を取りこぼさない</strong><br><br>
+既存データを移し、その間の更新・削除も追いつかせる。処理が重複したり順番が変わったりしても、結果が壊れないかを試す。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>読んだ結果を比べる</strong><br><br>
+件数だけでなく、納期、閲覧権限、削除済みの商品、更新の反映を比べる。違いを説明できるまで、切り替える範囲を広げない。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>戻した後も更新を失わない</strong><br><br>
+旧環境へ戻すなら、切り替え後の更新も扱えるかを確認する。古いコピーへ戻すだけでは、新しい変更を失う場合がある。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+新旧の両方へ書けば安全、とは限りません。片方だけ失敗した場合の検出と修復が必要です。書き込みを止められるなら、停止時間を合意して移す方が単純なこともあります。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>データを移すだけでなく、移している間と、戻すときの動作を確かめる。</strong>
+</div>
+
+</div>
+
+---
+
+## 切り替えは、影響と戻せる範囲に合わせて進める
+
+<div style="font-size: 0.75em;">
+
+新しい実装がテストを通っても、本番のすべての使われ方を確かめたわけではありません。画面の一部を試す変更と、全利用者が使う保存形式の変更では、必要な確認と観察期間が変わります。
+
+<div style="display: flex; gap: 16px; align-items: center; margin-top: 18px;">
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>限った範囲で試す</strong><br><br>
+まず検証環境で確認し、本番は対象を絞る。検索結果の差、エラー、利用者のつまずきを見る。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>戻す条件を決める</strong><br><br>
+どんな異常で止め、誰が判断するかを決める。旧実装へ戻す手順を、切り替え前に確かめる。
+</div>
+<div style="flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 8px;">
+<strong>データも戻せるかを見る</strong><br><br>
+新実装が書いたデータを旧実装が読めるか確認する。コードを戻すだけで済まない変更は、移行方法を別に検証する。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+本番で分かった例外は、その場の修正だけで終わらせず、テストと設計の理由へ戻します。次の人やAIが同じ箇所を変えても、必要な動作を失わないためです。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>変更の小ささは、差分の行数では決まらない。<br>影響を受ける範囲と、失敗を見つけて戻す方法で決める。</strong>
+</div>
+
+</div>
+
+---
+
+## 置き換えた後は、古い経路を片付ける
+
+<div style="font-size: 0.75em;">
+
+新旧を切り替えられる状態は、移行中には役立ちます。ただし、古いAPI、設定、データ形式を残し続けると、次の変更でも両方を理解し、確認する必要があります。
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;">
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>廃止できる条件を確かめる</strong><br><br>
+呼び出し元の移行、定期処理の利用、古いデータの扱いを確認する。戻すために残す期間と、その後の復旧方法も決める。
+</div>
+<div style="background-color: #f5f5f5; padding: 16px; border-radius: 8px;">
+<strong>役目を終えたものを減らす</strong><br><br>
+古い経路と設定を削除し、現行の図と手順を更新する。必要な動作のテストと、移行を決めた理由は残す。
+</div>
+</div>
+
+<div style="margin-top: 18px;">
+過去の判断記録は、現在も従う指示とは分けて保存します。古い方針には変更先を示し、なぜ切り替えたかを後から追えるようにします。履歴まで消すと、次の変更で同じ理由を調べ直すことになります。
+</div>
+
+<div style="margin-top: 16px; padding: 12px; background-color: #e0e0e0; border-radius: 8px; text-align: center;">
+<strong>新しく動くだけで終わらせず、次の変更で読むもの・守るものを減らす。</strong>
 </div>
 
 </div>
@@ -1899,7 +2697,7 @@ Design DocやADRには、選んだ理由と見直す条件を残します。図�
 
 <div style="font-size: 0.72em;">
 
-機能を消すのが難しいからこそ、削除の判断を後回しにしません。作る前に置いた前提も、利用や市場の変化で古くなります。先ほどの半年計画では、4ヶ月目まで中止を判断できませんでした。やめる条件と判断日を、機能を作る前に書いておけば、継続か中止かをもっと早く決められます。「2ヶ月の調査が終わる7月16日に、続けるかを決める」のように。
+機能を消すのが難しいからこそ、削除の判断を後回しにしません。作る前に置いた前提も、利用や市場の変化で古くなります。半年計画の例では、4ヶ月目まで中止を判断できませんでした。やめる条件と判断日を、機能を作る前に書いておけば、継続か中止かをもっと早く決められます。「2ヶ月の調査が終わる7月16日に、続けるかを決める」のように。
 
 <div style="display: flex; gap: 16px; align-items: stretch; margin-top: 14px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -1909,13 +2707,13 @@ Design DocやADRには、選んだ理由と見直す条件を残します。図�
 <strong>想定したジョブには使われていない</strong><br><span style="color: #555;">別のジョブを確かめるか、機能を消す</span>
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
-<strong>維持が流れを遅くしている</strong><br><span style="color: #555;">変更のたびにレビュー範囲と障害を増やす。消す</span>
+<strong>維持費や変更リスクが、得られる価値を上回る</strong><br><span style="color: #555;">代替手段と元に戻す方法を確かめ、縮小・置き換え・削除を選ぶ</span>
 </div>
 </div>
 
 <div style="margin-top: 14px;">
 
-判断日には、利用記録、問い合わせ、依存先、障害時の代替手段を見直します。条件を満たしていなければ、同じ形で続けるのではなく、縮小・停止・置き換えを選びます。使った費用の大きさは、続ける理由になりません。
+判断日には、利用記録、問い合わせ、依存先、障害時の代替手段を見直します。やめる条件に当てはまれば、縮小・停止・置き換えを選びます。材料が足りなければ、追加で確かめることと次の判断日を決めます。使った費用の大きさだけを、続ける理由にはしません。
 
 </div>
 
@@ -1931,7 +2729,7 @@ Design DocやADRには、選んだ理由と見直す条件を残します。図�
 
 <div style="font-size: 0.72em;">
 
-AI支援で、動くコードを書く時間は短くなり、個人が作れる量も増えます。ただし、ジョブの発見から結果の確認までには、実装以外の時間があります。
+AI支援で実装時間が短くなっても、ジョブの発見から結果の確認までには、実装以外の時間があります。増えたアウトプットを受け入れる仕事と、利用後の結果を確かめる仕事も一緒に見ます。
 
 <div style="display: flex; gap: 14px; align-items: stretch; margin-top: 16px;">
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
@@ -1949,14 +2747,14 @@ AI支援で、動くコードを書く時間は短くなり、個人が作れる
 </div>
 
 <div style="margin-top: 16px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
-<span style="color: #e65100; font-weight: bold;">30/70の例では、実作業を半分にしても全体は15%しか縮まらない。<br>速くなった実感と届いた価値が噛み合わないのは、実装の外にある待ちが残るから。</span>
+<span style="color: #e65100; font-weight: bold;">30/70の例では、実作業を半分にしても全体は15%しか縮まらない。<br>実装の外に待ちが残り、アウトプットの増加だけではアウトカムの変化が分からない。</span>
 </div>
 
 </div>
 
 ---
 
-## まとめ　作るべきかは流れとジョブで決める
+## まとめ　作る・任せる・やめるを決める
 
 <div style="font-size: 0.72em;">
 
@@ -1973,12 +2771,12 @@ AI支援で、動くコードを書く時間は短くなり、個人が作れる
 </div>
 <div style="flex: 1; background-color: #f5f5f5; padding: 14px; border-radius: 8px;">
 <strong>やめる</strong><br><br>
-利用者への重要性と構造上の影響を調べる。やめる条件と判断日を、作る前に決める。
+利用者への重要性と構造上の影響を調べる。必要な動作を保ち、置き換えや削除を選ぶ。条件と判断日は作る前に決める。
 </div>
 </div>
 
 <div style="margin-top: 16px; padding: 14px; background-color: #e0e0e0; border-radius: 8px; text-align: center; font-size: 1.1em;">
-<span style="color: #e65100; font-weight: bold;">AIは「どう作るか」の候補を増やす。<br>チームは「何を作るか」「どこまで任せるか」「いつやめるか」を決め、計画と結果を照らす。</span>
+<span style="color: #e65100; font-weight: bold;">AIは「どう作るか」の候補を増やす。<br>役割ごとの前提を図と対話で確かめ、チームが「作る・任せる・やめる」を決める。</span>
 </div>
 
 </div>

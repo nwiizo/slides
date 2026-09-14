@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">成果物と、それを生む条件の両方を直す</title>
+  <desc id="desc">実行・検証・運用で見つけた不一致を記録から調べる。成果物の修正と、情報・指示・権限・評価の修正へ分け、再実行でどちらの改善も確かめる。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g stroke="#999" stroke-width="2"><rect x="10" y="62" width="240" height="113" rx="8" fill="#f5f5f5"/><rect x="305" y="62" width="260" height="113" rx="8" fill="#f5f5f5"/><rect x="655" y="9" width="435" height="89" rx="8" fill="#fff"/><rect x="655" y="133" width="435" height="89" rx="8" fill="#e0e0e0"/></g>
+    <g font-size="27" font-weight="700"><text x="130" y="107">不一致を見つける</text><text x="435" y="107">原因を確かめる</text><text x="882" y="47">今回の成果物を直す</text><text x="882" y="171">次の実行の条件を直す</text></g>
+    <g font-size="23" fill="#555"><text x="130" y="146">実行・検証・運用</text><text x="435" y="146">期待と実際の記録</text><text x="882" y="80">動作・設計・依存を修正する</text><text x="882" y="204">情報・指示・権限・評価を更新する</text></g>
+    <path d="M1096 53 H1107 V251 H882 M1096 177 H1107" fill="none" stroke="#666" stroke-width="2.5"/>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M261 119 H293"/><path d="M577 119 H610 V53 H644"/><path d="M610 119 V177 H644"/><path d="M882 251 H130 V187"/></g>
+    <rect x="290" y="232" width="386" height="37" fill="#fff"/><text x="483" y="258" font-size="22">再実行で、対策が効くか確かめる</text>
+  </g>
+</svg>

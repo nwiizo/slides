@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">意図的に引き受けたかと、理由を使えるかは別の軸</title>
+  <desc id="desc">縦は負債と認識して引き受けたか、横は目的・制約・判断理由を後から使えるか。意図的な負債でも理由が使えない場合があり、負債と認識せず選んだ設計でも当時の理由を残せる。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <text x="715" y="29" font-size="26" font-weight="700">目的・制約・判断理由を</text>
+    <text x="515" y="65" font-size="25">後から使える</text><text x="915" y="65" font-size="25">後から使えない</text>
+    <g stroke="#999" stroke-width="2"><rect x="325" y="80" width="380" height="94" rx="7" fill="#f5f5f5"/><rect x="725" y="80" width="380" height="94" rx="7" fill="#e0e0e0"/><rect x="325" y="195" width="380" height="94" rx="7" fill="#f5f5f5"/><rect x="725" y="195" width="380" height="94" rx="7" fill="#e0e0e0"/></g>
+    <g font-size="25" font-weight="700"><text x="158" y="116">負債を認識して</text><text x="158" y="150">引き受けた</text><text x="158" y="231">当時は負債と</text><text x="158" y="265">認識していなかった</text></g>
+    <g font-size="24"><text x="515" y="118">意識して選び</text><text x="515" y="153">理由も引き継げる</text><text x="915" y="118">意識して選んだが</text><text x="915" y="153">理由を引き継げない</text><text x="515" y="233">後から負債に気づいたが</text><text x="515" y="268">当時の理由は確認できる</text><text x="915" y="233">後から負債に気づき</text><text x="915" y="268">当時の理由も確認できない</text></g>
+  </g>
+</svg>

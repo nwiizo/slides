@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="360" viewBox="0 0 1120 360" role="img" aria-labelledby="title desc">
+  <title id="title">エージェントが支援する、SECIの知識創造</title>
+  <desc id="desc">人が経験を共有する共同化、言葉や図にする表出化、記録を結ぶ連結化、試して身につける内面化が循環する。中央のエージェントは各過程へ、問い、記録の草案、情報の関連づけ、試行と検証の補助を提供する。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#666" stroke-width="2"/>
+    </marker>
+  </defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222">
+    <rect x="20" y="12" width="380" height="130" rx="14" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="42" y="48" font-size="28" font-weight="700">S  共同化</text>
+    <text x="42" y="80" font-size="22" fill="#555">暗黙知 → 暗黙知</text>
+    <text x="42" y="113" font-size="23">経験を共にして、見方を学ぶ</text>
+    <rect x="720" y="12" width="380" height="130" rx="14" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="742" y="48" font-size="28" font-weight="700">E  表出化</text>
+    <text x="742" y="80" font-size="22" fill="#555">暗黙知 → 形式知</text>
+    <text x="742" y="113" font-size="23">経験の意味を、言葉や図にする</text>
+    <rect x="720" y="218" width="380" height="130" rx="14" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="742" y="254" font-size="28" font-weight="700">C  連結化</text>
+    <text x="742" y="286" font-size="22" fill="#555">形式知 → 形式知</text>
+    <text x="742" y="319" font-size="23">構造・判断理由・評価を結ぶ</text>
+    <rect x="20" y="218" width="380" height="130" rx="14" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="42" y="254" font-size="28" font-weight="700">I  内面化</text>
+    <text x="42" y="286" font-size="22" fill="#555">形式知 → 暗黙知</text>
+    <text x="42" y="319" font-size="23">記録を使い、試して身につける</text>
+    <rect x="425" y="106" width="270" height="148" rx="14" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
+    <text x="560" y="139" text-anchor="middle" font-size="28" font-weight="700">エージェント</text>
+    <text x="560" y="171" text-anchor="middle" font-size="22">問い・記録の草案</text>
+    <text x="560" y="201" text-anchor="middle" font-size="22">検索・情報の関連づけ</text>
+    <text x="560" y="231" text-anchor="middle" font-size="22">試行・検証の補助</text>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M412 45 H706"/>
+      <path d="M910 153 V204"/>
+      <path d="M708 317 H414"/>
+      <path d="M210 206 V156"/>
+    </g>
+    <g fill="none" stroke="#666" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)">
+      <path d="M454 104 L414 91"/>
+      <path d="M666 104 L706 91"/>
+      <path d="M666 256 L706 269"/>
+      <path d="M454 256 L414 269"/>
+    </g>
+    <text x="560" y="78" text-anchor="middle" font-size="22" fill="#555">人が学ぶ循環</text>
+    <text x="560" y="296" text-anchor="middle" font-size="21" fill="#555">破線：各過程への支援</text>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="285" viewBox="0 0 1120 285" role="img" aria-labelledby="title desc">
+  <title id="title">成果物の更新と、理解や意図の継承を別々に確かめる</title>
+  <desc id="desc">調査・実装・検証をエージェントへ任せると、コード、説明、判断の記録を更新できる。その後も変更しやすさ、共有理解、理由の利用可能性は別々に確かめる必要がある。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="10" y="89" width="290" height="108" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <g font-size="25" font-weight="700"><text x="155" y="132">調査・実装・検証を</text><text x="155" y="169">エージェントへ任せる</text></g>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="378" y="10" width="280" height="74" rx="7"/><rect x="378" y="105" width="280" height="74" rx="7"/><rect x="378" y="200" width="280" height="74" rx="7"/></g>
+    <g font-size="26" font-weight="700"><text x="518" y="57">コードを更新する</text><text x="518" y="152">説明を生成する</text><text x="518" y="247">判断の記録を整える</text></g>
+    <g font-size="24"><text x="920" y="42">実装：変更を妨げる依存が</text><text x="920" y="76">減ったか</text><text x="920" y="136">理解：人が影響を説明し</text><text x="920" y="170">判断を修正できるか</text><text x="920" y="231">意図：目的・条件・理由を</text><text x="920" y="265">次の判断で使えるか</text></g>
+    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M312 143 H337 V47 H366"/><path d="M337 143 H366"/><path d="M337 143 V237 H366"/><path d="M670 47 H717"/><path d="M670 142 H717"/><path d="M670 237 H717"/></g>
+  </g>
+</svg>

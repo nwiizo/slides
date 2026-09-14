@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+  <title id="title">構造・理由・評価を、同じ対象へ結びつける</title>
+  <desc id="desc">対象Bと対応する実装から、構造モデルの依存先、設計判断の記録にある選択理由、評価にある採用条件をたどれるようにする。線は同じ対象への参照を表す。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <g fill="none" stroke="#666" stroke-width="2.5"><path d="M560 73 V110"/><path d="M320 157 H405"/><path d="M715 157 H800"/></g>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="380" y="5" width="360" height="68" rx="8"/><rect x="10" y="106" width="310" height="101" rx="8"/><rect x="800" y="106" width="310" height="101" rx="8"/></g>
+    <rect x="405" y="110" width="310" height="97" rx="8" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
+    <g font-size="27" font-weight="700"><text x="560" y="35">構造モデル</text><text x="165" y="143" font-size="26">設計判断の記録（ADR）</text><text x="560" y="147">対象 B</text><text x="955" y="143">評価・設計の検査</text></g>
+    <g font-size="23" fill="#555"><text x="560" y="62">責務・境界・依存先</text><text x="165" y="181" font-size="22">目的・選択理由・見直す条件</text><text x="560" y="185">同じ名称・対応する実装</text><text x="955" y="181">採用条件・守る性質</text></g>
+    <text x="560" y="240" font-size="24">対象から、影響・理由・採用条件をたどる</text>
+  </g>
+</svg>
