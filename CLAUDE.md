@@ -11,6 +11,7 @@ slides/{year}/       # Marp Markdownと公開PDF
 brands/3shake/       # 3-SHAKEテーマとブランド画像の固定実体
 assets/shared/       # 発表者共通画像
 assets/images/{year} # 講演固有画像
+.claude/rules/       # このリポジトリ固有の公開原稿・図・レイアウト方針
 .claude/skills/      # 公開スライド作成・レビュースキル
 .agents/skills       # .claude/skillsへのCodex向けシンボリックリンク
 vendor/              # Git submodule
@@ -24,6 +25,14 @@ package*.json         # ビルドコマンドと固定したNode.js依存
 - clone、依存導入、ビルド、テンプレート更新、公開前確認は `README.md` を入口とする。
 - AIエージェントの実行規約と必須検証は `AGENTS.md`、スライド記法とテーマ規約はsubmodule内のルールを正とする。
 - 公開する原稿と本文の記載方針は `.claude/rules/public-slide-source.md` を参照する。
+
+## ルールとテーマの管理範囲
+
+テンプレート側の `slide-writing.md` は共通の記法・構成・見出し・主張の書き方を扱う。このリポジトリの `public-slide-source.md` は、公開原稿へ説明を残す方針、制作事情を公開しない方針、講演固有のSVG図と本文レイアウトを扱う。詳細をREADMEやエージェント向け文書へ重複して転記せず、該当ルールを参照する。
+
+`class: reading` の本文・図レイアウトは `brands/3shake/themes/3shake-2026-presentation.css` にある。ブランドパックは利用先固有の拡張を含むため、上流と完全に一致することを前提にしない。
+
+テンプレートのファイル変更はsubmodule側のコミット、このリポジトリが使う版はgitlinkで記録する。公開時はテンプレート側のコミットを先に取得可能にする。手順と検証条件は `AGENTS.md` を参照する。
 
 ## 運用上の不変条件
 

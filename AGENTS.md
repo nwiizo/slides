@@ -39,6 +39,8 @@ submoduleが未取得なら、先に `git submodule update --init --recursive` �
 
 ## 変更後の必須確認
 
+スライド、テーマ、画像、ビルド設定を変更した場合は、次を確認する。
+
 1. 参照しているロゴと背景が `brands/3shake/assets/images/`、発表者画像が `assets/shared/`、講演固有画像が `assets/images/{year}/` に存在することを確認する。
 2. `.marprc.yml` の `themeSet: brands/3shake/themes/` と各スライドの `theme:` が一致することを確認する。
 3. 2025年と2026年から最低1件ずつ `npm run build:html -- ...` でHTMLビルドする。
@@ -46,6 +48,15 @@ submoduleが未取得なら、先に `git submodule update --init --recursive` �
 5. submoduleや親リポジトリのローカルパスがなくてもclone後に再現できることを確認する。
 
 公開前の詳細手順は `$prepare-slide-release` を正とし、Marpの実ビルドとVCS差分を証拠にする。独自チェックスクリプトの成功だけで公開可能と判断しない。
+
+文書・執筆ルールだけの変更では、差分と参照先、記載した手順の整合を確認する。ビルド対象が変わっていなければ、同じ作業中に通過した検証を再利用できる。
+
+## テンプレートの変更と公開
+
+- 共通ルール・スターター・上流テーマは `vendor/3shake-marp-templates/` 側で変更する。このリポジトリ固有の公開方針は `.claude/rules/public-slide-source.md`、固定資産は `brands/3shake/` で管理する。
+- commit・pushはユーザーから依頼された範囲で行う。親とsubmoduleそれぞれのブランチ、remote、差分を確認し、既存の変更を保持する。
+- テンプレート側をcommit・pushし、remoteから取得できることを確認してから、親リポジトリのgitlinkをcommit・pushする。親へのcommitだけでは、submodule内のファイル変更は保存されない。
+- gitlinkだけの更新でも、参照する上流差分を確認する。テーマ・画像を `brands/3shake/` へ取り込む場合は、上記のビルド検証を行う。
 
 ## 補助ツールの方針
 

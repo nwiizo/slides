@@ -68,7 +68,20 @@ npm run build:pdf -- slides/2026/rust-types-as-walls.md \
 
 コマンドはリポジトリ直下で実行します。npm scriptsはlockfileから導入したMarpを使い、ローカル画像に必要な `--allow-local-files` と非対話実行の `--no-stdin` を常に付けます。HTMLはローカル確認用でGit管理しません。PDFは公開成果物としてGit管理します。
 
+## スライドを編集する
+
+原稿の公開範囲、本文と図の書き方は [公開するスライド原稿](.claude/rules/public-slide-source.md)、共通の記法と構成は [テンプレートの執筆規約](vendor/3shake-marp-templates/.claude/rules/slide-writing.md) を参照してください。
+
+- 冒頭に話す内容を示し、主張の理由・前提・留保も本文に書きます。説明が増える場合は分割や文字サイズの調整を行い、PDFで可読性を確かめます。
+- 2026年の資料には `theme: 3shake-2026-presentation` を使います。本文と図を詳しく載せるレイアウトには `class: reading` を指定し、繰り返し使う見た目は共通テーマで管理します。
+- 講演固有の図は `assets/images/{year}/{talk}/` に置きます。自作SVGには関係が伝わる説明を付け、書籍などから引用した図には出典を記載します。
+- Markdownと関連文書も公開されます。制作事情をHTMLコメントに残さず、コメントはMarpの表示に必要な指定だけに使います。
+
+運用手順は [AGENTS.md](AGENTS.md)、ディレクトリ構成と資産の役割は [CLAUDE.md](CLAUDE.md) に記載しています。
+
 ## テンプレート更新
+
+### 上流の変更を取り込む
 
 ```sh
 git -C vendor/3shake-marp-templates status --short
@@ -80,6 +93,16 @@ git diff --submodule=log -- .gitmodules vendor/3shake-marp-templates
 submoduleにローカル変更がある場合は、先に上流リポジトリ側で変更を確定するか退避し、この手順を続行しません。`.gitmodules` は追跡ブランチを `main` に固定しています。更新後はgitlinkと上流コミット差分を確認し、必要なテーマ・画像だけを `brands/3shake/` へ明示的に取り込みます。submodule更新だけでは公開資料の見た目を変更しません。取り込み後は2025年・2026年の代表資料を再ビルドしてから変更を確定してください。
 
 新しい所属先や個人テーマは `brands/{brand}/` に追加します。既存の `brands/3shake/` は過去資料の再現に必要なため置き換えません。
+
+### テンプレートを修正して公開する
+
+`vendor/3shake-marp-templates/` は別のGitリポジトリです。共通ルール・スターター・上流テーマの変更はテンプレート側で、講演原稿・図・公開方針・固定したブランドパックの変更はこのリポジトリで管理します。
+
+1. テンプレート側のブランチ、remote、差分を確認し、変更に応じた検証を行います。
+2. テンプレート側でコミットし、そのコミットをremoteへpushします。
+3. スライド側で `git diff --submodule=log -- vendor/3shake-marp-templates` を確認し、新しい参照先を必要な関連変更とともにコミット・pushします。
+
+この順序で、スライド側が参照するコミットを他の利用者も取得できます。ルールだけの更新では `brands/3shake/` のコピーやPDF再生成は不要です。テーマ・画像を取り込んだ場合は、対象資料のHTMLと公開PDFを検証します。
 
 ## 公開スライドスキル
 
@@ -109,3 +132,5 @@ submoduleにローカル変更がある場合は、先に上流リポジトリ�
 ## Release check
 
 公開前は対象MarkdownをHTMLとPDFへ実際に変換し、画像、テーマ、READMEのPDFリンク、Git差分を確認します。clean-clone検証を含む完全な手順には [`$prepare-slide-release`](.claude/skills/prepare-slide-release/SKILL.md) を使います。
+
+文書・執筆ルールだけを変更した場合は、差分、参照先、手順の整合を確認します。submoduleの参照先を更新した場合は、参照するコミットをremoteから取得できることも確認します。
