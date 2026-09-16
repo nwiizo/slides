@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="255" viewBox="0 0 1120 255" role="img" aria-labelledby="title desc">
+<title id="title">エージェントの案を、関係者が判断する材料にする</title>
+<desc id="desc">エージェントが整理した案や前提と、関係者自身の目的・制約を合わせて検討する。人が守る条件と引き受ける負担を判断し、試した結果を次の判断へ戻す。案が整っていることだけでは合意にならない。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="15" y="20" width="355" height="68" rx="9"/><rect x="15" y="119" width="355" height="68" rx="9"/></g>
+<text x="192" y="62" font-size="26" font-weight="700">関係者の目的・制約</text><text x="192" y="161" font-size="26" font-weight="700">エージェントの案・整理</text>
+<g fill="none" stroke="#666" stroke-width="2.5"><path d="M370 54 H411 V103 H467" marker-end="url(#a)"/><path d="M370 153 H411 V103"/><path d="M825 103 H893" marker-end="url(#a)"/><path d="M1005 161 V216 H647 V161" marker-end="url(#a)"/></g>
+<rect x="480" y="47" width="345" height="114" rx="10" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="652" y="88" font-size="28" font-weight="700">人が確かめ、判断する</text><text x="652" y="129" font-size="24">守る条件・引き受ける負担</text>
+<rect x="906" y="47" width="199" height="114" rx="10" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+<text x="1005" y="88" font-size="28" font-weight="700">試す</text><text x="1005" y="129" font-size="24">結果を確かめる</text>
+<text x="825" y="247" font-size="23">結果から、未決事項と判断を見直す</text>
+</g></svg>

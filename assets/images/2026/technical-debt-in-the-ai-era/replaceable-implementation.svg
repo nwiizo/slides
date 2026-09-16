@@ -1,15 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
-  <title id="title">実装を替えても残す条件</title>
-  <desc id="desc">変更理由、入出力の境界、受け入れ評価、採用した版の記録を残し、内側の実装Aを実装Bへ差し替える。</desc>
-  <rect x="4" y="4" width="1112" height="290" rx="10" fill="#f5f5f5" stroke="#9a9a9a" stroke-width="2"/>
-  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
-    <text x="560" y="57" font-size="30" font-weight="700">残すもの</text>
-    <text x="560" y="103" font-size="28">変更理由 ／ 入出力の境界 ／ 受け入れ評価 ／ 採用した版の記録</text>
-    <rect x="180" y="150" width="300" height="96" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
-    <rect x="640" y="150" width="300" height="96" rx="6" fill="#e0e0e0" stroke="#777" stroke-width="2"/>
-    <text x="330" y="209" font-size="34">実装A</text>
-    <text x="790" y="209" font-size="34">実装B</text>
-    <path d="M500 198 H616 M603 186 L616 198 L603 210" fill="none" stroke="#555" stroke-width="3"/>
-    <text x="560" y="276" font-size="24" fill="#555">条件を保って差し替える</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="260" viewBox="0 0 1120 260" role="img" aria-labelledby="title desc">
+<title id="title">必要な知識を維持しながら、対象の実装を替える</title>
+<desc id="desc">目的・制約・判断理由、外部から必要とされる動作と評価を、実装から取り出して維持する。その知識を新旧の実装へ適用して確かめ、利用・データ・運用の依存を移してから旧実装を廃止する。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="20" y="10" width="1080" height="80" rx="10" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="560" y="44" font-size="28" font-weight="700">実装をまたいで維持する知識</text><text x="560" y="77" font-size="24">目的・制約・判断理由 ／ 必要な動作・境界・データの扱いと評価</text>
+<g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"><path d="M250 90 V135"/><path d="M870 90 V135"/><path d="M430 182 H677"/></g>
+<g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="70" y="143" width="360" height="75" rx="9"/><rect x="690" y="143" width="360" height="75" rx="9"/></g>
+<text x="250" y="190" font-size="28" font-weight="700">旧実装</text><text x="870" y="190" font-size="28" font-weight="700">新実装</text>
+<text x="560" y="166" font-size="23">必要な振る舞いを保つ</text>
+<text x="560" y="250" font-size="24">利用・データ・運用の依存を移し、旧実装を廃止する</text>
+</g></svg>

@@ -212,6 +212,12 @@ section > blockquote {
   background: none !important;
 }
 
+/* 出典を小さく表示する資料向け。class: compact-citations で使用する。 */
+section.compact-citations > blockquote,
+section.compact-citations .source {
+  font-size: 14px !important;
+}
+
 /* ========================================
    .reference-right（2025インラインCSS準拠）
    ======================================== */

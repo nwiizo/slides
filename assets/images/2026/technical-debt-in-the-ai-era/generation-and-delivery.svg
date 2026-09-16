@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
-  <title id="title">生成した候補が、使われるまでの経路を見る</title>
-  <desc id="desc">調査と判断の後に実装を生成・修正し、候補を評価・採用・統合・運用へ送る。生成量が採用できる量を上回ると候補が積み上がる。全工程の費用と時間を比べる。</desc>
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
-  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
-    <g stroke="#999" stroke-width="2"><rect x="10" y="30" width="220" height="116" rx="8" fill="#f5f5f5"/><rect x="278" y="30" width="220" height="116" rx="8" fill="#e0e0e0"/><rect x="810" y="30" width="300" height="116" rx="8" fill="#f5f5f5"/></g>
-    <g font-size="27" font-weight="700"><text x="120" y="77">調査・判断</text><text x="388" y="77">生成・修正</text><text x="960" y="77">評価・採用</text></g>
-    <g font-size="23" fill="#555"><text x="120" y="118">目的・影響を調べる</text><text x="388" y="118">実装の候補を作る</text><text x="960" y="118">統合・切り替え・運用</text></g>
-    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="566" y="23" width="169" height="94" rx="5"/><rect x="579" y="36" width="169" height="94" rx="5"/><rect x="592" y="49" width="169" height="94" rx="5"/></g>
-    <text x="676" y="88" font-size="24">採用前の</text><text x="676" y="123" font-size="24">候補</text>
-    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M240 88 H267"/><path d="M509 88 H553"/><path d="M771 88 H798"/></g>
-    <text x="677" y="184" font-size="23">生成量が採用できる量を上回ると、ここに待ちが増える</text>
-    <path d="M10 207 V224 H1110 V207" fill="none" stroke="#999" stroke-width="2"/>
-    <text x="560" y="260" font-size="25" font-weight="700">変更が使われるまでの費用と時間を、全体で比べる</text>
-  </g>
-</svg>
+<title id="title">生成した候補は、採否が決まるまで変更として届かない</title>
+<desc id="desc">生成・修正から出た候補は、評価と判断を待つ。採用した候補だけが統合・運用へ進み、却下した候補は止まる。候補が判断できる数を上回り続けると待ちが積み上がる。候補の枚数や箱の幅は測定値ではない。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="15" y="60" width="240" height="87" rx="9" fill="#f5f5f5" stroke="#999" stroke-width="2"/><text x="135" y="112" font-size="28" font-weight="700">生成・修正</text>
+<g fill="#e0e0e0" stroke="#999" stroke-width="2"><rect x="340" y="70" width="115" height="70" rx="6"/><rect x="355" y="59" width="115" height="70" rx="6"/><rect x="370" y="48" width="115" height="70" rx="6"/></g>
+<text x="417" y="166" font-size="24">判断待ちの候補</text>
+<rect x="570" y="60" width="230" height="87" rx="9" fill="#f5f5f5" stroke="#999" stroke-width="2"/><text x="685" y="112" font-size="27" font-weight="700">評価・採否判断</text>
+<rect x="925" y="60" width="180" height="87" rx="9" fill="#e0e0e0" stroke="#999" stroke-width="2"/><text x="1015" y="112" font-size="27" font-weight="700">統合・運用</text>
+<g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"><path d="M255 103 H327"/><path d="M487 103 H557"/><path d="M800 103 H912"/><path d="M685 147 V195"/></g>
+<text x="861" y="86" font-size="23">採用</text><text x="685" y="226" font-size="24">却下・保留</text>
+<text x="560" y="260" font-size="24">生成の時間と、利用者へ届くまでの時間を分けて見る</text>
+</g></svg>

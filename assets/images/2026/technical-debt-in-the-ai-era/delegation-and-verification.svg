@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+<title id="title">エージェントが進める範囲と、人に判断を戻す条件を決める</title>
+<desc id="desc">根拠と結果を確認できること、変更・停止の権限と手段があること、影響を限定して復旧できることを確認する。その条件から、自動実行の範囲と同時に動かす仕事の数を別々に決め、運用の結果から見直す。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="20" y="35" width="460" height="172" rx="10" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="250" y="75" font-size="28" font-weight="700">チームが結果に対処できるか</text>
+<g font-size="25"><text x="250" y="116">何を根拠に、何が変わったか</text><text x="250" y="153">実行を変え、止められるか</text><text x="250" y="190">影響を抑え、復旧できるか</text></g>
+<g fill="none" stroke="#666" stroke-width="2.5"><path d="M480 120 H535 V68 H595" marker-end="url(#a)"/><path d="M535 120 V180 H595" marker-end="url(#a)"/></g>
+<g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="610" y="20" width="490" height="90" rx="10"/><rect x="610" y="135" width="490" height="90" rx="10"/></g>
+<text x="855" y="56" font-size="27" font-weight="700">エージェントが進める範囲</text><text x="855" y="91" font-size="24">どこまで進め、いつ人に確認するか</text>
+<text x="855" y="171" font-size="27" font-weight="700">同時に動かす仕事の数</text><text x="855" y="206" font-size="24">結果を評価し、統合できるか</text>
+<text x="560" y="260" font-size="24">運用を担う人が、確かめ、止めて、直せるようにする</text>
+</g></svg>

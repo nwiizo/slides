@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="290" viewBox="0 0 1120 290" role="img" aria-labelledby="title desc">
-  <title id="title">変更の結果を、次の変更の出発点へ引き継ぐ</title>
-  <desc id="desc">今回の変更で実装・検証・運用を行い、判断理由・評価・共有理解を更新する。次の変更はその知識から出発し、さらに得た学びを引き継ぐ。構造と任せる範囲を、繰り返し選び直す。</desc>
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
-  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
-    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="12" width="320" height="122" rx="8"/><rect x="400" y="12" width="320" height="122" rx="8"/><rect x="790" y="12" width="320" height="122" rx="8"/></g>
-    <g font-size="28" font-weight="700"><text x="170" y="54">今回の変更</text><text x="560" y="54">次の変更</text><text x="950" y="54">さらに次の変更</text></g>
-    <g font-size="23" fill="#555"><text x="170" y="91">実装・検証・運用</text><text x="170" y="120">予測と結果を比べる</text><text x="560" y="91">学んだ条件から始める</text><text x="560" y="120">新たなずれを確かめる</text><text x="950" y="91">目的・設計・任せる範囲を</text><text x="950" y="120">選び直す</text></g>
-    <g fill="#e0e0e0" stroke="#999" stroke-width="2"><rect x="45" y="182" width="480" height="92" rx="8"/><rect x="595" y="182" width="480" height="92" rx="8"/></g>
-    <g font-size="25" font-weight="700"><text x="285" y="218">判断理由・評価・共有理解を更新</text><text x="835" y="218">新しく学んだことも引き継ぐ</text></g>
-    <g font-size="22" fill="#555"><text x="285" y="253">次の人とエージェントが使えるようにする</text><text x="835" y="253">実装と、開発の進め方を一緒に育てる</text></g>
-    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M170 145 V171"/><path d="M480 171 V145"/><path d="M645 145 V171"/><path d="M950 171 V145"/></g>
-  </g>
-</svg>
+<title id="title">変更で得た判断と学習を、次の変更の出発点にする</title>
+<desc id="desc">判断理由・評価・共有理解を、各変更で使い、結果から更新する。今回から次へ、さらにその先へと引き継ぎながら、不要な構造や古い条件は見直す。知識が増えるだけの図ではなく、維持と更新の反復を表す。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="20" y="12" width="1080" height="68" rx="10" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="560" y="55" font-size="28" font-weight="700">使い、確かめ、更新する：判断理由・評価・共有理解</text>
+<g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="55" y="152" width="270" height="70" rx="9"/><rect x="425" y="152" width="270" height="70" rx="9"/><rect x="795" y="152" width="270" height="70" rx="9"/></g>
+<g font-size="28" font-weight="700"><text x="190" y="197">今回の変更</text><text x="560" y="197">次の変更</text><text x="930" y="197">その先の変更</text></g>
+<g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"><path d="M145 80 V139"/><path d="M235 152 V93"/><path d="M515 80 V139"/><path d="M605 152 V93"/><path d="M885 80 V139"/><path d="M975 152 V93"/><path d="M325 187 H412"/><path d="M695 187 H782"/></g>
+<g font-size="22" fill="#555"><text x="102" y="120">使う</text><text x="310" y="120">更新する</text><text x="472" y="120">使う</text><text x="680" y="120">更新する</text><text x="842" y="120">使う</text><text x="1050" y="120">更新する</text></g>
+<text x="560" y="271" font-size="24">必要なものを残し、不要な構造と古い条件を見直す</text>
+</g></svg>

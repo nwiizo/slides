@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="265" viewBox="0 0 1120 265" role="img" aria-labelledby="title desc">
+<title id="title">問題の理解と対処を、関係者の違いから考え直す</title>
+<desc id="desc">関係者ごとの目的・制約・負担を、問題の理解と対処の選択へ照合する。対処した結果が問題の見方を更新する。全員の見方が同一になることは前提にしない。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="180" y="10" width="760" height="55" rx="9" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+<text x="560" y="46" font-size="26" font-weight="700">関係者によって異なる、目的・制約・負担</text>
+<g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"><path d="M310 65 V103"/><path d="M810 65 V103"/><path d="M460 148 H657"/><path d="M810 188 V224 H310 V188"/></g>
+<g fill="#e0e0e0" stroke="#999" stroke-width="2"><rect x="160" y="108" width="300" height="80" rx="9"/><rect x="660" y="108" width="300" height="80" rx="9"/></g>
+<text x="310" y="158" font-size="28" font-weight="700">問題の理解</text><text x="810" y="158" font-size="28" font-weight="700">対処の選択</text>
+<text x="560" y="132" font-size="22" fill="#555">何を守り、変えるか</text>
+<text x="560" y="258" font-size="24">対処した結果から、問題の捉え方も更新する</text>
+</g></svg>

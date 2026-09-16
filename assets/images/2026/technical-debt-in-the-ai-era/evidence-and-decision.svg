@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
-  <title id="title">動作・記録・利用を照合して、次の判断を作る</title>
-  <desc id="desc">コードが示す動作、記録が示す当時の期待、運用が示す利用と依存を照合する。根拠の一致と食い違いを確認して、今後守る条件と変更理由を判断する。事実、推測、今回の決定を区別して引き継ぐ。</desc>
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
-  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
-    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="10" width="365" height="57" rx="7"/><rect x="10" y="86" width="365" height="57" rx="7"/><rect x="10" y="162" width="365" height="57" rx="7"/></g>
-    <g font-size="25"><text x="192" y="47">コード：実装された動作</text><text x="192" y="123">記録：当時の期待・理由</text><text x="192" y="199">運用：実際の利用と依存</text></g>
-    <rect x="470" y="60" width="290" height="108" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
-    <rect x="825" y="60" width="285" height="108" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
-    <g font-size="27" font-weight="700"><text x="615" y="103">根拠を照合する</text><text x="967" y="103">今回の判断を作る</text></g>
-    <g font-size="23" fill="#555"><text x="615" y="144">一致と食い違いを調べる</text><text x="967" y="144">守る条件・変える理由</text></g>
-    <path d="M387 38 H418 V190 H387 M387 114 H418" fill="none" stroke="#666" stroke-width="2.5"/>
-    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M418 114 H458"/><path d="M772 114 H813"/></g>
-    <text x="763" y="219" font-size="24">事実 ／ 推測 ／ 今回の決定</text><text x="763" y="254" font-size="23" fill="#555">区別して、次の変更へ引き継ぐ</text>
-  </g>
-</svg>
+<title id="title">動作・記録・利用を照合し、守る条件を決める</title>
+<desc id="desc">コードの動作、記録された期待、運用での利用と依存を突き合わせる。確認できた事実と推測を分け、守る条件と変更範囲を決める。食い違いや未決の点は追加で調べ、関係者が判断する。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="20" y="15" width="355" height="53" rx="7"/><rect x="20" y="85" width="355" height="53" rx="7"/><rect x="20" y="155" width="355" height="53" rx="7"/></g>
+<g font-size="26"><text x="197" y="50">コードの動作</text><text x="197" y="120">記録された期待</text><text x="197" y="190">運用での利用と依存</text></g>
+<g fill="none" stroke="#666" stroke-width="2.5"><path d="M375 41 H418 V111 H475" marker-end="url(#a)"/><path d="M375 111 H418 M375 181 H418 V111"/></g>
+<rect x="490" y="60" width="220" height="105" rx="9" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="600" y="100" font-size="28" font-weight="700">突き合わせる</text><text x="600" y="140" font-size="24">事実と推測を分ける</text>
+<path d="M710 111 H805" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="967" y="95" font-size="27" font-weight="700">今回の決定</text><text x="967" y="135" font-size="24">守る条件・変更範囲</text>
+<path d="M520 165 V235 H197 V211" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="770" y="213" font-size="23">食い違いや未決の点は、調べて判断する</text>
+<text x="770" y="253" font-size="23">確認できた内容で実装し、評価する</text>
+</g></svg>

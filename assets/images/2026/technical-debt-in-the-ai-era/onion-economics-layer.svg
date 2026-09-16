@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+<title id="title">何を優先するか選ぶ側と、後の負担を引き受ける側</title>
+<desc id="desc">選択する側が目標を達成する一方、その判断に関われない側が調整・維持の負担を引き受ける場合を示す。相手に生じる費用も選択する側の判断へ織り込む。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="20" y="40" width="455" height="148" rx="10" fill="#f5f5f5"/><rect x="645" y="40" width="455" height="148" rx="10" fill="#e0e0e0"/>
+<path d="M560 40 V194" stroke="#999" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="560" y="28" font-size="23" fill="#555">判断に関われない側へ、負担が及ぶ場合</text>
+<g font-size="27" font-weight="700"><text x="247" y="83">選択する側</text><text x="872" y="83">影響を受ける側</text></g>
+<text x="247" y="131" font-size="25">自分の目標を達成する</text><text x="872" y="131" font-size="25">後の調整・維持の負担</text>
+<path d="M475 146 H632" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="247" y="169" font-size="23" fill="#555">何を優先するか決める</text><text x="872" y="169" font-size="23" fill="#555">判断に関われず、維持を担う</text>
+<path d="M872 188 V210 H247 V188" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="563" y="244" font-size="24">相手に生じる負担も、選択へ織り込む</text>
+</g></svg>

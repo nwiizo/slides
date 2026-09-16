@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="265" viewBox="0 0 1120 265" role="img" aria-labelledby="title desc">
+<title id="title">運用の結果から、次の改善と作業範囲を決める</title>
+<desc id="desc">変更を届けた後、優先順位を決めた側と利用・運用する側が、期待した成果と実際の負担を確かめ合う。上の矢印は変更を届ける流れ、下の双方向の線は互いの前提を問い直す対話を示す。その結果から優先順位・費用の分担・担当範囲・実行条件を見直す。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto-start-reverse"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="20" y="25" width="400" height="165" rx="10" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+<text x="220" y="66" font-size="27" font-weight="700">開発の優先順位を決める人</text><text x="220" y="110" font-size="25">優先した目的・見込んだ効果</text><text x="220" y="149" font-size="25">境界・担当・作業範囲</text>
+<rect x="700" y="25" width="400" height="165" rx="10" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="900" y="66" font-size="27" font-weight="700">変更を使い、運用する人</text><text x="900" y="110" font-size="25">利用者・検証や運用の担当</text><text x="900" y="149" font-size="25">価値・待ち・手戻り・維持費</text>
+<g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"><path d="M420 98 H687"/><path d="M900 190 V220 H220 V190" marker-start="url(#a)"/></g>
+<text x="560" y="81" font-size="24">変更を届ける</text>
+<text x="560" y="253" font-size="24">負担と前提を確かめ合い、優先順位と進め方を見直す</text>
+</g></svg>

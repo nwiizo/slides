@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="295" viewBox="0 0 1120 295" role="img" aria-labelledby="title desc">
+<title id="title">食い違いから、互いの判断の前提を確かめる</title>
+<desc id="desc">動作の見立ては記録と実際の動作を比べて確かめ、優先順位や守る条件の違いは互いの理由と負担を持ち寄って検討する。確かめた事実と合意したことを区別し、未決事項も含めて判断を更新する。エージェントは調査・反例の検討・試行・論点の整理を支援する。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="15" y="12" width="300" height="90" rx="10"/><rect x="420" y="12" width="385" height="90" rx="10"/><rect x="15" y="120" width="300" height="90" rx="10"/><rect x="420" y="120" width="385" height="90" rx="10"/></g>
+<rect x="900" y="46" width="205" height="130" rx="10" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<g font-size="26" font-weight="700"><text x="165" y="49">動作の見立て</text><text x="612" y="49">記録と実際の動作を比べる</text><text x="165" y="157">優先順位・守る条件</text><text x="612" y="157">理由と負担を持ち寄る</text></g>
+<g font-size="24"><text x="165" y="84">依存・影響・振る舞い</text><text x="165" y="192">役割・目的・制約</text></g>
+<g font-size="23"><text x="612" y="84">何を見落としていたか</text><text x="612" y="192">自分たちの前提も問い直す</text></g>
+<text x="1002" y="85" font-size="27" font-weight="700">判断を更新</text><text x="1002" y="123" font-size="24">根拠・合意</text><text x="1002" y="157" font-size="24">未決事項</text>
+<g fill="none" stroke="#666" stroke-width="2.5"><path d="M315 57 H406" marker-end="url(#a)"/><path d="M315 165 H406" marker-end="url(#a)"/><path d="M805 57 H847 V165 H805"/><path d="M847 111 H886" marker-end="url(#a)"/></g>
+<text x="560" y="249" font-size="24">確かめた事実と、関係者が決めたことを分けて残す</text>
+<text x="560" y="283" font-size="23" fill="#555">エージェントは調査・反例の検討・試行・論点の整理を支援する</text>
+</g></svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+<title id="title">コードを書く手間と、検証・運用する負担を一緒に見る</title>
+<desc id="desc">AIでコードを書く手間が減る側と、そのコードの検証・運用を受け持つ側が分かれる場合を示す。理解・検証・運用で生じる負担も、どの変更を採用するか決めるときに考慮する。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="20" y="40" width="455" height="148" rx="10" fill="#f5f5f5"/><rect x="645" y="40" width="455" height="148" rx="10" fill="#e0e0e0"/>
+<path d="M560 40 V194" stroke="#999" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="560" y="28" font-size="23" fill="#555">判断と負担が分かれる場合</text>
+<g font-size="27" font-weight="700"><text x="247" y="83">コードを作る・採用する側</text><text x="872" y="83">検証・運用を受け持つ側</text></g>
+<text x="247" y="131" font-size="25">AIでコードを書く手間が減る</text><text x="872" y="131" font-size="25">理解・検証・運用の手間がかかる</text>
+<path d="M475 146 H632" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="247" y="169" font-size="23" fill="#555">追加する変更を選ぶ</text><text x="872" y="169" font-size="23" fill="#555">採用後も維持する</text>
+<path d="M872 188 V210 H247 V188" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="563" y="244" font-size="24">受け持つ側の負担も、採用を決めるときに考える</text>
+</g></svg>

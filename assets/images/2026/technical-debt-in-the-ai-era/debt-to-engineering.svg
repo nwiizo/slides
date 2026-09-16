@@ -1,15 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
-  <title id="title">三つの負債から、対処する仕事を選ぶ</title>
-  <desc id="desc">実装の依存は境界と評価の見直しへ、共有理解の不足は根拠を使う試行と対話へ、意図の記録の不足は目的・理由・適用条件の維持へつなぐ。それぞれの改善が次の変更の負担を減らしたかを確認する。</desc>
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
-  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
-    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="10" y="10" width="324" height="208" rx="8"/><rect x="398" y="10" width="324" height="208" rx="8"/><rect x="786" y="10" width="324" height="208" rx="8"/></g>
-    <g font-size="28" font-weight="700"><text x="172" y="50">技術的負債</text><text x="560" y="50">認知的負債</text><text x="948" y="50">意図の負債</text></g>
-    <g font-size="23" fill="#555"><text x="172" y="89">変更を妨げる依存・制約</text><text x="560" y="89">影響を判断する理解の不足</text><text x="948" y="89">使える理由・条件の不足</text></g>
-    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M172 104 V135"/><path d="M560 104 V135"/><path d="M948 104 V135"/></g>
-    <g font-size="25" font-weight="700"><text x="172" y="169">境界と評価を見直し</text><text x="172" y="202">実装を変える</text><text x="560" y="169">根拠を使って試し</text><text x="560" y="202">説明を確かめ合う</text><text x="948" y="169">目的・理由・適用条件を</text><text x="948" y="202">次の判断で使える形へ</text></g>
-    <path d="M172 230 V247 H948 V230" fill="none" stroke="#666" stroke-width="2.5"/>
-    <path d="M560 230 V267" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="560" y="293" font-size="24">次の変更で、何をやり直さずに済んだか</text>
-  </g>
-</svg>
+<title id="title">変質、概念の終焉と再解釈、エージェントと向かう先</title>
+<desc id="desc">変質は実装の費用・変更量・学び方が別々に変わること。終焉と再解釈はコードの修繕だけで考えることをやめ、どこで負担が生じ、なぜ残るかを問うこと。向かう先は判断・検証・学習と採用後の責任を、エージェントとの開発へ組み込むこと。</desc>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222">
+<g fill="#f5f5f5"><rect x="15" y="12" width="1090" height="82" rx="9"/><rect x="15" y="109" width="1090" height="82" rx="9"/><rect x="15" y="206" width="1090" height="82" rx="9"/></g>
+<g stroke="#999" stroke-width="2"><path d="M315 27 V79 M315 124 V176 M315 221 V273"/></g>
+<g font-size="27" font-weight="700"><text x="42" y="64">変質</text><text x="42" y="161">終焉と再解釈</text><text x="42" y="258">共に向かう先</text></g>
+<g font-size="25"><text x="345" y="48">実装の費用・変更量・学び方が、別々に変わる</text><text x="345" y="80">減った作業と、増えた負担を見分ける</text><text x="345" y="145">コードの修繕だけで考えることをやめる</text><text x="345" y="177">どこで負担が生じ、なぜ残るかを調べて対処する</text><text x="345" y="242">判断・検証・学習を、エージェントとの仕事に組み込む</text><text x="345" y="274">運用の結果まで責任を持ち、次の判断に生かす</text></g>
+</g></svg>

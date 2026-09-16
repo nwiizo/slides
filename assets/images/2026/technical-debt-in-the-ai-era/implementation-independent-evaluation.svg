@@ -1,15 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="275" viewBox="0 0 1120 275" role="img" aria-labelledby="title desc">
-  <title id="title">内部の構成が変わっても、同じ意味の基準で比較する</title>
-  <desc id="desc">入出力・状態変化・失敗時の動作という維持する評価を、部品構成の異なる実装Aと実装Bの両方へ適用する。実装固有の検査は各構造に合わせる。</desc>
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
-  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
-    <rect x="100" y="5" width="920" height="64" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
-    <text x="560" y="47" font-size="28" font-weight="700">維持する評価：入出力・状態変化・失敗時の動作</text>
-    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="80" y="117" width="390" height="117" rx="8"/><rect x="650" y="117" width="390" height="117" rx="8"/></g>
-    <g font-size="27" font-weight="700"><text x="275" y="151">実装 A</text><text x="845" y="151">実装 B</text></g>
-    <g fill="#fff" stroke="#999" stroke-width="2"><rect x="120" y="170" width="125" height="46" rx="6"/><rect x="305" y="170" width="125" height="46" rx="6"/><rect x="675" y="170" width="80" height="46" rx="6"/><rect x="805" y="170" width="80" height="46" rx="6"/><rect x="935" y="170" width="80" height="46" rx="6"/></g>
-    <g font-size="24"><text x="182" y="201">部品 a</text><text x="367" y="201">部品 b</text><text x="715" y="201">x</text><text x="845" y="201">y</text><text x="975" y="201">z</text></g>
-    <g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#arrow)"><path d="M275 81 V105"/><path d="M845 81 V105"/><path d="M257 193 H293"/><path d="M767 193 H793"/><path d="M897 193 H923"/></g>
-    <text x="560" y="266" font-size="24">実装固有の検査は直し、維持する振る舞いの評価を引き継ぐ</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="260" viewBox="0 0 1120 260" role="img" aria-labelledby="title desc">
+<title id="title">生成と別に確かめた根拠から、採否を判断する</title>
+<desc id="desc">関係者と確認した条件や実際の利用が評価基準の根拠になる。候補の動作をその基準へ照合し、結果を採否判断へ渡す。実装とテストが同じ推測に一致していることだけでは根拠にならない。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="260" y="10" width="600" height="59" rx="9" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="560" y="49" font-size="26" font-weight="700">関係者と確かめた条件・実際の利用</text>
+<path d="M560 69 V110" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="360" y="119" width="400" height="75" rx="9" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+<text x="560" y="165" font-size="27" font-weight="700">評価基準と動作を照合</text>
+<text x="145" y="140" font-size="27" font-weight="700">候補の動作</text><text x="145" y="176" font-size="23">修正・置き換え</text>
+<path d="M260 155 H347" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<path d="M760 155 H860" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="980" y="141" font-size="27" font-weight="700">採否の判断</text><text x="980" y="177" font-size="23">結果と残る不確実さ</text>
+<text x="560" y="246" font-size="24">評価基準を変える場合は、候補に合うかではなく、変更理由を確かめる</text>
+</g></svg>

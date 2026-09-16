@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="290" viewBox="0 0 1120 290" role="img" aria-labelledby="title desc">
+<title id="title">AI時代の負債を、理解と判断理由から考える</title>
+<desc id="desc">エージェントが実装・調査・試行を支援しても、チームに変更を判断できる理解があるかを、認知的負債の観点から考える。目的・制約・理由の整理を支援しても、その記録を後から使えるかを、意図の負債の観点から考える。矢印は支援の先で確かめる問いへのつながりを表す。AIが必ず負債を生むという意味ではなく、同じ5つの層で、理解を得る過程と理由の引き継ぎ方がどう変わるかを掘り下げる。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<g text-anchor="middle" font-size="25" font-weight="700">
+<text x="225" y="29">エージェントが支援する仕事</text>
+<text x="817" y="29">その先で、確かめたいこと</text>
+</g>
+<g fill="#f5f5f5" stroke="#999" stroke-width="2">
+<rect x="20" y="50" width="410" height="82" rx="10"/>
+<rect x="20" y="162" width="410" height="82" rx="10"/>
+</g>
+<g fill="#e0e0e0" stroke="#999" stroke-width="2">
+<rect x="535" y="50" width="565" height="82" rx="10"/>
+<rect x="535" y="162" width="565" height="82" rx="10"/>
+</g>
+<g font-size="27"><text x="225" y="101">実装・調査・試行</text><text x="225" y="213">目的・制約・理由の整理</text></g>
+<g font-size="27" font-weight="700"><text x="817" y="83">認知的負債</text><text x="817" y="195">意図の負債</text></g>
+<g font-size="24"><text x="817" y="116">チームに、変更を判断できる理解があるか</text><text x="817" y="228">目的・制約・判断理由を後から使えるか</text></g>
+<g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)">
+<path d="M430 91 H520"/><path d="M430 203 H520"/>
+</g>
+<text x="560" y="281" font-size="24" fill="#555">5つの層で、理解を得る過程と理由の引き継ぎ方を問い直す</text>
+</g></svg>

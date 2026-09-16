@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="245" viewBox="0 0 1120 245" role="img" aria-labelledby="title desc">
+<title id="title">実装負債を含む構造の問題が、変更の負担へ波及する</title>
+<desc id="desc">技術的負債の一部に実装負債を置く。責務や依存関係にも問題が残り、変更時の修正・検証・調整の範囲へ影響する。二つの分類で全体を網羅する図ではない。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222">
+<rect x="15" y="15" width="590" height="210" rx="12" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+<text x="40" y="53" font-size="28" font-weight="700">技術的負債</text>
+<text x="40" y="91" font-size="24">責務のずれ・依存関係の問題も含む</text>
+<rect x="40" y="116" width="540" height="85" rx="8" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="62" y="153" font-size="27" font-weight="700">実装負債</text><text x="62" y="184" font-size="24">コードの書き方に残る問題</text>
+<g fill="none" stroke="#666" stroke-width="2.5"><path d="M605 120 H670 V51 H770" marker-end="url(#a)"/><path d="M670 120 H770" marker-end="url(#a)"/><path d="M670 120 V190 H770" marker-end="url(#a)"/></g>
+<g font-size="26"><text x="795" y="59">修正する範囲が広がる</text><text x="795" y="128">確かめる範囲が広がる</text><text x="795" y="198">調整する相手が増える</text></g>
+<text x="825" y="235" text-anchor="middle" font-size="22" fill="#555">必要な変更に対して、負担を捉える</text>
+</g></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="250" viewBox="0 0 1120 250" role="img" aria-labelledby="title desc">
+<title id="title">判断を方向づける条件へ、結果の負担を戻す</title>
+<desc id="desc">役割・目標・権限・評価によって、仕事で何を選ぶかが変わる。選んだ構造による負担を目標や評価に反映しなければ、同じ選択を繰り返しやすい。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#666" stroke-width="1.5"/></marker></defs>
+<g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+<rect x="20" y="15" width="740" height="59" rx="9" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+<text x="390" y="53" font-size="27" font-weight="700">選択を方向づける、役割・目標・権限・評価</text>
+<g fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#a)"><path d="M205 74 V112"/><path d="M356 151 H455"/><path d="M710 151 H822"/><path d="M970 112 V45 H779"/></g>
+<g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="55" y="115" width="300" height="72" rx="8"/><rect x="470" y="115" width="240" height="72" rx="8"/><rect x="835" y="115" width="270" height="72" rx="8"/></g>
+<g font-size="27" font-weight="700"><text x="205" y="160">仕事での選択</text><text x="590" y="160">残る構造</text><text x="970" y="160">変更後の負担</text></g>
+<text x="935" y="28" font-size="23">負担を評価に反映する</text>
+<text x="560" y="234" font-size="24">構造の修正と、同じ選択を繰り返す条件の見直しをつなぐ</text>
+</g></svg>
