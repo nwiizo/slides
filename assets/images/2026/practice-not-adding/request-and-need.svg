@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">通知がほしいという相談に、先週の出来事を加える</title>
+  <desc id="desc">最初の相談は、締め切りを知らせてほしいというもの。先週は通知を見て締め切りを知っていたが、最初にやることを決められなかった。課題に取りかかる場面で必要な助けを考える。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222">
+    <rect x="20" y="20" width="390" height="192" rx="12" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="450" y="20" width="650" height="192" rx="12" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
+    <g font-size="26" fill="#555"><text x="50" y="65">最初の相談</text><text x="480" y="65">先週、実際にあったこと（架空事例）</text></g>
+    <g font-size="30" font-weight="700"><text x="50" y="127">締め切りを</text><text x="50" y="175">知らせてほしい</text><text x="480" y="127">通知は見た。</text></g>
+    <text x="480" y="175" font-size="28">最初にやることを決められなかった。</text>
+    <text x="560" y="269" text-anchor="middle" font-size="29">助けたい場面の候補：課題に取りかかるとき</text>
+  </g>
+</svg>

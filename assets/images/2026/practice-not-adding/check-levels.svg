@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">動作、守る条件、実際の目的を分けて確かめる</title>
+  <desc id="desc">予定を登録できるかは道具の動作、変更後も締切が正しいかは守る条件、帰宅したときに最初の課題を選べたかは使う場面での確認。それぞれ個別に確かめる必要がある。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" text-anchor="middle" fill="#222">
+    <g stroke="#999" stroke-width="2"><rect x="20" y="24" width="335" height="176" rx="12" fill="#f5f5f5"/><rect x="392" y="24" width="335" height="176" rx="12" fill="#f5f5f5"/><rect x="764" y="24" width="335" height="176" rx="12" fill="#e0e0e0"/></g>
+    <g font-size="29" font-weight="700"><text x="188" y="70">道具の動作</text><text x="560" y="70">守る条件</text><text x="932" y="70">使う場面</text></g>
+    <g font-size="26"><text x="188" y="125">予定を</text><text x="188" y="167">登録できた？</text><text x="560" y="125">変更した後も</text><text x="560" y="167">締切は正しい？</text><text x="932" y="125">最初の課題を</text><text x="932" y="167">選べた？</text></g>
+    <path d="M188 211V230H932V211M560 211V230" fill="none" stroke="#999" stroke-width="2"/>
+    <text x="560" y="276" font-size="26">それぞれに、確かめる方法が必要</text>
+  </g>
+</svg>

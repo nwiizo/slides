@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">課題アプリに、どの機能を付けるか</title>
+  <desc id="desc">課題名と締め切りのある画面に対して、通知、カレンダー、AIによる作業分割が追加候補として並ぶ。どれが必要かは、まだ決まっていない。</desc>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222">
+    <rect x="20" y="22" width="380" height="256" rx="14" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="50" y="75" font-size="30" font-weight="700">課題アプリ</text>
+    <path d="M50 96H370" stroke="#999" stroke-width="2"/>
+    <text x="50" y="150" font-size="28">授業Aのレポート</text>
+    <text x="50" y="198" font-size="26">締切：金曜日 18:00</text>
+    <text x="50" y="248" font-size="24" fill="#555">ここに何を付ける？</text>
+    <path d="M430 150H472 M451 129V171" stroke="#666" stroke-width="3"/>
+    <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="510" y="22" width="590" height="72" rx="12"/><rect x="510" y="114" width="590" height="72" rx="12"/><rect x="510" y="206" width="590" height="72" rx="12"/></g>
+    <g font-size="29" font-weight="700"><text x="540" y="69">通知</text><text x="540" y="161">カレンダー</text><text x="540" y="253">AIによる作業分割</text></g>
+    <g font-size="24" fill="#555"><text x="810" y="69">締切を知らせる</text><text x="810" y="161">予定を並べる</text><text x="810" y="253">作業の候補を出す</text></g>
+  </g>
+</svg>

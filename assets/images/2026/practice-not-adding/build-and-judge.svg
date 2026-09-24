@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">作る反復と、目的に照らす判断</title>
+  <desc id="desc">目的と条件を決め、作る、動かす、直す作業へ渡す。結果を目的と条件で確かめて採用を判断する。確認で分かったことを、作るものや目的へ返す。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#666"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" text-anchor="middle" fill="#222">
+    <g stroke-width="2"><rect x="20" y="35" width="260" height="145" rx="12" fill="#f5f5f5" stroke="#999"/><rect x="360" y="35" width="390" height="145" rx="12" fill="#e0e0e0" stroke="#666"/><rect x="830" y="35" width="270" height="145" rx="12" fill="#f5f5f5" stroke="#999"/></g>
+    <g font-size="29" font-weight="700"><text x="150" y="90">何のために作るか</text><text x="555" y="90">作る → 試す → 直す</text><text x="965" y="90">使ってよいか</text></g>
+    <g font-size="24" fill="#555"><text x="150" y="140">目的と条件を決める</text><text x="555" y="140">AIに任せられる作業がある</text><text x="965" y="140">目的と条件で確かめる</text></g>
+    <g fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrow)"><path d="M285 107H345"/><path d="M755 107H815"/><path d="M965 185V251H150V196"/></g>
+    <rect x="292" y="226" width="540" height="49" fill="white"/><text x="560" y="259" font-size="25">確認で分かったことを、次の変更へ</text>
+  </g>
+</svg>

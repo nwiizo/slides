@@ -16,7 +16,7 @@
 - [35min Effective Platform Engineering](slides/2026/35min-effective-platform-engineering.pdf)
 - [20min Secure APIs](slides/2026/20min-secure-apis.pdf)
 - [45min Web Security](slides/2026/45min-web-security.pdf)
-- [60min その機能、追加しますか？](slides/2026/60min-practice-not-adding.pdf)
+- [60min 足さない練習 — AIで作れる時代に、何を足すか考える](slides/2026/60min-practice-not-adding.pdf) ／ [進行ガイド](docs/practice-not-adding-workshop.md)
 - [Architecture Modernization Will](slides/2026/architecture-modernization-will.pdf)
 - [Design Night: Architecture Modernization](slides/2026/design-night-architecture-modernization.pdf)
 - [EMConf: Technical Debt Turning Points](slides/2026/emconf-technical-debt-turning-points.pdf)
