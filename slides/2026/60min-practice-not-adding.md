@@ -35,7 +35,9 @@ _class: title dark
 <div class="body diagram-copy">
 <p>「課題の締め切りを知らせるアプリを作って」。<br>AIにコードを書いてもらい、動かして直すところから始められます。</p>
 <img width="1100" src="../../assets/images/2026/practice-not-adding/feature-choices.svg" alt="課題名と締切のあるアプリに、通知、カレンダー、AIによる作業分割などを追加する選択肢がある。どれが必要かはまだ決まっていない。">
-<p>思いついたことを、動く形にして試せる。その機会が増えています。<br>では、その機能で、<strong>誰の、どんな場面を変えたいのでしょうか。</strong></p>
+<p>AIで量産される低品質な文章や画像などは、<a href="https://www.merriam-webster.com/wordplay/word-of-the-year">AI Slop（AIスロップ）</a>と呼ばれます。</p>
+<p>ただ、雑な実装や使いにくい設定は、AI以前からありました。<br>人間も、いつも正しく判断できていたわけではありません。</p>
+<p>AIで、その不完全な判断を形にする速度も上がりました。<br>私は、<strong>確認が追いつかないと、以前からの問題が目立ちやすくなる</strong>と考えています。</p>
 </div>
 
 ---
