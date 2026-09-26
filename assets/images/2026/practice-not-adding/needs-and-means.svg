@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
   <title id="title">目的を満たす手段と、それに必要なもの</title>
   <desc id="desc">一問を自分で解く目的を、今の教材を使う案と新しい教材を使う案に結ぶ。両方の案が、難易度が合う問題と取り組む時間を必要とする。線は必要とする関係であり時間順ではない。</desc>
-  <g fill="none" stroke="#999" stroke-width="3"><path d="M560 65V88H290V105M560 88H830V105"/><path d="M290 175V192H830V175M400 192V216M720 192V216"/></g>
+  <g fill="none" stroke="#999" stroke-width="3"><path d="M560 65V88H290V105M560 88H830V105"/><path d="M290 175V192H830V175M400 192V216M790 192V216"/></g>
   <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" text-anchor="middle" fill="#222">
     <rect x="310" y="5" width="500" height="60" rx="12" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
     <text x="560" y="46" font-size="29" font-weight="700">目的：一問を自分で解く</text>

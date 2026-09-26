@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">締切の変更が複数の機能に関わる</title>
+  <desc id="desc">締切を変更すると、一覧、通知、AIの学習計画のそれぞれで、新しい締切に対応したか確かめる。矢印は変更が関わる先を表す。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#666"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" text-anchor="middle" fill="#222">
+    <rect x="360" y="12" width="400" height="64" rx="10" fill="#e0e0e0" stroke="#999" stroke-width="2"/>
+    <text x="560" y="54" font-size="29" font-weight="700">課題の締切が変わる</text>
+    <g fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrow)"><path d="M560 76V108H190V144"/><path d="M560 108V144"/><path d="M560 108H930V144"/></g>
+    <rect x="30" y="150" width="320" height="125" rx="10" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="400" y="150" width="320" height="125" rx="10" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="770" y="150" width="320" height="125" rx="10" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <g font-size="28" font-weight="700"><text x="190" y="190">一覧</text><text x="560" y="190">通知</text><text x="930" y="190">AIの学習計画</text></g>
+    <g font-size="24" fill="#555"><text x="190" y="238">新しい日時になった？</text><text x="560" y="238">古い予約は取り消せた？</text><text x="930" y="238">取り組む日も直せた？</text></g>
+  </g>
+</svg>

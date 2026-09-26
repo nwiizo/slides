@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">重要で、取り組む手がかりがある難所を選ぶ</title>
+  <desc id="desc">教材で止まった一行を調べ、理解できれば先へ進めるか、今の時間と教材で試せるかを見て、前の例題と比べることに力を使う。原因や効果は確認し、必要なら見立てを変える。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#666"/></marker></defs>
+  <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
+    <rect x="20" y="22" width="280" height="190" rx="12" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <rect x="370" y="22" width="380" height="190" rx="12" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
+    <rect x="820" y="22" width="280" height="190" rx="12" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <g font-size="28" font-weight="700"><text x="160" y="66">止まる理由を見る</text><text x="560" y="66">取り組む場所を選ぶ</text><text x="960" y="66">力を集めて試す</text></g>
+    <g font-size="25"><text x="160" y="116">どの一行から</text><text x="160" y="156">分からなくなった？</text><text x="560" y="116">分かれば、先へ進める？</text><text x="560" y="156">今ある時間と助けで試せる？</text><text x="960" y="116">その一行と</text><text x="960" y="156">前の例題を比べる</text></g>
+    <g fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrow)"><path d="M305 116H356"/><path d="M755 116H806"/></g>
+    <text x="560" y="265" font-size="25" fill="#555">理解が進まなければ、止まる理由や試す方法を見直す</text>
+  </g>
+</svg>

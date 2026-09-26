@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
-  <title id="title">選ぶ理由を組み立てる四つの問い</title>
-  <desc id="desc">選ぶ場面から目的と条件を決め、その基準で選択肢を比較し、目的に合うか確かめる。矢印は次の判断へ根拠を渡す関係。確認で分かったことから目的や案を見直す。</desc>
+  <title id="title">考える手がかりになる四つの問い</title>
+  <desc id="desc">選ぶ場面から目的と条件を考え、選択肢の助けと手間を比較し、確かめたいことを探す。矢印は前の問いを手がかりに次を考える関係。分かったことから目的や案を見直す。</desc>
   <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#666"/></marker></defs>
   <g font-family="Noto Sans JP, Hiragino Sans, sans-serif" fill="#222" text-anchor="middle">
     <g fill="#f5f5f5" stroke="#999" stroke-width="2"><rect x="20" y="15" width="240" height="174" rx="12"/><rect x="300" y="15" width="240" height="174" rx="12"/><rect x="580" y="15" width="240" height="174" rx="12"/><rect x="860" y="15" width="240" height="174" rx="12"/></g>
     <g font-size="29" font-weight="700"><text x="140" y="65">① 場面</text><text x="420" y="65">② 目的と条件</text><text x="700" y="65">③ 選択肢</text><text x="980" y="65">④ 確かめ方</text></g>
-    <g font-size="24" fill="#555"><text x="140" y="112">なぜ選ぶ必要が</text><text x="140" y="153">あった？</text><text x="420" y="112">どうなりたい？</text><text x="420" y="153">何を守る？</text><text x="700" y="112">目的に合う？</text><text x="700" y="153">手間は増える？</text><text x="980" y="112">何を見て</text><text x="980" y="153">選び直す？</text></g>
+    <g font-size="24" fill="#555"><text x="140" y="112">なぜ選ぶ必要が</text><text x="140" y="153">あった？</text><text x="420" y="112">どうなりたい？</text><text x="420" y="153">何を守る？</text><text x="700" y="112">目的に合う？</text><text x="700" y="153">助けと手間は？</text><text x="980" y="112">試すなら</text><text x="980" y="153">何を見る？</text></g>
     <g fill="none" stroke="#666" stroke-width="3" marker-end="url(#arrow)"><path d="M261 100H288"/><path d="M541 100H568"/><path d="M821 100H848"/><path d="M980 190V254H140V204"/></g>
     <rect x="280" y="229" width="560" height="49" fill="white"/>
     <text x="560" y="261" font-size="25">分かったことから、問いや案を見直す</text>
