@@ -16,7 +16,7 @@
 - [35min Effective Platform Engineering](slides/2026/35min-effective-platform-engineering.pdf)
 - [20min Secure APIs](slides/2026/20min-secure-apis.pdf)
 - [45min Web Security](slides/2026/45min-web-security.pdf)
-- [60min 足さない練習 — AIで作れる時代に、何を足すか考える](slides/2026/60min-practice-not-adding.pdf) ／ [進行ガイド](docs/practice-not-adding-workshop.md)
+- [60min 足さない練習 — AIで作れる時代に、何を足すか考える](slides/2026/60min-practice-not-adding.pdf) ／ [資料作成プロンプト・進行メモ](https://github.com/nwiizo/workspace_2026/blob/main/samples/practice-not-adding/README.md)
 - [Architecture Modernization Will](slides/2026/architecture-modernization-will.pdf)
 - [Design Night: Architecture Modernization](slides/2026/design-night-architecture-modernization.pdf)
 - [EMConf: Technical Debt Turning Points](slides/2026/emconf-technical-debt-turning-points.pdf)
@@ -127,7 +127,7 @@ submoduleにローカル変更がある場合は、先に上流リポジトリ�
 
 各スキルは、架空のレビュアーになりきる方式ではなく、スライド上の証拠、聴衆への影響、最小修正、変更しない判断を重視します。
 
-履歴から抽出した設計判断と、公開しなかった情報の境界は [`docs/history-derived-guidelines.md`](docs/history-derived-guidelines.md) にまとめています。
+制作メモや補助資料はローカル作業用の [`docs/`](docs/README.md) に置き、README以外はGitで管理しません。
 
 ## Release check
 

@@ -2,4 +2,8 @@
 node_modules/
 *.html
 
+# Local working documents; keep only the directory README in Git.
+/docs/*
+!/docs/README.md
+
 # PDF files are published artifacts and intentionally tracked.

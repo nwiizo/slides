@@ -67,7 +67,7 @@ submoduleが未取得なら、先に `git submodule update --init --recursive` �
 
 ## 履歴から抽出した原則
 
-AI履歴の本文は公開しない。再利用可能な判断だけを `docs/history-derived-guidelines.md` に抽象化する。
+AI履歴の本文は公開しない。再利用可能な判断だけをローカルの `docs/` に抽象化する。`docs/` はREADME以外をGitで管理しない。
 
 - READMEは利用者の入口、AGENTSは実行規約、CLAUDEは構造と不変条件を担当する。
 - レビュー結果は連結せず、`$review-slide-suite` で事実、約束、時間、話者の声を基準に統合する。

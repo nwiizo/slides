@@ -15,7 +15,7 @@ assets/images/{year} # 講演固有画像
 .claude/skills/      # 公開スライド作成・レビュースキル
 .agents/skills       # .claude/skillsへのCodex向けシンボリックリンク
 vendor/              # Git submodule
-docs/                # 公開可能な設計・抽象化した運用知識
+docs/                # ローカル作業用資料（READMEだけGit管理）
 .marprc.yml           # Marpのテーマ探索とHTML設定
 package*.json         # ビルドコマンドと固定したNode.js依存
 ```
@@ -44,5 +44,5 @@ package*.json         # ビルドコマンドと固定したNode.js依存
 - PDFはGitHubで閲覧する公開物として追跡し、HTMLはローカル検証用として無視する。
 - Markdown、テーマ、画像を変更したら、代表HTMLと対象PDFを再生成して参照切れを確認する。
 - 専門レビューは `$review-slide-suite`、公開判定は `$prepare-slide-release` で統括し、Marpの実ビルドを必須の証拠とする。
-- AI履歴やmemoryの本文は保存せず、公開可能な抽象化だけを `docs/history-derived-guidelines.md` に残す。
+- AI履歴やmemoryの本文は保存せず、再利用可能な判断だけをローカルの `docs/` に残す。README以外はGitで管理しない。
 - 構造と既存CLIで解決できる処理に補助スクリプトを追加しない。専用ツールが継続的に必要になった場合はRust CLIとして実装する。
