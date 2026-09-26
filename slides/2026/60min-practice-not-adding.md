@@ -96,7 +96,7 @@ _class: title dark
 <div class="step"><strong>35〜42分</strong><span>② どうなりたいか、何を守りたいかを書く</span></div>
 <div class="step"><strong>42〜49分</strong><span>③ 二案を比べ、気になる案や迷う理由を残す</span></div>
 <div class="step"><strong>49〜60分</strong><span>④ 確かめ方を考える（56分まで）／振り返る（残り4分）</span></div>
-<p>題材は、自分の最近の選択、または共通事例です。開発経験やAIは不要です。<br>全部書けなくても、結論が出なくても構いません。採点や提出はなく、共有は希望者だけです。</p>
+<p>題材は、自分の最近の選択、または共通事例です。開発経験やAIは不要です。<br>全部書けなくても、結論が出なくても構いません。採点・提出・共有・発表はありません。</p>
 </div>
 
 ---
@@ -494,6 +494,21 @@ _class: title dark
 
 ---
 
+## ワークの資料と進め方
+
+<div class="body explained">
+<div class="pair">
+<div>
+<p>四つの問い、共通事例、進行メモと、<br>資料を作るためのプロンプトをまとめています。</p>
+<p>これからのワークは、<br><strong>紙・メモアプリ・エディターで進められます。</strong><br>AIを使う必要はありません。</p>
+<p class="small"><a href="https://github.com/nwiizo/workspace_2026/blob/main/samples/practice-not-adding/README.md">github.com/nwiizo/workspace_2026/<br>blob/main/samples/practice-not-adding/README.md</a></p>
+</div>
+<div><img width="360" src="../../assets/images/2026/practice-not-adding/workshop-readme-qr.svg" alt="ワークの資料と進め方を開くQRコード。左のURLと同じGitHubのREADMEに移動する。"></div>
+</div>
+</div>
+
+---
+
 ## ここから、自分が考える題材を選ぶ
 
 <div class="body explained">
@@ -501,7 +516,7 @@ _class: title dark
 <div class="panel"><strong>自分が最近経験した選択</strong><br>道具を増やすか、教材を買うか、<br>活動や予定を引き受けるか、など。<br><br>選んだ後でも、迷っている途中でも構いません。</div>
 <div class="panel"><strong>主催者が用意する共通事例</strong><br>配られた事例を使います。<br>この資料にも、課題用の道具を増やすか考える例があります。<br><br>経験を思い出しにくい人も使えます。</div>
 </div>
-<p>一つの場面、一つの選択に絞ります。途中で共通事例へ替えても構いません。<br>個人的な事情を話す必要はありません。人の名前は伏せ、発表も任意です。</p>
+<p>一つの場面、一つの選択に絞ります。途中で共通事例へ替えても構いません。<br>書いた内容の共有や発表は行いません。人の名前は伏せて構いません。</p>
 </div>
 
 ---
@@ -687,8 +702,8 @@ _class: title dark
 ## 次に迷ったとき、思い出す問いがあれば
 
 <div class="body explained">
-<p><strong>58〜60分：希望者の共有とまとめ</strong></p>
-<p>共有したい人は30秒ほどで、気になった問いや迷ったところを話せます。<br>話さずに、自分のメモを読み返していても構いません。</p>
+<p><strong>58〜60分：まとめ</strong></p>
+<p>気になった問いがあれば、自分のメモに残しておけます。<br>書いた内容は共有せず、そのまま持ち帰ってください。</p>
 <div class="panel">場面から目的を決める。<br>目的と条件で選択肢を比べる。<br>試して分かったことから、選び直す。</div>
 <p>何かを足したくなったとき、「それで、どうなりたいんだっけ」と少し戻ってみる。<br>すぐに答えが出なくても、選び方が少し変わるかもしれません。<br><strong>今日の問いが、そんな小さなきっかけになればと思います。</strong></p>
 </div>
@@ -709,21 +724,6 @@ _class: title dark
 
 ### 次に迷ったとき、思い出す問いがあれば。
 
-</div>
-
----
-
-## このワークを、別の場でも開くなら
-
-<div class="body explained">
-<div class="pair">
-<div>
-<p>今日の考え方を入れた、<br>ワークショップ資料を作るプロンプトです。</p>
-<p>四つの問い、共通事例、声かけまで含め、<br><strong>ほかの資料を渡さずに使えます。</strong><br>主催者向けの進行メモもまとめました。</p>
-<p class="small"><a href="https://github.com/nwiizo/workspace_2026/blob/main/samples/practice-not-adding/README.md">github.com/nwiizo/workspace_2026/<br>blob/main/samples/practice-not-adding/README.md</a></p>
-</div>
-<div><img width="360" src="../../assets/images/2026/practice-not-adding/workshop-readme-qr.svg" alt="資料作成プロンプトを開くQRコード。左のURLと同じGitHubのREADMEに移動する。"></div>
-</div>
 </div>
 
 ---
